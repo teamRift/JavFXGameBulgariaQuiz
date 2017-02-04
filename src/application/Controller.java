@@ -1,7 +1,6 @@
 package application;
 
-// This file controls and interacts with all the UI objects
-// Contains all event handlers
+
 
 
 import javafx.application.Platform;
