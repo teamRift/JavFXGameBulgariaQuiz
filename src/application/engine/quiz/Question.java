@@ -1,7 +1,6 @@
-package application;
+package application.engine.quiz;
 
-
-
+import application.engine.controllers.GameController;
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -16,10 +15,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 
-
-
 public class Question {
-
 
     static Random rand = new Random();
     static int score = 0;
@@ -29,13 +25,10 @@ public class Question {
     static ArrayList<Button> buttons;
     final static String DELIMITER = ";";
 
-
     String question;
     String correctAnswer;
     ArrayList<String> wrongsAnswers;
     Button randomButton;
-
-
 
     public Question(String question, String correct, String wrong1, String wrong2, String wrong3) {
         this.question = question;
@@ -45,8 +38,6 @@ public class Question {
         this.wrongsAnswers.add(wrong2);
         this.wrongsAnswers.add(wrong3);
     }
-
-
 
     public static ArrayList<Question> loadQuestions(String filename) {
         ArrayList<Question> questions = new ArrayList<>();
@@ -64,29 +55,22 @@ public class Question {
         } catch (IOException e) {
 
             Alert notFound = new Alert(Alert.AlertType.ERROR);
-            notFound.setTitle("Questions File Error");
+            notFound.setTitle("File Error");
+            notFound.setContentText("Could not load questions file.");
             notFound.showAndWait();
 
             Platform.exit();
             System.exit(0);
         }
 
-
-
         return questions;
     }
-
-
 
     public static void setButtons(Button...buttonsArray) {
         buttons = new ArrayList<>(Arrays.asList(buttonsArray));
     }
 
-
-
     public static int getQuestionIndex() { return questionIndex; }
-
-
 
     public void displayQuestion(Label lbl, Label correctLabel) {
 
@@ -119,8 +103,6 @@ public class Question {
         }
     }
 
-
-
     public void checkCorrect(Button b, ArrayList<Question> questions, Label scoreLabel) {
 
 
@@ -136,7 +118,7 @@ public class Question {
 
 
         if (questions.size() == questionCount) {
-            Controller.finished(score, questionsCorrect);
+            GameController.finished(score, questionsCorrect);
         }
 
         questionCount += 1;
