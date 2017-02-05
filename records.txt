@@ -1,5 +1,0 @@
-username ; 0
-username ; 10
-username ; 0
-username ; 10
-username ; 30

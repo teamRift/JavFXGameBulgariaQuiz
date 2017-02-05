@@ -1,6 +1,6 @@
-package application.engine.quiz;
+package application.classes;
 
-import application.engine.controllers.GameController;
+import application.controllers.QuestionsController;
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -39,11 +39,14 @@ public class Question {
         this.wrongsAnswers.add(wrong3);
     }
 
+
+
     public static ArrayList<Question> loadQuestions(String filename) {
         ArrayList<Question> questions = new ArrayList<>();
+        String projectPath = System.getProperty("user.dir");
 
         try {
-            Path filePath = Paths.get("./" + filename);
+            Path filePath = Paths.get(projectPath + "/src/application/resources/questions/" + filename);
 
             Files.lines(filePath).forEach(line -> {
                 if (line.isEmpty()) {
@@ -55,22 +58,29 @@ public class Question {
         } catch (IOException e) {
 
             Alert notFound = new Alert(Alert.AlertType.ERROR);
-            notFound.setTitle("File Error");
-            notFound.setContentText("Could not load questions file.");
+            notFound.setTitle("Questions File Error");
             notFound.showAndWait();
 
             Platform.exit();
             System.exit(0);
         }
 
+
+
         return questions;
     }
+
+
 
     public static void setButtons(Button...buttonsArray) {
         buttons = new ArrayList<>(Arrays.asList(buttonsArray));
     }
 
+
+
     public static int getQuestionIndex() { return questionIndex; }
+
+
 
     public void displayQuestion(Label lbl, Label correctLabel) {
 
@@ -103,6 +113,8 @@ public class Question {
         }
     }
 
+
+
     public void checkCorrect(Button b, ArrayList<Question> questions, Label scoreLabel) {
 
 
@@ -118,7 +130,7 @@ public class Question {
 
 
         if (questions.size() == questionCount) {
-            GameController.finished(score, questionsCorrect);
+            QuestionsController.finished(score, questionsCorrect);
         }
 
         questionCount += 1;

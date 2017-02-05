@@ -1,0 +1,4 @@
+How big is Sofia`s population? ; 1.3 million ; 1.5 million ; 1.8 million ; 2.0 million
+Which mountain is located near Sofia? ; Vitosha ; Rila ; Pirin ; Stara Planina
+How many neighbourhoods are located in Sofia? ; 24 ; 30 ; 50 ; 18
+Since when metro become an optional transport in Sofia? ; 1998 ; 2000 ; 2002; 2004
