@@ -12,11 +12,13 @@ import java.io.IOException;
 
 public class MenuController {
 
+    public Button exit;
     @FXML
     Button StartBtn;
 
     public void ExitBtn(ActionEvent actionEvent) {
-
+        Stage stage = (Stage)exit.getScene().getWindow();
+        stage.close();
     }
 
     public void getStart(ActionEvent actionEvent) throws IOException {
