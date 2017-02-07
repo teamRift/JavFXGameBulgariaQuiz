@@ -1,9 +1,15 @@
 package application.controllers;
 
+import application.Main;
 import application.classes.Question;
+import application.classes.Rankings;
+import application.classes.Score;
+import application.classes.Values;
+import application.classes.cities.CityManager;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -11,6 +17,8 @@ import javafx.scene.control.Label;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import static application.controllers.CitiesController.cityManager;
 
 
 public class QuestionsController {
@@ -38,17 +46,18 @@ public class QuestionsController {
 
     static ArrayList<Question> questions;
     static int percent;
-    static int pauseValue = 1000;
-
+    static int pauseValue = Values.PAUSE_VALUE;
 
     @FXML
     public void initialize() {
 //        questions = Question.loadQuestions(cityName + "Questions.txt");
 
-        questions = Question.loadQuestions("sofiaQuestions.txt");
+        CityManager manager = cityManager;
+        System.out.println(manager.getCity().getClass().getSimpleName());
+
+        questions = Question.loadQuestions(manager.getFileName());
         Question.setButtons(firstButton, secondButton, thirdButton, fourthButton);
         questions.get(Question.getQuestionIndex()).displayQuestion(questionLabel, questionNumLabel);
-
 
         firstButton.setOnAction(this::handleButtonAction);
         secondButton.setOnAction(this::handleButtonAction);
@@ -92,7 +101,8 @@ public class QuestionsController {
         } else {
             percent = (int) ((double) questionsCorrect / (double) questions.size() * 100);
         }
-
+        Score newScore = new Score("username",score);
+        Rankings.save(newScore);
 
         Alert finish = new Alert(Alert.AlertType.INFORMATION);
         finish.setTitle("You Win!");

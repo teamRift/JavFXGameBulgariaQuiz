@@ -39,8 +39,6 @@ public class Question {
         this.wrongsAnswers.add(wrong3);
     }
 
-
-
     public static ArrayList<Question> loadQuestions(String filename) {
         ArrayList<Question> questions = new ArrayList<>();
         String projectPath = System.getProperty("user.dir");
