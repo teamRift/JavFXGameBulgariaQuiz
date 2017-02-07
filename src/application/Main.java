@@ -15,6 +15,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Rankings.create();
+        //replace with boot.fxml for bootscreen
+        // replace with start.fxml for startscreen
         Parent root = FXMLLoader.load(getClass().getResource("resources/fxml/cities.fxml")); //replace with start.fxml to skip boot
        // primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
 
