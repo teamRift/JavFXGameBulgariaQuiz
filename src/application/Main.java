@@ -17,7 +17,7 @@ public class Main extends Application {
         Rankings.create();
         //replace with boot.fxml for bootscreen
         // replace with start.fxml for startscreen
-        Parent root = FXMLLoader.load(getClass().getResource("resources/fxml/cities.fxml")); //replace with start.fxml to skip boot
+        Parent root = FXMLLoader.load(getClass().getResource("resources/fxml/start.fxml"));
        // primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
 
         primaryStage.setResizable(false);
