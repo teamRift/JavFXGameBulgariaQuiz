@@ -1,5 +1,6 @@
 package application.controllers;
 
+import application.classes.GameManager;
 import application.classes.cities.*;
 import application.classes.Values;
 import javafx.event.ActionEvent;
@@ -7,7 +8,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -15,7 +15,6 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class CitiesController {
     @FXML
@@ -46,7 +45,8 @@ public class CitiesController {
     Hyperlink pleven;
     @FXML
     Hyperlink turnovo;
-    public static CityManager cityManager;
+
+    public static GameManager gameManager;
 
     @FXML
     public void initialize() throws IOException {
@@ -55,7 +55,7 @@ public class CitiesController {
     }
 
     private static void initCityManager() {
-        cityManager = new CityManager();
+        gameManager = new GameManager();
     }
 
     public void onCityQuestion(ActionEvent actionEvent) throws IOException {
@@ -64,33 +64,29 @@ public class CitiesController {
         setCity(id.toLowerCase());
         Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/quizWindow.fxml"));
 
-//        String sourceID = actionEvent.getSource().toString();
-//        sourceID = sourceID.substring(sourceID.indexOf('=') + 1, sourceID.indexOf(','));
-//        String cityName = sourceID;
-
-        Stage stage = (Stage)sofia.getScene().getWindow();
+        Stage stage = (Stage)button.getScene().getWindow();
         stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
         stage.show();
     }
     private void setCity(String city){
         if (city.equalsIgnoreCase("sofia")){
-            cityManager = new CityManager(new Sofia());
+            gameManager.setCity(new Sofia());
         } else if (city.equalsIgnoreCase("varna")) {
-            cityManager = new CityManager(new Varna());
+            gameManager.setCity(new Varna());
         }  else if (city.equalsIgnoreCase("plovdiv")) {
-            cityManager = new CityManager(new Plovdiv());
+            gameManager.setCity(new Plovdiv());
         }  else if (city.equalsIgnoreCase("burgas")) {
-            cityManager = new CityManager(new Burgas());
+            gameManager.setCity(new Burgas());
         }  else if (city.equalsIgnoreCase("turnovo")) {
-            cityManager = new CityManager(new VelikoTurnovo());
+            gameManager.setCity(new VelikoTurnovo());
         }  else if (city.equalsIgnoreCase("pleven")) {
-            cityManager = new CityManager(new Pleven());
+            gameManager.setCity(new Pleven());
         }  else if (city.equalsIgnoreCase("ruse")) {
-            cityManager = new CityManager(new Ruse());
+            gameManager.setCity(new Ruse());
         }  else if (city.equalsIgnoreCase("blagoevgrad")) {
-            cityManager = new CityManager(new Blagoevgrad());
+            gameManager.setCity(new Blagoevgrad());
         } else {
-            cityManager = new CityManager(new Mordor());
+            gameManager.setCity(new Mordor());
         }
     }
     private void setPanes(){

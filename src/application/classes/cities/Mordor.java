@@ -1,5 +1,7 @@
 package application.classes.cities;
 
+import application.classes.Values;
+
 public class Mordor extends City {
     @Override
     public String name() {
@@ -8,9 +10,6 @@ public class Mordor extends City {
 
     @Override
     public String fileName() {
-        return "mordorQuestions.txt";
-//         ako imeto na faila i klasa e edno i syshto
-//         return this.getClass().getSimpleName().toLowerCase() + "Questions.txt";
+        return Values.QUESTIONS_MOCK;
     }
-
 }

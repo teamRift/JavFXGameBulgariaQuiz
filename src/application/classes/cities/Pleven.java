@@ -1,5 +1,7 @@
 package application.classes.cities;
 
+import application.classes.Values;
+
 public class Pleven extends City {
 
     @Override
@@ -9,6 +11,6 @@ public class Pleven extends City {
 
     @Override
     public String fileName() {
-        return "plevenQuestions.txt";
+        return Values.QUESTIONS_PLN;
     }
 }

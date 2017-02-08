@@ -1,15 +1,13 @@
 package application.controllers;
 
-import application.Main;
 import application.classes.Question;
-import application.classes.Rankings;
+import application.classes.Scores;
 import application.classes.Score;
 import application.classes.Values;
-import application.classes.cities.CityManager;
+import application.classes.GameManager;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -18,12 +16,8 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import static application.controllers.CitiesController.cityManager;
-
 
 public class QuestionsController {
-
-
 
     @FXML
     private Label questionLabel;
@@ -31,16 +25,12 @@ public class QuestionsController {
     public Button firstButton;
     @FXML
     public Button secondButton;
-
     @FXML
     public Button thirdButton;
-
     @FXML
     public Button fourthButton;
-
     @FXML
     public Label questionNumLabel;
-
     @FXML
     private Label scoreLabel;
 
@@ -50,12 +40,7 @@ public class QuestionsController {
 
     @FXML
     public void initialize() {
-//        questions = Question.loadQuestions(cityName + "Questions.txt");
-
-        CityManager manager = cityManager;
-        System.out.println(manager.getCity().getClass().getSimpleName());
-
-        questions = Question.loadQuestions(manager.getFileName());
+        questions = Question.loadQuestions(CitiesController.gameManager.getFileName());
         Question.setButtons(firstButton, secondButton, thirdButton, fourthButton);
         questions.get(Question.getQuestionIndex()).displayQuestion(questionLabel, questionNumLabel);
 
@@ -65,7 +50,6 @@ public class QuestionsController {
         fourthButton.setOnAction(this::handleButtonAction);
     }
 
-
     private void handleButtonAction(ActionEvent event) {
 
         firstButton.setDisable(true);
@@ -73,9 +57,7 @@ public class QuestionsController {
         thirdButton.setDisable(true);
         fourthButton.setDisable(true);
 
-
         questions.get(Question.getQuestionIndex()).checkCorrect((Button) event.getTarget(), questions, scoreLabel);
-
 
         Timer time = new Timer();
         time.schedule(new TimerTask() {
@@ -88,7 +70,9 @@ public class QuestionsController {
                     secondButton.setDisable(false);
                     thirdButton.setDisable(false);
                     fourthButton.setDisable(false);
+
                 });
+
             }
         }, pauseValue);
     }
@@ -101,8 +85,8 @@ public class QuestionsController {
         } else {
             percent = (int) ((double) questionsCorrect / (double) questions.size() * 100);
         }
-        Score newScore = new Score("username",score);
-        Rankings.save(newScore);
+        Score newScore = new Score(CitiesController.gameManager.getCityName(),CitiesController.gameManager.getCurrentUser(),score);
+        Scores.save(newScore);
 
         Alert finish = new Alert(Alert.AlertType.INFORMATION);
         finish.setTitle("You Win!");

@@ -27,7 +27,7 @@ public class BootController {
         Stage stage = (Stage) textLabel.getScene().getWindow();
         Parent root = stage.getScene().getRoot();
         try {
-            root = FXMLLoader.load(getClass().getResource("../resources/fxml/start.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }

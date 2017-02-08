@@ -1,1 +1,7 @@
 <-- START -->
+Ruse ; ASDASDASD ; 10
+VelikoTurnovo ; username ; 0
+Sofia ; username1 ; 10
+Varna ; username ; 10
+Yakoruda ; TITAN ; 10000
+VelikoTurnovo ; username ; 10

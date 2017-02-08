@@ -1,5 +1,7 @@
 package application.classes.cities;
 
+import application.classes.Values;
+
 public class Burgas extends City{
 
     @Override
@@ -7,6 +9,6 @@ public class Burgas extends City{
         return this.getClass().getSimpleName();
     }
     public String fileName() {
-        return "burgasQuestions.txt";
+        return Values.QUESTIONS_BLG;
     }
 }

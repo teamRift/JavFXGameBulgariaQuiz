@@ -1,5 +1,7 @@
 package application.classes.cities;
 
+import application.classes.Values;
+
 public class Ruse extends City {
 
     @Override
@@ -9,6 +11,6 @@ public class Ruse extends City {
 
     @Override
     public String fileName() {
-        return "ruseQuestions.txt";
+        return Values.QUESTIONS_RS;
     }
 }

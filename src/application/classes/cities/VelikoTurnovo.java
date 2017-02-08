@@ -1,8 +1,7 @@
 package application.classes.cities;
 
-/**
- * Created by Administrator on 2/7/2017.
- */
+import application.classes.Values;
+
 public class VelikoTurnovo extends City {
 
     @Override
@@ -12,6 +11,6 @@ public class VelikoTurnovo extends City {
 
     @Override
     public String fileName() {
-        return "vtQuestions.txt";
+        return Values.QUESTIONS_VT;
     }
 }

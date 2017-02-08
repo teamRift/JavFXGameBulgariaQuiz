@@ -54,7 +54,7 @@ public class Question {
                 questions.add(new Question(tokens[0].trim(), tokens[1].trim(), tokens[2].trim(), tokens[3].trim(), tokens[4].trim()));
             });
         } catch (IOException e) {
-
+            e.printStackTrace();
             Alert notFound = new Alert(Alert.AlertType.ERROR);
             notFound.setTitle("Questions File Error");
             notFound.showAndWait();

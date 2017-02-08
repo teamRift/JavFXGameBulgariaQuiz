@@ -1,5 +1,7 @@
 package application.classes.cities;
 
+import application.classes.Values;
+
 public class Sofia extends City{
 
 
@@ -10,6 +12,6 @@ public class Sofia extends City{
 
     @Override
     public String fileName() {
-        return "sofiaQuestions.txt";
+        return Values.QUESTIONS_SF;
     }
 }

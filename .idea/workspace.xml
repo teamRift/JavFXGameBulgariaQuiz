@@ -1,8 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="``">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/resources/images/background.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/classes/GameManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/classes/Scores.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/classes/Utils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/controllers/RankingsController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/resources/fxml/menu.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/resources/fxml/rankings.fxml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/classes/Player.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/classes/Rankings.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/classes/cities/CityManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/resources/fxml/start.fxml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/application/resources/questions/burgasQuestions" afterPath="$PROJECT_DIR$/src/application/resources/questions/burgasQuestions.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/application/resources/questions/mordorQuestions" afterPath="$PROJECT_DIR$/src/application/resources/questions/mordorQuestions.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/application/resources/questions/plevenQuestions.txt" afterPath="$PROJECT_DIR$/src/application/resources/questions/plnQuestions.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/application/resources/questions/plovdivQuestions" afterPath="$PROJECT_DIR$/src/application/resources/questions/plovdivQuestions.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/application/resources/questions/ruseQuestions" afterPath="$PROJECT_DIR$/src/application/resources/questions/ruseQuestions.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/application/resources/questions/varnaQuestions" afterPath="$PROJECT_DIR$/src/application/resources/questions/varnaQuestions.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/application/resources/questions/velikoturnovoQuestions" afterPath="$PROJECT_DIR$/src/application/resources/questions/velikoturnovoQuestions.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/resources/images/bulgaria1.png" afterPath="$PROJECT_DIR$/src/application/resources/images/bulgaria1.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rankings.txt" afterPath="$PROJECT_DIR$/rankings.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Main.java" afterPath="$PROJECT_DIR$/src/application/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/Question.java" afterPath="$PROJECT_DIR$/src/application/classes/Question.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/Score.java" afterPath="$PROJECT_DIR$/src/application/classes/Score.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/Values.java" afterPath="$PROJECT_DIR$/src/application/classes/Values.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/cities/Blagoevgrad.java" afterPath="$PROJECT_DIR$/src/application/classes/cities/Blagoevgrad.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/cities/Burgas.java" afterPath="$PROJECT_DIR$/src/application/classes/cities/Burgas.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/cities/Mordor.java" afterPath="$PROJECT_DIR$/src/application/classes/cities/Mordor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/cities/Pleven.java" afterPath="$PROJECT_DIR$/src/application/classes/cities/Pleven.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/cities/Plovdiv.java" afterPath="$PROJECT_DIR$/src/application/classes/cities/Plovdiv.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/cities/Ruse.java" afterPath="$PROJECT_DIR$/src/application/classes/cities/Ruse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/cities/Sofia.java" afterPath="$PROJECT_DIR$/src/application/classes/cities/Sofia.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/cities/VelikoTurnovo.java" afterPath="$PROJECT_DIR$/src/application/classes/cities/VelikoTurnovo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/controllers/BootController.java" afterPath="$PROJECT_DIR$/src/application/controllers/BootController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/controllers/CitiesController.java" afterPath="$PROJECT_DIR$/src/application/controllers/CitiesController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/controllers/MenuController.java" afterPath="$PROJECT_DIR$/src/application/controllers/MenuController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/controllers/QuestionsController.java" afterPath="$PROJECT_DIR$/src/application/controllers/QuestionsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/resources/questions/blagoevgradQuestions.txt" afterPath="$PROJECT_DIR$/src/application/resources/questions/blagoevgradQuestions.txt" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -16,6 +53,14 @@
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
   </component>
   <component name="DebuggerManager">
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
@@ -61,11 +106,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CitiesController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CitiesController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/controllers/CitiesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="965">
-              <caret line="63" column="32" lean-forward="false" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
+            <state relative-caret-position="420">
+              <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rankings.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rankings.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="43">
+              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RankingsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/controllers/RankingsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1235">
+              <caret line="74" column="68" lean-forward="false" selection-start-line="74" selection-start-column="68" selection-end-line="74" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,93 +138,67 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuestionsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/controllers/QuestionsController.java">
+      <file leaf-file-name="menu.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/menu.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="6" selection-end-column="34" />
+            <state relative-caret-position="29">
+              <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cities.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/cities.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="burgasQuestions.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/resources/questions/burgasQuestions.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="58">
+              <caret line="2" column="120" lean-forward="false" selection-start-line="2" selection-start-column="120" selection-end-line="2" selection-end-column="120" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/controllers/MenuController.java">
+      <file leaf-file-name="blagoevgradQuestions.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/resources/questions/blagoevgradQuestions.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="59" lean-forward="false" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Mordor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Mordor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="53" lean-forward="false" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+            <state relative-caret-position="145">
+              <caret line="5" column="59" lean-forward="false" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mordorQuestions" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/resources/questions/mordorQuestions">
+      <file leaf-file-name="velikoturnovoQuestions.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/resources/questions/velikoturnovoQuestions.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="88" lean-forward="false" selection-start-line="2" selection-start-column="88" selection-end-line="2" selection-end-column="88" />
+            <state relative-caret-position="87">
+              <caret line="3" column="115" lean-forward="false" selection-start-line="3" selection-start-column="115" selection-end-line="3" selection-end-column="115" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="burgasQuestions" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/resources/questions/burgasQuestions">
+      <file leaf-file-name="sofiaQuestions.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/application/resources/questions/sofiaQuestions.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="velikoturnovoQuestions" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/resources/questions/velikoturnovoQuestions">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plovdivQuestions" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/resources/questions/plovdivQuestions">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ruseQuestions" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/resources/questions/ruseQuestions">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="varnaQuestions" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/resources/questions/varnaQuestions">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="88" lean-forward="false" selection-start-line="2" selection-start-column="88" selection-end-line="2" selection-end-column="88" />
+            <state relative-caret-position="87">
+              <caret line="3" column="82" lean-forward="true" selection-start-line="3" selection-start-column="82" selection-end-line="3" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -170,8 +209,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -186,11 +225,17 @@
       <find>score</find>
       <find>loadScores</find>
       <find>scores</find>
-      <find>System</find>
       <find>System;;</find>
       <find>Values</find>
       <find>cityName</find>
       <find>tyrnovo</find>
+      <find>getStart</find>
+      <find>ExitBtn</find>
+      <find>save</find>
+      <find>initCityManager</find>
+      <find>gameManager</find>
+      <find>username</find>
+      <find>System</find>
     </findStrings>
     <replaceStrings>
       <replace>scores</replace>
@@ -198,6 +243,10 @@
       <replace>rankings</replace>
       <replace>name</replace>
       <replace>turnovo</replace>
+      <replace>startGame</replace>
+      <replace>exitGame</replace>
+      <replace>initGameManager</replace>
+      <replace>manager</replace>
     </replaceStrings>
   </component>
   <component name="FindManager">
@@ -221,57 +270,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/application/engine/utils/Topic.java" />
-        <option value="$PROJECT_DIR$/src/application/engine/utils/SceneController.java" />
-        <option value="$PROJECT_DIR$/src/application/MenuController.java" />
-        <option value="$PROJECT_DIR$/src/application/Controller.java" />
-        <option value="$PROJECT_DIR$/src/application/GameController.java" />
-        <option value="$PROJECT_DIR$/src/application/engine/controllers/MenuController.java" />
-        <option value="$PROJECT_DIR$/src/application/engine/states/StateManager.java" />
-        <option value="$PROJECT_DIR$/src/application/engine/quiz/ScoreBoard.java" />
-        <option value="$PROJECT_DIR$/src/application/records.txt" />
-        <option value="$PROJECT_DIR$/src/application/engine/quiz/Question.java" />
-        <option value="$PROJECT_DIR$/src/application/engine/utils/Strings.java" />
-        <option value="$PROJECT_DIR$/mordorQuestions.txt" />
-        <option value="$PROJECT_DIR$/src/application/engine/quiz/Session.java" />
-        <option value="$PROJECT_DIR$/src/application/engine/utils/Errors.java" />
-        <option value="$PROJECT_DIR$/src/application/engine/Exceptions.java" />
-        <option value="$PROJECT_DIR$/src/application/engine/utils/DisplayProperties.java" />
-        <option value="$PROJECT_DIR$/src/application/engine/utils/Dimensions.java" />
-        <option value="$PROJECT_DIR$/src/application/engine/quiz/Score.java" />
-        <option value="$PROJECT_DIR$/src/application/engine/quiz/Player.java" />
         <option value="$PROJECT_DIR$/src/application/engine/controllers/GameController.java" />
         <option value="$PROJECT_DIR$/src/application/engine/quiz/Rankings.java" />
         <option value="$PROJECT_DIR$/records.txt" />
         <option value="$PROJECT_DIR$/src/application/classes/Strings.java" />
         <option value="$PROJECT_DIR$/src/application/cities.fxml" />
-        <option value="$PROJECT_DIR$/src/application/classes/Question.java" />
         <option value="$PROJECT_DIR$/src/application/classes/City.java" />
         <option value="$PROJECT_DIR$/src/application/resources/fxml/boot.fxml" />
-        <option value="$PROJECT_DIR$/src/application/resources/fxml/start.fxml" />
-        <option value="$PROJECT_DIR$/src/application/controllers/MenuController.java" />
-        <option value="$PROJECT_DIR$/src/application/classes/Rankings.java" />
         <option value="$PROJECT_DIR$/src/application/controllers/BootController.java" />
         <option value="$PROJECT_DIR$/src/application/classes/cities/City.java" />
-        <option value="$PROJECT_DIR$/src/application/classes/cities/Burgas.java" />
         <option value="$PROJECT_DIR$/src/application/classes/cities/CityInterface.java" />
+        <option value="$PROJECT_DIR$/src/application/classes/cities/Varna.java" />
+        <option value="$PROJECT_DIR$/README" />
+        <option value="$PROJECT_DIR$/src/application/resources/fxml/cities.fxml" />
+        <option value="$PROJECT_DIR$/src/application/classes/cities/CityManager.java" />
+        <option value="$PROJECT_DIR$/src/application/resources/questions/varnaQuestions" />
+        <option value="$PROJECT_DIR$/src/application/classes/cities/Sofia.java" />
+        <option value="$PROJECT_DIR$/src/application/classes/cities/VelikoTurnovo.java" />
+        <option value="$PROJECT_DIR$/src/application/classes/cities/Blagoevgrad.java" />
+        <option value="$PROJECT_DIR$/src/application/classes/cities/Burgas.java" />
+        <option value="$PROJECT_DIR$/src/application/classes/cities/Mordor.java" />
         <option value="$PROJECT_DIR$/src/application/classes/cities/Pleven.java" />
         <option value="$PROJECT_DIR$/src/application/classes/cities/Plovdiv.java" />
         <option value="$PROJECT_DIR$/src/application/classes/cities/Ruse.java" />
-        <option value="$PROJECT_DIR$/src/application/classes/cities/Sofia.java" />
-        <option value="$PROJECT_DIR$/src/application/classes/cities/Varna.java" />
-        <option value="$PROJECT_DIR$/src/application/classes/cities/VelikoTurnovo.java" />
-        <option value="$PROJECT_DIR$/src/application/Main.java" />
-        <option value="$PROJECT_DIR$/README" />
-        <option value="$PROJECT_DIR$/src/application/classes/cities/Blagoevgrad.java" />
-        <option value="$PROJECT_DIR$/src/application/classes/Values.java" />
-        <option value="$PROJECT_DIR$/src/application/resources/fxml/cities.fxml" />
-        <option value="$PROJECT_DIR$/src/application/classes/cities/CityManager.java" />
-        <option value="$PROJECT_DIR$/src/application/classes/cities/Mordor.java" />
-        <option value="$PROJECT_DIR$/src/application/controllers/CitiesController.java" />
         <option value="$PROJECT_DIR$/src/application/resources/questions/mordorQuestions" />
+        <option value="$PROJECT_DIR$/src/application/resources/questions/vnQuestions.txt" />
+        <option value="$PROJECT_DIR$/src/application/resources/questions/blgQuestions.txt" />
+        <option value="$PROJECT_DIR$/src/application/resources/questions/bsQuestions" />
+        <option value="$PROJECT_DIR$/src/application/resources/fxml/start.fxml" />
+        <option value="$PROJECT_DIR$/src/application/resources/fxml/rankings.fxml" />
+        <option value="$PROJECT_DIR$/src/application/classes/Score.java" />
+        <option value="$PROJECT_DIR$/src/application/classes/Rankings.java" />
+        <option value="$PROJECT_DIR$/src/application/classes/Player.java" />
+        <option value="$PROJECT_DIR$/src/application/Main.java" />
+        <option value="$PROJECT_DIR$/src/application/classes/cities/GameManager.java" />
+        <option value="$PROJECT_DIR$/src/application/resources/fxml/menu.fxml" />
+        <option value="$PROJECT_DIR$/src/application/classes/Values.java" />
+        <option value="$PROJECT_DIR$/src/application/classes/Scores.java" />
+        <option value="$PROJECT_DIR$/src/application/classes/Question.java" />
+        <option value="$PROJECT_DIR$/src/application/classes/Utils.java" />
+        <option value="$PROJECT_DIR$/src/application/classes/GameManager.java" />
+        <option value="$PROJECT_DIR$/src/application/controllers/MenuController.java" />
         <option value="$PROJECT_DIR$/src/application/controllers/QuestionsController.java" />
-        <option value="$PROJECT_DIR$/src/application/resources/questions/varnaQuestions" />
+        <option value="$PROJECT_DIR$/src/application/controllers/RankingsController.java" />
+        <option value="$PROJECT_DIR$/src/application/controllers/CitiesController.java" />
+        <option value="$PROJECT_DIR$/rankings.txt" />
+        <option value="$PROJECT_DIR$/src/application/resources/questions/burgasQuestions" />
+        <option value="$PROJECT_DIR$/src/application/resources/questions/bsQuestions.txt" />
+        <option value="$PROJECT_DIR$/src/application/resources/questions/velikoturnovoQuestions" />
+        <option value="$PROJECT_DIR$/src/application/resources/questions/vtQuestions.txt" />
+        <option value="$PROJECT_DIR$/src/application/resources/questions/sofiaQuestions.txt" />
+        <option value="$PROJECT_DIR$/src/application/resources/questions/sfQuestions.txt" />
       </list>
     </option>
   </component>
@@ -284,8 +333,8 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-12" />
-    <option name="y" value="66" />
-    <option name="width" value="3854" />
+    <option name="y" value="54" />
+    <option name="width" value="3864" />
     <option name="height" value="2118" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -305,7 +354,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -432,9 +480,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavFXGameBulgariaQuiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavFXGameBulgariaQuiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavFXGameBulgariaQuiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavFXGameBulgariaQuiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -453,25 +550,138 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\JavFXGameBulgariaQuiz\src\application\resources\fxml" />
       <recent name="C:\Users\Administrator\Desktop\JavFXGameBulgariaQuiz\src\application\resources\questions" />
       <recent name="C:\Users\Administrator\Desktop\JavFXGameBulgariaQuiz\src\application\resources\images" />
       <recent name="D:\TestTest\src\application" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="application.controllers" />
       <recent name="application.classes.cities" />
       <recent name="application" />
       <recent name="application.engine.utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\JavFXGameBulgariaQuiz\src\application\resources\images" />
       <recent name="C:\Users\Administrator\Desktop\JavFXGameBulgariaQuiz\src\application\resources\fxml" />
       <recent name="C:\Users\Administrator\Desktop\JavFXGameBulgariaQuiz\src\application" />
       <recent name="C:\JavFXGameBulgariaQuiz\src\application\engine\db" />
       <recent name="C:\JavFXGameBulgariaQuiz\src\application" />
-      <recent name="C:\JavFXGameBulgariaQuiz" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/application/resources/questions/burgasQuestions</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="MenuController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -811,6 +1021,9 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -867,6 +1080,19 @@
       <scripts />
       <node-interpreter value="project" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
@@ -935,7 +1161,8 @@
       <workItem from="1486330414969" duration="268000" />
       <workItem from="1486415020661" duration="22223000" />
       <workItem from="1486472093002" duration="188000" />
-      <workItem from="1486475068415" duration="151000" />
+      <workItem from="1486475068415" duration="10340000" />
+      <workItem from="1486539637865" duration="12630000" />
     </task>
     <task id="LOCAL-00001" summary="Added logic to change Questions - package aplication.classes.cities.&#10;Added Ranking, Score Player classes, not implemented. TO DO Logic for displaying scores, keeping scores, scores.fxml, ScoresController.&#10;Added BootController with boot.fxml for startscreen. TO DO Team Rift Logo displayed for 3-4 seconds, then start screen.&#10;Added mordorQuestions. Limited Questions to 8 cities - Blagoevgrad, Burgas, Sofia, Varna, Pleven, Plovdiv, Ruse and Veliko Turnovo. If anyone wants other city, should replace one of above, but first notify others to avoid breaking logic in application.classes.cities;&#10;Moved all FXML to resources/fxml. path fixed.&#10;Created rankings.txt to keep scores.&#10;Added Values.java file to keep all Strings, Dimensions and any other static values.&#10;LAYOUT AND DESIGN&#10;&#10;TO DO&#10;Find good background image.&#10;&#10;CHANGES&#10;Changed bulgaria map image.&#10;Changed start.fxml buttons positon.&#10;Changed cities.fxml layout.&#10;Layout and design changes.&#10;More layout and design changes.&#10;">
       <created>1486467603680</created>
@@ -951,39 +1178,56 @@
       <option name="project" value="LOCAL" />
       <updated>1486475109540</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixed forgotten classes.">
+      <created>1486475247703</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1486475247703</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46956000" />
+    <option name="totallyTimeSpent" value="69775000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-12" y="66" width="3854" height="2118" extended-state="0" />
-    <editor active="true" />
+    <frame x="-12" y="54" width="3864" height="2118" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850778" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32793733" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35991606" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32948583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35822454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21357702" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22083333" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32845953" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -994,7 +1238,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916015" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1007,10 +1250,13 @@
     <MESSAGE value="MenuController - sample&#10;CitiesController&#10;start.fxml - sample&#10;cities.fxml&#10;add resources folder&#10;add controllers folder" />
     <MESSAGE value="Added logic to change Questions - package aplication.classes.cities.&#10;Added Ranking, Score Player classes, not implemented. TO DO Logic for displaying scores, keeping scores, scores.fxml, ScoresController.&#10;Added BootController with boot.fxml for startscreen. TO DO Team Rift Logo displayed for 3-4 seconds, then start screen.&#10;Added mordorQuestions. Limited Questions to 8 cities - Blagoevgrad, Burgas, Sofia, Varna, Pleven, Plovdiv, Ruse and Veliko Turnovo. If anyone wants other city, should replace one of above, but first notify others to avoid breaking logic in application.classes.cities;&#10;Moved all FXML to resources/fxml. path fixed.&#10;Created rankings.txt to keep scores.&#10;Added Values.java file to keep all Strings, Dimensions and any other static values.&#10;LAYOUT AND DESIGN&#10;&#10;TO DO&#10;Find good background image.&#10;&#10;CHANGES&#10;Changed bulgaria map image.&#10;Changed start.fxml buttons positon.&#10;Changed cities.fxml layout.&#10;Layout and design changes.&#10;More layout and design changes.&#10;" />
     <MESSAGE value="Merged." />
-    <option name="LAST_COMMIT_MESSAGE" value="Merged." />
+    <MESSAGE value="Fixed forgotten classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed forgotten classes." />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1018,232 +1264,352 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/filename.txt" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/ArrayList.java">
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/rsQuestions" />
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/vnQuestions" />
+    <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="427" column="13" lean-forward="false" selection-start-line="427" selection-start-column="13" selection-end-line="427" selection-end-column="13" />
+        <state relative-caret-position="1008">
+          <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rankings.txt" />
-    <entry file="file://$PROJECT_DIR$/src/application/engine/db/records.txt" />
-    <entry file="file://$PROJECT_DIR$/src/application/engine/quiz/Session.java" />
-    <entry file="file://$PROJECT_DIR$/mordorQuestions.txt" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/lang/String.java">
+    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/VelikoTurnovo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2938" column="25" lean-forward="false" selection-start-line="2938" selection-start-column="25" selection-end-line="2938" selection-end-column="25" />
+        <state relative-caret-position="793">
+          <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding>
+            <element signature="e#155#156#0" expanded="false" />
+            <element signature="e#209#210#0" expanded="false" />
+            <element signature="e#255#256#0" expanded="false" />
+            <element signature="e#297#298#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/engine/quiz/Player.java" />
-    <entry file="file://$PROJECT_DIR$/src/application/engine/Exceptions.java" />
-    <entry file="file://$PROJECT_DIR$/src/application/engine/utils/Errors.java" />
-    <entry file="file://$PROJECT_DIR$/src/application/engine/quiz/Score.java" />
-    <entry file="file://$PROJECT_DIR$/src/application/engine/quiz/Rankings.java" />
-    <entry file="file://$PROJECT_DIR$/src/application/engine/utils/Dimensions.java" />
-    <entry file="file://$PROJECT_DIR$/src/application/engine/quiz/Question.java" />
-    <entry file="file://$PROJECT_DIR$/src/application/engine/utils/Strings.java" />
-    <entry file="file://$PROJECT_DIR$/src/application/engine/controllers/GameController.java" />
-    <entry file="file://$PROJECT_DIR$/src/application/classes/Score.java" />
-    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/quizWindow.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Burgas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#232#233#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Mordor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding>
+            <element signature="e#247#248#0" expanded="false" />
+            <element signature="e#291#292#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Pleven.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Sofia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding>
+            <element signature="e#247#248#0" expanded="false" />
+            <element signature="e#289#290#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/mordorQuestions" />
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/varnaQuestions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="2" column="88" lean-forward="false" selection-start-line="2" selection-start-column="88" selection-end-line="2" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/bsQuestions" />
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/ruseQuestions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/images/bulgaria1.png">
+      <provider selected="true" editor-type-id="images">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/mordorQuestions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="88" lean-forward="true" selection-start-line="2" selection-start-column="88" selection-end-line="2" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/plovdivQuestions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="88" lean-forward="true" selection-start-line="2" selection-start-column="88" selection-end-line="2" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/images/background.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/quizWindow.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="25" lean-forward="false" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/images/bulgaria1.jpg" />
-    <entry file="file://$PROJECT_DIR$/src/application/resources/images/bulgaria2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rankings.txt" />
-    <entry file="file://$PROJECT_DIR$/src/application/classes/Rankings.java" />
-    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/boot.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/start.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/rankings.fxml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="-1816">
+          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/classes/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/controllers/BootController.java" />
-    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Burgas.java">
+    <entry file="file://$PROJECT_DIR$/src/application/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="295">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/boot.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/controllers/BootController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="1304" column="18" lean-forward="false" selection-start-line="1304" selection-start-column="18" selection-end-line="1304" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Blagoevgrad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="e#111#112#0" expanded="true" />
-            <element signature="e#165#166#0" expanded="true" />
-            <element signature="e#196#197#0" expanded="true" />
-            <element signature="e#240#241#0" expanded="true" />
+            <element signature="e#295#296#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="110" column="19" lean-forward="false" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/classes/cities/City.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="58">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/CityInterface.java">
+    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Plovdiv.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Pleven.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="319">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="e#112#113#0" expanded="true" />
-            <element signature="e#166#167#0" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
-            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#248#249#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Ruse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="451">
+          <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
           <folding>
-            <element signature="e#110#111#0" expanded="true" />
-            <element signature="e#139#140#0" expanded="true" />
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#227#228#0" expanded="true" />
+            <element signature="e#146#147#0" expanded="false" />
+            <element signature="e#175#176#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Sofia.java">
+    <entry file="file://$PROJECT_DIR$/src/application/classes/Values.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#111#112#0" expanded="true" />
-            <element signature="e#165#166#0" expanded="true" />
-            <element signature="e#211#212#0" expanded="true" />
-            <element signature="e#254#255#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Varna.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-          <folding>
-            <element signature="e#111#112#0" expanded="true" />
-            <element signature="e#165#166#0" expanded="true" />
-            <element signature="e#211#212#0" expanded="true" />
-            <element signature="e#254#255#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/VelikoTurnovo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-          <folding>
-            <element signature="e#168#169#0" expanded="true" />
-            <element signature="e#222#223#0" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="15" column="60" lean-forward="false" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
+        <state relative-caret-position="391">
+          <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/classes/Score.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/CityInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/classes/Scores.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2679">
+          <caret line="57" column="41" lean-forward="true" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/classes/Question.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="78" column="22" lean-forward="false" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
+        <state relative-caret-position="825">
+          <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/classes/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="11" column="7" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="11" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README">
+    <entry file="file://$PROJECT_DIR$/src/application/controllers/MenuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        <state relative-caret-position="1008">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initBackground#0;class#MenuController#0" expanded="false" />
+            <element signature="method#initStartButton#0;class#MenuController#0" expanded="false" />
+            <element signature="method#initialize#0;class#MenuController#0" expanded="false" />
+            <element signature="method#exitGame#0;class#MenuController#0" expanded="false" />
+            <element signature="method#showScores#0;class#MenuController#0" expanded="false" />
+            <element signature="method#startGame#0;class#MenuController#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Blagoevgrad.java">
+    <entry file="file://$PROJECT_DIR$/src/application/classes/GameManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        <state relative-caret-position="260">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/Values.java" />
-    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/cities.fxml">
+    <entry file="file://$PROJECT_DIR$/src/application/controllers/QuestionsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/controllers/RankingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1235">
+          <caret line="74" column="68" lean-forward="false" selection-start-line="74" selection-start-column="68" selection-end-line="74" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/controllers/CitiesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/menu.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/cities.fxml">
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="343">
           <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/CityManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding>
-            <element signature="e#147#148#0" expanded="true" />
-            <element signature="e#181#182#0" expanded="true" />
-          </folding>
-        </state>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Plovdiv.java">
+    <entry file="file://$PROJECT_DIR$/rankings.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Mordor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="53" lean-forward="false" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/mordorQuestions">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="88" lean-forward="false" selection-start-line="2" selection-start-column="88" selection-end-line="2" selection-end-column="88" />
+        <state relative-caret-position="43">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1256,18 +1622,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/velikoturnovoQuestions">
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/burgasQuestions.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/plovdivQuestions">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="58">
+          <caret line="2" column="120" lean-forward="false" selection-start-line="2" selection-start-column="120" selection-end-line="2" selection-end-column="120" />
           <folding />
         </state>
       </provider>
@@ -1280,39 +1638,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/varnaQuestions">
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/blagoevgradQuestions.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="88" lean-forward="false" selection-start-line="2" selection-start-column="88" selection-end-line="2" selection-end-column="88" />
+        <state relative-caret-position="116">
+          <caret line="4" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="97" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/controllers/QuestionsController.java">
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/blagoevgradQuestions.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="6" selection-end-column="34" />
+        <state relative-caret-position="145">
+          <caret line="5" column="59" lean-forward="false" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/controllers/MenuController.java">
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/velikoturnovoQuestions">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="59" lean-forward="false" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/controllers/CitiesController.java">
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/sofiaQuestions.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="965">
-          <caret line="63" column="32" lean-forward="false" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/velikoturnovoQuestions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="3" column="115" lean-forward="false" selection-start-line="3" selection-start-column="115" selection-end-line="3" selection-end-column="115" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/sofiaQuestions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="3" column="82" lean-forward="true" selection-start-line="3" selection-start-column="82" selection-end-line="3" selection-end-column="82" />
+          <folding />
         </state>
       </provider>
     </entry>
