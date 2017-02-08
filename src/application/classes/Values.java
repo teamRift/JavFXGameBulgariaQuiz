@@ -21,7 +21,7 @@ public class Values
     public static double SIX_COLS = SCREEN_HEIGHT / 2;
 
     public static short PAUSE_VALUE = 1000;
-
+    public static String LABEL_BACK_BTN = "Back";
     public static String LABEL_START_BTN = "New game";
     public static String LABEL_EXIT_BTN = "Exit";
     public static String LABEL_SCORES_BTN = "Leaderboard";

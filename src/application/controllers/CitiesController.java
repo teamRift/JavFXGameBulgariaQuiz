@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -17,6 +18,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class CitiesController {
+    @FXML
+    Button backButton;
     @FXML
     BorderPane mainPane;
     @FXML
@@ -100,5 +103,12 @@ public class CitiesController {
         mainPane.setPrefHeight(Values.SCREEN_HEIGHT);
         centerPane.setPrefWidth(Values.SCREEN_WIDTH - (3  * (Values.SCREEN_WIDTH / 6)));
         centerPane.setPrefHeight(Values.SCREEN_HEIGHT - (3  * (Values.SCREEN_HEIGHT / 6)));
+    }
+
+    public void OnBack(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
+        Stage stage = (Stage)backButton.getScene().getWindow();
+        stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
+        stage.show();
     }
 }

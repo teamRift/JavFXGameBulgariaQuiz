@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.BoxBlur?>
@@ -12,7 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="mainPane" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.CitiesController">
+<BorderPane fx:id="mainPane" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.CitiesController">
    <center>
       <GridPane fx:id="centerPane" BorderPane.alignment="CENTER">
          <columnConstraints>
@@ -115,7 +116,7 @@
       </GridPane>
    </bottom>
    <left>
-      <GridPane fx:id="leftPane" BorderPane.alignment="CENTER">
+      <GridPane fx:id="leftPane" prefHeight="586.0" prefWidth="95.0" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
@@ -123,7 +124,13 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Pane prefHeight="200.0" prefWidth="200.0" />
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="backButton" layoutX="50.0" layoutY="537.0" mnemonicParsing="false" onAction="#OnBack" text="&lt;&lt;Back">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+               </children></Pane>
          </children>
       </GridPane>
    </left>

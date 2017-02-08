@@ -2,4 +2,5 @@ Which river runs through blagoevgrad ? ; Struma ; Mesta ; Dunav ; Maritsa
 How municipalities have blagoevgrad ? ; 14; 7; 10; 20
 What is the population of Blagoevgrad ? ; 69610 ; 22530 ; 76500 ; 50555
 Which of these universities are located in Blagoevgrad ? ; South-West University "Neofit Rilski" ; New Bulgarian University ; University of Forestry ; National Academy of Arts
-Who district of Blagoevgrad has the most inhabitants ? ; Elenovo ; Strumsko ; Gramada ; Alen Mak 
+Who district of Blagoevgrad has the most inhabitants ? ; Elenovo ; Strumsko ; Gramada ; Alen Mak
+Who is the best DJ in Titan? ; Lazar ; Morandi ; Niki Genov ; Ali da mi pusnesh trap da densq
