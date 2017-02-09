@@ -7,3 +7,5 @@ Yakoruda ; TITAN ; 10000
 VelikoTurnovo ; username ; 10
 Varna ; Mariyan ; 20
 VelikoTurnovo ; username ; 0
+Varna ; Mariyan ; 0
+Varna ; username ; 30
