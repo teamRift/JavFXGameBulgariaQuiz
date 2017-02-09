@@ -134,4 +134,21 @@ public class Question {
         questionCount += 1;
         questionIndex += 1;
     }
+    public ArrayList jokerBtn(ArrayList<Button> btn){
+
+        ArrayList<Button> list = new ArrayList<>();
+
+        ArrayList<String> str1 = new ArrayList<>();
+
+        for (Button button : btn) {
+
+            String str = button.getText();
+
+            if (!str.equals(correctAnswer) && !str1.contains(str)){
+                list.add(button);
+                str1.add(str);
+            }
+        }
+        return list;
+    }
 }

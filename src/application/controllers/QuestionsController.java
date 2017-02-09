@@ -17,6 +17,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -191,5 +192,29 @@ public class QuestionsController {
         questionButtons.setPrefHeight(Values.TWO_ROWS);
         questionButtons.setMaxWidth(Values.SIX_COLS);
         questionButtons.setMaxHeight(Values.TWO_ROWS);
+    }
+
+    public void initHintButton(ActionEvent actionEvent) {
+        Random rn = new Random();
+
+        ArrayList<Button> buttons = new ArrayList<>();
+        buttons.add(firstButton);
+        buttons.add(secondButton);
+        buttons.add(thirdButton);
+        buttons.add(firstButton);
+
+        Question a = questions.get(Question.getQuestionIndex());
+        buttons = a.jokerBtn(buttons);
+
+
+        for (int i = 0; i < 2; i++) {
+            int index = rn.nextInt(buttons.size());
+            buttons.get(index).setDisable(true);
+            buttons.remove(index);
+        }
+
+
+        hintOne.setDisable(true);
+
     }
 }
