@@ -23,6 +23,9 @@ import javafx.util.Duration;
 import java.io.IOException;
 import java.util.List;
 
+import static application.controllers.BootController.gameManager;
+
+
 public class RankingsController {
     @FXML
     public Label rankingsTitle;
@@ -65,40 +68,28 @@ public class RankingsController {
     }
 
     private void loadScores() {
-        List<Score> scores = null;
-        try {
-            scores = Scores.load();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        int length = scores.size();
-        if (length>5){
-            length = 5;
-        }
-        scores = scores.subList(0,length);
-        for (Score score : scores) {
-            System.out.println(score.prepareSave());
-        }
+        List<Score> mScores = gameManager.getScores();
         rankingsTitle.setText(Values.LABEL_RANKINGS_TOP_5);
 
         //if less than 5 entries in ranks will throw array lenght error
         //to do fix
+        for (int i = 5 - mScores.size(); i > 0; i--) {
+            mScores.set(mScores.size(), new Score("---","---",0));
+        }
 
-        rankingsFirst.setText(scores.get(0).prepareSave());
-        rankingsSecond.setText(scores.get(1).prepareSave());
-        rankingsThird.setText(scores.get(2).prepareSave());
-        rankingsFourth.setText(scores.get(3).prepareSave());
-        rankingsFifth.setText(scores.get(4).prepareSave());
+
+        rankingsFirst.setText(mScores.get(0).prepareSave());
+        rankingsSecond.setText(mScores.get(1).prepareSave());
+        rankingsThird.setText(mScores.get(2).prepareSave());
+        rankingsFourth.setText(mScores.get(3).prepareSave());
+        rankingsFifth.setText(mScores.get(4).prepareSave());
 
         //Поле с интересна информация
         //В последствие може да се направи файл ако някой иска да се
         // занимае от който да се четат факти и да се зареждат тук
         // идеята е да го има на всеки екран освен boot.fxml
-        // винаги може да се махне
         // Фронтенд да се пипне на това цялото view
 
-        hintLabel.setText("Знаете ли че на дъното на Черно море лежат останки от град, изчезнал преди 10 хиляди години?");
-        hintLabel.setTextFill(Paint.valueOf("#2dad2e"));
-        hintLabel.setStyle("-fx-background-color: #000000;");
+        gameManager.setFactsLabel(hintLabel);
     }
 }

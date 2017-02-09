@@ -9,3 +9,9 @@ Varna ; Mariyan ; 20
 VelikoTurnovo ; username ; 0
 Varna ; Mariyan ; 0
 Varna ; username ; 30
+VelikoTurnovo ; username ; 30
+Ruse ; username ; 10
+VelikoTurnovo ; username ; 20
+VelikoTurnovo ; username ; 10
+VelikoTurnovo ; username ; 30
+Pleven ; RIFT ; 10

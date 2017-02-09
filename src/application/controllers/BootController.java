@@ -1,5 +1,6 @@
 package application.controllers;
 
+import application.classes.GameManager;
 import application.classes.Values;
 import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
@@ -14,11 +15,15 @@ import java.io.IOException;
 
 public class BootController {
 
+    public static GameManager gameManager;
+
     @FXML
     Label textLabel;
 
     @FXML
     public void initialize() throws IOException {
+        gameManager = new GameManager();
+
         PauseTransition delay = new PauseTransition(Duration.seconds(2));
         delay.setOnFinished( event -> startGame() );
         delay.play();

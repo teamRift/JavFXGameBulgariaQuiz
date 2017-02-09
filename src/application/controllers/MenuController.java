@@ -12,12 +12,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-import static application.controllers.CitiesController.gameManager;
+import static application.controllers.BootController.gameManager;
+
 
 public class MenuController {
 
@@ -118,5 +120,8 @@ public class MenuController {
         stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
         stage.show();
     }
-
+    private void initHint() {
+//        hintLabel.setTextFill(Paint.valueOf("#2dad2e"));
+//        hintLabel.setStyle("-fx-background-color: #000000;");
+    }
 }

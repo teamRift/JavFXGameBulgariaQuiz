@@ -11,10 +11,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class
-Scores {
-    //TODO private String cityName;
+import static application.controllers.BootController.gameManager;
+
+public class Scores {
+
     private List<Score> leaderboard;
+
     private static File scores = new File(Values.PATH_RANKINGS);
 
     public Scores(){
@@ -23,6 +25,7 @@ Scores {
         } catch (Exception ex){
         }
     }
+
     private static Scores create(){
         try (Writer writer = new BufferedWriter(new OutputStreamWriter(
                 new FileOutputStream(Values.PATH_RANKINGS), "utf-8"))) {
@@ -38,8 +41,10 @@ Scores {
         }
         return new Scores();
     }
+
     public static void save(Score score) {
         //TODO if user exist replace old entry
+
         try(FileWriter fw = new FileWriter(Values.PATH_RANKINGS, true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter out = new PrintWriter(bw)) {
@@ -49,6 +54,7 @@ Scores {
             e.printStackTrace();
         }
     }
+
     public static ArrayList<Score> load() throws Exception {
         ArrayList<Score> scores = new ArrayList<>();
 
@@ -81,20 +87,37 @@ Scores {
         });
         return scores;
     }
-    public void findAndLoad() throws Exception {
+
+    public static void findAndLoad(String userName) throws Exception {
+
         ArrayList<Score> scores = new ArrayList<>();
+
         try {
             Path filePath = Paths.get("./" + Values.PATH_RANKINGS);
             Files.lines(filePath).forEach(line -> {
                 if (line.isEmpty()) {
                     return;
                 }
+
                 String[] tokens = line.replaceAll(" ","").split(";");
                 //TODO implement loading user points
+                if (tokens.length < 2){
+                    System.out.println(line);
+                } else {
+                    System.out.println(line);
+
+                    if (tokens[1].equalsIgnoreCase(userName)){
+                        System.out.println(tokens[1]);
+                        gameManager.setUserMaxPoints(Integer.parseInt(tokens[2]));
+                    }
+                }
+
             });
         } catch (IOException e) {
+
         }
     }
+
     public List<Score> getScores(){
         return leaderboard;
     }

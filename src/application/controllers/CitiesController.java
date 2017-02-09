@@ -22,6 +22,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static application.controllers.BootController.gameManager;
+
 public class CitiesController {
     @FXML
     Button backButton;
@@ -60,12 +62,10 @@ public class CitiesController {
     @FXML
     Label hintLabel;
 
-    public static GameManager gameManager;
 
     @FXML
     public void initialize() throws IOException {
         setPanes();
-        initCityManager();
         initHint();
         gameManager.setFactsLabel(hintLabel);
     }
@@ -124,9 +124,4 @@ public class CitiesController {
         hintLabel.setTextFill(Paint.valueOf("#2dad2e"));
         hintLabel.setStyle("-fx-background-color: #000000;");
     }
-
-    private void initCityManager() {
-        gameManager = new GameManager();
-    }
-
 }

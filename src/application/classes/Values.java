@@ -4,8 +4,26 @@ import javafx.stage.Screen;
 
 public class Values
 {
+    // IMAGE FILES
     public static String IMG_BG_MAP_FLAG = "application/resources/images/bulgaria1.png";
     public static String IMG_BACKGROUND = "application/resources/images/background.png";
+
+    //FXML FILES
+    public static String PATH_CITIES = "../resources/fxml/cities.fxml";
+
+    //QUESTION FILES
+    public static String QUESTIONS_SF = "sofiaQuestions.txt";
+    public static String QUESTIONS_BS = "burgasQuestions.txt";
+    public static String QUESTIONS_BLG = "blagoevgradQuestions.txt";
+    public static String QUESTIONS_RS = "ruseQuestions.txt";
+    public static String QUESTIONS_VN = "varnaQuestions.txt";
+    public static String QUESTIONS_PLD = "plovdivQuestions.txt";
+    public static String QUESTIONS_PLN = "plnQuestions.txt";
+    public static String QUESTIONS_VT = "velikoturnovoQuestions.txt";
+    public static String QUESTIONS_MOCK = "mordorQuestions.txt";
+
+    //DB PATH
+    public static String PATH_RANKINGS = "rankings.txt";
 
     //This allows you to create your design regardless of SCREEN SIZE
     public static double SCREEN_WIDTH = Screen.getPrimary().getBounds().getWidth() - (Screen.getPrimary().getBounds().getWidth() / 4); //get the width of the display
@@ -34,16 +52,6 @@ public class Values
     public static String LABEL_SCORES_BTN = "Leaderboard";
     public static String LABEL_RANKINGS_TOP_5 = "Top 5 Players";
 
-    public static String QUESTIONS_SF = "sofiaQuestions.txt";
-    public static String QUESTIONS_BS = "burgasQuestions.txt";
-    public static String QUESTIONS_BLG = "blagoevgradQuestions.txt";
-    public static String QUESTIONS_RS = "ruseQuestions.txt";
-    public static String QUESTIONS_VN = "varnaQuestions.txt";
-    public static String QUESTIONS_PLD = "plovdivQuestions.txt";
-    public static String QUESTIONS_PLN = "plnQuestions.txt";
-    public static String QUESTIONS_VT = "velikoturnovoQuestions.txt";
-    public static String QUESTIONS_MOCK = "mordorQuestions.txt";
-    public static String PATH_RANKINGS = "rankings.txt";
     public static String FILE_ERROR_ALERT_TITLE = "File error.";
     public static String FILE_ERROR_RANKINGS = "Could not load records file.";
     public static String FILE_ERROR_QUESTIONS = "Could not load questions file.";
