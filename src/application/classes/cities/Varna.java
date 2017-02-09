@@ -1,6 +1,8 @@
 package application.classes.cities;
 
 
+import application.classes.Values;
+
 public class Varna extends City{
 
     @Override
@@ -10,6 +12,6 @@ public class Varna extends City{
 
     @Override
     public String fileName() {
-        return "varnaQuestions.txt";
+        return Values.QUESTIONS_VN;
     }
 }

@@ -11,9 +11,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -23,38 +22,33 @@ import static application.controllers.CitiesController.gameManager;
 public class MenuController {
 
     @FXML
-    public Button exitBtn;
+    Button exitBtn;
     @FXML
-    public Button startBtn;
+    Button startBtn;
     @FXML
-    public Button scoresBtn;
+    Button scoresBtn;
     @FXML
-    public AnchorPane mainPane;
-
+    BorderPane mainPane;
     @FXML
-    public TextField inputUserName;
+    GridPane topPane;
+    @FXML
+    GridPane leftPane;
+    @FXML
+    GridPane rightPane;
+    @FXML
+    GridPane bottomPane;
+    @FXML
+    GridPane centerPane;
+    @FXML
+    TextField inputUserName;
     @FXML
     VBox buttonsGroup;
     @FXML
-    public GridPane topPane;
-    @FXML
-    ImageView background;
-    @FXML
-    private void initBackground(){
-        background.setImage(new Image("application/resources/images/bulgaria1.png",
-                Values.SCREEN_WIDTH- Values.ONE_COL,
-                Values.SCREEN_HEIGHT - Values.ONE_ROW,
-                true,
-                true));
-    }
+    ImageView mapImage;
 
     private void initButtons(){
-
         scoresBtn.setText(Values.LABEL_SCORES_BTN);
-        scoresBtn.setMaxWidth(Values.FOUR_COLS);
-        scoresBtn.setMinWidth(Values.FOUR_COLS);
-        scoresBtn.setPrefWidth(Values.FOUR_COLS);
-        scoresBtn.setMaxHeight(Values.ONE_ROW/2);
+        Utils.setSize(scoresBtn, Values.FOUR_COLS, Values.ONE_ROW);
         scoresBtn.setOnAction((ActionEvent actionEvent) -> {
             try {
                 showScores(actionEvent);
@@ -75,28 +69,34 @@ public class MenuController {
         });
 
         exitBtn.setText(Values.LABEL_EXIT_BTN);
-        exitBtn.setMaxWidth(Values.FOUR_COLS);
-        exitBtn.setMinWidth(Values.FOUR_COLS);
-        exitBtn.setPrefWidth(Values.FOUR_COLS);
-        exitBtn.setMaxHeight(Values.ONE_ROW/2);
+        Utils.setSize(exitBtn, Values.FOUR_COLS, Values.ONE_ROW);
         exitBtn.setOnAction(this::exitGame);
     }
 
-    // set dimmensions of start button and input field
+    // set dimmensions of start button and input field for username
     private void initStartButton(){
-        inputUserName.setMaxHeight(Values.ONE_ROW/1.3);
-        inputUserName.setMaxWidth(Values.THREE_COLS);
-        inputUserName.setMinWidth(Values.THREE_COLS);
-        exitBtn.setPrefWidth(Values.TWO_COLS);
-        startBtn.setMaxHeight(Values.ONE_ROW/2);
+        Font font = new Font(23);
+        inputUserName.setFont(font);
+        inputUserName.setMaxHeight(Values.ONE_ROW/1.35);
+        inputUserName.setMaxWidth(Values.TWO_COLS);
+        inputUserName.setMinWidth(Values.TWO_COLS);
+        Utils.setSize(startBtn, Values.TWO_COLS, Values.ONE_ROW);
+        startBtn.setPrefWidth(Values.TWO_COLS);
+        startBtn.setMaxHeight(Values.ONE_ROW);
         startBtn.setMaxWidth(Values.TWO_COLS);
-        exitBtn.setMinWidth(Values.TWO_COLS);
-        exitBtn.setPrefWidth(Values.TWO_COLS);
-
     }
 
+    private void setPanes(){
+        Utils.setSize(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
+        Utils.setSize(topPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
+        Utils.setSize(bottomPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
+        Utils.setSize(leftPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
+        Utils.setSize(rightPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
+        Utils.setSize(mapImage, Values.FOUR_COLS*2, Values.FOUR_ROWS-2);
+        Utils.setSize(centerPane, Values.SCREEN_WIDTH  - Values.FOUR_COLS, Values.SCREEN_HEIGHT- Values.FOUR_COLS);
+        Utils.setBackground(mainPane, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT);
+    }
     public void initialize(){
-        initBackground();
         initButtons();
     }
     @FXML

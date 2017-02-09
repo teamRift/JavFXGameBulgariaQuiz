@@ -1,6 +1,7 @@
 package application.controllers;
 
 import application.classes.GameManager;
+import application.classes.Utils;
 import application.classes.cities.*;
 import application.classes.Values;
 import javafx.event.ActionEvent;
@@ -10,9 +11,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -31,7 +36,11 @@ public class CitiesController {
     @FXML
     GridPane leftPane;
     @FXML
-    Pane centerPane;
+    GridPane centerPane;
+    @FXML
+    Pane mapPane;
+    @FXML
+    ImageView mapImg;
     @FXML
     Hyperlink varna;
     @FXML
@@ -48,6 +57,8 @@ public class CitiesController {
     Hyperlink pleven;
     @FXML
     Hyperlink turnovo;
+    @FXML
+    Label hintLabel;
 
     public static GameManager gameManager;
 
@@ -55,10 +66,8 @@ public class CitiesController {
     public void initialize() throws IOException {
         setPanes();
         initCityManager();
-    }
-
-    private static void initCityManager() {
-        gameManager = new GameManager();
+        initHint();
+        gameManager.setFactsLabel(hintLabel);
     }
 
     public void onCityQuestion(ActionEvent actionEvent) throws IOException {
@@ -71,6 +80,14 @@ public class CitiesController {
         stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
         stage.show();
     }
+
+    public void OnBack(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
+        Stage stage = (Stage)backButton.getScene().getWindow();
+        stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
+        stage.show();
+    }
+
     private void setCity(String city){
         if (city.equalsIgnoreCase("sofia")){
             gameManager.setCity(new Sofia());
@@ -92,23 +109,24 @@ public class CitiesController {
             gameManager.setCity(new Mordor());
         }
     }
+
     private void setPanes(){
-        topPane.setMinHeight(Values.SCREEN_HEIGHT/4);
-        topPane.setPrefHeight(Values.SCREEN_HEIGHT/4);
-        bottomPane.setMinHeight(Values.SCREEN_HEIGHT/4);
-        bottomPane.setPrefHeight(Values.SCREEN_HEIGHT/4);
-        leftPane.setPrefWidth(Values.SCREEN_WIDTH/7);
-        rightPane.setPrefWidth(Values.SCREEN_WIDTH/8);
-        mainPane.setPrefWidth(Values.SCREEN_WIDTH);
-        mainPane.setPrefHeight(Values.SCREEN_HEIGHT);
-        centerPane.setPrefWidth(Values.SCREEN_WIDTH - (3  * (Values.SCREEN_WIDTH / 6)));
-        centerPane.setPrefHeight(Values.SCREEN_HEIGHT - (3  * (Values.SCREEN_HEIGHT / 6)));
+        Utils.setSize(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
+        Utils.setSize(topPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
+        Utils.setSize(bottomPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
+        Utils.setSize(leftPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
+        Utils.setSize(rightPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
+        Utils.setSize(centerPane, Values.SCREEN_WIDTH  - Values.FOUR_COLS, Values.SCREEN_HEIGHT- Values.FOUR_COLS);
+        Utils.setBackground(mainPane, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT);
     }
 
-    public void OnBack(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
-        Stage stage = (Stage)backButton.getScene().getWindow();
-        stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
-        stage.show();
+    private void initHint() {
+        hintLabel.setTextFill(Paint.valueOf("#2dad2e"));
+        hintLabel.setStyle("-fx-background-color: #000000;");
     }
+
+    private void initCityManager() {
+        gameManager = new GameManager();
+    }
+
 }

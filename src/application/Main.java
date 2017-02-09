@@ -15,7 +15,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         //replace with boot.fxml for bootscreen
         // replace with menu.fxml for startscreen
-        Parent root = FXMLLoader.load(getClass().getResource("resources/fxml/menu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("resources/fxml/boot.fxml"));
        // primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
 
         primaryStage.setResizable(false);
@@ -24,6 +24,7 @@ public class Main extends Application {
             Platform.exit();
             System.exit(0);
         }));
+
         primaryStage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
         primaryStage.show();
     }

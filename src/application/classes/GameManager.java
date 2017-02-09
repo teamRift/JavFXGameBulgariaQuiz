@@ -2,6 +2,7 @@ package application.classes;
 
 import application.classes.cities.City;
 import application.classes.cities.Mordor;
+import javafx.scene.control.Label;
 
 public class GameManager {
     private String currentUser;
@@ -37,5 +38,8 @@ public class GameManager {
         // TODO
         // if user exist load it
 
+    }
+    public void setFactsLabel(Label label){
+        label.setText("Знаете ли че на дъното на Черно море, лежат останки от цивилизация изчезнала преди 10 хиляди години?");
     }
 }

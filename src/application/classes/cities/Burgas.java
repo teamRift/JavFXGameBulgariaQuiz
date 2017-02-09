@@ -9,6 +9,6 @@ public class Burgas extends City{
         return this.getClass().getSimpleName();
     }
     public String fileName() {
-        return Values.QUESTIONS_BLG;
+        return Values.QUESTIONS_BS;
     }
 }

@@ -11,6 +11,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -18,9 +22,42 @@ import java.util.TimerTask;
 
 
 public class QuestionsController {
+    @FXML
+    Label questionNumLabel;
+    @FXML
+    Label questionLabel;
+    @FXML
+    Label scoreLabel;
+    @FXML
+    Label cityName;
+    @FXML
+    Label userName;
+    @FXML
+    Label maxScore;
+    @FXML
+    Label maxScoreUser;
+    @FXML
+    Label hintLabel;
 
     @FXML
-    private Label questionLabel;
+    ImageView background;
+    @FXML
+    BorderPane mainPane;
+
+    @FXML
+    GridPane topPane;
+    @FXML
+    GridPane leftPane;
+    @FXML
+    GridPane bottomPane;
+    @FXML
+    GridPane rightPane;
+    @FXML
+    GridPane questionButtons;
+    @FXML
+    GridPane centerPane;
+    @FXML
+    Button hintOne;
     @FXML
     public Button firstButton;
     @FXML
@@ -29,10 +66,7 @@ public class QuestionsController {
     public Button thirdButton;
     @FXML
     public Button fourthButton;
-    @FXML
-    public Label questionNumLabel;
-    @FXML
-    private Label scoreLabel;
+
 
     static ArrayList<Question> questions;
     static int percent;
@@ -40,6 +74,10 @@ public class QuestionsController {
 
     @FXML
     public void initialize() {
+        setBackground();
+        setPanes();
+        questionButtons.setMinWidth(Values.SIX_COLS);
+        questionButtons.setMinHeight(Values.TWO_ROWS);
         questions = Question.loadQuestions(CitiesController.gameManager.getFileName());
         Question.setButtons(firstButton, secondButton, thirdButton, fourthButton);
         questions.get(Question.getQuestionIndex()).displayQuestion(questionLabel, questionNumLabel);
@@ -77,7 +115,6 @@ public class QuestionsController {
         }, pauseValue);
     }
 
-
     public static void finished(int score, int questionsCorrect) {
 
         if (questionsCorrect == 0) {
@@ -95,8 +132,64 @@ public class QuestionsController {
 
         finish.showAndWait();
 
-
         Platform.exit();
         System.exit(0);
+    }
+
+    private void setBackground(){
+        background.setFitHeight(Values.SCREEN_HEIGHT);
+        background.setFitWidth(Values.SCREEN_WIDTH);
+        background.setImage(new Image(Values.IMG_BACKGROUND, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT,false,false));
+    }
+    private void setPanes(){
+
+        mainPane.setMinWidth(Values.SCREEN_WIDTH);
+        mainPane.setMinHeight(Values.SCREEN_HEIGHT);
+        mainPane.setPrefWidth(Values.SCREEN_WIDTH);
+        mainPane.setPrefHeight(Values.SCREEN_HEIGHT);
+        mainPane.setMaxWidth(Values.SCREEN_WIDTH);
+        mainPane.setMaxHeight(Values.SCREEN_HEIGHT);
+
+        topPane.setMinWidth(Values.SCREEN_WIDTH);
+        topPane.setMinHeight(Values.TWO_ROWS);
+        topPane.setPrefWidth(Values.SCREEN_WIDTH);
+        topPane.setPrefHeight(Values.TWO_ROWS);
+        topPane.setMaxWidth(Values.SCREEN_WIDTH);
+        topPane.setMaxHeight(Values.TWO_ROWS);
+
+        bottomPane.setMinWidth(Values.SCREEN_WIDTH);
+        bottomPane.setMinHeight(Values.ONE_ROW);
+        bottomPane.setPrefWidth(Values.SCREEN_WIDTH);
+        bottomPane.setPrefHeight(Values.ONE_ROW);
+        bottomPane.setMaxWidth(Values.SCREEN_WIDTH);
+        bottomPane.setMaxHeight(Values.ONE_ROW);
+
+        leftPane.setMinWidth(Values.THREE_COLS);
+        leftPane.setMinHeight(Values.SIX_ROWS);
+        leftPane.setPrefWidth(Values.THREE_COLS);
+        leftPane.setPrefHeight(Values.SIX_ROWS);
+        leftPane.setMaxWidth(Values.THREE_COLS);
+        leftPane.setMaxHeight(Values.SIX_ROWS);
+
+        rightPane.setMinWidth(Values.THREE_COLS);
+        rightPane.setMinHeight(Values.SIX_ROWS);
+        rightPane.setPrefWidth(Values.THREE_COLS);
+        rightPane.setPrefHeight(Values.SIX_ROWS);
+        rightPane.setMaxWidth(Values.THREE_COLS);
+        rightPane.setMaxHeight(Values.SIX_ROWS);
+
+        centerPane.setMinWidth(Values.SIX_COLS);
+        centerPane.setMinHeight(Values.SIX_ROWS+    Values.THREE_ROWS);
+        centerPane.setPrefWidth(Values.SIX_COLS);
+        centerPane.setPrefHeight(Values.SCREEN_HEIGHT-Values.THREE_ROWS);
+        centerPane.setMaxWidth(Values.SIX_COLS);
+        centerPane.setMaxHeight(Values.SCREEN_HEIGHT-Values.THREE_ROWS);
+
+        questionButtons.setMinWidth(Values.SIX_COLS);
+        questionButtons.setMinHeight(Values.TWO_ROWS);
+        questionButtons.setPrefWidth(Values.SIX_COLS);
+        questionButtons.setPrefHeight(Values.TWO_ROWS);
+        questionButtons.setMaxWidth(Values.SIX_COLS);
+        questionButtons.setMaxHeight(Values.TWO_ROWS);
     }
 }

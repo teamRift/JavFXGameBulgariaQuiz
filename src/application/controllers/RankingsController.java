@@ -4,7 +4,12 @@ import application.classes.Score;
 import application.classes.Scores;
 import application.classes.Values;
 import javafx.animation.PauseTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -12,8 +17,10 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.util.List;
 
 public class RankingsController {
@@ -36,13 +43,25 @@ public class RankingsController {
     @FXML
     public ImageView background;
     @FXML
-    Label textLabel;
+    Button backBtn;
     @FXML
     public void initialize() throws Exception {
         loadScores();
         PauseTransition delay = new PauseTransition(Duration.seconds(2));
         delay.setOnFinished( event -> System.out.println("Started."));
         delay.play();
+        backBtn.setOnAction(this::OnBack);
+    }
+    public void OnBack(ActionEvent actionEvent) {
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Stage stage = (Stage)backBtn.getScene().getWindow();
+        stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
+        stage.show();
     }
 
     private void loadScores() {
@@ -80,5 +99,6 @@ public class RankingsController {
 
         hintLabel.setText("Знаете ли че на дъното на Черно море лежат останки от град, изчезнал преди 10 хиляди години?");
         hintLabel.setTextFill(Paint.valueOf("#2dad2e"));
-        hintLabel.setStyle("-fx-background-color: #000000;");    }
+        hintLabel.setStyle("-fx-background-color: #000000;");
+    }
 }
