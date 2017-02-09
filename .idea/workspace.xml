@@ -3,21 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rankings.txt" afterPath="$PROJECT_DIR$/rankings.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Main.java" afterPath="$PROJECT_DIR$/src/application/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/GameManager.java" afterPath="$PROJECT_DIR$/src/application/classes/GameManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/Utils.java" afterPath="$PROJECT_DIR$/src/application/classes/Utils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/Values.java" afterPath="$PROJECT_DIR$/src/application/classes/Values.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/cities/Burgas.java" afterPath="$PROJECT_DIR$/src/application/classes/cities/Burgas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/cities/Varna.java" afterPath="$PROJECT_DIR$/src/application/classes/cities/Varna.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/controllers/CitiesController.java" afterPath="$PROJECT_DIR$/src/application/controllers/CitiesController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/controllers/MenuController.java" afterPath="$PROJECT_DIR$/src/application/controllers/MenuController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/controllers/QuestionsController.java" afterPath="$PROJECT_DIR$/src/application/controllers/QuestionsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/controllers/RankingsController.java" afterPath="$PROJECT_DIR$/src/application/controllers/RankingsController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/resources/fxml/cities.fxml" afterPath="$PROJECT_DIR$/src/application/resources/fxml/cities.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/resources/fxml/menu.fxml" afterPath="$PROJECT_DIR$/src/application/resources/fxml/menu.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/resources/fxml/quizWindow.fxml" afterPath="$PROJECT_DIR$/src/application/resources/fxml/quizWindow.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/resources/fxml/rankings.fxml" afterPath="$PROJECT_DIR$/src/application/resources/fxml/rankings.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,7 +75,7 @@
       <file leaf-file-name="CitiesController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/controllers/CitiesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="864">
+            <state relative-caret-position="1020">
               <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
               <folding>
                 <element signature="method#initialize#0;class#CitiesController#0" expanded="false" />
@@ -107,7 +94,7 @@
             <state />
           </provider>
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="1277">
+            <state relative-caret-position="1428">
               <caret line="84" column="26" lean-forward="false" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
               <folding />
             </state>
@@ -117,8 +104,8 @@
       <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/classes/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="29" column="40" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="29" selection-end-column="40" />
+            <state relative-caret-position="238">
+              <caret line="29" column="40" lean-forward="false" selection-start-line="25" selection-start-column="7" selection-end-line="29" selection-end-column="40" />
               <folding>
                 <element signature="method#log#0;class#Utils#0" expanded="false" />
                 <element signature="method#setSize#0;class#Utils#0" expanded="false" />
@@ -130,8 +117,8 @@
       <file leaf-file-name="BootController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/controllers/BootController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+            <state relative-caret-position="374">
+              <caret line="32" column="9" lean-forward="false" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -140,11 +127,9 @@
       <file leaf-file-name="MenuController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/application/controllers/MenuController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="641">
-              <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+            <state relative-caret-position="233">
+              <caret line="55" column="36" lean-forward="false" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
               <folding>
-                <element signature="e#3202#3203#0" expanded="true" />
-                <element signature="e#3231#3232#0" expanded="true" />
                 <element signature="method#exitGame#0;class#MenuController#0" expanded="false" />
                 <element signature="method#showScores#0;class#MenuController#0" expanded="false" />
               </folding>
@@ -158,8 +143,8 @@
             <state />
           </provider>
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="958">
-              <caret line="119" column="20" lean-forward="false" selection-start-line="119" selection-start-column="20" selection-end-line="119" selection-end-column="20" />
+            <state relative-caret-position="1819">
+              <caret line="107" column="20" lean-forward="false" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -168,7 +153,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="988">
+            <state relative-caret-position="323">
               <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
@@ -324,10 +309,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-12" />
-    <option name="y" value="54" />
-    <option name="width" value="3864" />
-    <option name="height" value="2118" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -345,8 +330,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -501,7 +487,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -882,9 +867,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -941,19 +923,6 @@
       <scripts />
       <node-interpreter value="project" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory />
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui />
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
@@ -1052,6 +1021,8 @@
       <workItem from="1486578710058" duration="214000" />
       <workItem from="1486590931414" duration="2642000" />
       <workItem from="1486629552047" duration="10713000" />
+      <workItem from="1486666550005" duration="12000" />
+      <workItem from="1486666573295" duration="548000" />
     </task>
     <task id="LOCAL-00001" summary="Added logic to change Questions - package aplication.classes.cities.&#10;Added Ranking, Score Player classes, not implemented. TO DO Logic for displaying scores, keeping scores, scores.fxml, ScoresController.&#10;Added BootController with boot.fxml for startscreen. TO DO Team Rift Logo displayed for 3-4 seconds, then start screen.&#10;Added mordorQuestions. Limited Questions to 8 cities - Blagoevgrad, Burgas, Sofia, Varna, Pleven, Plovdiv, Ruse and Veliko Turnovo. If anyone wants other city, should replace one of above, but first notify others to avoid breaking logic in application.classes.cities;&#10;Moved all FXML to resources/fxml. path fixed.&#10;Created rankings.txt to keep scores.&#10;Added Values.java file to keep all Strings, Dimensions and any other static values.&#10;LAYOUT AND DESIGN&#10;&#10;TO DO&#10;Find good background image.&#10;&#10;CHANGES&#10;Changed bulgaria map image.&#10;Changed start.fxml buttons positon.&#10;Changed cities.fxml layout.&#10;Layout and design changes.&#10;More layout and design changes.&#10;">
       <created>1486467603680</created>
@@ -1078,7 +1049,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87672000" />
+    <option name="totallyTimeSpent" value="88232000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1090,7 +1061,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-12" y="54" width="3864" height="2118" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1102,20 +1073,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35634744" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35718015" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22005208" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22441365" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1165,10 +1136,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding>
-            <element signature="e#247#248#0" expanded="false" />
-            <element signature="e#289#290#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1214,9 +1181,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#295#296#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1231,9 +1195,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#248#249#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1241,10 +1202,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="451">
           <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-          <folding>
-            <element signature="e#146#147#0" expanded="false" />
-            <element signature="e#175#176#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1337,10 +1294,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding>
-            <element signature="e#248#249#0" expanded="false" />
-            <element signature="e#291#292#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1371,7 +1324,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1379,10 +1331,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding>
-            <element signature="e#232#233#0" expanded="false" />
-            <element signature="e#274#275#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1395,7 +1343,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
           <caret line="1379" column="34" lean-forward="false" selection-start-line="1379" selection-start-column="34" selection-end-line="1379" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1403,7 +1350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
           <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1432,22 +1378,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="29">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <marker date="1486636115133" expanded="true" signature="4461:5596" ph="..." />
-            <marker date="1486636115133" expanded="true" signature="6892:7491" ph="..." />
-            <marker date="1486636115133" expanded="true" signature="6963:7473" ph="..." />
-            <marker date="1486636115133" expanded="true" signature="6997:7122" ph="..." />
-            <marker date="1486636115133" expanded="true" signature="7153:7449" ph="..." />
-            <marker date="1486636115133" expanded="true" signature="7506:9751" ph="..." />
-            <marker date="1486636115133" expanded="true" signature="7575:9735" ph="..." />
-            <marker date="1486636115133" expanded="true" signature="7609:7920" ph="..." />
-            <marker date="1486636115133" expanded="true" signature="7951:8251" ph="..." />
-            <marker date="1486636115133" expanded="true" signature="8277:9711" ph="..." />
-            <marker date="1486636115133" expanded="true" signature="8969:9118" ph="..." />
-            <marker date="1486636115133" expanded="true" signature="9002:9087" ph="..." />
-            <marker date="1486636115133" expanded="true" signature="9365:9514" ph="..." />
-            <marker date="1486636115133" expanded="true" signature="9398:9483" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1474,7 +1405,7 @@
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="1277">
+        <state relative-caret-position="1428">
           <caret line="84" column="26" lean-forward="false" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
           <folding />
         </state>
@@ -1485,16 +1416,16 @@
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="958">
-          <caret line="119" column="20" lean-forward="false" selection-start-line="119" selection-start-column="20" selection-end-line="119" selection-end-column="20" />
+        <state relative-caret-position="1819">
+          <caret line="107" column="20" lean-forward="false" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/classes/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="29" column="40" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="29" selection-end-column="40" />
+        <state relative-caret-position="238">
+          <caret line="29" column="40" lean-forward="false" selection-start-line="25" selection-start-column="7" selection-end-line="29" selection-end-column="40" />
           <folding>
             <element signature="method#log#0;class#Utils#0" expanded="false" />
             <element signature="method#setSize#0;class#Utils#0" expanded="false" />
@@ -1522,13 +1453,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
           <caret line="109" column="13" lean-forward="false" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
+        <state relative-caret-position="323">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
@@ -1536,15 +1466,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/controllers/BootController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        <state relative-caret-position="374">
+          <caret line="32" column="9" lean-forward="false" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/controllers/CitiesController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
+        <state relative-caret-position="1020">
           <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
           <folding>
             <element signature="method#initialize#0;class#CitiesController#0" expanded="false" />
@@ -1558,11 +1488,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/controllers/MenuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+        <state relative-caret-position="233">
+          <caret line="55" column="36" lean-forward="false" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
           <folding>
-            <element signature="e#3202#3203#0" expanded="true" />
-            <element signature="e#3231#3232#0" expanded="true" />
             <element signature="method#exitGame#0;class#MenuController#0" expanded="false" />
             <element signature="method#showScores#0;class#MenuController#0" expanded="false" />
           </folding>

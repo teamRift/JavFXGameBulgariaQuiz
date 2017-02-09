@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="mainPane" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.CitiesController">
+<BorderPane fx:id="mainPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.CitiesController">
    <center>
       <GridPane fx:id="centerPane" BorderPane.alignment="CENTER">
          <columnConstraints>
@@ -26,7 +26,7 @@
          <children>
             <Pane fx:id="mapPane" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <children>
-                  <ImageView fx:id="mapImg" fitHeight="800.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="mapImg" fitHeight="800.0" fitWidth="800.0" layoutX="110.0" layoutY="-67.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/bulgaria2.png" />
                      </image>
@@ -34,44 +34,44 @@
                         <BoxBlur />
                      </effect>
                   </ImageView>
-                  <Hyperlink fx:id="varna" layoutX="687.0" layoutY="199.0" onAction="#onCityQuestion" text="Varna" visited="true">
+                  <Hyperlink fx:id="varna" layoutX="749.0" layoutY="113.0" onAction="#onCityQuestion" text="Varna" visited="true">
                      <font>
-                        <Font name="Georgia" size="18.0" />
+                        <Font name="Algerian" size="18.0" />
                      </font>
                   </Hyperlink>
-                  <Hyperlink fx:id="ruse" graphicTextGap="10.0" layoutX="412.0" layoutY="101.0" onAction="#onCityQuestion" text="Russe" visited="true">
+                  <Hyperlink fx:id="ruse" graphicTextGap="10.0" layoutX="610.0" layoutY="-14.0" onAction="#onCityQuestion" text="Russe" visited="true">
                      <font>
-                        <Font name="Georgia" size="18.0" />
+                        <Font name="Algerian" size="18.0" />
                      </font>
                   </Hyperlink>
-                  <Hyperlink fx:id="sofia" graphicTextGap="10.0" layoutX="116.0" layoutY="280.0" onAction="#onCityQuestion" text="Sofia" visited="true">
+                  <Hyperlink fx:id="sofia" graphicTextGap="10.0" layoutX="229.0" layoutY="226.0" onAction="#onCityQuestion" text="Sofia" visited="true">
                      <font>
-                        <Font name="Georgia" size="18.0" />
+                        <Font name="Algerian" size="18.0" />
                      </font>
                   </Hyperlink>
-                  <Hyperlink fx:id="burgas" graphicTextGap="10.0" layoutX="637.0" layoutY="320.0" onAction="#onCityQuestion" text="Bourgas" visited="true">
+                  <Hyperlink fx:id="burgas" graphicTextGap="10.0" layoutX="676.0" layoutY="265.0" onAction="#onCityQuestion" text="Bourgas" visited="true">
                      <font>
-                        <Font name="Georgia" size="18.0" />
+                        <Font name="Algerian" size="18.0" />
                      </font>
                   </Hyperlink>
-                  <Hyperlink fx:id="blagoevgrad" graphicTextGap="10.0" layoutX="116.0" layoutY="452.0" onAction="#onCityQuestion" text="Blagoevgrad" visited="true">
+                  <Hyperlink fx:id="blagoevgrad" graphicTextGap="10.0" layoutX="220.0" layoutY="395.0" onAction="#onCityQuestion" text="Blagoevgrad" visited="true">
                      <font>
-                        <Font name="Georgia" size="18.0" />
+                        <Font name="Algerian" size="18.0" />
                      </font>
                   </Hyperlink>
-                  <Hyperlink fx:id="plovdiv" graphicTextGap="10.0" layoutX="371.0" layoutY="342.0" onAction="#onCityQuestion" text="Plovdiv" visited="true">
+                  <Hyperlink fx:id="plovdiv" graphicTextGap="10.0" layoutX="406.0" layoutY="357.0" onAction="#onCityQuestion" text="Plovdiv" visited="true">
                      <font>
-                        <Font name="Georgia" size="18.0" />
+                        <Font name="Algerian" size="18.0" />
                      </font>
                   </Hyperlink>
-                  <Hyperlink fx:id="pleven" graphicTextGap="10.0" layoutX="247.0" layoutY="198.0" onAction="#onCityQuestion" text="Pleven" visited="true">
+                  <Hyperlink fx:id="pleven" graphicTextGap="10.0" layoutX="340.0" layoutY="88.0" onAction="#onCityQuestion" text="Pleven" visited="true">
                      <font>
-                        <Font name="Georgia" size="18.0" />
+                        <Font name="Algerian" size="18.0" />
                      </font>
                   </Hyperlink>
-                  <Hyperlink fx:id="turnovo" graphicTextGap="10.0" layoutX="443.0" layoutY="199.0" onAction="#onCityQuestion" text="V.Tyrnovo" visited="true">
+                  <Hyperlink fx:id="turnovo" graphicTextGap="10.0" layoutX="537.0" layoutY="127.0" onAction="#onCityQuestion" text="V.Tyrnovo" visited="true">
                      <font>
-                        <Font name="Georgia" size="18.0" />
+                        <Font name="Algerian" size="18.0" />
                      </font>
                   </Hyperlink>
                </children>
