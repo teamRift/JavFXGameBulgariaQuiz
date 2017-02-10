@@ -128,7 +128,7 @@ public class QuestionsController {
         } else {
             percent = (int) ((double) questionsCorrect / (double) questions.size() * 100);
         }
-        Score newScore = new Score(CitiesController.gameManager.getCityName(),CitiesController.gameManager.getCurrentUser(),score);
+        Score newScore = new Score(CitiesController.gameManager.getCityName(), CitiesController.gameManager.getCurrentUser(), score);
         Scores.save(newScore);
 
         Alert finish = new Alert(Alert.AlertType.INFORMATION);
@@ -142,12 +142,13 @@ public class QuestionsController {
         System.exit(0);
     }
 
-    private void setBackground(){
+    private void setBackground() {
         background.setFitHeight(Values.SCREEN_HEIGHT);
         background.setFitWidth(Values.SCREEN_WIDTH);
-        background.setImage(new Image(Values.IMG_BACKGROUND, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT,false,false));
+        background.setImage(new Image(Values.IMG_BACKGROUND, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT, false, false));
     }
-    private void setPanes(){
+
+    private void setPanes() {
 
         mainPane.setMinWidth(Values.SCREEN_WIDTH);
         mainPane.setMinHeight(Values.SCREEN_HEIGHT);
@@ -185,11 +186,11 @@ public class QuestionsController {
         rightPane.setMaxHeight(Values.SIX_ROWS);
 
         centerPane.setMinWidth(Values.SIX_COLS);
-        centerPane.setMinHeight(Values.SIX_ROWS+    Values.THREE_ROWS);
+        centerPane.setMinHeight(Values.SIX_ROWS + Values.THREE_ROWS);
         centerPane.setPrefWidth(Values.SIX_COLS);
-        centerPane.setPrefHeight(Values.SCREEN_HEIGHT-Values.THREE_ROWS);
+        centerPane.setPrefHeight(Values.SCREEN_HEIGHT - Values.THREE_ROWS);
         centerPane.setMaxWidth(Values.SIX_COLS);
-        centerPane.setMaxHeight(Values.SCREEN_HEIGHT-Values.THREE_ROWS);
+        centerPane.setMaxHeight(Values.SCREEN_HEIGHT - Values.THREE_ROWS);
 
         questionButtons.setMinWidth(Values.SIX_COLS);
         questionButtons.setMinHeight(Values.TWO_ROWS);
@@ -224,9 +225,17 @@ public class QuestionsController {
     }
 
     public void OnBack(ActionEvent actionEvent) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation Dialog");
+        alert.setHeaderText(null);
+        alert.setContentText("Are you sure you want to go back ?");
+        Optional<ButtonType> action = alert.showAndWait();
+        if (action.get() == ButtonType.OK) {
             Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/cities.fxml"));
-            Stage stage = (Stage)backButton2.getScene().getWindow();
-            stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
+            Stage stage = (Stage) backButton2.getScene().getWindow();
+            stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
             stage.show();
+        }
     }
 }
+
