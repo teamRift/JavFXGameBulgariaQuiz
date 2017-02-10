@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.MotionBlur?>
@@ -12,7 +18,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<Pane xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.QuestionsController">
+<Pane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.QuestionsController">
    <children>
       <ImageView fx:id="background" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" smooth="false">
          <image>
@@ -86,7 +92,7 @@
                      <children>
                         <Button fx:id="hintOne" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#initHintButton" text="50/50" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="16.0" />
                            </font></Button>
                         <Button fx:id="backButton2" mnemonicParsing="false" onAction="#OnBack" text="&lt;&lt;Back" GridPane.rowIndex="1">
                            <font>
