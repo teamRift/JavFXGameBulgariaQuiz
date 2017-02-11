@@ -7,19 +7,25 @@ import application.classes.Values;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Cursor;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Optional;
 
 import static application.controllers.BootController.gameManager;
 
@@ -43,62 +49,63 @@ public class CitiesController {
     @FXML
     ImageView mapImg;
     @FXML
-    Hyperlink varna;
+    Button varna;
     @FXML
-    Hyperlink ruse;
+    Button ruse;
     @FXML
-    Hyperlink sofia;
+    Button sofia;
     @FXML
-    Hyperlink burgas;
+    Button burgas;
     @FXML
-    Hyperlink blagoevgrad;
+    Button blagoevgrad;
     @FXML
-    Hyperlink plovdiv;
+    Button plovdiv;
     @FXML
-    Hyperlink pleven;
+    Button pleven;
     @FXML
-    Hyperlink turnovo;
+    Button turnovo;
     @FXML
     Label hintLabel;
-
-
     @FXML
+    Label gameTitle;
+
     public void initialize() throws IOException {
         setPanes();
         initHint();
-        gameManager.setFactsLabel(hintLabel);
+        Utils.styleCityButton(varna,ruse,sofia,burgas,blagoevgrad,plovdiv,pleven,turnovo);
+        Utils.styleButton(backButton);
+        backButton.setText(Values.LABEL_BACK_BTN);
     }
 
-    public void onCityQuestion(ActionEvent actionEvent) throws IOException {
-        Hyperlink button  = (Hyperlink)  actionEvent.getSource();
+    public void onCityQuestion( ActionEvent actionEvent) throws IOException {
+        Button button  = (Button)  actionEvent.getSource();
         String id = button.getId();
         setCity(id.toLowerCase());
         Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/quizWindow.fxml"));
 
         Stage stage = (Stage)button.getScene().getWindow();
-        stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
+        stage.setScene( new Scene( root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
         stage.show();
     }
 
-    public void OnBack(ActionEvent actionEvent){
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Confirmation Dialog");
-        alert.setHeaderText(null);
-        alert.setContentText("Are you sure you want to go back ?");
-        Optional<ButtonType> action = alert.showAndWait();
-        if (action.get() == ButtonType.OK) {
-            Parent root = null;
-            try {
-                root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Stage stage = (Stage)backButton.getScene().getWindow();
-            stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
-            stage.show();
-        }
+    public void OnBack(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
+        Stage stage = ( Stage ) backButton.getScene().getWindow();
+        stage.setScene( new Scene( root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
+        stage.show();
     }
 
+    private void initHint() {
+
+        gameManager.setFactsLabel(hintLabel);
+
+        hintLabel.setTextFill(Color.WHITE);
+
+        hintLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD,25));
+
+        Utils.setShadow(hintLabel);
+
+    }
 
     private void setCity(String city){
         if (city.equalsIgnoreCase("sofia")){
@@ -132,8 +139,4 @@ public class CitiesController {
         Utils.setBackground(mainPane, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT);
     }
 
-    private void initHint() {
-        hintLabel.setTextFill(Paint.valueOf("#2dad2e"));
-        hintLabel.setStyle("-fx-background-color: #000000;");
-    }
 }

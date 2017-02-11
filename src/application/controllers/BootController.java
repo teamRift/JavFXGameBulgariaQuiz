@@ -22,11 +22,15 @@ public class BootController {
 
     @FXML
     public void initialize() throws IOException {
+
         gameManager = new GameManager();
 
-        PauseTransition delay = new PauseTransition(Duration.seconds(2));
+        PauseTransition delay = new PauseTransition(Duration.millis(4000));
+
         delay.setOnFinished( event -> startGame() );
+
         delay.play();
+
     }
     void startGame(){
         Stage stage = (Stage) textLabel.getScene().getWindow();
