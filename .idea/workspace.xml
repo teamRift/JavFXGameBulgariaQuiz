@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/controllers/CitiesController.java" afterPath="$PROJECT_DIR$/src/application/controllers/CitiesController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/controllers/QuestionsController.java" afterPath="$PROJECT_DIR$/src/application/controllers/QuestionsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/controllers/RankingsController.java" afterPath="$PROJECT_DIR$/src/application/controllers/RankingsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/resources/questions/plnQuestions.txt" afterPath="$PROJECT_DIR$/src/application/resources/questions/plnQuestions.txt" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,53 +72,7 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="CitiesController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/controllers/CitiesController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rankings.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/rankings.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1166">
-              <caret line="53" column="36" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RankingsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/controllers/RankingsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuestionsController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/application/controllers/QuestionsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="236" column="25" selection-start-line="236" selection-start-column="25" selection-end-line="236" selection-end-column="25" />
-              <folding>
-                <element signature="method#handleButtonAction#0;class#QuestionsController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -197,7 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/records.txt" />
         <option value="$PROJECT_DIR$/src/application/classes/Strings.java" />
         <option value="$PROJECT_DIR$/src/application/cities.fxml" />
         <option value="$PROJECT_DIR$/src/application/classes/City.java" />
@@ -237,7 +191,6 @@
         <option value="$PROJECT_DIR$/src/application/classes/GameManager.java" />
         <option value="$PROJECT_DIR$/src/application/classes/Values.java" />
         <option value="$PROJECT_DIR$/src/application/resources/fxml/rankings.fxml" />
-        <option value="$PROJECT_DIR$/src/application/controllers/RankingsController.java" />
         <option value="$PROJECT_DIR$/src/application/resources/fxml/cities.fxml" />
         <option value="$PROJECT_DIR$/src/application/Main.java" />
         <option value="$PROJECT_DIR$/src/application/controllers/BootController.java" />
@@ -246,8 +199,10 @@
         <option value="$PROJECT_DIR$/src/application/controllers/MenuController.java" />
         <option value="$PROJECT_DIR$/src/application/resources/fxml/quizWindow.fxml" />
         <option value="$PROJECT_DIR$/src/test.java" />
-        <option value="$PROJECT_DIR$/src/application/controllers/CitiesController.java" />
         <option value="$PROJECT_DIR$/src/application/controllers/QuestionsController.java" />
+        <option value="$PROJECT_DIR$/src/application/controllers/CitiesController.java" />
+        <option value="$PROJECT_DIR$/src/application/controllers/RankingsController.java" />
+        <option value="$PROJECT_DIR$/src/application/resources/questions/plnQuestions.txt" />
       </list>
     </option>
   </component>
@@ -259,8 +214,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="408" />
-    <option name="y" value="88" />
+    <option name="x" value="259" />
+    <option name="y" value="76" />
     <option name="width" value="1473" />
     <option name="height" value="834" />
   </component>
@@ -289,7 +244,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -451,6 +405,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -467,7 +422,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/StreamAPI" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -1036,6 +991,7 @@
       <workItem from="1486669358112" duration="1630000" />
       <workItem from="1486755307497" duration="1142000" />
       <workItem from="1486757366515" duration="303000" />
+      <workItem from="1486823317063" duration="1180000" />
     </task>
     <task id="LOCAL-00001" summary="Added logic to change Questions - package aplication.classes.cities.&#10;Added Ranking, Score Player classes, not implemented. TO DO Logic for displaying scores, keeping scores, scores.fxml, ScoresController.&#10;Added BootController with boot.fxml for startscreen. TO DO Team Rift Logo displayed for 3-4 seconds, then start screen.&#10;Added mordorQuestions. Limited Questions to 8 cities - Blagoevgrad, Burgas, Sofia, Varna, Pleven, Plovdiv, Ruse and Veliko Turnovo. If anyone wants other city, should replace one of above, but first notify others to avoid breaking logic in application.classes.cities;&#10;Moved all FXML to resources/fxml. path fixed.&#10;Created rankings.txt to keep scores.&#10;Added Values.java file to keep all Strings, Dimensions and any other static values.&#10;LAYOUT AND DESIGN&#10;&#10;TO DO&#10;Find good background image.&#10;&#10;CHANGES&#10;Changed bulgaria map image.&#10;Changed start.fxml buttons positon.&#10;Changed cities.fxml layout.&#10;Layout and design changes.&#10;More layout and design changes.&#10;">
       <created>1486467603680</created>
@@ -1062,7 +1018,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91307000" />
+    <option name="totallyTimeSpent" value="92487000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1074,7 +1030,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="408" y="88" width="1473" height="834" extended-state="0" />
+    <frame x="259" y="76" width="1473" height="834" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1084,12 +1040,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2984218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21168385" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21168385" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1193,7 +1149,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1208,9 +1163,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2679">
           <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1310,9 +1262,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1517">
           <caret line="42" column="123" selection-start-line="42" selection-start-column="123" selection-end-line="42" selection-end-column="123" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1320,7 +1269,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="652">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1455,17 +1403,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/plnQuestions.txt">
+    <entry file="file://$PROJECT_DIR$/src/test.java" />
+    <entry file="file://$PROJECT_DIR$/src/application/controllers/QuestionsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="101" selection-start-line="3" selection-start-column="101" selection-end-line="3" selection-end-column="101" />
+        <state relative-caret-position="412">
+          <caret line="242" column="9" selection-start-line="242" selection-start-column="9" selection-end-line="242" selection-end-column="9" />
+          <folding>
+            <element signature="method#handleButtonAction#0;class#QuestionsController#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.java" />
+    <entry file="file://$PROJECT_DIR$/src/application/controllers/RankingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="73" column="9" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/rankings.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1166">
+        <state relative-caret-position="346">
           <caret line="53" column="36" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
           <folding />
         </state>
@@ -1474,29 +1433,19 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/controllers/RankingsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/controllers/CitiesController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+        <state relative-caret-position="110">
+          <caret line="88" column="44" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/controllers/QuestionsController.java">
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/plnQuestions.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="236" column="25" selection-start-line="236" selection-start-column="25" selection-end-line="236" selection-end-column="25" />
-          <folding>
-            <element signature="method#handleButtonAction#0;class#QuestionsController#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="132">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -224,19 +224,23 @@ public class QuestionsController {
 
     }
 
-    public void OnBack(ActionEvent actionEvent) throws IOException {
+    public void OnBack(ActionEvent actionEvent) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation Dialog");
         alert.setHeaderText(null);
         alert.setContentText("Are you sure you want to go back ?");
         Optional<ButtonType> action = alert.showAndWait();
         if (action.get() == ButtonType.OK) {
-            Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/cities.fxml"));
+            Parent root = null;
+            try {
+                root = FXMLLoader.load(getClass().getResource("../resources/fxml/cities.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             Stage stage = (Stage) backButton2.getScene().getWindow();
             stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
             stage.show();
         }
-
     }
 }
 
