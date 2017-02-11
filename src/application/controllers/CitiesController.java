@@ -9,9 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -21,6 +19,7 @@ import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Optional;
 
 import static application.controllers.BootController.gameManager;
 
@@ -81,12 +80,25 @@ public class CitiesController {
         stage.show();
     }
 
-    public void OnBack(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
-        Stage stage = (Stage)backButton.getScene().getWindow();
-        stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
-        stage.show();
+    public void OnBack(ActionEvent actionEvent){
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation Dialog");
+        alert.setHeaderText(null);
+        alert.setContentText("Are you sure you want to go back ?");
+        Optional<ButtonType> action = alert.showAndWait();
+        if (action.get() == ButtonType.OK) {
+            Parent root = null;
+            try {
+                root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Stage stage = (Stage)backButton.getScene().getWindow();
+            stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
+            stage.show();
+        }
     }
+
 
     private void setCity(String city){
         if (city.equalsIgnoreCase("sofia")){

@@ -1,6 +1,10 @@
 package application.controllers;
 
-import application.classes.*;
+import application.classes.Question;
+import application.classes.Scores;
+import application.classes.Score;
+import application.classes.Values;
+import application.classes.GameManager;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,7 +24,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.*;
 
-import static application.controllers.BootController.gameManager;
 
 public class QuestionsController {
     @FXML
@@ -41,10 +44,12 @@ public class QuestionsController {
     Label maxScoreUser;
     @FXML
     Label hintLabel;
-   @FXML
+
+    @FXML
     ImageView background;
     @FXML
     BorderPane mainPane;
+
     @FXML
     GridPane topPane;
     @FXML
@@ -69,97 +74,24 @@ public class QuestionsController {
     public Button fourthButton;
 
 
-    private static ArrayList<Question> questions;
-
+    static ArrayList<Question> questions;
+    static int percent;
+    static int pauseValue = Values.PAUSE_VALUE;
 
     @FXML
     public void initialize() {
-        
         setBackground();
-        
         setPanes();
-        
-        setLabels();
-        
-        
         questionButtons.setMinWidth(Values.SIX_COLS);
-
         questionButtons.setMinHeight(Values.TWO_ROWS);
-
-        
-        questions = Question.loadQuestions(gameManager.getFileName());
-        
+        questions = Question.loadQuestions(CitiesController.gameManager.getFileName());
         Question.setButtons(firstButton, secondButton, thirdButton, fourthButton);
-        
         questions.get(Question.getQuestionIndex()).displayQuestion(questionLabel, questionNumLabel);
 
-        
         firstButton.setOnAction(this::handleButtonAction);
-        
         secondButton.setOnAction(this::handleButtonAction);
-        
         thirdButton.setOnAction(this::handleButtonAction);
-        
         fourthButton.setOnAction(this::handleButtonAction);
-        
-        
-        gameManager.setFactsLabel(hintLabel);
-    }
-
-    public static void finished(int score, int questionsCorrect) {
-        int percent = 0;
-
-        if (questionsCorrect > 0) {
-
-            percent = (int) ((double) questionsCorrect / (double) questions.size() * 100);
-
-        }
-
-
-        Score newScore = new Score(gameManager.getCityName(), gameManager.getCurrentUser(),score);
-
-        Scores.save(newScore);
-
-
-        Alert finish = new Alert(Alert.AlertType.INFORMATION);
-
-        finish.setTitle("You Win!");
-
-        finish.setHeaderText("Score: " + score);
-
-        finish.setContentText("Questions Correct: " + questionsCorrect + " out of " + questions.size() + " (" + percent + "%)");
-
-        finish.showAndWait();
-
-
-        Platform.exit();
-
-        System.exit(0);
-    }
-
-    private void setBackground(){
-        background.setFitHeight(Values.SCREEN_HEIGHT);
-        background.setFitWidth(Values.SCREEN_WIDTH);
-        background.setImage(new Image(Values.IMG_BACKGROUND, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT,false,false));
-    }
-
-    private void setLabels() {
-        cityName.setText(gameManager.getCityName());
-        userName.setText(gameManager.getCurrentUser());
-        maxScore.setText(String.valueOf(gameManager.getMaxScore()));
-        maxScoreUser.setText(String.valueOf(gameManager.getUserMaxPoints()));
-    }
-
-    private void setPanes(){
-        Utils.setSize(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
-        Utils.setSize(topPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
-        Utils.setSize(bottomPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
-        Utils.setSize(leftPane, Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        Utils.setSize(rightPane, Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        Utils.setSize(centerPane, Values.SIX_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        Utils.setSize(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
-        Utils.setSize(questionButtons,Values.SIX_COLS,Values.TWO_ROWS);
-        Utils.setBackground(mainPane,Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
     }
 
     private void handleButtonAction(ActionEvent event) {
@@ -186,7 +118,85 @@ public class QuestionsController {
                 });
 
             }
-        }, Values.PAUSE_VALUE);
+        }, pauseValue);
+    }
+
+    public static void finished(int score, int questionsCorrect) {
+
+        if (questionsCorrect == 0) {
+            percent = 0;
+        } else {
+            percent = (int) ((double) questionsCorrect / (double) questions.size() * 100);
+        }
+        Score newScore = new Score(CitiesController.gameManager.getCityName(),CitiesController.gameManager.getCurrentUser(),score);
+        Scores.save(newScore);
+
+        Alert finish = new Alert(Alert.AlertType.INFORMATION);
+        finish.setTitle("You Win!");
+        finish.setHeaderText("Score: " + score);
+        finish.setContentText("Questions Correct: " + questionsCorrect + " out of " + questions.size() + " (" + percent + "%)");
+
+        finish.showAndWait();
+
+        Platform.exit();
+        System.exit(0);
+    }
+
+    private void setBackground(){
+        background.setFitHeight(Values.SCREEN_HEIGHT);
+        background.setFitWidth(Values.SCREEN_WIDTH);
+        background.setImage(new Image(Values.IMG_BACKGROUND, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT,false,false));
+    }
+    private void setPanes(){
+
+        mainPane.setMinWidth(Values.SCREEN_WIDTH);
+        mainPane.setMinHeight(Values.SCREEN_HEIGHT);
+        mainPane.setPrefWidth(Values.SCREEN_WIDTH);
+        mainPane.setPrefHeight(Values.SCREEN_HEIGHT);
+        mainPane.setMaxWidth(Values.SCREEN_WIDTH);
+        mainPane.setMaxHeight(Values.SCREEN_HEIGHT);
+
+        topPane.setMinWidth(Values.SCREEN_WIDTH);
+        topPane.setMinHeight(Values.TWO_ROWS);
+        topPane.setPrefWidth(Values.SCREEN_WIDTH);
+        topPane.setPrefHeight(Values.TWO_ROWS);
+        topPane.setMaxWidth(Values.SCREEN_WIDTH);
+        topPane.setMaxHeight(Values.TWO_ROWS);
+
+        bottomPane.setMinWidth(Values.SCREEN_WIDTH);
+        bottomPane.setMinHeight(Values.ONE_ROW);
+        bottomPane.setPrefWidth(Values.SCREEN_WIDTH);
+        bottomPane.setPrefHeight(Values.ONE_ROW);
+        bottomPane.setMaxWidth(Values.SCREEN_WIDTH);
+        bottomPane.setMaxHeight(Values.ONE_ROW);
+
+        leftPane.setMinWidth(Values.THREE_COLS);
+        leftPane.setMinHeight(Values.SIX_ROWS);
+        leftPane.setPrefWidth(Values.THREE_COLS);
+        leftPane.setPrefHeight(Values.SIX_ROWS);
+        leftPane.setMaxWidth(Values.THREE_COLS);
+        leftPane.setMaxHeight(Values.SIX_ROWS);
+
+        rightPane.setMinWidth(Values.THREE_COLS);
+        rightPane.setMinHeight(Values.SIX_ROWS);
+        rightPane.setPrefWidth(Values.THREE_COLS);
+        rightPane.setPrefHeight(Values.SIX_ROWS);
+        rightPane.setMaxWidth(Values.THREE_COLS);
+        rightPane.setMaxHeight(Values.SIX_ROWS);
+
+        centerPane.setMinWidth(Values.SIX_COLS);
+        centerPane.setMinHeight(Values.SIX_ROWS+    Values.THREE_ROWS);
+        centerPane.setPrefWidth(Values.SIX_COLS);
+        centerPane.setPrefHeight(Values.SCREEN_HEIGHT-Values.THREE_ROWS);
+        centerPane.setMaxWidth(Values.SIX_COLS);
+        centerPane.setMaxHeight(Values.SCREEN_HEIGHT-Values.THREE_ROWS);
+
+        questionButtons.setMinWidth(Values.SIX_COLS);
+        questionButtons.setMinHeight(Values.TWO_ROWS);
+        questionButtons.setPrefWidth(Values.SIX_COLS);
+        questionButtons.setPrefHeight(Values.TWO_ROWS);
+        questionButtons.setMaxWidth(Values.SIX_COLS);
+        questionButtons.setMaxHeight(Values.TWO_ROWS);
     }
 
     public void initHintButton(ActionEvent actionEvent) {
@@ -214,13 +224,9 @@ public class QuestionsController {
     }
 
     public void OnBack(ActionEvent actionEvent) throws IOException {
-
-            Parent root = FXMLLoader.load(getClass().getResource(Values.PATH_CITIES));
-
+            Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/cities.fxml"));
             Stage stage = (Stage)backButton2.getScene().getWindow();
-
             stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
-
             stage.show();
     }
 }

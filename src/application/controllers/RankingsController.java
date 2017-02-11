@@ -9,7 +9,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -22,6 +24,7 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 import static application.controllers.BootController.gameManager;
 
@@ -56,15 +59,22 @@ public class RankingsController {
         backBtn.setOnAction(this::OnBack);
     }
     public void OnBack(ActionEvent actionEvent) {
-        Parent root = null;
-        try {
-            root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
-        } catch (IOException e) {
-            e.printStackTrace();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation Dialog");
+        alert.setHeaderText(null);
+        alert.setContentText("Are you sure you want to go back ?");
+        Optional<ButtonType> action = alert.showAndWait();
+        if (action.get() == ButtonType.OK) {
+            Parent root = null;
+            try {
+                root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Stage stage = (Stage)backBtn.getScene().getWindow();
+            stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
+            stage.show();
         }
-        Stage stage = (Stage)backBtn.getScene().getWindow();
-        stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
-        stage.show();
     }
 
     private void loadScores() {
