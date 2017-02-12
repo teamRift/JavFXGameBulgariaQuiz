@@ -2,9 +2,14 @@ package application.classes;
 
 import application.controllers.QuestionsController;
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -15,19 +20,31 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 
+import static application.controllers.BootController.gameManager;
+
 public class Question {
 
     static Random rand = new Random();
+
     static int score = 0;
+
     static int questionCount = 1;
+
     static int questionIndex = 0;
+
     static int questionsCorrect = 0;
+
     static ArrayList<Button> buttons;
+
     final static String DELIMITER = ";";
 
+
     String question;
+
     String correctAnswer;
+
     ArrayList<String> wrongsAnswers;
+
     Button randomButton;
 
     public Question(String question, String correct, String wrong1, String wrong2, String wrong3) {
@@ -40,78 +57,87 @@ public class Question {
     }
 
     public static ArrayList<Question> loadQuestions(String filename) {
+
         ArrayList<Question> questions = new ArrayList<>();
+
         String projectPath = System.getProperty("user.dir");
 
         try {
             Path filePath = Paths.get(projectPath + "/src/application/resources/questions/" + filename);
 
             Files.lines(filePath).forEach(line -> {
+
                 if (line.isEmpty()) {
+
                     return;
                 }
+
                 String[] tokens = line.split(DELIMITER);
+
                 questions.add(new Question(tokens[0].trim(), tokens[1].trim(), tokens[2].trim(), tokens[3].trim(), tokens[4].trim()));
+
             });
+
         } catch (IOException e) {
+
             e.printStackTrace();
+
             Alert notFound = new Alert(Alert.AlertType.ERROR);
-            notFound.setTitle("Questions File Error");
+
+            notFound.setTitle(Values.FILE_ERROR_QUESTIONS);
+
             notFound.showAndWait();
 
             Platform.exit();
+
             System.exit(0);
         }
 
-
-
         return questions;
     }
-
-
 
     public static void setButtons(Button...buttonsArray) {
         buttons = new ArrayList<>(Arrays.asList(buttonsArray));
     }
 
-
-
     public static int getQuestionIndex() { return questionIndex; }
-
-
 
     public void displayQuestion(Label lbl, Label correctLabel) {
 
-       ArrayList<Button> buttonsCopy = new ArrayList<>(buttons);
-
+        ArrayList<Button> buttonsCopy = new ArrayList<>(buttons);
 
         for (Button b : buttonsCopy) {
 
             b.getStyleClass().remove("correct");
+
             b.getStyleClass().remove("wrong");
+
         }
 
         lbl.setText(this.question);
+
         correctLabel.setText("Question " + questionCount);
 
 
         int randInt = rand.nextInt(4);
+
         randomButton = buttonsCopy.get(randInt);
 
 
         buttonsCopy.get(randInt).setText(this.correctAnswer);
+
         buttonsCopy.remove(randInt);
 
 
-
         Collections.shuffle(this.wrongsAnswers);
+
         for (Button b : buttonsCopy) {
 
             b.setText(this.wrongsAnswers.get(buttonsCopy.indexOf(b)));
+
         }
+
     }
-
-
 
     public void checkCorrect(Button b, ArrayList<Question> questions, Label scoreLabel) {
 
@@ -119,22 +145,52 @@ public class Question {
         if (this.randomButton == b) {
 
             score += 10;
+
             scoreLabel.setText("Score: " + score);
+
             questionsCorrect += 1;
+
         } else {
 
             this.randomButton.getStyleClass().add("correct");
+
         }
 
 
         if (questions.size() == questionCount) {
+
             QuestionsController.finished(score, questionsCorrect);
+
+            try {
+
+                showScores(b);
+
+            } catch (IOException e) {
+
+                e.printStackTrace();
+
+            }
         }
 
         questionCount += 1;
+
         questionIndex += 1;
+
     }
-    public ArrayList jokerBtn(ArrayList<Button> btn){
+
+    private void showScores( Button b ) throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/rankings.fxml"));
+
+        Stage stage = (Stage)b.getScene().getWindow();
+
+        stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
+
+        stage.show();
+
+    }
+
+    public ArrayList jokerBtn(ArrayList<Button> btn) {
 
         ArrayList<Button> list = new ArrayList<>();
 
@@ -144,11 +200,31 @@ public class Question {
 
             String str = button.getText();
 
-            if (!str.equals(correctAnswer) && !str1.contains(str)){
+            if (!str.equals(correctAnswer) && !str1.contains(str)) {
+
                 list.add(button);
+
                 str1.add(str);
+
             }
+
         }
+
         return list;
+
+    }
+
+    public static void reset() {
+
+        score = 0;
+
+        questionCount = 1;
+
+        questionIndex = 0;
+
+        questionsCorrect = 0;
+
+        gameManager.setCurrentUserPoints(0);
+
     }
 }

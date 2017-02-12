@@ -52,11 +52,6 @@
               </rowConstraints>
                <children>
                   <Button fx:id="backBtn" mnemonicParsing="false" text="Button" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-                  <Label fx:id="rankingsTitle" alignment="CENTER" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
-                     <font>
-                        <Font name="Lucida Console" size="90.0" />
-                     </font>
-                  </Label>
                   <Label fx:id="rankingsFirst" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
                      <font>
                         <Font name="Lucida Console" size="49.0" />
@@ -82,11 +77,17 @@
                         <Font name="Lucida Console" size="49.0" />
                      </font>
                   </Label>
+                  <Label fx:id="rankingsCurrent" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
                </children>
             </GridPane>
             <Label fx:id="hintLabel" contentDisplay="CENTER" text="Label" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <font>
                   <Font name="Lucida Sans Unicode" size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="rankingsTitle" alignment="CENTER" text="Label" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <font>
+                  <Font name="Lucida Console" size="90.0" />
                </font>
             </Label>
          </children>

@@ -32,6 +32,17 @@ public class Utils {
     }
 
     // this method set the controller scene background
+    public static void setBackground(Pane pane, String path, double WIDTH, double HEIGHT) {
+
+        BackgroundImage myBI = new BackgroundImage(new Image(path,WIDTH,HEIGHT,false,true),
+                BackgroundRepeat.REPEAT,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.DEFAULT,
+                BackgroundSize.DEFAULT);
+
+        pane.setBackground(new Background(myBI));
+
+    }
     public static void setBackground(Pane pane, double WIDTH, double HEIGHT) {
 
         BackgroundImage myBI = new BackgroundImage(new Image(Values.IMG_BACKGROUND,WIDTH,HEIGHT,false,true),
@@ -44,7 +55,21 @@ public class Utils {
 
     }
 
-    // use this method to set sizes for Panes and Buttons in controllers.
+    // this method applies default font with given @param size to given label(s) and sets shadow
+    public static void styleLabel(int size, Label... labels) {
+
+        for (Label label : labels) {
+
+            label.setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD,size));
+
+            label.setTextFill(Color.WHITE);
+
+            Utils.setShadow(label);
+
+        }
+    }
+
+    // use this method to set sizes for Panes and Buttons iаn controllers.
     public static void setSize(Object object, double WIDTH, double HEIGHT) {
 
         if (object instanceof Pane) {
@@ -77,22 +102,7 @@ public class Utils {
 
             ((Button) object).setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, 25));
 
-
-            DropShadow shadow = new DropShadow();
-
-            shadow.setRadius(5);
-
-            shadow.setOffsetX(5);
-
-            shadow.setOffsetY(5);
-
-            shadow.setBlurType(BlurType.GAUSSIAN);
-
-            shadow.setColor(Color.BLACK);
-
-
-            ((Button) object).setEffect(shadow);
-
+            Utils.styleButton((Button) object);
         }else if (object instanceof ImageView) {
 
             ((ImageView) object).setFitWidth(WIDTH);
@@ -106,6 +116,7 @@ public class Utils {
         }
     }
 
+    // this method sets predefined shadow to objects of time Label and Button
     public static void setShadow(Object object) {
 
         DropShadow shadow = new DropShadow();
@@ -140,13 +151,16 @@ public class Utils {
 
     }
 
+    // this method sets predefined shadow to objects of time Label and Button with given single offset param and radius
     public static void setShadow(Object object, int offset, int radius) {
 
         DropShadow shadow = new DropShadow();
 
         shadow.setColor(Color.BLACK);
 
+
         if (object instanceof Label) {
+
 
             shadow.setRadius(radius);
 
@@ -156,7 +170,9 @@ public class Utils {
 
             shadow.setBlurType(BlurType.ONE_PASS_BOX);
 
+
         } else if (object instanceof Button) {
+
 
             shadow.setRadius(radius);
 
@@ -171,7 +187,7 @@ public class Utils {
 
     }
 
-    // sets button background and font style
+    // sets city button background and font style
     public static void styleCityButton(Button... buttons) {
 
         for (Button button : buttons) {
@@ -185,12 +201,15 @@ public class Utils {
             Utils.setShadow(button);
 
         }
+
     }
+
+    // sets button background and font style
     public static void styleButton(Button... buttons) {
 
         for (Button button : buttons) {
 
-            button.setBackground(new Background(new BackgroundFill(Paint.valueOf("#FFFFFF"),new CornerRadii(10), new Insets(5,5,5,5))));
+            button.setBackground(new Background(new BackgroundFill(Paint.valueOf("#FFFFFF"),new CornerRadii(7), new Insets(5,5,5,5))));
 
             button.setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD,25));
 
@@ -199,5 +218,15 @@ public class Utils {
             Utils.setShadow(button);
 
         }
+
     }
+
+    public static String getRanking(String input){
+        return String.format("%s %s %s",
+                input.split(";")[0],
+                input.split(";")[1],
+                input.split(";")[2]
+        );
+    }
+
 }

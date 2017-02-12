@@ -1,5 +1,6 @@
 package application.controllers;
 
+import application.classes.GameManager;
 import application.classes.Score;
 import application.classes.Utils;
 import application.classes.Values;
@@ -27,6 +28,8 @@ public class RankingsController {
     @FXML
     public Label rankingsTitle;
     @FXML
+    public Label rankingsCurrent;
+    @FXML
     public Label rankingsFirst;
     @FXML
     public Label rankingsSecond;
@@ -46,24 +49,45 @@ public class RankingsController {
     Button backBtn;
 
     public void initialize() throws Exception {
+
+        initCurrent();
+
         loadScores();
-        PauseTransition delay = new PauseTransition(Duration.seconds(2));
-        delay.setOnFinished( event -> System.out.println("Started."));
-        delay.play();
+
         Utils.setBackground(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
+
         Utils.setSize(background, Values.SCREEN_WIDTH- Values.THREE_COLS, Values.SCREEN_HEIGHT- Values.THREE_ROWS);
+
+        Utils.styleLabel(35,rankingsCurrent,rankingsFirst,rankingsSecond,rankingsThird,rankingsFourth,rankingsFifth);
+
+        Utils.styleLabel(50,rankingsTitle);
+
+        Utils.styleLabel(25,hintLabel);
+
         initBackButton();
     }
+
     public void OnBack(ActionEvent actionEvent) {
+
         Parent root = null;
+
         try {
+
             root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
+
         } catch (IOException e) {
+
             e.printStackTrace();
+
         }
+
+
         Stage stage = (Stage)backBtn.getScene().getWindow();
+
         stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
+
         stage.show();
+
     }
 
     private void loadScores() {
@@ -76,23 +100,34 @@ public class RankingsController {
             mScores.set(mScores.size(), new Score("---","---",0));
         }
 
-        rankingsFirst.setText(mScores.get(0).prepareSave());
-        rankingsSecond.setText(mScores.get(1).prepareSave());
-        rankingsThird.setText(mScores.get(2).prepareSave());
-        rankingsFourth.setText(mScores.get(3).prepareSave());
-        rankingsFifth.setText(mScores.get(4).prepareSave());
+        rankingsFirst.setText(Utils.getRanking(mScores.get(0).prepareSave()));
+        rankingsSecond.setText(Utils.getRanking(mScores.get(1).prepareSave()));
+        rankingsThird.setText(Utils.getRanking(mScores.get(2).prepareSave()));
+        rankingsFourth.setText(Utils.getRanking(mScores.get(3).prepareSave()));
+        rankingsFifth.setText(Utils.getRanking(mScores.get(4).prepareSave()));
 
         //Поле с интересна информация
         //В последствие може да се направи файл ако някой иска да се
         // занимае от който да се четат факти и да се зареждат тук
         // идеята е да го има на всеки екран освен boot.fxml
         // Фронтенд да се пипне на това цялото view
-
         gameManager.setFactsLabel(hintLabel);
     }
+
     private void initBackButton(){
         backBtn.setOnAction(this::OnBack);
         backBtn.setText(Values.LABEL_BACK_BTN);
         Utils.setSize(backBtn, Values.ONE_COL, Values.ONE_ROW);
+        Utils.styleButton(backBtn);
+    }
+    private void initCurrent(){
+        if (GameManager.hasPlayed){
+            rankingsCurrent.setText(String.format("%s %s %s",
+                    gameManager.getCityName(),
+                    gameManager.getCurrentUser(),
+                    gameManager.getCurrentUserPoints()));
+        } else {
+            rankingsCurrent.setVisible(false);
+        }
     }
 }

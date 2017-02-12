@@ -8,6 +8,7 @@ public class Values
 
     public static String IMG_BG_MAP_FLAG = "application/resources/images/bulgaria1.png";
     public static String IMG_BACKGROUND = "application/resources/images/background.png";
+    public static String IMG_BACKGROUND_CITIES = "application/resources/images/bulgaria2.png";
 
     //FXML FILES
 
@@ -55,6 +56,7 @@ public class Values
     public static String LABEL_BACK_BTN = "Back";
     public static String LABEL_START_BTN = "New game";
     public static String LABEL_EXIT_BTN = "Exit";
+    public static String LABEL_CHOOSE_CITY_BTN = "Choose city";
     public static String LABEL_SCORES_BTN = "Leaderboard";
     public static String LABEL_RANKINGS_TOP_5 = "Top 5 Players";
     public static String LABEL_GAME_TITLE = "Bulgaria Quiz";
@@ -64,7 +66,7 @@ public class Values
     public static String FILE_ERROR_ALERT_TITLE = "File error.";
     public static String FILE_ERROR_RANKINGS = "Could not load records file.";
     public static String FILE_ERROR_QUESTIONS = "Could not load questions file.";
-    public static String INVALID_USERNAME = "Invalid username. Lenght must be at least 3 characters.";
 
     public static String DEFAULT_FONT = "Lucida Sans";
+
 }

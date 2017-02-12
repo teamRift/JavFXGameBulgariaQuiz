@@ -23,7 +23,7 @@ import static application.controllers.BootController.gameManager;
 
 public class QuestionsController {
     @FXML
-    Button backButton2;
+    Button backButton;
     @FXML
     Label questionNumLabel;
     @FXML
@@ -40,7 +40,7 @@ public class QuestionsController {
     Label maxScoreUser;
     @FXML
     Label hintLabel;
-   @FXML
+    @FXML
     ImageView background;
     @FXML
     BorderPane mainPane;
@@ -76,21 +76,25 @@ public class QuestionsController {
         
         setBackground();
         
-        setPanes();
+        initPanes();
         
-        setLabels();
-        
+        initLabels();
 
-        Utils.styleButton(firstButton,secondButton,thirdButton,fourthButton,hintOne,backButton2);
+        Utils.setSize(hintOne,Values.TWO_COLS,Values.ONE_ROW);
 
-        backButton2.setText(Values.LABEL_BACK_BTN);
+        Utils.styleButton(firstButton,secondButton,thirdButton,fourthButton,backButton,hintOne);
+
+        Utils.setSize(backButton,Values.ONE_COL, Values.ONE_ROW);
+
+        backButton.setText(Values.LABEL_BACK_BTN);
 
 
         questionButtons.setMinWidth(Values.SIX_COLS);
 
-        questionButtons.setMinHeight(Values.TWO_ROWS);
+        questionButtons.setMinHeight(Values.FOUR_ROWS);
 
-        
+        Question.reset();
+
         questions = Question.loadQuestions(gameManager.getFileName());
         
         Question.setButtons(firstButton, secondButton, thirdButton, fourthButton);
@@ -105,9 +109,7 @@ public class QuestionsController {
         thirdButton.setOnAction(this::handleButtonAction);
         
         fourthButton.setOnAction(this::handleButtonAction);
-        
-        
-        gameManager.setFactsLabel(hintLabel);
+
     }
 
     public static void finished(int score, int questionsCorrect) {
@@ -120,26 +122,12 @@ public class QuestionsController {
 
         }
 
-
         Score newScore = new Score(gameManager.getCityName(), gameManager.getCurrentUser(),score);
 
         Scores.save(newScore);
 
+        gameManager.setCurrentUserPoints(score);
 
-        Alert finish = new Alert(Alert.AlertType.INFORMATION);
-
-        finish.setTitle("You Win!");
-
-        finish.setHeaderText("Score: " + score);
-
-        finish.setContentText("Questions Correct: " + questionsCorrect + " out of " + questions.size() + " (" + percent + "%)");
-
-        finish.showAndWait();
-
-
-        Platform.exit();
-
-        System.exit(0);
     }
 
     private void setBackground(){
@@ -152,19 +140,22 @@ public class QuestionsController {
 
     }
 
-    private void setLabels() {
+    private void initLabels() {
 
         cityName.setText(gameManager.getCityName());
 
         userName.setText(gameManager.getCurrentUser());
 
-        maxScore.setText(String.valueOf(gameManager.getMaxScore()));
+        maxScore.setText(String.valueOf("Game Max: " + gameManager.getMaxScore()));
 
-        maxScoreUser.setText(String.valueOf(gameManager.getUserMaxPoints()));
+        maxScoreUser.setText(String.valueOf("User Max: " + gameManager.getUserMaxPoints()));
 
+        gameManager.setFactsLabel(hintLabel);
+
+        Utils.styleLabel(25,cityName,userName,maxScore,maxScoreUser,questionNumLabel,questionLabel,scoreLabel,hintLabel);
     }
 
-    private void setPanes() {
+    private void initPanes() {
 
         Utils.setSize(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
 
@@ -187,7 +178,8 @@ public class QuestionsController {
     }
 
     private void handleButtonAction(ActionEvent event) {
-
+        System.out.println(questions.size());
+        System.out.println(Question.getQuestionIndex());
         firstButton.setDisable(true);
 
         secondButton.setDisable(true);
@@ -196,9 +188,8 @@ public class QuestionsController {
 
         fourthButton.setDisable(true);
 
-
-        questions.get(Question.getQuestionIndex()).checkCorrect((Button) event.getTarget(), questions, scoreLabel);
-
+        questions.get(Question.getQuestionIndex())
+                .checkCorrect((Button) event.getTarget(), questions, scoreLabel);
 
         Timer time = new Timer();
 
@@ -210,7 +201,11 @@ public class QuestionsController {
 
                 Platform.runLater(() -> {
 
-                    questions.get(Question.getQuestionIndex()).displayQuestion(questionLabel, questionNumLabel);
+                    if (questions.size()>Question.getQuestionIndex()){
+
+                        questions.get(Question.getQuestionIndex()).displayQuestion(questionLabel, questionNumLabel);
+
+                    }
 
                     firstButton.setDisable(false);
 
@@ -265,7 +260,7 @@ public class QuestionsController {
 
             Parent root = FXMLLoader.load(getClass().getResource(Values.PATH_CITIES));
 
-            Stage stage = (Stage)backButton2.getScene().getWindow();
+            Stage stage = (Stage)backButton.getScene().getWindow();
 
             stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
 

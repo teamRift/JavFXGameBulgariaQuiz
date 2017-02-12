@@ -8,9 +8,14 @@ import java.util.List;
 
 public class GameManager {
 
+    public static boolean isLogged;
+    public static boolean hasPlayed;
+
     private String currentUser;
 
     private int maxPoints;
+
+    private int currentUserPoints;
 
     private int userMaxPoints;
 
@@ -18,9 +23,11 @@ public class GameManager {
 
     private List<Score> scores;
 
+
     public GameManager(){
         init();
     }
+
     public void init(){
         setScores();
     }
@@ -41,6 +48,10 @@ public class GameManager {
         return this.city;
     }
 
+    public int getCurrentUserPoints() {
+        return currentUserPoints;
+    }
+
     public int getUserMaxPoints() {
         return userMaxPoints;
     }
@@ -51,17 +62,36 @@ public class GameManager {
 
 
     public void setCurrentUser(String currentUser) {
+
         this.currentUser = currentUser;
+
         try {
+
             Scores.findAndLoad(currentUser);
+
         } catch (Exception e) {
+
             e.printStackTrace();
+
         }
+
+        isLogged = true;
+
     }
 
-    public void setCity(City city){
+    public void setCity(City city) {
+
         if (city != null) this.city = city;
+
         else this.city = new Mordor();
+
+    }
+
+    public void setCurrentUserPoints(int currentUserPoints) {
+
+        this.currentUserPoints = currentUserPoints;
+
+        hasPlayed = true;
     }
 
     public void setUserMaxPoints(int userMaxPoints) {
@@ -73,7 +103,9 @@ public class GameManager {
     }
 
     public void setFactsLabel(Label label){
-        label.setText("Знаете ли че на дъното на Черно море, лежат останки от цивилизация изчезнала преди 10 хиляди години?");
+
+        label.setText("Did you know an ancient city, dated back 10.000 BC, has been discovered on the bottom of the Black sea?");
+
     }
 
     public List<Score> getScores() {
@@ -81,20 +113,31 @@ public class GameManager {
     }
 
     private void setScores() {
+
         try {
+
             this.scores = Scores.load();
+
         } catch (Exception e) {
+
             e.printStackTrace();
+
         }
+
         int length = scores.size();
-        if (length>5){
+
+        if (length>5) {
+
             length = 5;
+
         }
+
         scores = scores.subList(0,length);
-        for (Score score : scores) {
-            System.out.println(score.prepareSave());
-        }
+
         this.setMaxScore(this.scores.get(0).getValue());
+
         System.out.println("DB loaded.");
+
     }
+
 }

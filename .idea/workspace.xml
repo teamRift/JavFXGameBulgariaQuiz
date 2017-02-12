@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Added new labels at menu, rankings, cities, questions.&#10;&#10;Added Utils methods to style Buttons.&#10;&#10;Changed hyperlinks to buttons in cities.fxml&#10;&#10;Fixed bg flag at menu.fxml&#10;&#10;To do :&#10;&#10;style&#10;&#10;rankings.fxml , quesitons.fxml">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Added new labels at menu, rankings, cities, questions.&#10;&#10;Added Utils methods to style Buttons.&#10;&#10;Changed hyperlinks to buttons in cities.fxml&#10;&#10;Fixed bg flag at menu.fxml&#10;&#10;To do :&#10;&#10;style&#10;&#10;rankings.fxml , quesitons.fxml&#10;&#10;functionality&#10;user name, user score and max score labels at quizWindow.fxml&#10;&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rankings.txt" afterPath="$PROJECT_DIR$/rankings.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/GameManager.java" afterPath="$PROJECT_DIR$/src/application/classes/GameManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/Question.java" afterPath="$PROJECT_DIR$/src/application/classes/Question.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/Scores.java" afterPath="$PROJECT_DIR$/src/application/classes/Scores.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/Utils.java" afterPath="$PROJECT_DIR$/src/application/classes/Utils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/Values.java" afterPath="$PROJECT_DIR$/src/application/classes/Values.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/controllers/BootController.java" afterPath="$PROJECT_DIR$/src/application/controllers/BootController.java" />
@@ -12,8 +15,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/controllers/QuestionsController.java" afterPath="$PROJECT_DIR$/src/application/controllers/QuestionsController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/controllers/RankingsController.java" afterPath="$PROJECT_DIR$/src/application/controllers/RankingsController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/resources/fxml/cities.fxml" afterPath="$PROJECT_DIR$/src/application/resources/fxml/cities.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/resources/fxml/menu.fxml" afterPath="$PROJECT_DIR$/src/application/resources/fxml/menu.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/resources/fxml/quizWindow.fxml" afterPath="$PROJECT_DIR$/src/application/resources/fxml/quizWindow.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/resources/fxml/rankings.fxml" afterPath="$PROJECT_DIR$/src/application/resources/fxml/rankings.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/resources/questions/varnaQuestions.txt" afterPath="$PROJECT_DIR$/src/application/resources/questions/varnaQuestions.txt" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,130 +84,171 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="RankingsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/controllers/RankingsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="875">
-              <caret line="94" column="45" lean-forward="false" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuestionsController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/application/controllers/QuestionsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1141">
-              <caret line="269" column="8" lean-forward="true" selection-start-line="269" selection-start-column="8" selection-end-line="269" selection-end-column="8" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+      <file leaf-file-name="cities.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/cities.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="603">
+              <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5010#5496#0" expanded="true" />
-                <element signature="e#5495#5496#0" expanded="true" />
+                <marker date="1486937536393" expanded="true" signature="6920:6941" ph="..." />
+                <marker date="1486937536393" expanded="true" signature="6920:6959" ph="..." />
+                <marker date="1486937536393" expanded="true" signature="6920:6970" ph="..." />
+                <marker date="1486937536393" expanded="true" signature="6920:7482" ph="..." />
+                <marker date="1486937536393" expanded="true" signature="6981:7468" ph="..." />
+                <marker date="1486937536393" expanded="true" signature="7065:7456" ph="..." />
+                <marker date="1486937536393" expanded="true" signature="7093:7206" ph="..." />
+                <marker date="1486937536393" expanded="true" signature="7231:7339" ph="..." />
+                <marker date="1486937536393" expanded="true" signature="7359:7438" ph="..." />
               </folding>
             </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MenuController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/controllers/MenuController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="119" column="39" lean-forward="false" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
+            <state relative-caret-position="133">
+              <caret line="202" column="84" lean-forward="false" selection-start-line="202" selection-start-column="84" selection-end-line="202" selection-end-column="84" />
               <folding>
-                <element signature="method#setPanes#0;class#MenuController#0" expanded="false" />
+                <element signature="method#initStartButton#0;class#MenuController#0" expanded="false" />
+                <element signature="method#initialize#0;class#MenuController#0" expanded="false" />
                 <element signature="method#initLabels#0;class#MenuController#0" expanded="false" />
                 <element signature="method#exitGame#0;class#MenuController#0" expanded="false" />
-                <element signature="method#showScores#0;class#MenuController#0" expanded="false" />
-                <element signature="method#startGame#0;class#MenuController#0" expanded="false" />
-                <element signature="method#initGameLabel#0;class#MenuController#0" expanded="false" />
                 <element signature="method#initRiftLabel#0;class#MenuController#0" expanded="false" />
+                <element signature="method#initSoftUniLabel#0;class#MenuController#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CitiesController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/controllers/CitiesController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="925">
-              <caret line="76" column="27" lean-forward="true" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="48" />
+      <file leaf-file-name="menu.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/menu.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="353">
+              <caret line="42" column="37" lean-forward="false" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
               <folding>
-                <element signature="method#OnBack#0;class#CitiesController#0" expanded="false" />
-                <element signature="method#initHint#0;class#CitiesController#0" expanded="false" />
-                <element signature="method#setCity#0;class#CitiesController#0" expanded="false" />
-                <element signature="method#setPanes#0;class#CitiesController#0" expanded="false" />
+                <marker date="1486937056119" expanded="true" signature="5069:5266" ph="..." />
+                <marker date="1486937056119" expanded="true" signature="5748:6533" ph="..." />
+                <marker date="1486937056119" expanded="true" signature="5813:6521" ph="..." />
+                <marker date="1486937056119" expanded="true" signature="5841:5954" ph="..." />
+                <marker date="1486937056119" expanded="true" signature="5979:6251" ph="..." />
+                <marker date="1486937056119" expanded="true" signature="6271:6503" ph="..." />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/classes/Utils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1323">
-              <caret line="196" column="42" lean-forward="false" selection-start-line="196" selection-start-column="42" selection-end-line="196" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BootController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/controllers/BootController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="27" column="75" lean-forward="true" selection-start-line="27" selection-start-column="75" selection-end-line="27" selection-end-column="75" />
-              <folding />
-            </state>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="quizWindow.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/quizWindow.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="670">
+              <caret line="122" column="16" lean-forward="false" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
+              <folding>
+                <marker date="1486937422701" expanded="true" signature="6789:7070" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="6789:7087" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="6789:10410" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="6841:7019" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="6898:6991" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="7104:8110" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="7175:8092" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="7209:7334" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="7365:7661" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="7687:8068" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="7892:8041" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="7920:8013" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="8125:10367" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="8194:10351" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="8228:8539" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="8570:8870" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="8896:10327" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="9585:9734" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="9618:9703" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="9981:10130" ph="..." />
+                <marker date="1486937422701" expanded="true" signature="10014:10099" ph="..." />
+              </folding>
+            </state>
+          </provider>
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
             <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="117" column="34" lean-forward="false" selection-start-line="117" selection-start-column="34" selection-end-line="117" selection-end-column="34" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="boot.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/boot.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
           <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Color.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/paint/Color.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="1641" column="88" lean-forward="false" selection-start-line="1641" selection-start-column="43" selection-end-line="1641" selection-end-column="88" />
-              <folding />
-            </state>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="rankings.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/rankings.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="56" column="28" lean-forward="false" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
+              <folding>
+                <marker date="1486924933972" expanded="true" signature="5654:5682" ph="..." />
+              </folding>
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Scores.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/application/classes/Scores.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="53" column="36" lean-forward="false" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
+            <state relative-caret-position="282">
+              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding>
+                <element signature="method#load#0;class#Scores#0" expanded="false" />
+                <element signature="method#findAndLoad#0;class#Scores#0" expanded="false" />
+                <element signature="method#userExist#0;class#Scores#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RankingsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/controllers/RankingsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="98" column="27" lean-forward="false" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/classes/GameManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="876">
+              <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+              <folding>
+                <element signature="method#setCity#0;class#GameManager#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rankings.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rankings.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -221,12 +266,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>questions</find>
-      <find>question</find>
-      <find>icon</find>
-      <find>GameController</find>
-      <find>FILE_ERROR_RANKINGS</find>
-      <find>USER_</find>
       <find>score</find>
       <find>loadScores</find>
       <find>scores</find>
@@ -240,7 +279,6 @@
       <find>initCityManager</find>
       <find>gameManager</find>
       <find>username</find>
-      <find>System</find>
       <find>background</find>
       <find>minWidth</find>
       <find>maxWidth</find>
@@ -250,6 +288,14 @@
       <find>WIDTH_OR_FONT_SIZE</find>
       <find>setAttributes</find>
       <find>CitiesController.gameManager</find>
+      <find>backButton2</find>
+      <find>setLabels</find>
+      <find>setPanes</find>
+      <find>onH</find>
+      <find>initHint</find>
+      <find>Избери</find>
+      <find>centerPane</find>
+      <find>System</find>
     </findStrings>
     <replaceStrings>
       <replace>scores</replace>
@@ -268,6 +314,10 @@
       <replace>WIDTH</replace>
       <replace>Utils.setSize</replace>
       <replace>gameManager</replace>
+      <replace>backButton</replace>
+      <replace>initLabels</replace>
+      <replace>initPanes</replace>
+      <replace>mapPane</replace>
     </replaceStrings>
   </component>
   <component name="FindManager">
@@ -291,7 +341,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/application/classes/Strings.java" />
         <option value="$PROJECT_DIR$/src/application/cities.fxml" />
         <option value="$PROJECT_DIR$/src/application/classes/City.java" />
         <option value="$PROJECT_DIR$/src/application/resources/fxml/boot.fxml" />
@@ -316,9 +365,6 @@
         <option value="$PROJECT_DIR$/src/application/classes/Rankings.java" />
         <option value="$PROJECT_DIR$/src/application/classes/Player.java" />
         <option value="$PROJECT_DIR$/src/application/classes/cities/GameManager.java" />
-        <option value="$PROJECT_DIR$/src/application/classes/Scores.java" />
-        <option value="$PROJECT_DIR$/src/application/classes/Question.java" />
-        <option value="$PROJECT_DIR$/rankings.txt" />
         <option value="$PROJECT_DIR$/src/application/resources/questions/burgasQuestions" />
         <option value="$PROJECT_DIR$/src/application/resources/questions/bsQuestions.txt" />
         <option value="$PROJECT_DIR$/src/application/resources/questions/velikoturnovoQuestions" />
@@ -327,21 +373,25 @@
         <option value="$PROJECT_DIR$/src/application/resources/questions/sfQuestions.txt" />
         <option value="$PROJECT_DIR$/src/application/classes/cities/Varna.java" />
         <option value="$PROJECT_DIR$/src/application/classes/cities/Burgas.java" />
-        <option value="$PROJECT_DIR$/src/application/classes/GameManager.java" />
-        <option value="$PROJECT_DIR$/src/application/classes/Values.java" />
-        <option value="$PROJECT_DIR$/src/application/resources/fxml/cities.fxml" />
         <option value="$PROJECT_DIR$/src/application/Main.java" />
-        <option value="$PROJECT_DIR$/src/application/resources/fxml/menu.fxml" />
-        <option value="$PROJECT_DIR$/src/application/resources/fxml/quizWindow.fxml" />
         <option value="$PROJECT_DIR$/src/test.java" />
         <option value="$PROJECT_DIR$/src/application/resources/questions/plnQuestions.txt" />
-        <option value="$PROJECT_DIR$/src/application/controllers/RankingsController.java" />
-        <option value="$PROJECT_DIR$/src/application/controllers/BootController.java" />
-        <option value="$PROJECT_DIR$/src/application/classes/Utils.java" />
         <option value="$PROJECT_DIR$/src/application/controllers/MenuController.java" />
+        <option value="$PROJECT_DIR$/src/application/controllers/BootController.java" />
         <option value="$PROJECT_DIR$/src/application/resources/fxml/rankings.fxml" />
+        <option value="$PROJECT_DIR$/src/application/resources/questions/varnaQuestions.txt" />
+        <option value="$PROJECT_DIR$/src/application/classes/Question.java" />
+        <option value="$PROJECT_DIR$/src/application/classes/Values.java" />
+        <option value="$PROJECT_DIR$/src/application/controllers/RankingsController.java" />
+        <option value="$PROJECT_DIR$/src/application/classes/Utils.java" />
+        <option value="$PROJECT_DIR$/src/application/resources/fxml/menu.fxml" />
         <option value="$PROJECT_DIR$/src/application/controllers/CitiesController.java" />
         <option value="$PROJECT_DIR$/src/application/controllers/QuestionsController.java" />
+        <option value="$PROJECT_DIR$/src/application/resources/fxml/quizWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/application/resources/fxml/cities.fxml" />
+        <option value="$PROJECT_DIR$/src/application/classes/GameManager.java" />
+        <option value="$PROJECT_DIR$/rankings.txt" />
+        <option value="$PROJECT_DIR$/src/application/classes/Scores.java" />
       </list>
     </option>
   </component>
@@ -374,8 +424,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -425,36 +476,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="questions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavFXGameBulgariaQuiz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavFXGameBulgariaQuiz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -530,7 +551,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -552,11 +572,12 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Desktop\JavFXGameBulgariaQuiz\src\application\resources\fxml" />
-      <recent name="C:\Users\Administrator\Desktop\JavFXGameBulgariaQuiz\src\application\resources\questions" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\JavFXGameBulgariaQuiz\src\application\resources\images" />
-      <recent name="D:\TestTest\src\application" />
+      <recent name="C:\Users\Administrator\Desktop\JavFXGameBulgariaQuiz\src\application\resources\fxml" />
+      <recent name="C:\Users\Administrator\Desktop\JavFXGameBulgariaQuiz\src\application" />
+      <recent name="C:\JavFXGameBulgariaQuiz\src\application\engine\db" />
+      <recent name="C:\JavFXGameBulgariaQuiz\src\application" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="application.controllers" />
@@ -564,12 +585,11 @@
       <recent name="application" />
       <recent name="application.engine.utils" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Desktop\JavFXGameBulgariaQuiz\src\application\resources\images" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\JavFXGameBulgariaQuiz\src\application\resources\fxml" />
-      <recent name="C:\Users\Administrator\Desktop\JavFXGameBulgariaQuiz\src\application" />
-      <recent name="C:\JavFXGameBulgariaQuiz\src\application\engine\db" />
-      <recent name="C:\JavFXGameBulgariaQuiz\src\application" />
+      <recent name="C:\Users\Administrator\Desktop\JavFXGameBulgariaQuiz\src\application\resources\questions" />
+      <recent name="C:\Users\Administrator\Desktop\JavFXGameBulgariaQuiz\src\application\resources\images" />
+      <recent name="D:\TestTest\src\application" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -1087,7 +1107,9 @@
       <workItem from="1486755307497" duration="1142000" />
       <workItem from="1486757366515" duration="303000" />
       <workItem from="1486823317063" duration="1180000" />
-      <workItem from="1486838849798" duration="3561000" />
+      <workItem from="1486838849798" duration="3667000" />
+      <workItem from="1486905331706" duration="3095000" />
+      <workItem from="1486918775897" duration="15915000" />
     </task>
     <task id="LOCAL-00001" summary="Added logic to change Questions - package aplication.classes.cities.&#10;Added Ranking, Score Player classes, not implemented. TO DO Logic for displaying scores, keeping scores, scores.fxml, ScoresController.&#10;Added BootController with boot.fxml for startscreen. TO DO Team Rift Logo displayed for 3-4 seconds, then start screen.&#10;Added mordorQuestions. Limited Questions to 8 cities - Blagoevgrad, Burgas, Sofia, Varna, Pleven, Plovdiv, Ruse and Veliko Turnovo. If anyone wants other city, should replace one of above, but first notify others to avoid breaking logic in application.classes.cities;&#10;Moved all FXML to resources/fxml. path fixed.&#10;Created rankings.txt to keep scores.&#10;Added Values.java file to keep all Strings, Dimensions and any other static values.&#10;LAYOUT AND DESIGN&#10;&#10;TO DO&#10;Find good background image.&#10;&#10;CHANGES&#10;Changed bulgaria map image.&#10;Changed start.fxml buttons positon.&#10;Changed cities.fxml layout.&#10;Layout and design changes.&#10;More layout and design changes.&#10;">
       <created>1486467603680</created>
@@ -1110,11 +1132,18 @@
       <option name="project" value="LOCAL" />
       <updated>1486475247703</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added new labels at menu, rankings, cities, questions.&#10;&#10;Added Utils methods to style Buttons.&#10;&#10;Changed hyperlinks to buttons in cities.fxml&#10;&#10;Fixed bg flag at menu.fxml&#10;&#10;To do :&#10;&#10;style&#10;&#10;rankings.fxml , quesitons.fxml&#10;&#10;functionality&#10;user name, user score and max score labels at quizWindow.fxml&#10;&#10;">
+      <created>1486842481082</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1486842481082</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96048000" />
+    <option name="totallyTimeSpent" value="115164000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1138,8 +1167,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29817232" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29817232" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1150,8 +1179,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1184,18 +1213,11 @@
     <MESSAGE value="Added logic to change Questions - package aplication.classes.cities.&#10;Added Ranking, Score Player classes, not implemented. TO DO Logic for displaying scores, keeping scores, scores.fxml, ScoresController.&#10;Added BootController with boot.fxml for startscreen. TO DO Team Rift Logo displayed for 3-4 seconds, then start screen.&#10;Added mordorQuestions. Limited Questions to 8 cities - Blagoevgrad, Burgas, Sofia, Varna, Pleven, Plovdiv, Ruse and Veliko Turnovo. If anyone wants other city, should replace one of above, but first notify others to avoid breaking logic in application.classes.cities;&#10;Moved all FXML to resources/fxml. path fixed.&#10;Created rankings.txt to keep scores.&#10;Added Values.java file to keep all Strings, Dimensions and any other static values.&#10;LAYOUT AND DESIGN&#10;&#10;TO DO&#10;Find good background image.&#10;&#10;CHANGES&#10;Changed bulgaria map image.&#10;Changed start.fxml buttons positon.&#10;Changed cities.fxml layout.&#10;Layout and design changes.&#10;More layout and design changes.&#10;" />
     <MESSAGE value="Merged." />
     <MESSAGE value="Fixed forgotten classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed forgotten classes." />
+    <MESSAGE value="Added new labels at menu, rankings, cities, questions.&#10;&#10;Added Utils methods to style Buttons.&#10;&#10;Changed hyperlinks to buttons in cities.fxml&#10;&#10;Fixed bg flag at menu.fxml&#10;&#10;To do :&#10;&#10;style&#10;&#10;rankings.fxml , quesitons.fxml&#10;&#10;functionality&#10;user name, user score and max score labels at quizWindow.fxml&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new labels at menu, rankings, cities, questions.&#10;&#10;Added Utils methods to style Buttons.&#10;&#10;Changed hyperlinks to buttons in cities.fxml&#10;&#10;Fixed bg flag at menu.fxml&#10;&#10;To do :&#10;&#10;style&#10;&#10;rankings.fxml , quesitons.fxml&#10;&#10;functionality&#10;user name, user score and max score labels at quizWindow.fxml&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/application/classes/Utils.java</url>
-          <line>182</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
@@ -1205,35 +1227,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/plovdivQuestions.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="88" lean-forward="false" selection-start-line="2" selection-start-column="88" selection-end-line="2" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/Player.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="1304" column="18" lean-forward="false" selection-start-line="1304" selection-start-column="18" selection-end-line="1304" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Blagoevgrad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="110" column="19" lean-forward="false" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Plovdiv.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -1259,13 +1252,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/Scores.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2679">
-          <caret line="57" column="41" lean-forward="false" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -1331,11 +1317,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/images/bulgaria1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/layout/Region.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
@@ -1343,39 +1324,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rankings.txt" />
-    <entry file="file://$PROJECT_DIR$/src/application/classes/Values.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/cities.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="2508">
-          <caret line="114" column="20" lean-forward="false" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/resources/images/background.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/menu.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="42" column="37" lean-forward="false" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/layout/AnchorPane.java">
@@ -1392,14 +1343,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/resources/questions/burgasQuestions.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -1411,13 +1354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/varnaQuestions.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="88" lean-forward="false" selection-start-line="2" selection-start-column="88" selection-end-line="2" selection-end-column="88" />
         </state>
       </provider>
     </entry>
@@ -1450,118 +1386,279 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/GameManager.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/paint/Color.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="45936">
+          <caret line="1641" column="88" lean-forward="false" selection-start-line="1641" selection-start-column="43" selection-end-line="1641" selection-end-column="88" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/quizWindow.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="117" column="34" lean-forward="false" selection-start-line="117" selection-start-column="34" selection-end-line="117" selection-end-column="34" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3501">
+          <caret line="427" column="13" lean-forward="false" selection-start-line="427" selection-start-column="13" selection-end-line="427" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/boot.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/io/PrintStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="803" column="16" lean-forward="false" selection-start-line="803" selection-start-column="16" selection-end-line="803" selection-end-column="16" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/images/bulgaria1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/controllers/BootController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="27" column="75" lean-forward="true" selection-start-line="27" selection-start-column="75" selection-end-line="27" selection-end-column="75" />
+        <state relative-caret-position="319">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/paint/Color.java">
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/varnaQuestions.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="1641" column="88" lean-forward="false" selection-start-line="1641" selection-start-column="43" selection-end-line="1641" selection-end-column="88" />
+        <state relative-caret-position="132">
+          <caret line="3" column="125" lean-forward="false" selection-start-line="3" selection-start-column="125" selection-end-line="3" selection-end-column="125" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/classes/Question.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5616">
+          <caret line="219" column="0" lean-forward="true" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+          <folding>
+            <element signature="method#Question#0;class#Question#0" expanded="false" />
+            <element signature="method#loadQuestions#0;class#Question#0" expanded="false" />
+            <element signature="method#displayQuestion#0;class#Question#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/classes/Values.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="807">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="790">
+          <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/stream/Stream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1133">
+          <caret line="497" column="9" lean-forward="false" selection-start-line="497" selection-start-column="9" selection-end-line="497" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="2237" column="18" lean-forward="false" selection-start-line="2237" selection-start-column="18" selection-end-line="2237" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/classes/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1323">
-          <caret line="196" column="42" lean-forward="false" selection-start-line="196" selection-start-column="42" selection-end-line="196" selection-end-column="42" />
+        <state relative-caret-position="1961">
+          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="method#log#0;class#Utils#0" expanded="false" />
+            <element signature="method#styleLabel#0;class#Utils#0" expanded="false" />
+            <element signature="method#setShadow#0;class#Utils#0" expanded="false" />
+            <element signature="method#setShadow#1;class#Utils#0" expanded="false" />
+            <element signature="method#styleCityButton#0;class#Utils#0" expanded="false" />
+            <element signature="method#styleButton#0;class#Utils#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/rankings.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="53" column="36" lean-forward="false" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/controllers/CitiesController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="925">
-          <caret line="76" column="27" lean-forward="true" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="48" />
+        <state relative-caret-position="459">
+          <caret line="118" column="30" lean-forward="true" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
           <folding>
+            <element signature="method#onCityQuestion#0;class#CitiesController#0" expanded="false" />
             <element signature="method#OnBack#0;class#CitiesController#0" expanded="false" />
-            <element signature="method#initHint#0;class#CitiesController#0" expanded="false" />
+            <element signature="method#initButtons#0;class#CitiesController#0" expanded="false" />
             <element signature="method#setCity#0;class#CitiesController#0" expanded="false" />
-            <element signature="method#setPanes#0;class#CitiesController#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/controllers/MenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="119" column="39" lean-forward="false" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
-          <folding>
-            <element signature="method#setPanes#0;class#MenuController#0" expanded="false" />
-            <element signature="method#initLabels#0;class#MenuController#0" expanded="false" />
-            <element signature="method#exitGame#0;class#MenuController#0" expanded="false" />
-            <element signature="method#showScores#0;class#MenuController#0" expanded="false" />
-            <element signature="method#startGame#0;class#MenuController#0" expanded="false" />
-            <element signature="method#initGameLabel#0;class#MenuController#0" expanded="false" />
-            <element signature="method#initRiftLabel#0;class#MenuController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/controllers/RankingsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="875">
-          <caret line="94" column="45" lean-forward="false" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/controllers/QuestionsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1141">
-          <caret line="269" column="8" lean-forward="true" selection-start-line="269" selection-start-column="8" selection-end-line="269" selection-end-column="8" />
+        <state relative-caret-position="787">
+          <caret line="152" column="45" lean-forward="true" selection-start-line="152" selection-start-column="45" selection-end-line="152" selection-end-column="45" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5010#5496#0" expanded="true" />
-            <element signature="e#5495#5496#0" expanded="true" />
+            <element signature="method#setBackground#0;class#QuestionsController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/boot.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/menu.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="42" column="37" lean-forward="false" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+          <folding>
+            <marker date="1486937056119" expanded="true" signature="5069:5266" ph="..." />
+            <marker date="1486937056119" expanded="true" signature="5748:6533" ph="..." />
+            <marker date="1486937056119" expanded="true" signature="5813:6521" ph="..." />
+            <marker date="1486937056119" expanded="true" signature="5841:5954" ph="..." />
+            <marker date="1486937056119" expanded="true" signature="5979:6251" ph="..." />
+            <marker date="1486937056119" expanded="true" signature="6271:6503" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/rankings.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="56" column="28" lean-forward="false" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
+          <folding>
+            <marker date="1486924933972" expanded="true" signature="5654:5682" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/controllers/RankingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="98" column="27" lean-forward="false" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/controllers/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="202" column="84" lean-forward="false" selection-start-line="202" selection-start-column="84" selection-end-line="202" selection-end-column="84" />
+          <folding>
+            <element signature="method#initStartButton#0;class#MenuController#0" expanded="false" />
+            <element signature="method#initialize#0;class#MenuController#0" expanded="false" />
+            <element signature="method#initLabels#0;class#MenuController#0" expanded="false" />
+            <element signature="method#exitGame#0;class#MenuController#0" expanded="false" />
+            <element signature="method#initRiftLabel#0;class#MenuController#0" expanded="false" />
+            <element signature="method#initSoftUniLabel#0;class#MenuController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/classes/GameManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="876">
+          <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding>
+            <element signature="method#setCity#0;class#GameManager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/cities.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+          <folding>
+            <marker date="1486937536393" expanded="true" signature="6920:6941" ph="..." />
+            <marker date="1486937536393" expanded="true" signature="6920:6959" ph="..." />
+            <marker date="1486937536393" expanded="true" signature="6920:6970" ph="..." />
+            <marker date="1486937536393" expanded="true" signature="6920:7482" ph="..." />
+            <marker date="1486937536393" expanded="true" signature="6981:7468" ph="..." />
+            <marker date="1486937536393" expanded="true" signature="7065:7456" ph="..." />
+            <marker date="1486937536393" expanded="true" signature="7093:7206" ph="..." />
+            <marker date="1486937536393" expanded="true" signature="7231:7339" ph="..." />
+            <marker date="1486937536393" expanded="true" signature="7359:7438" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/quizWindow.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="122" column="16" lean-forward="false" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
+          <folding>
+            <marker date="1486937422701" expanded="true" signature="6789:7070" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="6789:7087" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="6789:10410" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="6841:7019" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="6898:6991" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="7104:8110" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="7175:8092" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="7209:7334" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="7365:7661" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="7687:8068" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="7892:8041" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="7920:8013" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="8125:10367" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="8194:10351" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="8228:8539" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="8570:8870" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="8896:10327" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="9585:9734" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="9618:9703" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="9981:10130" ph="..." />
+            <marker date="1486937422701" expanded="true" signature="10014:10099" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rankings.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/classes/Scores.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="method#load#0;class#Scores#0" expanded="false" />
+            <element signature="method#findAndLoad#0;class#Scores#0" expanded="false" />
+            <element signature="method#userExist#0;class#Scores#0" expanded="false" />
           </folding>
         </state>
       </provider>

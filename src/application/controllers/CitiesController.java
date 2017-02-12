@@ -15,10 +15,7 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
@@ -43,9 +40,7 @@ public class CitiesController {
     @FXML
     GridPane leftPane;
     @FXML
-    GridPane centerPane;
-    @FXML
-    Pane mapPane;
+    AnchorPane mapPane;
     @FXML
     ImageView mapImg;
     @FXML
@@ -67,76 +62,130 @@ public class CitiesController {
     @FXML
     Label hintLabel;
     @FXML
-    Label gameTitle;
+    Label labelChooseCity;
 
     public void initialize() throws IOException {
+
         setPanes();
-        initHint();
-        Utils.styleCityButton(varna,ruse,sofia,burgas,blagoevgrad,plovdiv,pleven,turnovo);
-        Utils.styleButton(backButton);
-        backButton.setText(Values.LABEL_BACK_BTN);
+
+        initButtons();
+
+        initLabels();
+
     }
 
     public void onCityQuestion( ActionEvent actionEvent) throws IOException {
+
         Button button  = (Button)  actionEvent.getSource();
+
         String id = button.getId();
+
         setCity(id.toLowerCase());
+
         Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/quizWindow.fxml"));
 
+
         Stage stage = (Stage)button.getScene().getWindow();
+
         stage.setScene( new Scene( root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
+
         stage.show();
+
     }
 
     public void OnBack(ActionEvent actionEvent) throws IOException {
+
         Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
+
         Stage stage = ( Stage ) backButton.getScene().getWindow();
+
         stage.setScene( new Scene( root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
+
         stage.show();
     }
 
-    private void initHint() {
+    private void initButtons(){
 
-        gameManager.setFactsLabel(hintLabel);
+        Utils.styleCityButton(varna,ruse,sofia,burgas,blagoevgrad,plovdiv,pleven,turnovo);
 
-        hintLabel.setTextFill(Color.WHITE);
+        Utils.styleButton(backButton);
 
-        hintLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD,25));
+        Utils.setSize(backButton,Values.ONE_COL, Values.ONE_ROW);
 
-        Utils.setShadow(hintLabel);
+        backButton.setText(Values.LABEL_BACK_BTN);
 
     }
 
-    private void setCity(String city){
-        if (city.equalsIgnoreCase("sofia")){
+    private void initLabels() {
+
+        gameManager.setFactsLabel(hintLabel);
+
+        Utils.styleLabel(25,hintLabel);
+
+
+        labelChooseCity.setText(Values.LABEL_CHOOSE_CITY_BTN);
+
+        Utils.styleLabel(40,labelChooseCity);
+
+    }
+
+    private void setCity(String city) {
+
+        if (city.equalsIgnoreCase("sofia")) {
+
             gameManager.setCity(new Sofia());
+
         } else if (city.equalsIgnoreCase("varna")) {
+
             gameManager.setCity(new Varna());
+
         }  else if (city.equalsIgnoreCase("plovdiv")) {
+
             gameManager.setCity(new Plovdiv());
+
         }  else if (city.equalsIgnoreCase("burgas")) {
+
             gameManager.setCity(new Burgas());
+
         }  else if (city.equalsIgnoreCase("turnovo")) {
+
             gameManager.setCity(new VelikoTurnovo());
+
         }  else if (city.equalsIgnoreCase("pleven")) {
+
             gameManager.setCity(new Pleven());
+
         }  else if (city.equalsIgnoreCase("ruse")) {
+
             gameManager.setCity(new Ruse());
+
         }  else if (city.equalsIgnoreCase("blagoevgrad")) {
+
             gameManager.setCity(new Blagoevgrad());
+
         } else {
+
             gameManager.setCity(new Mordor());
+
         }
     }
 
     private void setPanes(){
+
         Utils.setSize(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
-        Utils.setSize(topPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
+
+        Utils.setSize(topPane, Values.SCREEN_WIDTH, Values.THREE_ROWS);
+
         Utils.setSize(bottomPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
-        Utils.setSize(leftPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        Utils.setSize(rightPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        Utils.setSize(centerPane, Values.SCREEN_WIDTH  - Values.FOUR_COLS, Values.SCREEN_HEIGHT- Values.FOUR_COLS);
+
+        Utils.setSize(leftPane, Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
+
+        Utils.setSize(rightPane, Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
+
+        Utils.setSize(mapPane, Values.SIX_COLS, Values.SIX_ROWS + (Values.ONE_ROW*1.5));
+
         Utils.setBackground(mainPane, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT);
+
     }
 
 }

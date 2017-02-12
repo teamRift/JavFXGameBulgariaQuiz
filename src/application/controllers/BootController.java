@@ -32,16 +32,27 @@ public class BootController {
         delay.play();
 
     }
-    void startGame(){
+    private void startGame() {
+
         Stage stage = (Stage) textLabel.getScene().getWindow();
+
+
         Parent root = stage.getScene().getRoot();
+
         try {
+
             root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
+
         } catch (IOException e) {
+
             e.printStackTrace();
+
         }
 
         stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
+
         stage.show();
+
     }
+
 }

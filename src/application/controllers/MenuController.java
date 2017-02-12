@@ -1,5 +1,6 @@
 package application.controllers;
 
+import application.classes.GameManager;
 import application.classes.Utils;
 import application.classes.Values;
 import javafx.event.ActionEvent;
@@ -195,8 +196,9 @@ public class MenuController {
 
     }
 
-
     private void startGame(ActionEvent actionEvent) throws IOException {
+
+        gameManager = new GameManager();
 
         Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/cities.fxml"));
 
@@ -207,7 +209,6 @@ public class MenuController {
         stage.show();
 
     }
-
 
     private void initGameLabel() {
 
