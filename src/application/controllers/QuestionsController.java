@@ -236,10 +236,10 @@ public class QuestionsController {
         buttons.add(firstButton);
 
 
-        Question a = questions.get(Question.getQuestionIndex());
+        Question question = questions.get(Question.getQuestionIndex());
 
 
-        buttons = a.jokerBtn(buttons);
+        buttons = question.jokerBtn(buttons);
 
 
         for (int i = 0; i < 2; i++) {
