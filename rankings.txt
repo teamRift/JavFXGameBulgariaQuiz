@@ -1,7 +1,0 @@
-MORDOR ; SAURON ; 0
-Ruse ; USERNAME ; 10
-VelikoTurnovo ; USERNAME ; 0
-Plovdiv ; ASDDS ; 20
-Varna ; USERNAME ; 40
-VelikoTurnovo ; USERNAME ; 30
-Plovdiv ; USERNAME ; 30
