@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -17,7 +16,10 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import static application.controllers.BootController.gameManager;
 
@@ -67,18 +69,16 @@ public class QuestionsController {
     @FXML
     public Button fourthButton;
 
-
     private static ArrayList<Question> questions;
-
 
     @FXML
     public void initialize() {
         
         setBackground();
         
-        initPanes();
+        setPanes();
         
-        initLabels();
+        setLabels();
 
         Utils.setSize(hintOne,Values.TWO_COLS,Values.ONE_ROW);
 
@@ -122,8 +122,8 @@ public class QuestionsController {
 
         }
 
-        Score newScore = new Score(gameManager.getCityName(), gameManager.getCurrentUser(),score);
-
+        Score newScore = new Score(gameManager.getCityName(), gameManager.getCurrentUser(), score);
+        System.out.println("Save score.");
         Scores.save(newScore);
 
         gameManager.setCurrentUserPoints(score);
@@ -140,7 +140,7 @@ public class QuestionsController {
 
     }
 
-    private void initLabels() {
+    private void setLabels() {
 
         cityName.setText(gameManager.getCityName());
 
@@ -155,7 +155,7 @@ public class QuestionsController {
         Utils.styleLabel(25,cityName,userName,maxScore,maxScoreUser,questionNumLabel,questionLabel,scoreLabel,hintLabel);
     }
 
-    private void initPanes() {
+    private void setPanes() {
 
         Utils.setSize(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
 
@@ -178,8 +178,7 @@ public class QuestionsController {
     }
 
     private void handleButtonAction(ActionEvent event) {
-        System.out.println(questions.size());
-        System.out.println(Question.getQuestionIndex());
+
         firstButton.setDisable(true);
 
         secondButton.setDisable(true);
@@ -221,9 +220,9 @@ public class QuestionsController {
         }, Values.PAUSE_VALUE);
     }
 
-    public void initHintButton(ActionEvent actionEvent) {
+    public void hintButton(ActionEvent actionEvent) {
 
-        Random random = new Random();
+        Random rn = new Random();
 
         ArrayList<Button> buttons = new ArrayList<>();
 
@@ -235,16 +234,13 @@ public class QuestionsController {
 
         buttons.add(firstButton);
 
-
         Question question = questions.get(Question.getQuestionIndex());
-
 
         buttons = question.jokerBtn(buttons);
 
-
         for (int i = 0; i < 2; i++) {
 
-            int index = random.nextInt(buttons.size());
+            int index = rn.nextInt(buttons.size());
 
             buttons.get(index).setDisable(true);
 
@@ -258,13 +254,12 @@ public class QuestionsController {
 
     public void OnBack(ActionEvent actionEvent) throws IOException {
 
-            Parent root = FXMLLoader.load(getClass().getResource(Values.PATH_CITIES));
+        Parent root = FXMLLoader.load(getClass().getResource(Values.PATH_CITIES));
 
-            Stage stage = (Stage)backButton.getScene().getWindow();
+        Stage stage = (Stage)backButton.getScene().getWindow();
 
-            stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
+        stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
 
-            stage.show();
+        stage.show();
     }
-
 }

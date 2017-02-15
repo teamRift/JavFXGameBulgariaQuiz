@@ -1,13 +1,16 @@
 package application.classes;
 
+import com.sun.org.apache.bcel.internal.classfile.SourceFile;
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -18,58 +21,19 @@ public class Scores {
 
     private List<Score> leaderboard;
 
-    private static File scores;
-
     public Scores() {
 
-        try {
-
-            leaderboard = load();
-
-        } catch (Exception ex){
-
-        }
+        leaderboard = load();
 
     }
 
-    private static Scores create() {
-
-        try (Writer writer = new BufferedWriter(new OutputStreamWriter(
-
-                new FileOutputStream(Values.PATH_RANKINGS), "utf-8"))) {
-
-            writer.write("<-- START -->\n");
-
-            writer.write("MORDOR ; SAURON ; 0\n");
-
-            writer.close();
-
-        } catch (UnsupportedEncodingException e) {
-
-            e.printStackTrace();
-
-        } catch (FileNotFoundException e) {
-
-            e.printStackTrace();
-
-        } catch (IOException e) {
-
-            e.printStackTrace();
-
-        }
-
-        return new Scores();
-    }
-
-    public static void save(Score score) {
+    private static void create() {
 
         Path filePath = Paths.get("./" + Values.PATH_RANKINGS);
 
-        List<String> fileContent = null;
-
         try {
 
-            fileContent = new ArrayList<>(Files.readAllLines(filePath, StandardCharsets.UTF_8));
+            Files.createFile(filePath);
 
         } catch (IOException e) {
 
@@ -77,20 +41,11 @@ public class Scores {
 
         }
 
-        for (int i = 0; i < fileContent.size(); i++) {
+        List<String> fileContent = new ArrayList<String>();
 
-            String[] tokens = fileContent.get(i).replaceAll(" ", "").split(";");
+        for (int i = 0; i < 5; i++){
 
-            if (tokens.length > 2) {
-
-                if (tokens[0].equalsIgnoreCase(score.getCityName()) & tokens[1].equalsIgnoreCase(score.getUserName()) & Integer.valueOf(tokens[2]) < score.getValue()) {
-
-                    fileContent.set(i, score.prepareSave());
-                    break;
-
-                }
-
-            }
+            fileContent.add("BG ; TEAM RIFT ; 0");
 
         }
 
@@ -106,16 +61,25 @@ public class Scores {
 
     }
 
-    public static ArrayList<Score> load() throws Exception {
+    public static List<Score> load() {
 
         ArrayList<Score> scores = new ArrayList<>();
 
         try {
+
             Path filePath = Paths.get("./" + Values.PATH_RANKINGS);
+
+            if (!Files.exists(filePath)) {
+
+                Utils.log(Scores.class,"");
+
+                create();
+
+            }
 
             Files.lines(filePath).forEach(line -> {
 
-                if (line.isEmpty() | line.contains("<-- START -->")) {
+                if (line.isEmpty()) {
 
                     return;
 
@@ -131,18 +95,9 @@ public class Scores {
 
             create();
 
-            Alert notFound = new Alert(Alert.AlertType.ERROR);
+            System.out.println("Created");
 
-            notFound.setTitle(Values.FILE_ERROR_ALERT_TITLE);
-
-            notFound.setContentText(Values.FILE_ERROR_RANKINGS);
-
-            notFound.showAndWait();
-
-
-            Platform.exit();
-
-            System.exit(0);
+            e.printStackTrace();
 
         }
 
@@ -175,7 +130,9 @@ public class Scores {
             Files.lines(filePath).forEach(line -> {
 
                 if (line.isEmpty()) {
+
                     line.replace(line,line);
+
                     return;
 
                 }
@@ -203,11 +160,75 @@ public class Scores {
     }
 
     public List<Score> getScores(){
+
+        if (leaderboard.isEmpty()){
+
+            load();
+
+        }
+
         return leaderboard;
+
     }
 
-    private boolean userExist(String userName){
+    public static void save(Score score) {
 
-        return false;
+        Path filePath = Paths.get("./" + Values.PATH_RANKINGS);
+
+        List<String> fileContent = null;
+
+        try {
+
+            fileContent = new ArrayList<>(Files.readAllLines(filePath, StandardCharsets.UTF_8));
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+
+        }
+
+        for (int i = 0; i < fileContent.size(); i++) {
+
+            String[] tokens = fileContent.get(i).replaceAll(" ", "").split(";");
+
+            if (tokens.length > 2) {
+
+                if (tokens[0].equals("BG") | ( tokens[0].equals(score.getCityName()) & tokens[1].equals(score.getUserName()) )) {
+
+                    if ( score.getValue() > Integer.valueOf(tokens[2]) ) {
+
+                        fileContent.set(i, score.prepareSave());
+
+                        break;
+
+                    }
+
+                } else {
+
+                    if( i == fileContent.size()-1){
+
+                        fileContent.add(score.prepareSave());
+
+                        break;
+
+                    }
+
+                }
+
+
+
+            }
+
+        }
+
+        try {
+
+            Files.write(filePath, fileContent, StandardCharsets.UTF_8);
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+
+        }
     }
 }

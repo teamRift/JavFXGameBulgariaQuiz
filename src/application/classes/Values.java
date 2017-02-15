@@ -22,13 +22,13 @@ public class Values
     public static String QUESTIONS_RS = "ruseQuestions.txt";
     public static String QUESTIONS_VN = "varnaQuestions.txt";
     public static String QUESTIONS_PLD = "plovdivQuestions.txt";
-    public static String QUESTIONS_PLN = "plnQuestions.txt";
+    public static String QUESTIONS_PLN = "plevenQuestions.txt";
     public static String QUESTIONS_VT = "velikoturnovoQuestions.txt";
     public static String QUESTIONS_MOCK = "mordorQuestions.txt";
 
     //DB PATH
 
-    public static String PATH_RANKINGS = "rankings.txt";
+    public static String PATH_RANKINGS = "scores.txt";
 
     //This allows you to create your design regardless of SCREEN SIZE
 
@@ -56,6 +56,7 @@ public class Values
     public static String LABEL_BACK_BTN = "Back";
     public static String LABEL_START_BTN = "New game";
     public static String LABEL_EXIT_BTN = "Exit";
+    public static String LABEL_CREDITS_BTN = "Credits";
     public static String LABEL_CHOOSE_CITY_BTN = "Choose city";
     public static String LABEL_SCORES_BTN = "Leaderboard";
     public static String LABEL_RANKINGS_TOP_5 = "Top 5 Players";
@@ -64,6 +65,7 @@ public class Values
     public static String LABEL_SOFTUNI = "SoftUni 2017";
 
     public static String FILE_ERROR_ALERT_TITLE = "File error.";
+    public static String FILE_SCORES_MISSING = "There was an error with your scores db file. You need to restart the game to continue playing.";
     public static String FILE_ERROR_RANKINGS = "Could not load records file.";
     public static String FILE_ERROR_QUESTIONS = "Could not load questions file.";
 

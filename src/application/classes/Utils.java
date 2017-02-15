@@ -1,6 +1,5 @@
 package application.classes;
 
-
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -22,10 +21,10 @@ public class Utils {
         return input.substring(0, 1).toUpperCase() + input.substring(1);
     }
 
-    public void log(String input) {
+    public static void log(Object object, String input) {
 
-        System.out.printf("%s.class %s %s.\n",
-                this.getClass().getSimpleName(),
+        System.out.printf("%s : %s.class %s.\n",
+                object.getClass().getSimpleName(),
                 LocalTime.now(),
                 input);
 
@@ -43,6 +42,7 @@ public class Utils {
         pane.setBackground(new Background(myBI));
 
     }
+
     public static void setBackground(Pane pane, double WIDTH, double HEIGHT) {
 
         BackgroundImage myBI = new BackgroundImage(new Image(Values.IMG_BACKGROUND,WIDTH,HEIGHT,false,true),
@@ -103,7 +103,24 @@ public class Utils {
             ((Button) object).setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, 25));
 
             Utils.styleButton((Button) object);
-        }else if (object instanceof ImageView) {
+
+        } else if (object instanceof Label) {
+
+            ((Label) object).setMinWidth(WIDTH);
+
+            ((Label) object).setPrefWidth(WIDTH);
+
+            ((Label) object).setMaxWidth(WIDTH);
+
+
+            ((Label) object).setMinHeight(HEIGHT);
+
+            ((Label) object).setPrefHeight(HEIGHT);
+
+            ((Label) object).setMaxHeight(HEIGHT);
+
+
+        } else if (object instanceof ImageView) {
 
             ((ImageView) object).setFitWidth(WIDTH);
 
@@ -146,6 +163,18 @@ public class Utils {
             shadow.setBlurType(BlurType.GAUSSIAN);
 
             ((Button) object).setEffect(shadow);
+
+        } else if (object instanceof HBox) {
+
+            shadow.setRadius(-5);
+
+            shadow.setOffsetX(5);
+
+            shadow.setOffsetY(5);
+
+            shadow.setBlurType(BlurType.GAUSSIAN);
+
+            ((HBox) object).setEffect(shadow);
 
         }
 
@@ -221,12 +250,35 @@ public class Utils {
 
     }
 
-    public static String getRanking(String input){
+    public static void makeItLookLikeButton(Object... objects) {
+        for (Object object : objects) {
+            if (object instanceof HBox){
+
+                ((HBox) object).setBackground(
+                                    new Background(
+                                            new BackgroundFill(Paint.valueOf("#FFFFFF"),
+                                                    new CornerRadii(7),
+                                                    new Insets(5))));
+
+                Utils.setShadow(((HBox) object));
+
+            } else if (object instanceof Label) {
+
+                ((Label) object).setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD,25));
+
+                ((Label) object).setTextFill(Color.BLACK);
+
+            }
+
+        }
+
+    }
+
+    public static String getRanking(String input) {
         return String.format("%s %s %s",
                 input.split(";")[0],
                 input.split(";")[1],
                 input.split(";")[2]
         );
     }
-
 }

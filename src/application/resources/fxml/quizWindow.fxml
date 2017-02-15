@@ -130,7 +130,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="hintOne" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#initHintButton" text="50/50" GridPane.halignment="CENTER">
+                  <Button fx:id="hintOne" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#hintButton" text="50/50" GridPane.halignment="CENTER">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>

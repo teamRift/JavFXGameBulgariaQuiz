@@ -1,8 +1,7 @@
 package application.controllers;
 
-import application.classes.GameManager;
-import application.classes.Utils;
-import application.classes.Values;
+import application.classes.*;
+import com.sun.javafx.font.freetype.HBGlyphLayout;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -32,11 +31,15 @@ public class MenuController {
     @FXML
     Label gameTitle;
     @FXML
-    Button exitBtn;
+    Label exitBtn;
     @FXML
-    Button startBtn;
+    Label creditsBtn;
     @FXML
-    Button scoresBtn;
+    Label startBtn;
+    @FXML
+    HBox startGameBox,scoresBox,creditsBox,exitBox;
+    @FXML
+    Label scoresBtn;
     @FXML
     BorderPane mainPane;
     @FXML
@@ -60,17 +63,44 @@ public class MenuController {
     @FXML
     Label menuRightLabel;
 
-    private void initButtons(){
+    public void initialize() {
+
+        setButtons();
+
+        setPanes();
+
+        setLabels();
+
+//        Score mock = new Score("VARNA", "AS", 310);
+//
+//        Scores.save(mock);
+    }
+
+    private void setButtons(){
+
 
         scoresBtn.setText(Values.LABEL_SCORES_BTN);
 
-        Utils.setSize(scoresBtn, Values.FOUR_COLS, Values.ONE_ROW);
-
-        scoresBtn.setOnAction((ActionEvent actionEvent) -> {
+        scoresBtn.setOnMouseClicked(actionEvent -> {
 
             try {
 
-                showScores(actionEvent);
+                showScores();
+
+            } catch (IOException e) {
+
+                e.printStackTrace();
+
+            }
+
+        });
+        creditsBtn.setText(Values.LABEL_CREDITS_BTN);
+
+        creditsBtn.setOnMouseClicked(actionEvent -> {
+
+            try {
+
+                showCredits();
 
             } catch (IOException e) {
 
@@ -82,13 +112,13 @@ public class MenuController {
 
         startBtn.setText(Values.LABEL_START_BTN);
 
-        initStartButton();
+        setStartButton();
 
-        startBtn.setOnAction((ActionEvent actionEvent) -> {
+        startBtn.setOnMouseClicked(actionEvent -> {
 
             try {
 
-                startGame(actionEvent);
+                startGame();
 
             } catch (IOException e) {
 
@@ -104,33 +134,79 @@ public class MenuController {
 
         Utils.setSize(exitBtn, Values.FOUR_COLS, Values.ONE_ROW);
 
-        exitBtn.setOnAction(this::exitGame);
+        exitBtn.setOnMouseClicked(actionEvent -> {
+
+                exitGame();
+
+            gameManager.setCurrentUser(inputUserName.getText());
+
+        });
+    }
+    
+    private void setLabels() {
+
+        setGameLabel();
+
+        setRiftLabel();
+
+        setSoftUniLabel();
+
     }
 
-    // set dimmensions of start button and input field for username
-    private void initStartButton(){
+    private void setGameLabel() {
 
+        gameTitle.setText(Values.LABEL_GAME_TITLE);
+
+        gameTitle.setTextFill(Color.SEAGREEN);
+
+        gameTitle.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD,70));
+
+        Utils.setShadow(gameTitle);
+    }
+
+    private void setRiftLabel() {
+
+        menuLeftLabel.setText(Values.LABEL_TEAM_RIFT);
+
+        menuLeftLabel.setTextFill(Color.WHITESMOKE);
+
+        menuLeftLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD,32));
+
+        Utils.setShadow(menuLeftLabel);
+
+    }
+
+    private void setSoftUniLabel() {
+
+        menuRightLabel.setText(Values.LABEL_SOFTUNI);
+
+        menuRightLabel.setTextFill(Color.WHITE);
+
+        menuRightLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD,32));
+
+        Utils.setShadow(menuRightLabel);
+    }
+
+    private void setStartButton(){
 
         inputUserName.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, FontPosture.ITALIC, 25));
-
-        inputUserName.setMaxHeight(Values.ONE_ROW);
-
-        inputUserName.setMaxWidth(Values.TWO_COLS);
-
-        inputUserName.setMinWidth(Values.TWO_COLS);
-        inputUserName.setText("USERNAME");
+        gameManager.setUserName(inputUserName);
         inputUserName.setBackground(Background.EMPTY);
 
-        Utils.setSize(startBtn, Values.TWO_COLS, Values.ONE_ROW);
+        Utils.setSize(startBtn, Values.ONE_COL*1.5, Values.ONE_ROW);
+        Utils.setSize(exitBtn, Values.ONE_COL*1.5, Values.ONE_ROW);
+        Utils.setSize(creditsBtn, Values.ONE_COL*1.5, Values.ONE_ROW);
+        Utils.setSize(scoresBtn, Values.ONE_COL*1.5, Values.ONE_ROW);
 
-        startBtn.setPrefWidth(Values.TWO_COLS);
+        Utils.setSize(startGameBox,Values.THREE_COLS,Values.ONE_ROW);
+        Utils.setSize(scoresBox,Values.THREE_COLS,Values.ONE_ROW);
+        Utils.setSize(creditsBox,Values.THREE_COLS,Values.ONE_ROW);
+        Utils.setSize(exitBox,Values.THREE_COLS,Values.ONE_ROW);
 
-        startBtn.setMaxHeight(Values.ONE_ROW);
+        Utils.makeItLookLikeButton(startBtn,exitBtn,creditsBtn,scoresBtn);
 
-        startBtn.setMaxWidth(Values.TWO_COLS);
-
+        Utils.makeItLookLikeButton(startGameBox,scoresBox,creditsBox,exitBox);
     }
-
 
     private void setPanes(){
 
@@ -152,30 +228,7 @@ public class MenuController {
 
     }
 
-
-    public void initialize() {
-
-        initButtons();
-
-        setPanes();
-
-        initLabels();
-        Utils.styleButton(exitBtn,startBtn,scoresBtn);
-    }
-
-
-    private void initLabels() {
-
-        initGameLabel();
-
-        initRiftLabel();
-
-        initSoftUniLabel();
-
-    }
-
-
-    private void exitGame(ActionEvent event) {
+    private void exitGame() {
 
         Stage stage = (Stage)exitBtn.getScene().getWindow();
 
@@ -183,8 +236,19 @@ public class MenuController {
 
     }
 
+    private void showCredits() throws IOException {
 
-    private void showScores(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/credits.fxml"));
+
+        Stage stage = (Stage)creditsBtn.getScene().getWindow();
+
+        stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
+
+        stage.show();
+
+    }
+
+    private void showScores() throws IOException {
 
         Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/rankings.fxml"));
 
@@ -196,7 +260,7 @@ public class MenuController {
 
     }
 
-    private void startGame(ActionEvent actionEvent) throws IOException {
+    private void startGame() throws IOException {
 
         gameManager = new GameManager();
 
@@ -208,52 +272,5 @@ public class MenuController {
 
         stage.show();
 
-    }
-
-    private void initGameLabel() {
-
-        gameTitle.setText(Values.LABEL_GAME_TITLE);
-
-        gameTitle.setTextFill(Color.DARKOLIVEGREEN);
-
-        gameTitle.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD,70));
-
-        DropShadow shadow = new DropShadow();
-
-        shadow.setRadius(10);
-
-        shadow.setOffsetX(0);
-
-        shadow.setOffsetY(10);
-
-        shadow.setBlurType(BlurType.GAUSSIAN);
-
-        shadow.setColor(Color.BLACK);
-
-        gameTitle.setEffect(shadow);
-
-    }
-
-    private void initRiftLabel() {
-
-        menuLeftLabel.setText(Values.LABEL_TEAM_RIFT);
-
-        menuLeftLabel.setTextFill(Color.WHITESMOKE);
-
-        menuLeftLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD,32));
-
-        Utils.setShadow(menuLeftLabel);
-
-    }
-
-    private void initSoftUniLabel() {
-
-        menuRightLabel.setText(Values.LABEL_SOFTUNI);
-
-        menuRightLabel.setTextFill(Color.WHITE);
-
-        menuRightLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD,32));
-
-        Utils.setShadow(menuRightLabel);
     }
 }

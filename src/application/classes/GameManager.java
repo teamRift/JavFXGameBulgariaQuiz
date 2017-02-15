@@ -3,12 +3,14 @@ package application.classes;
 import application.classes.cities.City;
 import application.classes.cities.Mordor;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 import java.util.List;
 
 public class GameManager {
 
     public static boolean isLogged;
+
     public static boolean hasPlayed;
 
     private String currentUser;
@@ -23,13 +25,8 @@ public class GameManager {
 
     private List<Score> scores;
 
-
     public GameManager(){
         init();
-    }
-
-    public void init(){
-        setScores();
     }
 
     public String getCityName(){
@@ -59,7 +56,6 @@ public class GameManager {
     public int getMaxScore(){
         return maxPoints;
     }
-
 
     public void setCurrentUser(String currentUser) {
 
@@ -102,42 +98,52 @@ public class GameManager {
         this.maxPoints = maxScore;
     }
 
+    public List<Score> getScores() {
+
+        setScores();
+
+        return scores;
+    }
+
+    private void setScores() {
+
+        Scores s = new Scores();
+
+        this.scores = s.getScores();
+
+        int length = scores.size();
+
+        if (length > 5) {
+
+            length = 5;
+
+        }
+
+        this.setMaxScore(this.scores.get(0).getValue());
+
+    }
+
     public void setFactsLabel(Label label){
 
         label.setText("Did you know an ancient city, dated back 10.000 BC, has been discovered on the bottom of the Black sea?");
 
     }
 
-    public List<Score> getScores() {
-        return scores;
+    public void setUserName(TextField t){
+
+        if (this.getCurrentUser() == null) {
+
+            t.setText("USERNAME");
+
+        } else {
+
+            t.setText(this.getCurrentUser());
+
+        }
     }
 
-    private void setScores() {
-
-        try {
-
-            this.scores = Scores.load();
-
-        } catch (Exception e) {
-
-            e.printStackTrace();
-
-        }
-
-        int length = scores.size();
-
-        if (length>5) {
-
-            length = 5;
-
-        }
-
-        scores = scores.subList(0,length);
-
-        this.setMaxScore(this.scores.get(0).getValue());
-
-        System.out.println("DB loaded.");
-
+    public void init(){
+        setScores();
     }
 
 }

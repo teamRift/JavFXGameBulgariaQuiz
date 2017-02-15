@@ -126,6 +126,7 @@ public class RankingsController {
                     gameManager.getCityName(),
                     gameManager.getCurrentUser(),
                     gameManager.getCurrentUserPoints()));
+            GameManager.hasPlayed = false;
         } else {
             rankingsCurrent.setVisible(false);
         }

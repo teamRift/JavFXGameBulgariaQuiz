@@ -68,9 +68,9 @@ public class CitiesController {
 
         setPanes();
 
-        initButtons();
+        setButtons();
 
-        initLabels();
+        setLabels();
 
     }
 
@@ -104,7 +104,7 @@ public class CitiesController {
         stage.show();
     }
 
-    private void initButtons(){
+    private void setButtons(){
 
         Utils.styleCityButton(varna,ruse,sofia,burgas,blagoevgrad,plovdiv,pleven,turnovo);
 
@@ -116,7 +116,7 @@ public class CitiesController {
 
     }
 
-    private void initLabels() {
+    private void setLabels() {
 
         gameManager.setFactsLabel(hintLabel);
 
