@@ -59,7 +59,7 @@
         </rowConstraints>
          <children>
             <Label fx:id="leftLabel" text="Label" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Button fx:id="backBtn" mnemonicParsing="false" text="Button" GridPane.rowIndex="2" />
+            <Button fx:id="backBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Button" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </left>

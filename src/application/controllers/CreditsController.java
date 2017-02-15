@@ -69,6 +69,8 @@ public class CreditsController {
 
         Utils.styleButton(backBtn);
 
+        Utils.setSize(backBtn, Values.ONE_COL, Values.ONE_ROW);
+        backBtn.setText(Values.LABEL_BACK_BTN);
         backBtn.setOnAction((actionEvent) -> {
 
             try {
@@ -110,7 +112,7 @@ public class CreditsController {
         gameTitle.setText(Values.LABEL_GAME_TITLE);
 
 
-        Utils.styleLabel(25, leftLabel, rightLabel);
+        Utils.styleLabel(32, leftLabel, rightLabel);
 
         leftLabel.setText(Values.LABEL_TEAM_RIFT);
 
