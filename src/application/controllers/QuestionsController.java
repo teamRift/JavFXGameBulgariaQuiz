@@ -223,7 +223,7 @@ public class QuestionsController {
 
     public void initHintButton(ActionEvent actionEvent) {
 
-        Random rn = new Random();
+        Random random = new Random();
 
         ArrayList<Button> buttons = new ArrayList<>();
 
@@ -244,7 +244,7 @@ public class QuestionsController {
 
         for (int i = 0; i < 2; i++) {
 
-            int index = rn.nextInt(buttons.size());
+            int index = random.nextInt(buttons.size());
 
             buttons.get(index).setDisable(true);
 
