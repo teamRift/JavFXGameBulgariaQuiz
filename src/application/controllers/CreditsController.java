@@ -111,8 +111,7 @@ public class CreditsController {
 
         gameTitle.setText(Values.LABEL_GAME_TITLE);
 
-
-        Utils.styleLabel(32, leftLabel, rightLabel);
+            Utils.styleLabel(32, leftLabel, rightLabel);
 
         leftLabel.setText(Values.LABEL_TEAM_RIFT);
 
