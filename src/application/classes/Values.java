@@ -34,8 +34,9 @@ public class Values
 
     public static double SCREEN_WIDTH = Screen.getPrimary().getBounds().getWidth() - (Screen.getPrimary().getBounds().getWidth() / 4); //get the width of the display
     public static double SCREEN_HEIGHT = Screen.getPrimary().getBounds().getHeight() - (Screen.getPrimary().getBounds().getHeight() / 4); //get the width of the display
-
-    // размери базирани на големината на екрана
+//    public static double SCREEN_HEIGHT = 600;
+//    public static double SCREEN_WIDTH = 800;
+//    // размери базирани на големината на екрана
     // размери за височина
 
     public static double ONE_ROW = SCREEN_HEIGHT / 12; // 1 /12 от екрана - 1 ред
@@ -63,6 +64,10 @@ public class Values
     public static String LABEL_GAME_TITLE = "Bulgaria Quiz";
     public static String LABEL_TEAM_RIFT = "Team Rift®";
     public static String LABEL_SOFTUNI = "SoftUni 2017";
+
+    public static int H3 = (int) Math.round(ONE_COL/7);
+    public static int H2 = (int) Math.round(ONE_COL/3);
+    public static int H1 = (int) Math.round(ONE_COL);
 
     public static String FILE_ERROR_ALERT_TITLE = "File error.";
     public static String FILE_SCORES_MISSING = "There was an error with your scores db file. You need to restart the game to continue playing.";

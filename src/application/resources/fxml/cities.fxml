@@ -23,7 +23,7 @@
     <center>
         <AnchorPane fx:id="mapPane" BorderPane.alignment="CENTER">
             <children>
-                <ImageView fx:id="mapImg" fitHeight="800.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <ImageView fx:id="mapImg" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <image>
                         <Image url="@../images/bulgaria2.png" />
                     </image>
@@ -31,7 +31,7 @@
                         <BoxBlur />
                     </effect>
                 </ImageView>
-                <Button fx:id="varna" depthTest="DISABLE" graphicTextGap="10.0" layoutX="680.0" layoutY="171.0" onAction="#onCityQuestion" text="Varna">
+                <Button fx:id="varna" graphicTextGap="10.0" layoutX="680.0" layoutY="171.0" onAction="#onCityQuestion" text="Varna">
                     <font>
                         <Font name="Algerian" size="18.0" />
                     </font>

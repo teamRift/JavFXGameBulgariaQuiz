@@ -152,7 +152,7 @@ public class QuestionsController {
 
         gameManager.setFactsLabel(hintLabel);
 
-        Utils.styleLabel(25,cityName,userName,maxScore,maxScoreUser,questionNumLabel,questionLabel,scoreLabel,hintLabel);
+        Utils.styleLabel(Values.H3,cityName,userName,maxScore,maxScoreUser,questionNumLabel,questionLabel,scoreLabel,hintLabel);
     }
 
     private void setPanes() {

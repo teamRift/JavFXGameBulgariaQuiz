@@ -159,7 +159,7 @@ public class MenuController {
 
         gameTitle.setTextFill(Color.SEAGREEN);
 
-        gameTitle.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD,70));
+        gameTitle.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD,Values.H1 - Values.H2));
 
         Utils.setShadow(gameTitle);
     }
@@ -170,7 +170,7 @@ public class MenuController {
 
         menuLeftLabel.setTextFill(Color.WHITESMOKE);
 
-        menuLeftLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD,32));
+        menuLeftLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H2));
 
         Utils.setShadow(menuLeftLabel);
 
@@ -182,18 +182,18 @@ public class MenuController {
 
         menuRightLabel.setTextFill(Color.WHITE);
 
-        menuRightLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD,32));
+        menuRightLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD,Values.H3*2));
 
         Utils.setShadow(menuRightLabel);
     }
 
     private void setStartButton(){
 
-        inputUserName.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, FontPosture.ITALIC, 25));
+        inputUserName.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.NORMAL, FontPosture.REGULAR, Values.H3));
         gameManager.setUserName(inputUserName);
         inputUserName.setBackground(Background.EMPTY);
-
-        Utils.setSize(startBtn, Values.ONE_COL*1.5, Values.ONE_ROW);
+        Utils.setSize(inputUserName,Values.ONE_COL, Values.ONE_ROW);
+        Utils.setSize(startBtn, Values.ONE_COL, Values.ONE_ROW);
         Utils.setSize(exitBtn, Values.ONE_COL*1.5, Values.ONE_ROW);
         Utils.setSize(creditsBtn, Values.ONE_COL*1.5, Values.ONE_ROW);
         Utils.setSize(scoresBtn, Values.ONE_COL*1.5, Values.ONE_ROW);

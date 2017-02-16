@@ -3,6 +3,7 @@ package application.classes;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.effect.BlurType;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
@@ -30,10 +31,10 @@ public class Utils {
 
     }
 
-    // this method set the controller scene background
-    public static void setBackground(Pane pane, String path, double WIDTH, double HEIGHT) {
+    // this method sets the controller scene background predefined image
+    public static void setBackground(Pane pane, double WIDTH, double HEIGHT) {
 
-        BackgroundImage myBI = new BackgroundImage(new Image(path,WIDTH,HEIGHT,false,true),
+        BackgroundImage myBI = new BackgroundImage(new Image(Values.IMG_BACKGROUND,WIDTH,HEIGHT,false,true),
                 BackgroundRepeat.REPEAT,
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundPosition.DEFAULT,
@@ -43,9 +44,10 @@ public class Utils {
 
     }
 
-    public static void setBackground(Pane pane, double WIDTH, double HEIGHT) {
+    //this method sets the controller scene background with custom image
+    public static void setBackground(Pane pane, String path, double WIDTH, double HEIGHT) {
 
-        BackgroundImage myBI = new BackgroundImage(new Image(Values.IMG_BACKGROUND,WIDTH,HEIGHT,false,true),
+        BackgroundImage myBI = new BackgroundImage(new Image(path,WIDTH,HEIGHT,false,true),
                 BackgroundRepeat.REPEAT,
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundPosition.DEFAULT,
@@ -69,7 +71,7 @@ public class Utils {
         }
     }
 
-    // use this method to set sizes for Panes and Buttons iаn controllers.
+    // use this method to set sizes for Panes, ImageViews, Labels and Buttons in controllers.
     public static void setSize(Object object, double WIDTH, double HEIGHT) {
 
         if (object instanceof Pane) {
@@ -100,7 +102,7 @@ public class Utils {
 
             ((Button) object).setPrefHeight(HEIGHT);
 
-            ((Button) object).setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, 25));
+            ((Button) object).setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H3));
 
             Utils.styleButton((Button) object);
 
@@ -111,7 +113,6 @@ public class Utils {
             ((Label) object).setPrefWidth(WIDTH);
 
             ((Label) object).setMaxWidth(WIDTH);
-
 
             ((Label) object).setMinHeight(HEIGHT);
 
@@ -126,9 +127,25 @@ public class Utils {
 
             ((ImageView) object).setFitHeight(HEIGHT);
 
+        } else if (object instanceof TextField) {
+
+            ((TextField) object).setMinWidth(WIDTH);
+
+            ((TextField) object).setMaxWidth(WIDTH);
+
+            ((TextField) object).setPrefWidth(WIDTH);
+
+            ((TextField) object).setMinHeight(HEIGHT);
+
+            ((TextField) object).setMaxHeight(HEIGHT);
+
+            ((TextField) object).setPrefHeight(HEIGHT);
+
+            ((TextField) object).setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H3));
+
         } else {
 
-            System.out.printf("Utils.setSize(Object object) : %s is not a valid object. Use Pane, ImageView or Button.", Utils.capitalize(object.getClass().getSimpleName()));
+            System.out.printf("Utils.setSize(Object object) : %s is not a valid object. Pane, ImageView, Label or Button required.", Utils.capitalize(object.getClass().getSimpleName()));
 
         }
     }
@@ -223,7 +240,7 @@ public class Utils {
 
             button.setBackground(Background.EMPTY);
 
-            button.setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD,25));
+            button.setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD,Values.H3));
 
             button.setTextFill(Color.WHITESMOKE);
 
@@ -240,7 +257,7 @@ public class Utils {
 
             button.setBackground(new Background(new BackgroundFill(Paint.valueOf("#FFFFFF"),new CornerRadii(7), new Insets(5,5,5,5))));
 
-            button.setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD,25));
+            button.setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD, Values.H3));
 
             button.setTextFill(Color.BLACK);
 
@@ -264,7 +281,7 @@ public class Utils {
 
             } else if (object instanceof Label) {
 
-                ((Label) object).setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD,25));
+                ((Label) object).setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD,Values.H3));
 
                 ((Label) object).setTextFill(Color.BLACK);
 

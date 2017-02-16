@@ -11,15 +11,9 @@ import javafx.scene.Cursor;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -108,24 +102,45 @@ public class CitiesController {
 
         Utils.styleCityButton(varna,ruse,sofia,burgas,blagoevgrad,plovdiv,pleven,turnovo);
 
-        Utils.styleButton(backButton);
+        burgas.setLayoutX(Values.SIX_COLS - Values.ONE_ROW);
+        burgas.setLayoutY(Values.FOUR_ROWS * 1.2);
 
+        varna.setLayoutX(Values.SIX_COLS * 0.95);
+        varna.setLayoutY(Values.TWO_ROWS * 1.27);
+
+        ruse.setLayoutX(Values.THREE_COLS * 1.07);
+        ruse.setLayoutY(Values.ONE_ROW* 1.2);
+
+        sofia.setLayoutX(Values.ONE_COL);
+        sofia.setLayoutY(Values.TWO_COLS * 1.12);
+
+        blagoevgrad.setLayoutX(Values.ONE_COL * 0.75);
+        blagoevgrad.setLayoutY(Values.SIX_ROWS * 1.2);
+
+        plovdiv.setLayoutX(Values.THREE_COLS);
+        plovdiv.setLayoutY(Values.FOUR_ROWS * 1.3);
+
+        pleven.setLayoutX(Values.TWO_COLS * 0.97);
+        pleven.setLayoutY(Values.TWO_ROWS * 1.45);
+
+        turnovo.setLayoutX(Values.THREE_COLS * 1.15);
+        turnovo.setLayoutY(Values.TWO_ROWS * 1.5);
+
+        Utils.styleButton(backButton);
         Utils.setSize(backButton,Values.ONE_COL, Values.ONE_ROW);
 
         backButton.setText(Values.LABEL_BACK_BTN);
-
     }
 
     private void setLabels() {
 
         gameManager.setFactsLabel(hintLabel);
 
-        Utils.styleLabel(25,hintLabel);
-
+        Utils.styleLabel(Values.H3,hintLabel);
 
         labelChooseCity.setText(Values.LABEL_CHOOSE_CITY_BTN);
 
-        Utils.styleLabel(40,labelChooseCity);
+        Utils.styleLabel(Values.H2,labelChooseCity);
 
     }
 
@@ -182,10 +197,12 @@ public class CitiesController {
 
         Utils.setSize(rightPane, Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
 
-        Utils.setSize(mapPane, Values.SIX_COLS, Values.SIX_ROWS + (Values.ONE_ROW*1.5));
+        Utils.setSize(mapPane, Values.SIX_COLS, Values.SIX_ROWS + Values.THREE_ROWS);
 
         Utils.setBackground(mainPane, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT);
 
+        mapImg.setFitWidth(Values.SCREEN_WIDTH);
+        mapImg.setFitWidth(Values.SCREEN_HEIGHT);
     }
 
 }
