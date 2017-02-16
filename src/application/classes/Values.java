@@ -57,6 +57,7 @@ public class Values
     public static String LABEL_BACK_BTN = "Back";
     public static String LABEL_START_BTN = "New game";
     public static String LABEL_EXIT_BTN = "Exit";
+    public static String LABEL_RANKTABLE_BTN="Rank Table";
     public static String LABEL_CREDITS_BTN = "Credits";
     public static String LABEL_CHOOSE_CITY_BTN = "Choose city";
     public static String LABEL_SCORES_BTN = "Leaderboard";
