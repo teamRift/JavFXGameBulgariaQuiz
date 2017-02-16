@@ -112,18 +112,18 @@ public class MenuController {
 
         });
 
-        rankBtn.setText(Values.LABEL_RANKTABLE_BTN);
-        rankBtn.setMaxWidth(Values.FOUR_COLS);
-        rankBtn.setMinWidth(Values.FOUR_COLS);
-        rankBtn.setPrefWidth(Values.FOUR_COLS);
-        rankBtn.setMaxHeight(Values.ONE_ROW/2);
-        rankBtn.setOnAction((ActionEvent actionEvent) ->{
-            try{
-                showRankTable(actionEvent);
-            }catch(IOException e){
-                e.printStackTrace();
-            }
-        });
+//        rankBtn.setText(Values.LABEL_RANKTABLE_BTN);
+//        rankBtn.setMaxWidth(Values.FOUR_COLS);
+//        rankBtn.setMinWidth(Values.FOUR_COLS);
+//        rankBtn.setPrefWidth(Values.FOUR_COLS);
+//        rankBtn.setMaxHeight(Values.ONE_ROW/2);
+//        rankBtn.setOnAction((ActionEvent actionEvent) ->{
+//            try{
+//                showRankTable(actionEvent);
+//            }catch(IOException e){
+//                e.printStackTrace();
+//            }
+//        });
 
         startBtn.setText(Values.LABEL_START_BTN);
 
@@ -242,13 +242,13 @@ public class MenuController {
         Utils.setBackground(mainPane, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT);
 
     }
-    @FXML
-    public void showRankTable(ActionEvent actionEvent) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/RankTable.fxml"));
-        Stage stage = (Stage)rankBtn.getScene().getWindow();
-        stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
-        stage.show();
-    }
+//    @FXML
+//    public void showRankTable(ActionEvent actionEvent) throws IOException{
+//        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/RankTable.fxml"));
+//        Stage stage = (Stage)rankBtn.getScene().getWindow();
+//        stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
+//        stage.show();
+//    }
 
     private void exitGame() {
 
