@@ -1,4 +1,5 @@
 package application.classes.cities;
 
-public abstract class City implements CityInterface{
+public abstract class City implements CityInterface {
+
 }
