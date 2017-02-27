@@ -31,7 +31,6 @@ public class Utils {
 
     }
 
-    // this method sets the controller scene background predefined image
     public static void setBackground(Pane pane, double WIDTH, double HEIGHT) {
 
         BackgroundImage myBI = new BackgroundImage(new Image(Values.IMG_BACKGROUND,WIDTH,HEIGHT,false,true),
@@ -59,7 +58,6 @@ public class Utils {
 
     // this method applies default font with given @param size to given label(s) and sets shadow
     public static void styleLabel(int size, Label... labels) {
-
         for (Label label : labels) {
 
             label.setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD,size));

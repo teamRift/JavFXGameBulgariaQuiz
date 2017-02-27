@@ -2,57 +2,50 @@ package application.classes;
 
 public class Score {
 
+    private String id;
+    private String userName;
+    private String cityName;
+    private String dateSet;
     private int scores;
 
-    private String userName;
-
-    private String cityName;
-
     public Score(){}
-
-
     public Score(String cityName, String userName, int scores) {
-
         this.setCityName(Utils.capitalize(cityName));
-
-        this.setUser(userName);
-
+        this.setUserName(userName);
         this.setScore(scores);
     }
-    public Score setScore(int scores) {
 
+    public String getId(){
+        return this.id;
+    }
+    public void setId(String id){
+        this.id = id;
+    }
+
+    public String getDate(){
+        return this.dateSet;
+    }
+    public void setDate(String date){
+        this.dateSet = date;
+    }
+
+    public void setScore(int scores) {
         this.scores = scores;
-
-        return this;
-
     }
 
-    private Score setUser(String user){
-
-        this.userName = user;
-
-        return this;
-    }
-
-    private Score setCityName(String city){
-
+    public void setCityName(String city){
         this.cityName = city;
-
-        return this;
-
     }
-
     public String getCityName(){ return cityName;}
 
     public String getUserName(){ return userName; }
+    public void setUserName(String userName){ this.userName = userName;}
 
     public int getValue() { return scores; }
-
     public String prepareSave() {
 
         return String.format("%s ; %s ; %s", cityName, userName, scores);
 
     }
-
 }
 
