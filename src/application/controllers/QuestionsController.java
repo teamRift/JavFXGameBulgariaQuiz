@@ -95,7 +95,7 @@ public class QuestionsController {
 
         Question.reset();
 
-        questions = Question.loadQuestions(gameManager.getFileName());
+        questions = Question.loadQuestions(gameManager.getFileName(),Values.DIFFICULTY_EASY);
         
         Question.setButtons(firstButton, secondButton, thirdButton, fourthButton);
         

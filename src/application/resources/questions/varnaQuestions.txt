@@ -1,4 +1,4 @@
-How old is the gold in the Varna Catholitic Necropolis? ; 7000 BC ; 2000 BC ; 100 000 BC ; 200 AD
-Which of the following is a name Varna city had in the past?  ; Stalin ; Flavia ; Sredec ; Diospolis
-Which tracian deity is appointed as The Guardian of Odessos? ; Darzalas ; Boreas ; Bacchus ; Tiona
-The very first Bulgarian football champion was a team from Varna. What was its name? ; Vladislav ; Varna ; Spartak ; Cherno more
+__EASY ; How old is the gold in the Varna Catholitic Necropolis? ; 7000 BC ; 2000 BC ; 100 000 BC ; 200 AD
+__EASY ; Which of the following is a name Varna city had in the past?  ; Stalin ; Flavia ; Sredec ; Diospolis
+__EASY ; Which tracian deity is appointed as The Guardian of Odessos? ; Darzalas ; Boreas ; Bacchus ; Tiona
+__EASY ; The very first Bulgarian football champion was a team from Varna. What was its name? ; Vladislav ; Varna ; Spartak ; Cherno more

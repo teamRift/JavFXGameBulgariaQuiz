@@ -1,13 +1,11 @@
 package application.controllers;
 
-import application.classes.GameManager;
+import application.classes.City;
 import application.classes.Utils;
-import application.classes.cities.*;
 import application.classes.Values;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Cursor;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -145,44 +143,10 @@ public class CitiesController {
     }
 
     private void setCity(String city) {
-
-        if (city.equalsIgnoreCase("sofia")) {
-
-            gameManager.setCity(new Sofia());
-
-        } else if (city.equalsIgnoreCase("varna")) {
-
-            gameManager.setCity(new Varna());
-
-        }  else if (city.equalsIgnoreCase("plovdiv")) {
-
-            gameManager.setCity(new Plovdiv());
-
-        }  else if (city.equalsIgnoreCase("burgas")) {
-
-            gameManager.setCity(new Burgas());
-
-        }  else if (city.equalsIgnoreCase("turnovo")) {
-
-            gameManager.setCity(new VelikoTurnovo());
-
-        }  else if (city.equalsIgnoreCase("pleven")) {
-
-            gameManager.setCity(new Pleven());
-
-        }  else if (city.equalsIgnoreCase("ruse")) {
-
-            gameManager.setCity(new Ruse());
-
-        }  else if (city.equalsIgnoreCase("blagoevgrad")) {
-
-            gameManager.setCity(new Blagoevgrad());
-
-        } else {
-
-            gameManager.setCity(new Mordor());
-
-        }
+        City choosenCity = new City();
+        choosenCity.setName(city);
+        choosenCity.setFileName();
+        gameManager.setCity(choosenCity);
     }
 
     private void setPanes(){

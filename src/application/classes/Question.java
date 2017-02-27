@@ -56,25 +56,58 @@ public class Question {
         this.wrongsAnswers.add(wrong3);
     }
 
-    public static ArrayList<Question> loadQuestions(String filename) {
+//    public static ArrayList<Question> loadQuestions(String filename) {
+//
+//        ArrayList<Question> questions = new ArrayList<>();
+//
+//        String projectPath = System.getProperty("user.dir");
+//
+//        try {
+//            Path filePath = Paths.get(projectPath + "/src/application/resources/questions/" + filename);
+//
+//            Files.lines(filePath).forEach(line -> {
+//
+//                if (line.isEmpty()) {
+//
+//                    return;
+//                }
+//
+//                String[] tokens = line.split(DELIMITER);
+//
+//                questions.add(new Question(tokens[1].trim(), tokens[2].trim(), tokens[3].trim(), tokens[4].trim(), tokens[5].trim()));
+//
+//            });
+//
+//        } catch (IOException e) {
+//
+//            e.printStackTrace();
+//
+//            Alert notFound = new Alert(Alert.AlertType.ERROR);
+//
+//            notFound.setTitle(Values.FILE_ERROR_QUESTIONS);
+//
+//            notFound.showAndWait();
+//
+//            Platform.exit();
+//
+//            System.exit(0);
+//        }
+//
+//        return questions;
+//    }
 
+    public static ArrayList<Question> loadQuestions(String filename, String difficulty) {
         ArrayList<Question> questions = new ArrayList<>();
-
         String projectPath = System.getProperty("user.dir");
-
         try {
             Path filePath = Paths.get(projectPath + "/src/application/resources/questions/" + filename);
-
             Files.lines(filePath).forEach(line -> {
-
-                if (line.isEmpty()) {
-
+                if (line.isEmpty() | !line.contains(difficulty)) {
                     return;
                 }
 
                 String[] tokens = line.split(DELIMITER);
-
-                questions.add(new Question(tokens[0].trim(), tokens[1].trim(), tokens[2].trim(), tokens[3].trim(), tokens[4].trim()));
+                questions.add(new Question(tokens[1].trim(), tokens[2].trim(), tokens[3].trim(), tokens[4].trim(),tokens[5].trim()));
 
             });
 

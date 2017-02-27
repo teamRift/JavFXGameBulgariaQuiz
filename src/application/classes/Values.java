@@ -14,19 +14,10 @@ public class Values
 
     public static String PATH_CITIES = "../resources/fxml/cities.fxml";
 
-    //QUESTION FILES
+    public static final String DIFFICULTY_EASY = "__EASY";
+    public static final String DIFFICULTY_NORMAL = "__NORMAL";
+    public static final String DIFFICULTY_HARD = "__HARD";
 
-    public static String QUESTIONS_SF = "sofiaQuestions.txt";
-    public static String QUESTIONS_BS = "burgasQuestions.txt";
-    public static String QUESTIONS_BLG = "blagoevgradQuestions.txt";
-    public static String QUESTIONS_RS = "ruseQuestions.txt";
-    public static String QUESTIONS_VN = "varnaQuestions.txt";
-    public static String QUESTIONS_PLD = "plovdivQuestions.txt";
-    public static String QUESTIONS_PLN = "plevenQuestions.txt";
-    public static String QUESTIONS_VT = "velikoturnovoQuestions.txt";
-    public static String QUESTIONS_MOCK = "mordorQuestions.txt";
-
-    //DB PATH
 
     public static String PATH_RANKINGS = "scores.txt";
 

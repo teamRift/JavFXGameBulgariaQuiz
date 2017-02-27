@@ -1,7 +1,5 @@
 package application.classes;
 
-import application.classes.cities.City;
-import application.classes.cities.Mordor;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -34,7 +32,7 @@ public class GameManager {
     }
 
     public String getFileName(){
-        return this.city.fileName();
+        return this.city.getFileName();
     }
 
     public String getCurrentUser() {
@@ -76,17 +74,18 @@ public class GameManager {
     }
 
     public void setCity(City city) {
-
-        if (city != null) this.city = city;
-
-        else this.city = new Mordor();
-
+        if (city != null) {
+            this.city = city;
+        }
+        else {
+            this.city = new City();
+            this.city.setName("mordor");
+            this.city.setFileName();
+        }
     }
 
     public void setCurrentUserPoints(int currentUserPoints) {
-
         this.currentUserPoints = currentUserPoints;
-
         hasPlayed = true;
     }
 
@@ -99,51 +98,33 @@ public class GameManager {
     }
 
     public List<Score> getScores() {
-
         setScores();
-
         return scores;
     }
 
     private void setScores() {
-
         Scores s = new Scores();
-
         this.scores = s.getScores();
-
         int length = scores.size();
-
         if (length > 5) {
-
             length = 5;
-
         }
-
         this.setMaxScore(this.scores.get(0).getValue());
-
     }
 
     public void setFactsLabel(Label label){
-
         label.setText("Did you know an ancient city, dated back 10.000 BC, has been discovered on the bottom of the Black sea?");
-
     }
 
     public void setUserName(TextField t){
-
         if (this.getCurrentUser() == null) {
-
             t.setText("USERNAME");
-
         } else {
-
             t.setText(this.getCurrentUser());
-
         }
     }
 
     public void init(){
         setScores();
     }
-
 }

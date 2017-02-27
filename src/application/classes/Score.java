@@ -5,6 +5,7 @@ public class Score {
     private String id;
     private String userName;
     private String cityName;
+    private String difficulty;
     private String dateSet;
     private int scores;
 
@@ -41,11 +42,19 @@ public class Score {
     public String getUserName(){ return userName; }
     public void setUserName(String userName){ this.userName = userName;}
 
+    public String getDifficulty() {
+        return difficulty;
+    }
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
+    }
+
     public int getValue() { return scores; }
     public String prepareSave() {
 
         return String.format("%s ; %s ; %s", cityName, userName, scores);
 
     }
+
 }
 
