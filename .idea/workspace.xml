@@ -6,36 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Changes to City.&#10;Removed city child classes.&#10;Added difficulty for questions to question files. __EASY , __NORMAL, __HARD words in the begining of the line will be used to mark difficulty.&#10;Changed Question load()">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/classes/cities/Blagoevgrad.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/classes/cities/Burgas.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/classes/cities/CityInterface.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/classes/cities/Mordor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/classes/cities/Pleven.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/classes/cities/Plovdiv.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/classes/cities/Ruse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/classes/cities/Sofia.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/classes/cities/Varna.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/classes/cities/VelikoTurnovo.java" afterPath="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/application/classes/Utils.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestTest.iml" afterPath="$PROJECT_DIR$/TestTest.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TestTest/application/resources/questions/blagoevgradQuestions.txt" afterPath="$PROJECT_DIR$/out/production/TestTest/application/resources/questions/blagoevgradQuestions.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TestTest/application/resources/questions/sofiaQuestions.txt" afterPath="$PROJECT_DIR$/out/production/TestTest/application/resources/questions/sofiaQuestions.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/GameManager.java" afterPath="$PROJECT_DIR$/src/application/classes/GameManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/Question.java" afterPath="$PROJECT_DIR$/src/application/classes/Question.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/Score.java" afterPath="$PROJECT_DIR$/src/application/classes/Score.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/classes/Values.java" afterPath="$PROJECT_DIR$/src/application/classes/Values.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/controllers/CitiesController.java" afterPath="$PROJECT_DIR$/src/application/controllers/CitiesController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/controllers/CreditsController.java" afterPath="$PROJECT_DIR$/src/application/controllers/CreditsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/controllers/MenuController.java" afterPath="$PROJECT_DIR$/src/application/controllers/MenuController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/controllers/QuestionsController.java" afterPath="$PROJECT_DIR$/src/application/controllers/QuestionsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/resources/questions/blagoevgradQuestions.txt" afterPath="$PROJECT_DIR$/src/application/resources/questions/blagoevgradQuestions.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/resources/questions/burgasQuestions.txt" afterPath="$PROJECT_DIR$/src/application/resources/questions/burgasQuestions.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/resources/questions/mordorQuestions.txt" afterPath="$PROJECT_DIR$/src/application/resources/questions/mordorQuestions.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/resources/questions/plovdivQuestions.txt" afterPath="$PROJECT_DIR$/src/application/resources/questions/plovdivQuestions.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/resources/questions/ruseQuestions.txt" afterPath="$PROJECT_DIR$/src/application/resources/questions/ruseQuestions.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/resources/questions/sofiaQuestions.txt" afterPath="$PROJECT_DIR$/src/application/resources/questions/sofiaQuestions.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/resources/questions/varnaQuestions.txt" afterPath="$PROJECT_DIR$/src/application/resources/questions/varnaQuestions.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/application/classes/cities/City.java" afterPath="$PROJECT_DIR$/src/application/classes/City.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/application/resources/questions/velikoturnovoQuestions.txt" afterPath="$PROJECT_DIR$/src/application/resources/questions/turnovoQuestions.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/controllers/RankingsController.java" afterPath="$PROJECT_DIR$/src/application/controllers/RankingsController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -103,62 +81,160 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Scores.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/classes/Scores.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+      <file leaf-file-name="plovdivQuestions.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/resources/questions/plovdivQuestions.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="48" column="47" lean-forward="false" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
-              <folding>
-                <element signature="method#findAndLoad#0;class#Scores#0" expanded="false" />
-                <element signature="method#getScores#0;class#Scores#0" expanded="false" />
-                <element signature="method#save#0;class#Scores#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Question.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/application/classes/Question.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-              <folding>
-                <element signature="method#Question#0;class#Question#0" expanded="false" />
-                <element signature="method#getQuestionIndex#0;class#Question#0" expanded="false" />
-                <element signature="method#displayQuestion#0;class#Question#0" expanded="false" />
-                <element signature="method#checkCorrect#0;class#Question#0" expanded="false" />
-                <element signature="method#showScores#0;class#Question#0" expanded="false" />
-                <element signature="method#jokerBtn#0;class#Question#0" expanded="false" />
-                <element signature="method#reset#0;class#Question#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/classes/GameManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-              <folding>
-                <element signature="method#setCurrentUser#0;class#GameManager#0" expanded="false" />
-                <element signature="method#setCurrentUserPoints#0;class#GameManager#0" expanded="false" />
-                <element signature="method#getScores#0;class#GameManager#0" expanded="false" />
-                <element signature="method#setScores#0;class#GameManager#0" expanded="false" />
-                <element signature="method#setFactsLabel#0;class#GameManager#0" expanded="false" />
-                <element signature="method#setUserName#0;class#GameManager#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Values.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/classes/Values.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="87">
+              <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ruseQuestions.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/resources/questions/ruseQuestions.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sofiaQuestions.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/resources/questions/sofiaQuestions.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="turnovoQuestions.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/resources/questions/turnovoQuestions.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="varnaQuestions.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/resources/questions/varnaQuestions.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="3" column="137" lean-forward="false" selection-start-line="3" selection-start-column="137" selection-end-line="3" selection-end-column="137" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CitiesController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/controllers/CitiesController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1243">
+              <caret line="355" column="0" lean-forward="false" selection-start-line="355" selection-start-column="0" selection-end-line="355" selection-end-column="0" />
+              <folding>
+                <element signature="method#initialize#0;class#CitiesController#0" expanded="false" />
+                <element signature="method#onCityQuestion#0;class#CitiesController#0" expanded="false" />
+                <element signature="method#OnBack#0;class#CitiesController#0" expanded="false" />
+                <element signature="method#setButtons#0;class#CitiesController#0" expanded="false" />
+                <element signature="method#setLabels#0;class#CitiesController#0" expanded="false" />
+                <element signature="method#setCity#0;class#CitiesController#0" expanded="false" />
+                <element signature="method#setPanes#0;class#CitiesController#0" expanded="false" />
+                <element signature="method#setBackground#0;class#CitiesController#0" expanded="false" />
+                <element signature="method#styleLabel#0;class#CitiesController#0" expanded="false" />
+                <element signature="method#setSize#0;class#CitiesController#0" expanded="false" />
+                <element signature="method#setShadow#0;class#CitiesController#0" expanded="false" />
+                <element signature="method#styleCityButton#0;class#CitiesController#0" expanded="false" />
+                <element signature="method#styleButton#0;class#CitiesController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreditsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/controllers/CreditsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2087">
+              <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#initialize#0;class#CreditsController#0" expanded="false" />
+                <element signature="method#setButtons#0;class#CreditsController#0" expanded="false" />
+                <element signature="method#setPanes#0;class#CreditsController#0" expanded="false" />
+                <element signature="method#setLabels#0;class#CreditsController#0" expanded="false" />
+                <element signature="method#onBack#0;class#CreditsController#0" expanded="false" />
+                <element signature="method#setBackground#0;class#CreditsController#0" expanded="false" />
+                <element signature="method#styleLabel#0;class#CreditsController#0" expanded="false" />
+                <element signature="method#setSize#0;class#CreditsController#0" expanded="false" />
+                <element signature="method#setShadow#0;class#CreditsController#0" expanded="false" />
+                <element signature="method#styleButton#0;class#CreditsController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/application/controllers/MenuController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="693">
+              <caret line="36" column="51" lean-forward="true" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#initialize#0;class#MenuController#0" expanded="false" />
+                <element signature="method#initButtons#0;class#MenuController#0" expanded="false" />
+                <element signature="method#initStartButton#0;class#MenuController#0" expanded="false" />
+                <element signature="method#initExitButton#0;class#MenuController#0" expanded="false" />
+                <element signature="method#initCreditsButton#0;class#MenuController#0" expanded="false" />
+                <element signature="method#initScoresButton#0;class#MenuController#0" expanded="false" />
+                <element signature="method#initRankButton#0;class#MenuController#0" expanded="false" />
+                <element signature="e#2894#2948#0" expanded="false" />
+                <element signature="method#initLabels#0;class#MenuController#0" expanded="false" />
+                <element signature="method#setGameLabel#0;class#MenuController#0" expanded="false" />
+                <element signature="method#setRiftLabel#0;class#MenuController#0" expanded="false" />
+                <element signature="method#setSoftUniLabel#0;class#MenuController#0" expanded="false" />
+                <element signature="method#setStartButton#0;class#MenuController#0" expanded="false" />
+                <element signature="method#initPanes#0;class#MenuController#0" expanded="false" />
+                <element signature="method#exitGame#0;class#MenuController#0" expanded="false" />
+                <element signature="method#showCredits#0;class#MenuController#0" expanded="false" />
+                <element signature="method#showScores#0;class#MenuController#0" expanded="false" />
+                <element signature="method#startGame#0;class#MenuController#0" expanded="false" />
+                <element signature="e#7107#7118#0" expanded="false" />
+                <element signature="method#setBackground#0;class#MenuController#0" expanded="false" />
+                <element signature="method#setSize#0;class#MenuController#0" expanded="false" />
+                <element signature="method#setShadow#0;class#MenuController#0" expanded="false" />
+                <element signature="method#styleButton#0;class#MenuController#0" expanded="false" />
+                <element signature="method#styleAsButton#0;class#MenuController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RankingsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/controllers/RankingsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1115">
+              <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
+              <folding>
+                <element signature="method#initialize#0;class#RankingsController#0" expanded="false" />
+                <element signature="method#OnBack#0;class#RankingsController#0" expanded="false" />
+                <element signature="method#loadScores#0;class#RankingsController#0" expanded="false" />
+                <element signature="e#2533#2596#0" expanded="false" />
+                <element signature="e#3126#3155#0" expanded="false" />
+                <element signature="method#initBackButton#0;class#RankingsController#0" expanded="false" />
+                <element signature="method#initCurrent#0;class#RankingsController#0" expanded="false" />
+                <element signature="method#log#0;class#RankingsController#0" expanded="false" />
+                <element signature="method#setBackground#0;class#RankingsController#0" expanded="false" />
+                <element signature="method#styleLabel#0;class#RankingsController#0" expanded="false" />
+                <element signature="method#setSize#0;class#RankingsController#0" expanded="false" />
+                <element signature="method#setShadow#0;class#RankingsController#0" expanded="false" />
+                <element signature="method#styleButton#0;class#RankingsController#0" expanded="false" />
+                <element signature="method#getRanking#0;class#RankingsController#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,22 +242,23 @@
       <file leaf-file-name="QuestionsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/controllers/QuestionsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="717">
-              <caret line="220" column="5" lean-forward="true" selection-start-line="220" selection-start-column="5" selection-end-line="220" selection-end-column="5" />
+            <state relative-caret-position="1399">
+              <caret line="434" column="0" lean-forward="false" selection-start-line="434" selection-start-column="0" selection-end-line="434" selection-end-column="0" />
               <folding>
+                <element signature="method#initialize#0;class#QuestionsController#0" expanded="false" />
+                <element signature="method#finished#0;class#QuestionsController#0" expanded="false" />
+                <element signature="method#setBackground#0;class#QuestionsController#0" expanded="false" />
+                <element signature="method#setLabels#0;class#QuestionsController#0" expanded="false" />
+                <element signature="method#setPanes#0;class#QuestionsController#0" expanded="false" />
                 <element signature="method#handleButtonAction#0;class#QuestionsController#0" expanded="false" />
                 <element signature="method#hintButton#0;class#QuestionsController#0" expanded="false" />
+                <element signature="method#OnBack#0;class#QuestionsController#0" expanded="false" />
+                <element signature="method#setBackground#1;class#QuestionsController#0" expanded="false" />
+                <element signature="method#styleLabel#0;class#QuestionsController#0" expanded="false" />
+                <element signature="method#setSize#0;class#QuestionsController#0" expanded="false" />
+                <element signature="method#setShadow#0;class#QuestionsController#0" expanded="false" />
+                <element signature="method#styleButton#0;class#QuestionsController#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scores.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scores.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -198,8 +275,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>initCityManager</find>
-      <find>gameManager</find>
       <find>username</find>
       <find>background</find>
       <find>minWidth</find>
@@ -211,8 +286,6 @@
       <find>setAttributes</find>
       <find>CitiesController.gameManager</find>
       <find>backButton2</find>
-      <find>setLabels</find>
-      <find>setPanes</find>
       <find>onH</find>
       <find>initHint</find>
       <find>Избери</find>
@@ -221,13 +294,17 @@
       <find>Font</find>
       <find>25</find>
       <find>public</find>
-      <find>Utils.</find>
       <find>Values.SCOREDB_KEY_USER</find>
       <find>KEY_USER</find>
       <find>Values.</find>
       <find>COLLECTION_SCORES</find>
       <find>KEY_SCORES</find>
       <find>public static</find>
+      <find>makeItLookLikeButton</find>
+      <find>Utils.</find>
+      <find>setButtons</find>
+      <find>setPanes</find>
+      <find>setLabels</find>
     </findStrings>
     <replaceStrings>
       <replace>scores</replace>
@@ -247,8 +324,6 @@
       <replace>Utils.setSize</replace>
       <replace>gameManager</replace>
       <replace>backButton</replace>
-      <replace>initLabels</replace>
-      <replace>initPanes</replace>
       <replace>mapPane</replace>
       <replace>Values.H3</replace>
       <replace>private</replace>
@@ -257,6 +332,10 @@
       <replace>DB_COLLECTION</replace>
       <replace>KEY_POINTS</replace>
       <replace>public static final</replace>
+      <replace>styleAsButton</replace>
+      <replace>initButtons</replace>
+      <replace>initPanes</replace>
+      <replace>initLabels</replace>
     </replaceStrings>
   </component>
   <component name="FindManager">
@@ -312,14 +391,10 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/application/db/UserDB.java" />
         <option value="$PROJECT_DIR$/src/application/classes/cities/City.java" />
-        <option value="$PROJECT_DIR$/src/application/controllers/RankingsController.java" />
-        <option value="$PROJECT_DIR$/src/application/controllers/MenuController.java" />
-        <option value="$PROJECT_DIR$/src/application/controllers/CreditsController.java" />
         <option value="$PROJECT_DIR$/src/application/classes/Scores.java" />
         <option value="$PROJECT_DIR$/src/application/db/ScoreDBObject.java" />
         <option value="$PROJECT_DIR$/src/application/classes/Player.java" />
         <option value="$PROJECT_DIR$/src/application/classes/City.java" />
-        <option value="$PROJECT_DIR$/src/application/controllers/CitiesController.java" />
         <option value="$PROJECT_DIR$/src/application/db/ScoreDB.java" />
         <option value="$PROJECT_DIR$/src/application/resources/questions/blagoevgradQuestions.txt" />
         <option value="$PROJECT_DIR$/src/application/resources/questions/burgasQuestions.txt" />
@@ -328,13 +403,17 @@
         <option value="$PROJECT_DIR$/src/application/resources/questions/ruseQuestions.txt" />
         <option value="$PROJECT_DIR$/src/application/resources/questions/sofiaQuestions.txt" />
         <option value="$PROJECT_DIR$/src/application/resources/questions/turnovoQuestions.txt" />
-        <option value="$PROJECT_DIR$/src/application/resources/questions/varnaQuestions.txt" />
         <option value="$PROJECT_DIR$/src/application/classes/Score.java" />
-        <option value="$PROJECT_DIR$/src/application/classes/Utils.java" />
         <option value="$PROJECT_DIR$/src/application/classes/GameManager.java" />
-        <option value="$PROJECT_DIR$/src/application/controllers/QuestionsController.java" />
         <option value="$PROJECT_DIR$/src/application/classes/Values.java" />
         <option value="$PROJECT_DIR$/src/application/classes/Question.java" />
+        <option value="$PROJECT_DIR$/src/application/resources/questions/varnaQuestions.txt" />
+        <option value="$PROJECT_DIR$/src/application/classes/Utils.java" />
+        <option value="$PROJECT_DIR$/src/application/controllers/RankingsController.java" />
+        <option value="$PROJECT_DIR$/src/application/controllers/QuestionsController.java" />
+        <option value="$PROJECT_DIR$/src/application/controllers/CreditsController.java" />
+        <option value="$PROJECT_DIR$/src/application/controllers/CitiesController.java" />
+        <option value="$PROJECT_DIR$/src/application/controllers/MenuController.java" />
       </list>
     </option>
   </component>
@@ -367,9 +446,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -428,55 +504,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="questions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="teamrift" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="teamrift" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="teamrift" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="teamrift" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -504,6 +532,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1077,7 +1108,8 @@
       <workItem from="1487285279091" duration="312000" />
       <workItem from="1487285735393" duration="237000" />
       <workItem from="1487286072359" duration="29000" />
-      <workItem from="1488227842318" duration="5474000" />
+      <workItem from="1488227842318" duration="6349000" />
+      <workItem from="1488273700145" duration="1129000" />
     </task>
     <task id="LOCAL-00001" summary="Added logic to change Questions - package aplication.classes.cities.&#10;Added Ranking, Score Player classes, not implemented. TO DO Logic for displaying scores, keeping scores, scores.fxml, ScoresController.&#10;Added BootController with boot.fxml for startscreen. TO DO Team Rift Logo displayed for 3-4 seconds, then start screen.&#10;Added mordorQuestions. Limited Questions to 8 cities - Blagoevgrad, Burgas, Sofia, Varna, Pleven, Plovdiv, Ruse and Veliko Turnovo. If anyone wants other city, should replace one of above, but first notify others to avoid breaking logic in application.classes.cities;&#10;Moved all FXML to resources/fxml. path fixed.&#10;Created rankings.txt to keep scores.&#10;Added Values.java file to keep all Strings, Dimensions and any other static values.&#10;LAYOUT AND DESIGN&#10;&#10;TO DO&#10;Find good background image.&#10;&#10;CHANGES&#10;Changed bulgaria map image.&#10;Changed start.fxml buttons positon.&#10;Changed cities.fxml layout.&#10;Layout and design changes.&#10;More layout and design changes.&#10;">
       <created>1486467603680</created>
@@ -1163,11 +1195,25 @@
       <option name="project" value="LOCAL" />
       <updated>1488231266507</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Changes to City.&#10;Removed city child classes.&#10;Added difficulty for questions to question files. __EASY , __NORMAL, __HARD words in the begining of the line will be used to mark difficulty.&#10;loadQuestions() now takes second argument Difficulty and should load only questions that match.">
+      <created>1488233457104</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1488233457104</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added new fields  and methods  to Score class.&#10;Added new class Player.&#10;Changed all fields in Values to final.&#10;Changed to City class.&#10;Removed city child classes.&#10;Added difficulty for questions to question files. __EASY , __NORMAL, __HARD words in the begining of the line will be used to mark difficulty.&#10;loadQuestions() now takes second argument Difficulty and should load only questions that match.">
+      <created>1488233610924</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1488233610924</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136555000" />
+    <option name="totallyTimeSpent" value="138559000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1185,27 +1231,25 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32751322" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08571429" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32328042" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32328042" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20057233" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32804233" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1213,13 +1257,33 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32751322" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32804233" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1245,7 +1309,9 @@
     <MESSAGE value="Values - all to final" />
     <MESSAGE value="Values - all fields made final" />
     <MESSAGE value="Added new fields and methods to Scores.&#10;Added new class Player.&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new fields and methods to Scores.&#10;Added new class Player.&#10;" />
+    <MESSAGE value="Changes to City.&#10;Removed city child classes.&#10;Added difficulty for questions to question files. __EASY , __NORMAL, __HARD words in the begining of the line will be used to mark difficulty.&#10;loadQuestions() now takes second argument Difficulty and should load only questions that match." />
+    <MESSAGE value="Added new fields  and methods  to Score class.&#10;Added new class Player.&#10;Changed all fields in Values to final.&#10;Changed to City class.&#10;Removed city child classes.&#10;Added difficulty for questions to question files. __EASY , __NORMAL, __HARD words in the begining of the line will be used to mark difficulty.&#10;loadQuestions() now takes second argument Difficulty and should load only questions that match." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new fields  and methods  to Score class.&#10;Added new class Player.&#10;Changed all fields in Values to final.&#10;Changed to City class.&#10;Removed city child classes.&#10;Added difficulty for questions to question files. __EASY , __NORMAL, __HARD words in the begining of the line will be used to mark difficulty.&#10;loadQuestions() now takes second argument Difficulty and should load only questions that match." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1258,25 +1324,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/io/PrintStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="803" column="16" lean-forward="false" selection-start-line="803" selection-start-column="16" selection-end-line="803" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/images/bulgaria1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/function/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/stream/Stream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1133">
@@ -1292,54 +1339,54 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/boot.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/menu.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/menu.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="1218">
           <caret line="42" column="37" lean-forward="false" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/rankings.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/rankings.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="1624">
           <caret line="56" column="28" lean-forward="false" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/quizWindow.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/quizWindow.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="3538">
           <caret line="122" column="16" lean-forward="false" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rankings.txt" />
     <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/credits.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/resources/scores.txt" />
@@ -1359,71 +1406,32 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/resources/fxml/cities.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="37" column="25" lean-forward="false" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.classpath">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.project">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/CityInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Mordor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="14" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath" />
+    <entry file="file://$PROJECT_DIR$/.project" />
+    <entry file="file://$PROJECT_DIR$/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/CityInterface.java" />
+    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Mordor.java" />
     <entry file="file://$PROJECT_DIR$/src/application/controllers/BootController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1248">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1431,48 +1439,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="19" column="81" lean-forward="false" selection-start-line="19" selection-start-column="77" selection-end-line="19" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/controllers/RankingsController.java">
+    <entry file="file://$PROJECT_DIR$/src/application/db/ScoreDBObject.java" />
+    <entry file="file://$PROJECT_DIR$/src/application/classes/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="40" column="31" lean-forward="true" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initCurrent#0;class#RankingsController#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="335">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/controllers/MenuController.java">
+    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Varna.java" />
+    <entry file="file://$PROJECT_DIR$/src/application/db/ScoreDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="2116">
+          <caret line="122" column="51" lean-forward="true" selection-start-line="122" selection-start-column="51" selection-end-line="122" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/controllers/CreditsController.java">
+    <entry file="file://$PROJECT_DIR$/src/application/db/UserDB.java" />
+    <entry file="file://$PROJECT_DIR$/src/application/classes/Scores.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="121" column="36" lean-forward="false" selection-start-line="121" selection-start-column="36" selection-end-line="121" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="558">
+          <caret line="48" column="47" lean-forward="false" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestTest.iml">
+    <entry file="file://$PROJECT_DIR$/scores.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/db/ScoreDBObject.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/TestTest/application/resources/questions/blagoevgradQuestions.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1480,36 +1488,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/Player.java">
+    <entry file="file://$PROJECT_DIR$/out/production/TestTest/application/resources/questions/sofiaQuestions.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/cities/Varna.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/classes/City.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
+        <state relative-caret-position="58">
           <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="e#224#225#0" expanded="true" />
-            <element signature="e#251#252#0" expanded="true" />
-            <element signature="e#291#292#0" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#481#482#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/classes/GameManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/classes/Question.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="980">
+          <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/classes/Score.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/classes/Values.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1537,88 +1554,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/varnaQuestions.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/turnovoQuestions.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/db/ScoreDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2116">
-          <caret line="122" column="51" lean-forward="true" selection-start-line="122" selection-start-column="51" selection-end-line="122" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/db/UserDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="26" column="53" lean-forward="true" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/controllers/CitiesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="151" column="27" lean-forward="false" selection-start-line="151" selection-start-column="27" selection-end-line="151" selection-end-column="27" />
-          <folding>
-            <element signature="method#initialize#0;class#CitiesController#0" expanded="false" />
-            <element signature="method#onCityQuestion#0;class#CitiesController#0" expanded="false" />
-            <element signature="method#OnBack#0;class#CitiesController#0" expanded="false" />
-            <element signature="method#setButtons#0;class#CitiesController#0" expanded="false" />
-            <element signature="method#setLabels#0;class#CitiesController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="68" column="9" lean-forward="true" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
-          <folding>
-            <element signature="method#log#0;class#Utils#0" expanded="false" />
-            <element signature="method#setBackground#0;class#Utils#0" expanded="false" />
-            <element signature="method#setBackground#1;class#Utils#0" expanded="false" />
-            <element signature="method#setSize#0;class#Utils#0" expanded="false" />
-            <element signature="method#setShadow#0;class#Utils#0" expanded="false" />
-            <element signature="method#setShadow#1;class#Utils#0" expanded="false" />
-            <element signature="method#styleCityButton#0;class#Utils#0" expanded="false" />
-            <element signature="method#styleButton#0;class#Utils#0" expanded="false" />
-            <element signature="method#makeItLookLikeButton#0;class#Utils#0" expanded="false" />
-            <element signature="method#getRanking#0;class#Utils#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/Score.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding>
-            <element signature="method#getCityName#0;class#Score#0" expanded="false" />
-            <element signature="method#getUserName#0;class#Score#0" expanded="false" />
-            <element signature="method#setUserName#0;class#Score#0" expanded="false" />
-            <element signature="method#getValue#0;class#Score#0" expanded="false" />
-            <element signature="method#prepareSave#0;class#Score#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/sofiaQuestions.txt">
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/plovdivQuestions.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
           <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
@@ -1634,7 +1570,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/plovdivQuestions.txt">
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/sofiaQuestions.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
           <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
@@ -1642,72 +1578,154 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/Scores.java">
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/turnovoQuestions.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="48" column="47" lean-forward="false" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
-          <folding>
-            <element signature="method#findAndLoad#0;class#Scores#0" expanded="false" />
-            <element signature="method#getScores#0;class#Scores#0" expanded="false" />
-            <element signature="method#save#0;class#Scores#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/GameManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding>
-            <element signature="method#setCurrentUser#0;class#GameManager#0" expanded="false" />
-            <element signature="method#setCurrentUserPoints#0;class#GameManager#0" expanded="false" />
-            <element signature="method#getScores#0;class#GameManager#0" expanded="false" />
-            <element signature="method#setScores#0;class#GameManager#0" expanded="false" />
-            <element signature="method#setFactsLabel#0;class#GameManager#0" expanded="false" />
-            <element signature="method#setUserName#0;class#GameManager#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/Values.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="87">
+          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scores.txt">
+    <entry file="file://$PROJECT_DIR$/TestTest.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="319">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/resources/questions/varnaQuestions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="3" column="137" lean-forward="false" selection-start-line="3" selection-start-column="137" selection-end-line="3" selection-end-column="137" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/classes/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/controllers/RankingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1115">
+          <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
+          <folding>
+            <element signature="method#initialize#0;class#RankingsController#0" expanded="false" />
+            <element signature="method#OnBack#0;class#RankingsController#0" expanded="false" />
+            <element signature="method#loadScores#0;class#RankingsController#0" expanded="false" />
+            <element signature="e#2533#2596#0" expanded="false" />
+            <element signature="e#3126#3155#0" expanded="false" />
+            <element signature="method#initBackButton#0;class#RankingsController#0" expanded="false" />
+            <element signature="method#initCurrent#0;class#RankingsController#0" expanded="false" />
+            <element signature="method#log#0;class#RankingsController#0" expanded="false" />
+            <element signature="method#setBackground#0;class#RankingsController#0" expanded="false" />
+            <element signature="method#styleLabel#0;class#RankingsController#0" expanded="false" />
+            <element signature="method#setSize#0;class#RankingsController#0" expanded="false" />
+            <element signature="method#setShadow#0;class#RankingsController#0" expanded="false" />
+            <element signature="method#styleButton#0;class#RankingsController#0" expanded="false" />
+            <element signature="method#getRanking#0;class#RankingsController#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/controllers/QuestionsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="220" column="5" lean-forward="true" selection-start-line="220" selection-start-column="5" selection-end-line="220" selection-end-column="5" />
+        <state relative-caret-position="1399">
+          <caret line="434" column="0" lean-forward="false" selection-start-line="434" selection-start-column="0" selection-end-line="434" selection-end-column="0" />
           <folding>
+            <element signature="method#initialize#0;class#QuestionsController#0" expanded="false" />
+            <element signature="method#finished#0;class#QuestionsController#0" expanded="false" />
+            <element signature="method#setBackground#0;class#QuestionsController#0" expanded="false" />
+            <element signature="method#setLabels#0;class#QuestionsController#0" expanded="false" />
+            <element signature="method#setPanes#0;class#QuestionsController#0" expanded="false" />
             <element signature="method#handleButtonAction#0;class#QuestionsController#0" expanded="false" />
             <element signature="method#hintButton#0;class#QuestionsController#0" expanded="false" />
+            <element signature="method#OnBack#0;class#QuestionsController#0" expanded="false" />
+            <element signature="method#setBackground#1;class#QuestionsController#0" expanded="false" />
+            <element signature="method#styleLabel#0;class#QuestionsController#0" expanded="false" />
+            <element signature="method#setSize#0;class#QuestionsController#0" expanded="false" />
+            <element signature="method#setShadow#0;class#QuestionsController#0" expanded="false" />
+            <element signature="method#styleButton#0;class#QuestionsController#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/classes/Question.java">
+    <entry file="file://$PROJECT_DIR$/src/application/controllers/CitiesController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+        <state relative-caret-position="1243">
+          <caret line="355" column="0" lean-forward="false" selection-start-line="355" selection-start-column="0" selection-end-line="355" selection-end-column="0" />
           <folding>
-            <element signature="method#Question#0;class#Question#0" expanded="false" />
-            <element signature="method#getQuestionIndex#0;class#Question#0" expanded="false" />
-            <element signature="method#displayQuestion#0;class#Question#0" expanded="false" />
-            <element signature="method#checkCorrect#0;class#Question#0" expanded="false" />
-            <element signature="method#showScores#0;class#Question#0" expanded="false" />
-            <element signature="method#jokerBtn#0;class#Question#0" expanded="false" />
-            <element signature="method#reset#0;class#Question#0" expanded="false" />
+            <element signature="method#initialize#0;class#CitiesController#0" expanded="false" />
+            <element signature="method#onCityQuestion#0;class#CitiesController#0" expanded="false" />
+            <element signature="method#OnBack#0;class#CitiesController#0" expanded="false" />
+            <element signature="method#setButtons#0;class#CitiesController#0" expanded="false" />
+            <element signature="method#setLabels#0;class#CitiesController#0" expanded="false" />
+            <element signature="method#setCity#0;class#CitiesController#0" expanded="false" />
+            <element signature="method#setPanes#0;class#CitiesController#0" expanded="false" />
+            <element signature="method#setBackground#0;class#CitiesController#0" expanded="false" />
+            <element signature="method#styleLabel#0;class#CitiesController#0" expanded="false" />
+            <element signature="method#setSize#0;class#CitiesController#0" expanded="false" />
+            <element signature="method#setShadow#0;class#CitiesController#0" expanded="false" />
+            <element signature="method#styleCityButton#0;class#CitiesController#0" expanded="false" />
+            <element signature="method#styleButton#0;class#CitiesController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/controllers/CreditsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2087">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#CreditsController#0" expanded="false" />
+            <element signature="method#setButtons#0;class#CreditsController#0" expanded="false" />
+            <element signature="method#setPanes#0;class#CreditsController#0" expanded="false" />
+            <element signature="method#setLabels#0;class#CreditsController#0" expanded="false" />
+            <element signature="method#onBack#0;class#CreditsController#0" expanded="false" />
+            <element signature="method#setBackground#0;class#CreditsController#0" expanded="false" />
+            <element signature="method#styleLabel#0;class#CreditsController#0" expanded="false" />
+            <element signature="method#setSize#0;class#CreditsController#0" expanded="false" />
+            <element signature="method#setShadow#0;class#CreditsController#0" expanded="false" />
+            <element signature="method#styleButton#0;class#CreditsController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/controllers/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="36" column="51" lean-forward="true" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#MenuController#0" expanded="false" />
+            <element signature="method#initButtons#0;class#MenuController#0" expanded="false" />
+            <element signature="method#initStartButton#0;class#MenuController#0" expanded="false" />
+            <element signature="method#initExitButton#0;class#MenuController#0" expanded="false" />
+            <element signature="method#initCreditsButton#0;class#MenuController#0" expanded="false" />
+            <element signature="method#initScoresButton#0;class#MenuController#0" expanded="false" />
+            <element signature="method#initRankButton#0;class#MenuController#0" expanded="false" />
+            <element signature="e#2894#2948#0" expanded="false" />
+            <element signature="method#initLabels#0;class#MenuController#0" expanded="false" />
+            <element signature="method#setGameLabel#0;class#MenuController#0" expanded="false" />
+            <element signature="method#setRiftLabel#0;class#MenuController#0" expanded="false" />
+            <element signature="method#setSoftUniLabel#0;class#MenuController#0" expanded="false" />
+            <element signature="method#setStartButton#0;class#MenuController#0" expanded="false" />
+            <element signature="method#initPanes#0;class#MenuController#0" expanded="false" />
+            <element signature="method#exitGame#0;class#MenuController#0" expanded="false" />
+            <element signature="method#showCredits#0;class#MenuController#0" expanded="false" />
+            <element signature="method#showScores#0;class#MenuController#0" expanded="false" />
+            <element signature="method#startGame#0;class#MenuController#0" expanded="false" />
+            <element signature="e#7107#7118#0" expanded="false" />
+            <element signature="method#setBackground#0;class#MenuController#0" expanded="false" />
+            <element signature="method#setSize#0;class#MenuController#0" expanded="false" />
+            <element signature="method#setShadow#0;class#MenuController#0" expanded="false" />
+            <element signature="method#styleButton#0;class#MenuController#0" expanded="false" />
+            <element signature="method#styleAsButton#0;class#MenuController#0" expanded="false" />
           </folding>
         </state>
       </provider>
