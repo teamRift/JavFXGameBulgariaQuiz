@@ -28,7 +28,7 @@ public class GameManager {
     }
 
     public String getCityName(){
-        return this.city.getClass().getSimpleName();
+        return this.city.getName();
     }
 
     public String getFileName(){
@@ -56,21 +56,13 @@ public class GameManager {
     }
 
     public void setCurrentUser(String currentUser) {
-
         this.currentUser = currentUser;
-
         try {
-
             Scores.findAndLoad(currentUser);
-
         } catch (Exception e) {
-
             e.printStackTrace();
-
         }
-
         isLogged = true;
-
     }
 
     public void setCity(City city) {

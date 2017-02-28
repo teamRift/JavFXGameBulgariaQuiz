@@ -29,41 +29,17 @@ import static application.controllers.BootController.gameManager;
 
 public class CitiesController {
     @FXML
-    Button backButton;
+    Label hintLabel, labelChooseCity;
     @FXML
-    BorderPane mainPane;
-    @FXML
-    GridPane topPane;
-    @FXML
-    GridPane rightPane;
-    @FXML
-    GridPane bottomPane;
-    @FXML
-    GridPane leftPane;
+    Button varna, sofia, ruse, burgas, blagoevgrad, velikoturnovo, pleven, plovdiv, backButton;
     @FXML
     AnchorPane mapPane;
     @FXML
+    BorderPane mainPane;
+    @FXML
+    GridPane topPane, bottomPane, leftPane, rightPane ;
+    @FXML
     ImageView mapImg;
-    @FXML
-    Button varna;
-    @FXML
-    Button ruse;
-    @FXML
-    Button sofia;
-    @FXML
-    Button burgas;
-    @FXML
-    Button blagoevgrad;
-    @FXML
-    Button plovdiv;
-    @FXML
-    Button pleven;
-    @FXML
-    Button turnovo;
-    @FXML
-    Label hintLabel;
-    @FXML
-    Label labelChooseCity;
 
     public void initialize() throws IOException {
 
@@ -74,7 +50,6 @@ public class CitiesController {
         setLabels();
 
     }
-
     public void onCityQuestion( ActionEvent actionEvent) throws IOException {
 
         Button button  = (Button)  actionEvent.getSource();
@@ -93,7 +68,6 @@ public class CitiesController {
         stage.show();
 
     }
-
     public void OnBack(ActionEvent actionEvent) throws IOException {
 
         Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
@@ -104,15 +78,14 @@ public class CitiesController {
 
         stage.show();
     }
-
     private void setButtons(){
 
-        styleCityButton(varna,ruse,sofia,burgas,blagoevgrad,plovdiv,pleven,turnovo);
+        styleCityButton(varna,ruse,sofia,burgas,blagoevgrad,plovdiv,pleven,velikoturnovo);
 
         burgas.setLayoutX(Values.SIX_COLS - Values.ONE_ROW);
         burgas.setLayoutY(Values.FOUR_ROWS * 1.2);
 
-        varna.setLayoutX(Values.SIX_COLS * 0.95);
+        varna.setLayoutX(Values.SIX_COLS * 0.93);
         varna.setLayoutY(Values.TWO_ROWS * 1.27);
 
         ruse.setLayoutX(Values.THREE_COLS * 1.07);
@@ -130,15 +103,14 @@ public class CitiesController {
         pleven.setLayoutX(Values.TWO_COLS * 0.97);
         pleven.setLayoutY(Values.TWO_ROWS * 1.45);
 
-        turnovo.setLayoutX(Values.THREE_COLS * 1.15);
-        turnovo.setLayoutY(Values.TWO_ROWS * 1.5);
+        velikoturnovo.setLayoutX(Values.THREE_COLS * 1.15);
+        velikoturnovo.setLayoutY(Values.TWO_ROWS * 1.5);
 
         styleButton(backButton);
         setSize(backButton,Values.ONE_COL, Values.ONE_ROW);
 
         backButton.setText(Values.LABEL_BACK_BTN);
     }
-
     private void setLabels() {
 
         gameManager.setFactsLabel(hintLabel);
@@ -150,14 +122,12 @@ public class CitiesController {
         styleLabel(Values.H2,labelChooseCity);
 
     }
-
     private void setCity(String city) {
         City choosenCity = new City();
         choosenCity.setName(city);
         choosenCity.setFileName();
         gameManager.setCity(choosenCity);
     }
-
     private void setPanes(){
 
         setSize(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
@@ -177,10 +147,10 @@ public class CitiesController {
         mapImg.setFitWidth(Values.SCREEN_WIDTH);
         mapImg.setFitWidth(Values.SCREEN_HEIGHT);
     }
-    public static String capitalize(String input){
+    private static String capitalize(String input){
         return input.substring(0, 1).toUpperCase() + input.substring(1);
     }
-    public static void setBackground(Pane pane, double WIDTH, double HEIGHT) {
+    private static void setBackground(Pane pane, double WIDTH, double HEIGHT) {
 
         BackgroundImage myBI = new BackgroundImage(new Image(Values.IMG_BACKGROUND,WIDTH,HEIGHT,false,true),
                 BackgroundRepeat.REPEAT,
@@ -191,7 +161,7 @@ public class CitiesController {
         pane.setBackground(new Background(myBI));
 
     }
-    public static void styleLabel(int size, Label... labels) {
+    private static void styleLabel(int size, Label... labels) {
         for (Label label : labels) {
             label.setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD,size));
 
@@ -201,7 +171,7 @@ public class CitiesController {
 
         }
     }
-    public static void setSize(Object object, double WIDTH, double HEIGHT) {
+    private static void setSize(Object object, double WIDTH, double HEIGHT) {
 
         if (object instanceof Pane) {
 
@@ -278,7 +248,7 @@ public class CitiesController {
 
         }
     }
-    public static void setShadow(Object object) {
+    private static void setShadow(Object object) {
 
         DropShadow shadow = new DropShadow();
 
@@ -323,7 +293,7 @@ public class CitiesController {
         }
 
     }
-    public static void styleCityButton(Button... buttons) {
+    private static void styleCityButton(Button... buttons) {
 
         for (Button button : buttons) {
 
@@ -338,7 +308,7 @@ public class CitiesController {
         }
 
     }
-    public static void styleButton(Button... buttons) {
+    private static void styleButton(Button... buttons) {
 
         for (Button button : buttons) {
 

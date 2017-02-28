@@ -19,15 +19,12 @@ import com.mongodb.*;
 import static application.controllers.BootController.gameManager;
 
 public class Scores {
-
     private List<Score> leaderboard;
-
     public Scores() {
 
         leaderboard = load();
 
     }
-
     private static void create() {
 
         Path filePath = Paths.get("./" + Values.PATH_RANKINGS);
@@ -61,117 +58,62 @@ public class Scores {
         }
 
     }
-
     public static List<Score> load() {
-
         ArrayList<Score> scores = new ArrayList<>();
-
         try {
-
             Path filePath = Paths.get("./" + Values.PATH_RANKINGS);
-
             if (!Files.exists(filePath)) {
-
-                Utils.log(Scores.class,"");
-
                 create();
-
             }
-
             Files.lines(filePath).forEach(line -> {
-
                 if (line.isEmpty()) {
-
                     return;
-
                 }
-
                 String[] tokens = line.split(";");
-
                 scores.add(new Score(tokens[0].trim(),tokens[1].trim(), Integer.parseInt(tokens[2].trim())));
-
             });
-
         } catch (IOException e) {
-
             create();
-
             System.out.println("Created");
-
             e.printStackTrace();
-
         }
 
-
         Collections.sort(scores, (s1, s2) -> {
-
             if (s1.getValue() > s2.getValue())
-
                 return -1; // replace with 1 to reverse
-
             if (s1.getValue() < s2.getValue())
-
                 return 1; // replace with -1 to reverse
-
             return 0;
-
         });
 
         return scores;
     }
-
     public static void findAndLoad(String userName) throws Exception {
-
         ArrayList<Score> scores = new ArrayList<>();
-
         try {
-
             Path filePath = Paths.get("./" + Values.PATH_RANKINGS);
-
             Files.lines(filePath).forEach(line -> {
-
                 if (line.isEmpty()) {
-
                     line.replace(line,line);
-
                     return;
-
                 }
-
                 String[] tokens = line.replaceAll(" ","").split(";");
-
                 if (tokens.length > 2) {
-
                     if (tokens[1].equalsIgnoreCase(userName)) {
-
                         gameManager.setUserMaxPoints(Integer.parseInt(tokens[2]));
-
                     }
-
                 }
-
             });
-
         } catch (IOException e) {
-
             e.printStackTrace();
-
         }
-
     }
-
     public List<Score> getScores(){
-
         if (leaderboard.isEmpty()){
-
             load();
-
         }
-
         return leaderboard;
-
     }
-
     public static void save(Score score) {
 
         Path filePath = Paths.get("./" + Values.PATH_RANKINGS);
@@ -230,5 +172,4 @@ public class Scores {
 
         }
     }
-
 }

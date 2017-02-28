@@ -6,7 +6,12 @@ public class City {
     private String fileName;
     public City(){}
     public String getName() {
-        return name;
+        if (this.name.equalsIgnoreCase("velikoturnovo")){
+            return String.format("%s %s",
+                    capitalize(name.substring(0,6)),
+                    capitalize(name.substring(6)));
+        }
+        return capitalize(name);
     }
 
     public void setName(String name) {
@@ -21,5 +26,8 @@ public class City {
         this.fileName = name + QUESTION_FILE_SUFFIX;
     }
 
+    public static String capitalize(String input){
+        return input.substring(0, 1).toUpperCase() + input.substring(1);
+    }
 
 }

@@ -28,40 +28,13 @@ public class CreditsController {
     @FXML
     Button backBtn;
     @FXML
-    public Label gameTitle;
-    @FXML
-    public Label leftLabel;
-    @FXML
-    public Label rightLabel;
+    public Label gameTitle, leftLabel, rightLabel;
     @FXML
     private BorderPane mainPane;
     @FXML
-    private GridPane teamRiftBox;
+    private GridPane teamRiftBox, topPane, bottomPane, leftPane, rightPane;
     @FXML
-    private GridPane topPane;
-    @FXML
-    private GridPane leftPane;
-    @FXML
-    private GridPane bottomPane;
-    @FXML
-    private GridPane rightPane;
-    @FXML
-    private Label creditsL1;
-    @FXML
-    private Label creditsL2;
-    @FXML
-    private Label creditsL3;
-    @FXML
-    private Label creditsL4;
-    @FXML
-    private Label creditsR1;
-    @FXML
-    private Label creditsR2;
-    @FXML
-    private Label creditsR3;
-    @FXML
-    private Label creditsR4;
-
+    private Label creditsL1, creditsL2, creditsL3, creditsL4, creditsR1, creditsR2, creditsR3, creditsR4;
 
     public void initialize(){
 
@@ -147,7 +120,7 @@ public class CreditsController {
 
     }
 
-    public void onBack() throws IOException {
+    private void onBack() throws IOException {
 
         Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
 
@@ -157,10 +130,10 @@ public class CreditsController {
 
         stage.show();
     }
-    public static String capitalize(String input){
+    private static String capitalize(String input){
         return input.substring(0, 1).toUpperCase() + input.substring(1);
     }
-    public static void setBackground(Pane pane, double WIDTH, double HEIGHT) {
+    private static void setBackground(Pane pane, double WIDTH, double HEIGHT) {
 
         BackgroundImage myBI = new BackgroundImage(new Image(Values.IMG_BACKGROUND,WIDTH,HEIGHT,false,true),
                 BackgroundRepeat.REPEAT,
@@ -171,7 +144,7 @@ public class CreditsController {
         pane.setBackground(new Background(myBI));
 
     }
-    public static void styleLabel(int size, Label... labels) {
+    private static void styleLabel(int size, Label... labels) {
         for (Label label : labels) {
             label.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD,size));
 
@@ -181,7 +154,7 @@ public class CreditsController {
 
         }
     }
-    public static void setSize(Object object, double WIDTH, double HEIGHT) {
+    private static void setSize(Object object, double WIDTH, double HEIGHT) {
 
         if (object instanceof Pane) {
 
@@ -258,7 +231,7 @@ public class CreditsController {
 
         }
     }
-    public static void setShadow(Object object) {
+    private static void setShadow(Object object) {
 
         DropShadow shadow = new DropShadow();
 
@@ -303,7 +276,7 @@ public class CreditsController {
         }
 
     }
-    public static void styleButton(Button... buttons) {
+    private static void styleButton(Button... buttons) {
 
         for (Button button : buttons) {
 

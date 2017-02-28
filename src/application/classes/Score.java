@@ -11,7 +11,7 @@ public class Score {
 
     public Score(){}
     public Score(String cityName, String userName, int scores) {
-        this.setCityName(Utils.capitalize(cityName));
+        this.setCityName(capitalize(cityName));
         this.setUserName(userName);
         this.setScore(scores);
     }
@@ -54,6 +54,9 @@ public class Score {
 
         return String.format("%s ; %s ; %s", cityName, userName, scores);
 
+    }
+    public static String capitalize(String input){
+        return input.substring(0, 1).toUpperCase() + input.substring(1);
     }
 
 }
