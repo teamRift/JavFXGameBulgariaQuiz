@@ -85,6 +85,7 @@
         </rowConstraints>
          <children>
             <Label fx:id="gameTitle" text="Label" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Button fx:id="songBtn" mnemonicParsing="false" onAction="#songControllers" text="Song Off" />
          </children>
       </GridPane>
    </top>

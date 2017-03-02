@@ -1,6 +1,7 @@
 package application.controllers;
 
 import application.classes.*;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -27,6 +28,7 @@ import static application.controllers.BootController.gameManager;
 
 
 public class MenuController {
+    public Button songBtn;
     @FXML
     BorderPane mainPane;
     @FXML
@@ -58,6 +60,7 @@ public class MenuController {
         initScoresButton();
         initStartButton();
         initRankButton();
+        initSongButton();
     }
     private void initStartButton(){
         startBtn.setText(Values.LABEL_START_BTN);
@@ -89,7 +92,6 @@ public class MenuController {
                 e.printStackTrace();
             }
         });
-
     }
     private void initScoresButton(){
         scoresBtn.setText(Values.LABEL_SCORES_BTN);
@@ -101,6 +103,11 @@ public class MenuController {
             }
         });
 
+    }
+    private void initSongButton(){
+        if (Song.check){
+            songBtn.setText("Song On");
+        }
     }
     private void initRankButton(){
         //        rankBtn.setText(Values.LABEL_RANKTABLE_BTN);
@@ -420,5 +427,15 @@ public class MenuController {
 
         }
 
+    }
+
+    public void songControllers(ActionEvent actionEvent) {
+        if (Song.check){
+            Song.start();
+            songBtn.setText("Song Off");
+        } else {
+            Song.pause();
+            songBtn.setText("Song On");
+        }
     }
 }

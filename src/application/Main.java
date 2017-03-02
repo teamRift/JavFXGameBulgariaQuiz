@@ -3,6 +3,7 @@ package application;
 
 import application.classes.GameManager;
 import application.classes.Scores;
+import application.classes.Song;
 import application.classes.Values;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -29,6 +30,11 @@ public class Main extends Application {
 
         primaryStage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
         primaryStage.show();
+        songBackground();
+    }
+    private void songBackground() {
+        Song song = new Song();
+        song.playTrack();
     }
     public static void main(String[] args) {
         launch(args);
