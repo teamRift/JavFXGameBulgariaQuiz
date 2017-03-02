@@ -80,7 +80,6 @@ public class MenuController {
         setSize(exitBtn, Values.FOUR_COLS, Values.ONE_ROW);
         exitBtn.setOnMouseClicked(actionEvent -> {
             exitGame();
-            gameManager.setCurrentUser(inputUserName.getText());
         });
     }
     private void initCreditsButton(){

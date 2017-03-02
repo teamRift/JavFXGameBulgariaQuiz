@@ -5,11 +5,17 @@ import javafx.animation.PauseTransition;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -65,20 +71,13 @@ public class Question {
             });
 
         } catch (IOException e) {
-
             e.printStackTrace();
-
             Alert notFound = new Alert(Alert.AlertType.ERROR);
-
             notFound.setTitle(Values.FILE_ERROR_QUESTIONS);
-
             notFound.showAndWait();
-
             Platform.exit();
-
             System.exit(0);
         }
-
         return questions;
     }
     public static void setButtons(Button...buttonsArray) {
@@ -90,28 +89,26 @@ public class Question {
 
         currentLabel.setText(this.question);
         correctLabel.setText("Question " + questionCount);
+
         int randInt = rand.nextInt(4);
         randomButton = buttonsCopy.get(randInt);
         buttonsCopy.get(randInt).setText(this.correctAnswer);
         buttonsCopy.remove(randInt);
         Collections.shuffle(this.wrongsAnswers);
         for (Button b : buttonsCopy) {
+            b.setTextFill(Color.BLACK);
+            b.setBackground(new Background(new BackgroundFill(Paint.valueOf("#FFFFFF"),new CornerRadii(7), new Insets(5,5,5,5))));
             b.setText(this.wrongsAnswers.get(buttonsCopy.indexOf(b)));
         }
 
     }
     public void checkCorrect(Button b, ArrayList<Question> questions, Label scoreLabel) {
         if (this.randomButton == b) {
-            this.randomButton.setStyle("-fx-background-color: #006600");
+            this.randomButton.setTextFill(Color.WHITE);
+            this.randomButton.setBackground(new Background(new BackgroundFill(Paint.valueOf("#006600"),new CornerRadii(7), new Insets(5,5,5,5))));
             score += 10;
             scoreLabel.setText("Score: " + score);
             questionsCorrect += 1;
-
-
-        } else {
-            b.setStyle("-fx-background-color: #660000");
-
-
         }
 
 
@@ -120,9 +117,7 @@ public class Question {
             try {
                 showScores(b);
             } catch (IOException e) {
-
                 e.printStackTrace();
-
             }
         }
 

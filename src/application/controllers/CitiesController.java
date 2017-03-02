@@ -29,6 +29,12 @@ import static application.controllers.BootController.gameManager;
 
 public class CitiesController {
     @FXML
+    public Label labelMaxRecord;
+    @FXML
+    public Label labelUserRecord;
+    @FXML
+    public  Label labelUserName;
+    @FXML
     Label hintLabel, labelChooseCity;
     @FXML
     Button varna, sofia, ruse, burgas, blagoevgrad, velikoturnovo, pleven, plovdiv, backButton;

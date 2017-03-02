@@ -92,18 +92,21 @@ public class QuestionsController {
 
         styleButton(firstButton,secondButton,thirdButton,fourthButton,backButton,hintOne);
 
-        setSize(backButton,Values.ONE_COL, Values.ONE_ROW);
+        setSize(backButton,Values.ONE_COL, Values.ONE_ROW/2);
+        setSize(firstButton, Values.THREE_COLS, Values.ONE_ROW);
+        setSize(secondButton, Values.THREE_COLS, Values.ONE_ROW);
+        setSize(thirdButton, Values.THREE_COLS, Values.ONE_ROW);
+        setSize(fourthButton, Values.THREE_COLS, Values.ONE_ROW);
 
         backButton.setText(Values.LABEL_BACK_BTN);
 
-
         questionButtons.setMinWidth(Values.SIX_COLS);
 
-        questionButtons.setMinHeight(Values.FOUR_ROWS);
+        questionButtons.setMinHeight(Values.THREE_ROWS);
 
         Question.reset();
 
-        questions = Question.loadQuestions(gameManager.getFileName(),Values.DIFFICULTY_EASY);
+        questions = Question.loadQuestions(gameManager.getFileName(),Values.DIFFICULTY_NORMAL);
         
         Question.setButtons(firstButton, secondButton, thirdButton, fourthButton);
         
@@ -221,7 +224,6 @@ public class QuestionsController {
                     thirdButton.setDisable(false);
 
                     fourthButton.setDisable(false);
-
                 });
 
             }
