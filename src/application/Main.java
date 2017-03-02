@@ -20,6 +20,7 @@ public class Main extends Application {
         // replace with menu.fxml for startscreen
         Parent root = FXMLLoader.load(getClass().getResource("resources/fxml/boot.fxml"));
        // primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
+        root.getStylesheets().add("application/lightTheme.css");
 
         primaryStage.setResizable(false);
         primaryStage.setTitle("Bulgaria Quiz");

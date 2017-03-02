@@ -1,6 +1,7 @@
 package application.classes;
 
 import application.controllers.QuestionsController;
+import javafx.animation.PauseTransition;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +11,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -84,10 +87,7 @@ public class Question {
     public static int getQuestionIndex() { return questionIndex; }
     public void displayQuestion(Label currentLabel, Label correctLabel) {
         ArrayList<Button> buttonsCopy = new ArrayList<>(buttons);
-        for (Button b : buttonsCopy) {
-            b.getStyleClass().remove("correct");
-            b.getStyleClass().remove("wrong");
-        }
+
         currentLabel.setText(this.question);
         correctLabel.setText("Question " + questionCount);
         int randInt = rand.nextInt(4);
@@ -98,14 +98,20 @@ public class Question {
         for (Button b : buttonsCopy) {
             b.setText(this.wrongsAnswers.get(buttonsCopy.indexOf(b)));
         }
+
     }
     public void checkCorrect(Button b, ArrayList<Question> questions, Label scoreLabel) {
         if (this.randomButton == b) {
+            this.randomButton.setStyle("-fx-background-color: #006600");
             score += 10;
             scoreLabel.setText("Score: " + score);
             questionsCorrect += 1;
+
+
         } else {
-            this.randomButton.getStyleClass().add("correct");
+            b.setStyle("-fx-background-color: #660000");
+
+
         }
 
 
@@ -123,6 +129,8 @@ public class Question {
         questionCount += 1;
 
         questionIndex += 1;
+
+
 
     }
     private void showScores(Button b) throws IOException {

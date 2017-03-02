@@ -419,17 +419,17 @@ public class QuestionsController {
     }
     public static void styleButton(Button... buttons) {
 
-        for (Button button : buttons) {
+       for (Button button : buttons) {
 
-            button.setBackground(new Background(new BackgroundFill(Paint.valueOf("#FFFFFF"),new CornerRadii(7), new Insets(5,5,5,5))));
+         button.setBackground(new Background(new BackgroundFill(Paint.valueOf("#FFFFFF"),new CornerRadii(7), new Insets(5,5,5,5))));
 
-            button.setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD, Values.H3));
+          button.setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD, Values.H3));
 
-            button.setTextFill(Color.BLACK);
+           button.setTextFill(Color.BLACK);
 
-            setShadow(button);
+           setShadow(button);
 
-        }
+       }
 
     }
 }
