@@ -92,7 +92,11 @@ public class Question {
 
         int randInt = rand.nextInt(4);
         randomButton = buttonsCopy.get(randInt);
+
         buttonsCopy.get(randInt).setText(this.correctAnswer);
+        buttonsCopy.get(randInt).setTextFill(Color.BLACK);
+        buttonsCopy.get(randInt).setBackground(new Background(new BackgroundFill(Paint.valueOf("#FFFFFF"),new CornerRadii(7), new Insets(5,5,5,5))));
+
         buttonsCopy.remove(randInt);
         Collections.shuffle(this.wrongsAnswers);
         for (Button b : buttonsCopy) {
@@ -104,13 +108,15 @@ public class Question {
     }
     public void checkCorrect(Button b, ArrayList<Question> questions, Label scoreLabel) {
         if (this.randomButton == b) {
-            this.randomButton.setTextFill(Color.WHITE);
-            this.randomButton.setBackground(new Background(new BackgroundFill(Paint.valueOf("#006600"),new CornerRadii(7), new Insets(5,5,5,5))));
+            b.setTextFill(Color.WHITE);
+            b.setBackground(new Background(new BackgroundFill(Paint.valueOf("#006600"),new CornerRadii(7), new Insets(5,5,5,5))));
             score += 10;
             scoreLabel.setText("Score: " + score);
             questionsCorrect += 1;
+        } else {
+            b.setTextFill(Color.WHITE);
+            b.setBackground(new Background(new BackgroundFill(Paint.valueOf("#cc3745"),new CornerRadii(7), new Insets(5,5,5,5))));
         }
-
 
         if (questions.size() == questionCount) {
             QuestionsController.finished(score, questionsCorrect);
@@ -120,13 +126,9 @@ public class Question {
                 e.printStackTrace();
             }
         }
-
         questionCount += 1;
 
         questionIndex += 1;
-
-
-
     }
     private void showScores(Button b) throws IOException {
 

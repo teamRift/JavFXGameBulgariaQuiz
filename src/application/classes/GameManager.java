@@ -11,6 +11,8 @@ public class GameManager {
 
     public static boolean hasPlayed;
 
+    private String questionsDifficulty;
+
     private String currentUser;
 
     private int maxPoints;
@@ -115,6 +117,14 @@ public class GameManager {
             t.setText(this.getCurrentUser());
         }
     }
+    public String getQuestionsDifficulty() {
+        return questionsDifficulty;
+    }
+
+    public void setQuestionsDifficulty(String questionsDifficulty) {
+        this.questionsDifficulty = questionsDifficulty;
+    }
+
 
     public void init(){
         setScores();

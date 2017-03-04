@@ -6,11 +6,6 @@ public class City {
     private String fileName;
     public City(){}
     public String getName() {
-        if (this.name.equalsIgnoreCase("velikoturnovo")){
-            return String.format("%s %s",
-                    capitalize(name.substring(0,6)),
-                    capitalize(name.substring(6)));
-        }
         return capitalize(name);
     }
 

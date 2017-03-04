@@ -1,6 +1,7 @@
 package application.controllers;
 
 import application.classes.*;
+import com.sun.org.apache.xpath.internal.SourceTree;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -81,17 +82,13 @@ public class QuestionsController {
 
     @FXML
     public void initialize() {
-        
         setBackground();
-        
         setPanes();
-        
         setLabels();
-
-        setSize(hintOne,Values.TWO_COLS,Values.ONE_ROW);
 
         styleButton(firstButton,secondButton,thirdButton,fourthButton,backButton,hintOne);
 
+        setSize(hintOne,Values.ONE_COL,Values.ONE_ROW);
         setSize(backButton,Values.ONE_COL, Values.ONE_ROW/2);
         setSize(firstButton, Values.THREE_COLS, Values.ONE_ROW);
         setSize(secondButton, Values.THREE_COLS, Values.ONE_ROW);
@@ -99,46 +96,30 @@ public class QuestionsController {
         setSize(fourthButton, Values.THREE_COLS, Values.ONE_ROW);
 
         backButton.setText(Values.LABEL_BACK_BTN);
-
         questionButtons.setMinWidth(Values.SIX_COLS);
-
         questionButtons.setMinHeight(Values.THREE_ROWS);
 
         Question.reset();
-
-        questions = Question.loadQuestions(gameManager.getFileName(),Values.DIFFICULTY_NORMAL);
-        
+        questions = Question.loadQuestions(gameManager.getFileName(),gameManager.getQuestionsDifficulty());
         Question.setButtons(firstButton, secondButton, thirdButton, fourthButton);
-        
         questions.get(Question.getQuestionIndex()).displayQuestion(questionLabel, questionNumLabel);
 
-        
         firstButton.setOnAction(this::handleButtonAction);
-        
         secondButton.setOnAction(this::handleButtonAction);
-        
         thirdButton.setOnAction(this::handleButtonAction);
-        
         fourthButton.setOnAction(this::handleButtonAction);
-
     }
 
     public static void finished(int score, int questionsCorrect) {
-
         int percent = 0;
-
         if (questionsCorrect > 0) {
-
             percent = (int) ((double) questionsCorrect / (double) questions.size() * 100);
-
         }
-
         Score newScore = new Score(gameManager.getCityName(), gameManager.getCurrentUser(), score);
         System.out.println("Save score.");
         Scores.save(newScore);
 
         gameManager.setCurrentUserPoints(score);
-
     }
 
     private void setBackground(){
@@ -191,41 +172,28 @@ public class QuestionsController {
     private void handleButtonAction(ActionEvent event) {
 
         firstButton.setDisable(true);
-
         secondButton.setDisable(true);
-
         thirdButton.setDisable(true);
-
         fourthButton.setDisable(true);
 
         questions.get(Question.getQuestionIndex())
                 .checkCorrect((Button) event.getTarget(), questions, scoreLabel);
 
         Timer time = new Timer();
-
         time.schedule(new TimerTask() {
 
             @Override
 
             public void run() {
-
                 Platform.runLater(() -> {
-
                     if (questions.size()>Question.getQuestionIndex()){
-
                         questions.get(Question.getQuestionIndex()).displayQuestion(questionLabel, questionNumLabel);
-
                     }
-
                     firstButton.setDisable(false);
-
                     secondButton.setDisable(false);
-
                     thirdButton.setDisable(false);
-
                     fourthButton.setDisable(false);
                 });
-
             }
         }, Values.PAUSE_VALUE);
     }
@@ -420,18 +388,11 @@ public class QuestionsController {
 
     }
     public static void styleButton(Button... buttons) {
-
        for (Button button : buttons) {
-
-         button.setBackground(new Background(new BackgroundFill(Paint.valueOf("#FFFFFF"),new CornerRadii(7), new Insets(5,5,5,5))));
-
-          button.setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD, Values.H3));
-
+           button.setBackground(new Background(new BackgroundFill(Paint.valueOf("#FFFFFF"),new CornerRadii(7), new Insets(5,5,5,5))));
+           button.setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD, Values.H3));
            button.setTextFill(Color.BLACK);
-
            setShadow(button);
-
        }
-
     }
 }

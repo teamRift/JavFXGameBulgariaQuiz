@@ -19,6 +19,7 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
@@ -29,11 +30,15 @@ import static application.controllers.BootController.gameManager;
 
 public class CitiesController {
     @FXML
-    public Label labelMaxRecord;
+    public Label labelDifficulty;
     @FXML
-    public Label labelUserRecord;
+    public Button buttonEasy;
     @FXML
-    public  Label labelUserName;
+    public Button buttonNormal;
+    @FXML
+    public Button buttonHard;
+    public Label labelInputUserName;
+    public TextField inputUserName;
     @FXML
     Label hintLabel, labelChooseCity;
     @FXML
@@ -46,8 +51,13 @@ public class CitiesController {
     GridPane topPane, bottomPane, leftPane, rightPane ;
     @FXML
     ImageView mapImg;
-
+    @FXML
+    VBox difficultyBox;
     public void initialize() throws IOException {
+
+        inputUserName.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.NORMAL, FontPosture.REGULAR, Values.H3));
+        gameManager.setUserName(inputUserName);
+        inputUserName.setBackground(Background.EMPTY);
 
         setPanes();
 
@@ -56,23 +66,15 @@ public class CitiesController {
         setLabels();
 
     }
-    public void onCityQuestion( ActionEvent actionEvent) throws IOException {
-
+    public void onCityQuestion(ActionEvent actionEvent) throws IOException {
         Button button  = (Button)  actionEvent.getSource();
-
         String id = button.getId();
-
+        gameManager.setCurrentUser(inputUserName.getText());
         setCity(id.toLowerCase());
-
         Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/quizWindow.fxml"));
-
-
         Stage stage = (Stage)button.getScene().getWindow();
-
         stage.setScene( new Scene( root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
-
         stage.show();
-
     }
     public void OnBack(ActionEvent actionEvent) throws IOException {
 
@@ -84,10 +86,29 @@ public class CitiesController {
 
         stage.show();
     }
-    private void setButtons(){
+    private void setButtons() {
+        styleButton(buttonEasy,buttonNormal,buttonHard);
+        buttonEasy.setOnAction((event -> {
+            resetDifficultyButtons();
+            gameManager.setQuestionsDifficulty(Values.DIFFICULTY_EASY);
+            ((Button)event.getSource()).setTextFill(Color.WHITE);
+            ((Button)event.getSource()).setBackground(new Background(new BackgroundFill(Paint.valueOf("#006600"),new CornerRadii(7), new Insets(5,5,5,5))));
+        }));
+        buttonNormal.setOnAction((event -> {
+            resetDifficultyButtons();
+            gameManager.setQuestionsDifficulty(Values.DIFFICULTY_NORMAL);
+            ((Button)event.getSource()).setTextFill(Color.WHITE);
+            ((Button)event.getSource()).setBackground(new Background(new BackgroundFill(Paint.valueOf("#006600"),new CornerRadii(7), new Insets(5,5,5,5))));
+        }));
+        buttonHard.setOnAction((event -> {
+            resetDifficultyButtons();
+            gameManager.setQuestionsDifficulty(Values.DIFFICULTY_HARD);
+            ((Button)event.getSource()).setTextFill(Color.WHITE);
+            ((Button)event.getSource()).setBackground(new Background(new BackgroundFill(Paint.valueOf("#006600"),new CornerRadii(7), new Insets(5,5,5,5))));
+        }));
+
 
         styleCityButton(varna,ruse,sofia,burgas,blagoevgrad,plovdiv,pleven,velikoturnovo);
-
         burgas.setLayoutX(Values.SIX_COLS - Values.ONE_ROW);
         burgas.setLayoutY(Values.FOUR_ROWS * 1.2);
 
@@ -113,16 +134,24 @@ public class CitiesController {
         velikoturnovo.setLayoutY(Values.TWO_ROWS * 1.5);
 
         styleButton(backButton);
-        setSize(backButton,Values.ONE_COL, Values.ONE_ROW);
+        setSize(backButton,Values.ONE_COL/2, Values.ONE_ROW/2);
 
         backButton.setText(Values.LABEL_BACK_BTN);
+    }
+    private void resetDifficultyButtons() {
+        buttonEasy.setTextFill(Color.BLACK);
+        buttonEasy.setBackground(new Background(new BackgroundFill(Color.WHITE,new CornerRadii(7), new Insets(5,5,5,5))));
+        buttonNormal.setTextFill(Color.BLACK);
+        buttonNormal.setBackground(new Background(new BackgroundFill(Color.WHITE,new CornerRadii(7), new Insets(5,5,5,5))));
+        buttonHard.setTextFill(Color.BLACK);
+        buttonHard.setBackground(new Background(new BackgroundFill(Color.WHITE,new CornerRadii(7), new Insets(5,5,5,5))));
     }
     private void setLabels() {
 
         gameManager.setFactsLabel(hintLabel);
 
         styleLabel(Values.H3,hintLabel);
-
+        labelDifficulty.setText(Values.LABEL_DIFFICULTY);
         labelChooseCity.setText(Values.LABEL_CHOOSE_CITY_BTN);
 
         styleLabel(Values.H2,labelChooseCity);
@@ -147,7 +176,7 @@ public class CitiesController {
         setSize(rightPane, Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
 
         setSize(mapPane, Values.SIX_COLS, Values.SIX_ROWS + Values.THREE_ROWS);
-
+        difficultyBox.setPadding(new Insets(0,0,0,Values.ONE_ROW/5));
         setBackground(mainPane, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT);
 
         mapImg.setFitWidth(Values.SCREEN_WIDTH);

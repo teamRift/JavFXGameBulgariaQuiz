@@ -45,8 +45,7 @@
                   </ImageView>
                   <HBox fx:id="startGameBox" alignment="CENTER" layoutX="10.0" layoutY="260.0" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <TextField fx:id="inputUserName" alignment="CENTER" maxWidth="200.0" prefHeight="56.0" prefWidth="536.0" text="username" />
-                        <Label fx:id="startBtn" contentDisplay="CENTER" text="Start Game">
+                        <Label fx:id="startLabel" contentDisplay="CENTER" text="Start Game">
                            <padding>
                               <Insets left="15.0" />
                            </padding>
@@ -55,17 +54,17 @@
                   </HBox>
                   <HBox fx:id="scoresBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="scoresBtn" alignment="CENTER" contentDisplay="CENTER" text="Label" />
+                        <Label fx:id="scoresLabel" alignment="CENTER" contentDisplay="CENTER" text="Label" />
                      </children>
                   </HBox>
                   <HBox fx:id="creditsBox" alignment="CENTER" layoutX="10.0" layoutY="360.0">
                      <children>
-                        <Label fx:id="creditsBtn" alignment="CENTER" contentDisplay="CENTER" text="Label" />
+                        <Label fx:id="creditsLabel" alignment="CENTER" contentDisplay="CENTER" text="Label" />
                      </children>
                   </HBox>
                   <HBox fx:id="exitBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="exitBtn" alignment="CENTER" contentDisplay="CENTER" text="Label" />
+                        <Label fx:id="exitLabel" alignment="CENTER" contentDisplay="CENTER" text="Label" />
                      </children>
                   </HBox>
                </children>

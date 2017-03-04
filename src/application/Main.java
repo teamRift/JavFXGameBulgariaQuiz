@@ -28,7 +28,6 @@ public class Main extends Application {
             Platform.exit();
             System.exit(0);
         }));
-
         primaryStage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
         primaryStage.show();
         songBackground();

@@ -34,11 +34,9 @@ public class MenuController {
     @FXML
     GridPane topPane, bottomPane, leftPane, rightPane, centerPane;
     @FXML
-    Label gameTitle,exitBtn,creditsBtn, startBtn, scoresBtn, rankBtn, getMenuLeftLabel,getMenuRightLabel;
+    Label gameTitle,exitLabel,creditsLabel, startLabel, scoresLabel, rankBtn, getMenuLeftLabel,getMenuRightLabel;
     @FXML
     HBox startGameBox,scoresBox,creditsBox,exitBox;
-    @FXML
-    TextField inputUserName;
     @FXML
     VBox buttonsGroup;
     @FXML
@@ -63,28 +61,27 @@ public class MenuController {
         initSongButton();
     }
     private void initStartButton(){
-        startBtn.setText(Values.LABEL_START_BTN);
-        setStartButton();
-        startBtn.setOnMouseClicked(actionEvent -> {
+        startLabel.setText(Values.LABEL_START_BTN);
+        setButtons();
+        startLabel.setOnMouseClicked(actionEvent -> {
             try {
                 startGame();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            gameManager.setCurrentUser(inputUserName.getText());
         });
 
     }
     private void initExitButton(){
-        exitBtn.setText(Values.LABEL_EXIT_BTN);
-        setSize(exitBtn, Values.FOUR_COLS, Values.ONE_ROW);
-        exitBtn.setOnMouseClicked(actionEvent -> {
+        exitLabel.setText(Values.LABEL_EXIT_BTN);
+        setSize(exitLabel, Values.FOUR_COLS, Values.ONE_ROW);
+        exitLabel.setOnMouseClicked(actionEvent -> {
             exitGame();
         });
     }
     private void initCreditsButton(){
-        creditsBtn.setText(Values.LABEL_CREDITS_BTN);
-        creditsBtn.setOnMouseClicked(actionEvent -> {
+        creditsLabel.setText(Values.LABEL_CREDITS_BTN);
+        creditsLabel.setOnMouseClicked(actionEvent -> {
             try {
                 showCredits();
             } catch (IOException e) {
@@ -93,8 +90,8 @@ public class MenuController {
         });
     }
     private void initScoresButton(){
-        scoresBtn.setText(Values.LABEL_SCORES_BTN);
-        scoresBtn.setOnMouseClicked(actionEvent -> {
+        scoresLabel.setText(Values.LABEL_SCORES_BTN);
+        scoresLabel.setOnMouseClicked(actionEvent -> {
             try {
                 showScores();
             } catch (IOException e) {
@@ -163,24 +160,19 @@ public class MenuController {
 
         setShadow(menuRightLabel);
     }
-    private void setStartButton(){
+    private void setButtons() {
 
-        inputUserName.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.NORMAL, FontPosture.REGULAR, Values.H3));
-        gameManager.setUserName(inputUserName);
-        inputUserName.setBackground(Background.EMPTY);
-        setSize(inputUserName,Values.ONE_COL, Values.ONE_ROW);
-        setSize(startBtn, Values.ONE_COL, Values.ONE_ROW);
-        setSize(exitBtn, Values.ONE_COL*1.5, Values.ONE_ROW);
-        setSize(creditsBtn, Values.ONE_COL*1.5, Values.ONE_ROW);
-        setSize(scoresBtn, Values.ONE_COL*1.5, Values.ONE_ROW);
+        setSize(startLabel, Values.ONE_COL, Values.ONE_ROW/2);
+        setSize(exitLabel, Values.ONE_COL, Values.ONE_ROW/2);
+        setSize(creditsLabel, Values.ONE_COL, Values.ONE_ROW/2);
+        setSize(scoresLabel, Values.ONE_COL, Values.ONE_ROW/2);
 
-        setSize(startGameBox,Values.THREE_COLS,Values.ONE_ROW);
-        setSize(scoresBox,Values.THREE_COLS,Values.ONE_ROW);
-        setSize(creditsBox,Values.THREE_COLS,Values.ONE_ROW);
-        setSize(exitBox,Values.THREE_COLS,Values.ONE_ROW);
+        setSize(startGameBox,Values.TWO_COLS,Values.ONE_ROW/1.5);
+        setSize(scoresBox,Values.TWO_COLS,Values.ONE_ROW/1.5);
+        setSize(creditsBox,Values.TWO_COLS,Values.ONE_ROW/1.5);
+        setSize(exitBox,Values.TWO_COLS,Values.ONE_ROW/1.5);
 
-        styleAsButton(startBtn,exitBtn,creditsBtn,scoresBtn);
-
+        styleAsButton(startLabel,exitLabel,creditsLabel,scoresLabel);
         styleAsButton(startGameBox,scoresBox,creditsBox,exitBox);
     }
     private void initPanes(){
@@ -205,7 +197,7 @@ public class MenuController {
 
     private void exitGame() {
 
-        Stage stage = (Stage)exitBtn.getScene().getWindow();
+        Stage stage = (Stage)exitLabel.getScene().getWindow();
 
         stage.close();
 
@@ -214,7 +206,7 @@ public class MenuController {
 
         Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/credits.fxml"));
 
-        Stage stage = (Stage)creditsBtn.getScene().getWindow();
+        Stage stage = (Stage)creditsLabel.getScene().getWindow();
 
         stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
 
@@ -225,7 +217,7 @@ public class MenuController {
 
         Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/rankings.fxml"));
 
-        Stage stage = (Stage)scoresBtn.getScene().getWindow();
+        Stage stage = (Stage)scoresLabel.getScene().getWindow();
 
         stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
 
@@ -238,7 +230,7 @@ public class MenuController {
 
         Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/cities.fxml"));
 
-        Stage stage = (Stage)startBtn.getScene().getWindow();
+        Stage stage = (Stage)startLabel.getScene().getWindow();
 
         stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
 

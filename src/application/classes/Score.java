@@ -2,7 +2,6 @@ package application.classes;
 
 public class Score {
 
-    private String id;
     private String userName;
     private String cityName;
     private String difficulty;
@@ -14,13 +13,6 @@ public class Score {
         this.setCityName(capitalize(cityName));
         this.setUserName(userName);
         this.setScore(scores);
-    }
-
-    public String getId(){
-        return this.id;
-    }
-    public void setId(String id){
-        this.id = id;
     }
 
     public String getDate(){

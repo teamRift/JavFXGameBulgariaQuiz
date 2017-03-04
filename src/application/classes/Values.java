@@ -13,10 +13,10 @@ public class Values
     //FXML FILES
 
     public static String PATH_CITIES = "../resources/fxml/cities.fxml";
-
+    public static final String LABEL_DIFFICULTY = "Choose difficulty";
     public static final String DIFFICULTY_EASY = "__EASY";
     public static final String DIFFICULTY_NORMAL = "__NORMAL";
-    public static final String DIFFICULTY_HARD = "__HARD";
+    public static final String DIFFICULTY_HARD = "__DIFFICULT";
 
 
     public static String PATH_RANKINGS = "scores.txt";
