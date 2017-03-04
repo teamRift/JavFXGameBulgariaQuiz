@@ -37,7 +37,7 @@ public class CitiesController {
     @FXML
     Label hintLabel, labelChooseCity;
     @FXML
-    Button varna, sofia, ruse, burgas, blagoevgrad, velikoturnovo, pleven, plovdiv, backButton;
+    Button varna, sofia, ruse, burgas, blagoevgrad, velikoturnovo, pleven, plovdiv, backButton, hardButton, normalButton,easyButton;
     @FXML
     AnchorPane mapPane;
     @FXML
@@ -328,5 +328,15 @@ public class CitiesController {
 
         }
 
+    }
+
+    public void OnHard(ActionEvent actionEvent) throws IOException {
+
+    }
+
+    public void OnNormal(ActionEvent actionEvent) {
+    }
+
+    public void OnEasy(ActionEvent actionEvent) {
     }
 }
