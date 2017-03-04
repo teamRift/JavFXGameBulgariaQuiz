@@ -57,7 +57,6 @@ public class CitiesController {
 
         inputUserName.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.NORMAL, FontPosture.REGULAR, Values.H3));
         gameManager.setUserName(inputUserName);
-        inputUserName.setBackground(Background.EMPTY);
 
         setPanes();
 
@@ -88,18 +87,21 @@ public class CitiesController {
     }
     private void setButtons() {
         styleButton(buttonEasy,buttonNormal,buttonHard);
+        setSize(buttonEasy,Values.ONE_COL, Values.ONE_ROW/2);
         buttonEasy.setOnAction((event -> {
             resetDifficultyButtons();
             gameManager.setQuestionsDifficulty(Values.DIFFICULTY_EASY);
             ((Button)event.getSource()).setTextFill(Color.WHITE);
             ((Button)event.getSource()).setBackground(new Background(new BackgroundFill(Paint.valueOf("#006600"),new CornerRadii(7), new Insets(5,5,5,5))));
         }));
+        setSize(buttonNormal,Values.ONE_COL, Values.ONE_ROW/2);
         buttonNormal.setOnAction((event -> {
             resetDifficultyButtons();
             gameManager.setQuestionsDifficulty(Values.DIFFICULTY_NORMAL);
             ((Button)event.getSource()).setTextFill(Color.WHITE);
             ((Button)event.getSource()).setBackground(new Background(new BackgroundFill(Paint.valueOf("#006600"),new CornerRadii(7), new Insets(5,5,5,5))));
         }));
+        setSize(buttonHard,Values.ONE_COL, Values.ONE_ROW/2);
         buttonHard.setOnAction((event -> {
             resetDifficultyButtons();
             gameManager.setQuestionsDifficulty(Values.DIFFICULTY_HARD);
@@ -134,7 +136,7 @@ public class CitiesController {
         velikoturnovo.setLayoutY(Values.TWO_ROWS * 1.5);
 
         styleButton(backButton);
-        setSize(backButton,Values.ONE_COL/2, Values.ONE_ROW/2);
+        setSize(backButton,Values.ONE_COL*0.8, Values.ONE_ROW/2);
 
         backButton.setText(Values.LABEL_BACK_BTN);
     }
@@ -152,6 +154,7 @@ public class CitiesController {
 
         styleLabel(Values.H3,hintLabel);
         labelDifficulty.setText(Values.LABEL_DIFFICULTY);
+
         labelChooseCity.setText(Values.LABEL_CHOOSE_CITY_BTN);
 
         styleLabel(Values.H2,labelChooseCity);

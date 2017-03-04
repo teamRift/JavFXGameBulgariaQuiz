@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
@@ -123,7 +124,7 @@
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
                         <Label fx:id="labelInputUserName" text="Label" />
-                        <TextField fx:id="inputUserName" alignment="CENTER" maxWidth="200.0" prefHeight="56.0" prefWidth="536.0" text="username" />
+                        <TextField fx:id="inputUserName" alignment="CENTER_RIGHT" text="username" />
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
