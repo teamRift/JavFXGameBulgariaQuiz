@@ -1,4 +1,12 @@
 __EASY ; On which river is located Veliko Tarnovo? ; on the Yantra River ; on Iskar River ; on Struma River ; on Maritza River
 __EASY ; Which monument located in Veliko Tarnovo? ; Monument of Asenevci ; Monument of Ivanovci ; Monument of Botev ; Monument of Boris I
-__EASY ; On which date the first National Assembly convened in Veliko Tarnovo to ratify the state's first constitution, Tarnovo Constitution ? ; on 17 April 1879 ; on 17 April 1878 ; on 3 Mart 1878 ; on 19 February 1873
-__EASY ; According to archeological researches, Veliko Tarnovo was founded arond: ; 4200 B.C. ; 2230 B.C. ; 610 B.C ; 1000 B.C.
+__EASY ; How much is the population of Veliko Turnovo ? ; 73000 ; 100000 ; 90000 ; 87000
+__EASY ; What is the distance between Sofia and Veliko Turnovo ? ; 220km ; 300km ; 350km ; 400km
+__NORMAL ; According to archeological researches, Veliko Tarnovo was founded arond: ; 4200 B.C. ; 2230 B.C. ; 610 B.C ; 1000 B.C.
+__NORMAL ; How old is Veliko Turnovo ? ; over 6000 years ; over 8000 years ; over 10000 years ; over 12000 years
+__NORMAL ; Which is the biggest neighbourhood in Veliko Turnovo ? ; Buzludja ; Zona B ; Kartala ; Varusha
+__NORMAL ; Which newspapper is created in Veliko Turnovo ? ; "Borba" ; "24chasa" ; "Trud" ; "Standart"
+__HARD ; On which date the first National Assembly convened in Veliko Tarnovo to ratify the state's first constitution, Tarnovo Constitution ? ; on 17 April 1879 ; on 17 April 1878 ; on 3 Mart 1878 ; on 19 February 1873
+__HARD ; Which hospital is situated in Veliko Turnovo ? ; MOBAL"D-r Stefan Cherkezov" ; Sveta ANNA ; Isul ; Aleksandrovksa 
+__HARD ; How many museums are there in Veliko Turnovo ? ; 8 ; 9 ; 10 ; 11 
+__HARD ; How many churches are there in Veliko Turnovo ? ; 10 ; 11 ; 12 ; 13

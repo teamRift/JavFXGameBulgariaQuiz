@@ -1,4 +1,12 @@
 __EASY ; In which name was known in the West for most of Plovdiv recorded history ? ; Philippopolis ; Naulochos ; Pistiros ; Apollonia
 __EASY ; Plovdiv is the second-largest city in Bulgaria with a population ? ; of 341,567 ; of 523,726 ; of 163,984 ; of 1 524,649
 __EASY ; Which river separate Plovdiv ? ; Maritsa ; Iskar ; Danube ; Struma
-__EASY ; Which is probably the best-known monument from antiquity in Bulgaria ? ; The Ancient theatre ; The Sevtopolis ; The Perperiikon ; The Dinea
+__EASY ; How big is Plovdiv in square kilometters? ; 102000 ; 144000 ; 156000 ; 190000
+__NORMAL ; How old is Plovdiv ? ; over 8000 years ; over 5000 years ; over 4000 years ; over 11000 years
+__NORMAL ; How many neighbourhoods are there in Plovdiv ? ; 34 ; 44 ; 54 ; 47
+__NORMAL ; Which park is situated in Plovdiv ? ; Lauta ; Kajluka ; Borisova gradina ; Zaimov
+__NORMAL ; Which university is situated in Plovdiv ? ; Agraren ; Amerikanski ; Nov Bulgarski ; Datski
+__HARD ; In which year was created the Archeological museum ? ; 1882 ; 1876 ; 1894 ; 1900
+__HARD ; Which radio station is situated in Plovdiv ? ; Katra ; Energy ; Radio Fm ; The Voice
+__HARD ; How long is river Maritsa ? ; 480km ; 250km ; 1000km ; 560km 
+__HARD ; Which famous writer is born in Plovdiv ? ; Panayot Pipkov ; Elin Pelin ; Ivan Vazov ; Dora Gabe

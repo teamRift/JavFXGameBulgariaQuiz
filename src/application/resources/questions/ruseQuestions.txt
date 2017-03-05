@@ -1,4 +1,12 @@
-__EASY ; In which architecture style is city Ruse ? ;  Neo-Baroque and Neo-Rococo ; Neo-Baroque ; Neo-Rococo ; Neoclassical
-__EASY ; How the is often called Ruse ? ; the Little Vienna ; the Little Florence ; the Little Sofia ; the Little Prague
-__EASY ; Which Romanian city stand across the Rousse bridge over Danube? ; Giurgiu ; Bucharest ; Brashov ; Calafat
-__EASY ; What is the name of the urban festival hold in Ruse? ; Sexaginta Prista Summer Stage ; Ruse Rock fest ; Planeta Payner Festival ; Ruschuk folk
+__EASY ; Which big river is near Ruse ? ; Dunva ; Iskar ; Maritsa ; Tundja
+__EASY ; How much is the population of Ruse ? ; 146000 ; 156000 ; 166000 ; 176000
+__EASY ; Which football club is from Ruse ? ; Dunav ; Levski ; CSKA ; Slavya
+__EASY ; What is the distance between Ruse and Bucurest ? ; 75km ; 175km ; 275km ; 190km
+__NORMAL ; Which Romanian city stand across the Rousse bridge over Danube? ; Giurgiu ; Bucharest ; Brashov ; Calafat
+__NORMAL ; How the is often called Ruse ? ; the Little Vienna ; the Little Florence ; the Little Sofia ; the Little Prague
+__NORMAL ; Which park is situated in Ruse ? ; Lesopark Lipnik ; Kajluka ; Zaymov ; Yujen park
+__NORMAL ; Which theater is situated in Ruse ? ; Sava Ognyanov ; Ivan Vazov ; Aleko Konstantinov ; Nikolay Binev
+__HARD ; In which architecture style is city Ruse ? ;  Neo-Baroque and Neo-Rococo ; Neo-Baroque ; Neo-Rococo ; Neoclassical
+__HARD ;  What is the name of the urban festival hold in Ruse? ; Sexaginta Prista Summer Stage ; Ruse Rock fest ; Planeta Payner Festival ; Ruschuk folk
+__HARD ; The name "RUSE" is sinonimous of a color,which is this color ? ; Red ; Blue ; Green ; White
+__HARD ; In which year is created the first skin factory in Ruse ? ; 1881 ; 1882 ; 1883 ; 1884
