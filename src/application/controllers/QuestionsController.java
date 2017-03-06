@@ -1,36 +1,24 @@
 package application.controllers;
 
 import application.classes.*;
-import com.sun.org.apache.xpath.internal.SourceTree;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.effect.BlurType;
-import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
-
-import static application.controllers.BootController.gameManager;
 
 public class QuestionsController {
     @FXML
@@ -86,21 +74,21 @@ public class QuestionsController {
         setPanes();
         setLabels();
 
-        styleButton(firstButton,secondButton,thirdButton,fourthButton,backButton,hintOne);
+        GUIHelper.styleButton(firstButton,secondButton,thirdButton,fourthButton,backButton,hintOne);
 
-        setSize(hintOne,Values.ONE_COL,Values.ONE_ROW);
-        setSize(backButton,Values.ONE_COL, Values.ONE_ROW/2);
-        setSize(firstButton, Values.THREE_COLS, Values.ONE_ROW);
-        setSize(secondButton, Values.THREE_COLS, Values.ONE_ROW);
-        setSize(thirdButton, Values.THREE_COLS, Values.ONE_ROW);
-        setSize(fourthButton, Values.THREE_COLS, Values.ONE_ROW);
+        GUIHelper.setViewDimensions(hintOne,Values.ONE_COL,Values.ONE_ROW);
+        GUIHelper.setViewDimensions(backButton,Values.ONE_COL, Values.ONE_ROW/2);
+        GUIHelper.setViewDimensions(firstButton, Values.THREE_COLS, Values.ONE_ROW);
+        GUIHelper.setViewDimensions(secondButton, Values.THREE_COLS, Values.ONE_ROW);
+        GUIHelper.setViewDimensions(thirdButton, Values.THREE_COLS, Values.ONE_ROW);
+        GUIHelper.setViewDimensions(fourthButton, Values.THREE_COLS, Values.ONE_ROW);
 
         backButton.setText(Values.LABEL_BACK_BTN);
         questionButtons.setMinWidth(Values.SIX_COLS);
         questionButtons.setMinHeight(Values.THREE_ROWS);
 
         Question.reset();
-        questions = Question.loadQuestions(gameManager.getFileName(),gameManager.getQuestionsDifficulty());
+        questions = Question.loadQuestions(GameManager.getFileName(),GameManager.getQuestionsDifficulty());
         Question.setButtons(firstButton, secondButton, thirdButton, fourthButton);
         questions.get(Question.getQuestionIndex()).displayQuestion(questionLabel, questionNumLabel);
 
@@ -115,11 +103,11 @@ public class QuestionsController {
         if (questionsCorrect > 0) {
             percent = (int) ((double) questionsCorrect / (double) questions.size() * 100);
         }
-        Score newScore = new Score(gameManager.getCityName(), gameManager.getCurrentUser(), score);
+        Score newScore = new Score(GameManager.getCityName(), GameManager.getCurrentUser(), score);
         System.out.println("Save score.");
         Scores.save(newScore);
 
-        gameManager.setCurrentUserPoints(score);
+        GameManager.setCurrentUserPoints(score);
     }
 
     private void setBackground(){
@@ -134,38 +122,38 @@ public class QuestionsController {
 
     private void setLabels() {
 
-        cityName.setText(gameManager.getCityName());
+        cityName.setText(GameManager.getCityName());
 
-        userName.setText(gameManager.getCurrentUser());
+        userName.setText(GameManager.getCurrentUser());
 
-        maxScore.setText(String.valueOf("Game Max: " + gameManager.getMaxScore()));
+        maxScore.setText(String.valueOf("Game Max: " + GameManager.getMaxScore()));
 
-        maxScoreUser.setText(String.valueOf("User Max: " + gameManager.getUserMaxPoints()));
+        maxScoreUser.setText(String.valueOf("User Max: " + GameManager.getUserMaxPoints()));
 
-        gameManager.setFactsLabel(hintLabel);
+        GameManager.setFactsLabel(hintLabel);
 
-        styleLabel(Values.H3,cityName,userName,maxScore,maxScoreUser,questionNumLabel,questionLabel,scoreLabel,hintLabel);
+        GUIHelper.styleLabel(Values.H3,cityName,userName,maxScore,maxScoreUser,questionNumLabel,questionLabel,scoreLabel,hintLabel);
     }
 
     private void setPanes() {
 
-        setSize(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
 
-        setSize(topPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
+        GUIHelper.setViewDimensions(topPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
 
-        setSize(bottomPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
+        GUIHelper.setViewDimensions(bottomPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
 
-        setSize(leftPane, Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
+        GUIHelper.setViewDimensions(leftPane, Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
 
-        setSize(rightPane, Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
+        GUIHelper.setViewDimensions(rightPane, Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
 
-        setSize(centerPane, Values.SIX_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
+        GUIHelper.setViewDimensions(centerPane, Values.SIX_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
 
-        setSize(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
 
-        setSize(questionButtons,Values.SIX_COLS,Values.TWO_ROWS);
+        GUIHelper.setViewDimensions(questionButtons,Values.SIX_COLS,Values.TWO_ROWS);
 
-        setBackground(mainPane,Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
+        GUIHelper.setBackground(mainPane,Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
 
     }
 
@@ -239,160 +227,5 @@ public class QuestionsController {
         stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
 
         stage.show();
-    }
-
-    public static String capitalize(String input){
-        return input.substring(0, 1).toUpperCase() + input.substring(1);
-    }
-    public static void setBackground(Pane pane, double WIDTH, double HEIGHT) {
-
-        BackgroundImage myBI = new BackgroundImage(new Image(Values.IMG_BACKGROUND,WIDTH,HEIGHT,false,true),
-                BackgroundRepeat.REPEAT,
-                BackgroundRepeat.NO_REPEAT,
-                BackgroundPosition.DEFAULT,
-                BackgroundSize.DEFAULT);
-
-        pane.setBackground(new Background(myBI));
-
-    }
-    public static void styleLabel(int size, Label... labels) {
-        for (Label label : labels) {
-            label.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD,size));
-
-            label.setTextFill(Color.WHITE);
-
-            setShadow(label);
-
-        }
-    }
-    public static void setSize(Object object, double WIDTH, double HEIGHT) {
-
-        if (object instanceof Pane) {
-
-            ((Pane) object).setMinWidth(WIDTH);
-
-            ((Pane) object).setMaxWidth(WIDTH);
-
-            ((Pane) object).setPrefWidth(WIDTH);
-
-            ((Pane) object).setMinHeight(HEIGHT);
-
-            ((Pane) object).setMaxHeight(HEIGHT);
-
-            ((Pane) object).setPrefHeight(HEIGHT);
-
-        } else if (object instanceof Button) {
-
-            ((Button) object).setMinWidth(WIDTH);
-
-            ((Button) object).setMaxWidth(WIDTH);
-
-            ((Button) object).setPrefWidth(WIDTH);
-
-            ((Button) object).setMinHeight(HEIGHT);
-
-            ((Button) object).setMaxHeight(HEIGHT);
-
-            ((Button) object).setPrefHeight(HEIGHT);
-
-            ((Button) object).setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H3));
-
-            styleButton((Button) object);
-
-        } else if (object instanceof Label) {
-
-            ((Label) object).setMinWidth(WIDTH);
-
-            ((Label) object).setPrefWidth(WIDTH);
-
-            ((Label) object).setMaxWidth(WIDTH);
-
-            ((Label) object).setMinHeight(HEIGHT);
-
-            ((Label) object).setPrefHeight(HEIGHT);
-
-            ((Label) object).setMaxHeight(HEIGHT);
-
-
-        } else if (object instanceof ImageView) {
-
-            ((ImageView) object).setFitWidth(WIDTH);
-
-            ((ImageView) object).setFitHeight(HEIGHT);
-
-        } else if (object instanceof TextField) {
-
-            ((TextField) object).setMinWidth(WIDTH);
-
-            ((TextField) object).setMaxWidth(WIDTH);
-
-            ((TextField) object).setPrefWidth(WIDTH);
-
-            ((TextField) object).setMinHeight(HEIGHT);
-
-            ((TextField) object).setMaxHeight(HEIGHT);
-
-            ((TextField) object).setPrefHeight(HEIGHT);
-
-            ((TextField) object).setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H3));
-
-        } else {
-
-            System.out.printf("setSize(Object object) : %s is not a valid object. Pane, ImageView, Label or Button required.", capitalize(object.getClass().getSimpleName()));
-
-        }
-    }
-    public static void setShadow(Object object) {
-
-        DropShadow shadow = new DropShadow();
-
-        shadow.setColor(Color.BLACK);
-
-        if (object instanceof Label) {
-
-            shadow.setRadius(5);
-
-            shadow.setOffsetX(5);
-
-            shadow.setOffsetY(5);
-
-            shadow.setBlurType(BlurType.ONE_PASS_BOX);
-
-            ((Label) object).setEffect(shadow);
-
-        } else if (object instanceof Button) {
-
-            shadow.setRadius(5);
-
-            shadow.setOffsetX(5);
-
-            shadow.setOffsetY(5);
-
-            shadow.setBlurType(BlurType.GAUSSIAN);
-
-            ((Button) object).setEffect(shadow);
-
-        } else if (object instanceof HBox) {
-
-            shadow.setRadius(-5);
-
-            shadow.setOffsetX(5);
-
-            shadow.setOffsetY(5);
-
-            shadow.setBlurType(BlurType.GAUSSIAN);
-
-            ((HBox) object).setEffect(shadow);
-
-        }
-
-    }
-    public static void styleButton(Button... buttons) {
-       for (Button button : buttons) {
-           button.setBackground(new Background(new BackgroundFill(Paint.valueOf("#FFFFFF"),new CornerRadii(7), new Insets(5,5,5,5))));
-           button.setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD, Values.H3));
-           button.setTextFill(Color.BLACK);
-           setShadow(button);
-       }
     }
 }

@@ -15,16 +15,12 @@ import java.io.IOException;
 
 public class BootController {
 
-    public static GameManager gameManager;
-
     @FXML
     Label textLabel;
 
     @FXML
     public void initialize() throws IOException {
-
-        gameManager = new GameManager();
-
+        GameManager.init();
         PauseTransition delay = new PauseTransition(Duration.millis(4000));
 
         delay.setOnFinished( event -> startGame() );

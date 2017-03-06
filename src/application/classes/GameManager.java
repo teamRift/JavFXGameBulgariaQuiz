@@ -2,131 +2,116 @@ package application.classes;
 
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-
+import java.util.ArrayList;
 import java.util.List;
 
-public class GameManager {
+public  class GameManager {
 
-    public static boolean isLogged;
-
-    public static boolean hasPlayed;
-
-    private String questionsDifficulty;
-
-    private String currentUser;
-
-    private int maxPoints;
-
-    private int currentUserPoints;
-
-    private int userMaxPoints;
-
-    private City city;
-
-    private List<Score> scores;
-
+    private static boolean hasPlayed = false;
+    private static String questionsDifficulty = "__EASY";
+    private static String currentUser = "User";
+    private static int maxPoints = 0;
+    private static int currentUserPoints = 0;
+    private static int userMaxPoints = 0;
+    private static City city = new City();
+    private static List<Score> scores = new ArrayList<>();
     public GameManager(){
         init();
     }
-
-    public String getCityName(){
-        return this.city.getName();
+    public static String getCityName(){
+        return city.getName();
     }
 
-    public String getFileName(){
-        return this.city.getFileName();
+    public static String getFileName(){
+        return city.getFileName();
     }
-
-    public String getCurrentUser() {
+    public static String getCurrentUser() {
         return currentUser;
     }
-
-    public City getCity(){
-        return this.city;
+    public static City getCity(){
+        return city;
     }
-
-    public int getCurrentUserPoints() {
+    public static int getCurrentUserPoints() {
         return currentUserPoints;
     }
-
-    public int getUserMaxPoints() {
+    public static int getUserMaxPoints() {
         return userMaxPoints;
     }
-
-    public int getMaxScore(){
+    public static int getMaxScore(){
         return maxPoints;
     }
-
-    public void setCurrentUser(String currentUser) {
-        this.currentUser = currentUser;
+    public static void setCurrentUser(String currentUser) {
+        currentUser = currentUser;
         try {
             Scores.findAndLoad(currentUser);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        isLogged = true;
     }
-
-    public void setCity(City city) {
+    public static void setCityName(String cityName) {
         if (city != null) {
-            this.city = city;
+            city.setName(cityName);
+            city.setFileName();
         }
         else {
-            this.city = new City();
-            this.city.setName("mordor");
-            this.city.setFileName();
+            city = new City();
+            city.setName("mordor");
+            city.setFileName();
         }
     }
 
-    public void setCurrentUserPoints(int currentUserPoints) {
-        this.currentUserPoints = currentUserPoints;
+    public static void setCurrentUserPoints(int currentUserPoints) {
+        currentUserPoints = currentUserPoints;
         hasPlayed = true;
     }
 
-    public void setUserMaxPoints(int userMaxPoints) {
-        this.userMaxPoints = userMaxPoints;
+    static void setUserMaxPoints(int userMaxPoints) {
+        userMaxPoints = userMaxPoints;
     }
 
-    public void setMaxScore(int maxScore){
-        this.maxPoints = maxScore;
+    static void setMaxScore(int maxScore){
+        maxPoints = maxScore;
     }
 
-    public List<Score> getScores() {
+    public static List<Score> getScores() {
         setScores();
         return scores;
     }
 
-    private void setScores() {
+    private static void setScores() {
         Scores s = new Scores();
-        this.scores = s.getScores();
-        int length = scores.size();
-        if (length > 5) {
-            length = 5;
-        }
-        this.setMaxScore(this.scores.get(0).getValue());
+        scores = s.getScores();
+        setMaxScore(scores.get(0).getValue());
     }
 
-    public void setFactsLabel(Label label){
+    public static void setFactsLabel(Label label){
         label.setText("Did you know an ancient city, dated back 10.000 BC, has been discovered on the bottom of the Black sea?");
     }
 
-    public void setUserName(TextField t){
-        if (this.getCurrentUser() == null) {
+    public static void setUserName(TextField t) {
+        if (getCurrentUser() == null) {
             t.setText("USERNAME");
         } else {
-            t.setText(this.getCurrentUser());
+            t.setText(getCurrentUser());
         }
     }
-    public String getQuestionsDifficulty() {
+    public static String getQuestionsDifficulty() {
         return questionsDifficulty;
     }
 
-    public void setQuestionsDifficulty(String questionsDifficulty) {
-        this.questionsDifficulty = questionsDifficulty;
+    public static void setQuestionsDifficulty(String questionsDifficulty) {
+        questionsDifficulty = questionsDifficulty;
     }
 
+    public static boolean playerHasPlayed() {
+        return hasPlayed;
+    }
 
-    public void init(){
+    public static void setHasPlayed(boolean hasPlayed) {
+        GameManager.hasPlayed = hasPlayed;
+    }
+
+    public static void init(){
         setScores();
     }
 }

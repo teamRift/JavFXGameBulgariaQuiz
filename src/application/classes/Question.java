@@ -29,8 +29,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 
-import static application.controllers.BootController.gameManager;
-
 public class Question {
 
     private static Random rand = new Random();
@@ -173,7 +171,7 @@ public class Question {
 
         questionsCorrect = 0;
 
-        gameManager.setCurrentUserPoints(0);
+        GameManager.setCurrentUserPoints(0);
 
     }
 }
