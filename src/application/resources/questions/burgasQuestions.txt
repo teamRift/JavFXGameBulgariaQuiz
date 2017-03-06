@@ -1,4 +1,12 @@
 __EASY ; Bourgas is the fourth-largest city in Bulgaria after: ; Sofia, Plovdiv, Varna ; Sofia, Varna, Ruse ; Sofia, Ruse, Plovdiv; Sofia, Plovdiv, Silistra
-__EASY ; The name of the city is derived from the Latin word "burgos" which meaning: ; "tower" ; "city" ; "largest" ; "captain"
-__EASY ; To the west, south and north, the city is surrounded by the Burgas Lakes. How many are they ? ; three ; five ; one ; six
 __EASY ; What was the name of the festival that used to take place in Burgas not while ago? ; Spirit of Burgas ; Metropolis ; Planeta Payner Festival ; Zlaten orfei
+__EASY ; How much is the population in Burgas ? ; 206 000 ; 190 000 ; 305 000 ; 500 000
+__EASY ; In which year the population is the highes in Burgas ? ; 2013 ; 2005 ; 1992 ; 2007
+__NORMAL ; Which is the oldest church in the city ? ; "Sveti Kiril i Metodi" ; "Nedelya" ; "Aleksander Nevski" ; "Uspenie na Presveta Bogorodica"
+__NORMAL ; Which airport is located in Burgas ? ; Sarafovo ; Balkan ; Lesnovo ; Aksakovo
+__NORMAL ; To the west, south and north, the city is surrounded by the Burgas Lakes. How many are they ? ; three ; five ; one ; six
+__NORMAL ; Which actor is born in Burgas ? ; Apostol Karamitev ; Todor Kolev ; Lyubomir Neykov ; Georgi Mamalev
+__HARD ; The name of the city is derived from the Latin word "burgos" which meaning: ; "tower" ; "city" ; "largest" ; "captain"
+__HARD ; Which hall is situated in Burgas ? ; Boycho Brunzov ; Arena Armeec ; Festivalna ; Zala Zandan
+__HARD ; Which ancient city is near to Burgas ? ; Deultum ; Kabile ; Carevec ; Marcianopolis
+__HARD ; Which of these is honored citizen of Burgas ? ; Kimon Georgiev ; Lyuben Obretenov ; Darin Velikov ; Diko Ivanov

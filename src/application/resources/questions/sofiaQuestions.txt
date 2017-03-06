@@ -1,4 +1,12 @@
-__EASY ; How big is Sofia`s population? ; 1.3 million ; 1.5 million ; 1.8 million ; 2.0 million
-__EASY ; Which mountain is located near Sofia? ; Vitosha ; Rila ; Pirin ; Stara Planina
-__EASY ; How many neighbourhoods are located in Sofia? ; 24 ; 30 ; 50 ; 18
-__EASY ; Since when metro become an optional transport in Sofia? ; 1998 ; 2000 ; 2002; 2004
+__EASY ; Which mountain is located in Sofia ? ; Vitosha ; Stara planina ; Pirin ; Rila 
+__EASY ; Which park is situated in Sofia ? ; Borisova gradina ; Morksa gradina ; Kajluka ; Bachinovo 
+__EASY ; What was the previous name of Sofia ? ; Sredec ; Melnik ; Pliska ; Pirdop 
+__EASY ; How many airports are there in Sofia ? ; 1 ; 2 ; 3 ; 4 
+__NORMAL ; How big is Sofia`s population? ; 1.3 million ; 1.5 million ; 1.8 million ; 2.0 million
+__NORMAL ; How many neighbourhoods are located in Sofia? ; 24 ; 30 ; 50 ; 18
+__NORMAL ; Since when metro become an optional transport in Sofia? ; 1998 ; 2000 ; 2002; 2004
+__NORMAL ; Which is the oldest park in Sofia ? ; Gradska gradina ; Borisova gradina ; Yujen park ; Zapaden park
+__HARD ; When was build the central prison in Sofia ? ; 1908 ; 1909 ; 1910 ; 1911
+__HARD ; When was made the first phone call in Sofia ? ; 1884 ; 1885 ; 1886 ; 1887
+__HARD ; When was driven the first automobil in Sofia ? ; 1896 ; 1897 ; 1898 ; 1899
+__HARD ; How many mineral feeds are there in Sofia ? ; 49 ; 50 ; 51 ; 52

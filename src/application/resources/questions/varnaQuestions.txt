@@ -1,12 +1,12 @@
-__EASY ; How old is the gold in the Varna Catholitic Necropolis? ; 7000 BC ; 2000 BC ; 100 000 BC ; 200 AD
+__EASY ; How much is the population of Varna ? ; 335000 ; 360000 ; 500000 ; 467000
 __EASY ; Which of the following is a name Varna city had in the past?  ; Stalin ; Flavia ; Sredec ; Diospolis
-__EASY ; Which tracian deity is appointed as The Guardian of Odessos? ; Darzalas ; Boreas ; Bacchus ; Tiona
-__EASY ; The very first Bulgarian football champion was a team from Varna. What was its name? ; Vladislav ; Varna ; Spartak ; Cherno more
-__NORMAL ; How old is the gold in the Varna Catholitic Necropolis? ; 7000 BC ; 2000 BC ; 100 000 BC ; 200 AD
-__NORMAL ; Which of the following is a name Varna city had in the past?  ; Stalin ; Flavia ; Sredec ; Diospolis
+__EASY ; How many neighbourhoods are there in Varna ? ; 25 ; 41 ; 35 ; 29
+__EASY ; Which is the biggest are in Varna ? ; Primorski ; Odesos ; Asparuhovo ; Mladost
+__NORMAL ; Which is the oldest church in Varna ? ; Uspenie Bogorodichno ; Sveta Paraskeva ; Svati Anastasii ; Sveti Dimitur
 __NORMAL ; Which tracian deity is appointed as The Guardian of Odessos? ; Darzalas ; Boreas ; Bacchus ; Tiona
+__NORMAL ; Which mall is situated in Varna ? ; Mam's and Me Center Viva ? ; The Mall ; City Center ; Paradise Center 
 __NORMAL ; The very first Bulgarian football champion was a team from Varna. What was its name? ; Vladislav ; Varna ; Spartak ; Cherno more
 __HARD ; How old is the gold in the Varna Catholitic Necropolis? ; 7000 BC ; 2000 BC ; 100 000 BC ; 200 AD
-__HARD ; Which of the following is a name Varna city had in the past?  ; Stalin ; Flavia ; Sredec ; Diospolis
-__HARD ; Which tracian deity is appointed as The Guardian of Odessos? ; Darzalas ; Boreas ; Bacchus ; Tiona
-__HARD ; The very first Bulgarian football champion was a team from Varna. What was its name? ; Vladislav ; Varna ; Spartak ; Cherno more
+__HARD ; How much is the dept of Varna in 2012 ? ; 65milion leva ; 54milion leva ; 60milion leva ; 59 milion leva
+__HARD ; In which year is founded "Dujavna opera Varna" ? ; 1947 ; 1948 ; 1949 ; 1959
+__HARD ; How many halls are there in the Varna Archeological museum ? ; 32 ; 33 ; 34 ; 35

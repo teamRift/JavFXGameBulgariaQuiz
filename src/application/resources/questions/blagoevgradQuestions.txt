@@ -2,5 +2,11 @@ __EASY ; Which river runs through blagoevgrad ? ; Struma ; Mesta ; Dunav ; Marit
 __EASY ; How municipalities have blagoevgrad ? ; 14; 7; 10; 20
 __EASY ; What is the population of Blagoevgrad ? ; 69610 ; 22530 ; 76500 ; 50555
 __EASY ; Which of these universities are located in Blagoevgrad ? ; South-West University "Neofit Rilski" ; New Bulgarian University ; University of Forestry ; National Academy of Arts
-__EASY ; Who district of Blagoevgrad has the most inhabitants ? ; Elenovo ; Strumsko ; Gramada ; Alen Mak
-__EASY ; Who is the best DJ in Titan? ; Lazar ; Morandi ; Niki Genov ; Ali da mi pusnesh trap da densa
+__NORMAL ; Who district of Blagoevgrad has the most inhabitants ? ; Elenovo ; Strumsko ; Gramada ; Alen Mak
+__NORMAL ; Who is the best DJ in Titan? ; Lazar ; Morandi ; Niki Genov ; Ali da mi pusnesh trap da densa
+__NORMAL ; What is the size of Blagoevgrad in square metters ? ; 28909 ; 30000; 31312 ; 27414
+__NORMAL ; In which year the population is the highes in Blagoevgrad ? ; 1992 ; 1995 ; 2000 ; 2016
+__HARD ; What is the distance from Blagoevgrad to Macedonia ? ; 31km ; 40km ; 52km ; 100km
+__HARD ; How many schools are there in Blagoevgrad ? ; 20 ; 22 ; 31 ; 13
+__HARD ; What is the name of the biggest local football club ? ; Pirin ; Levski ; CSKA ; Lokomotiv
+__HARD ; Which park is situated in Blagoevgrad ? ; Volga ; Borisova gradina ; Morksa gradina ; Kajluka
