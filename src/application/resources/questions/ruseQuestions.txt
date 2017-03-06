@@ -2,7 +2,7 @@ __EASY ; Which big river runs near Ruse ? ; Dunav ; Iskar ; Maritsa ; Tundja
 __EASY ; How many citizens live in the city of Ruse ? ; 146000 ; 156000 ; 166000 ; 176000
 __EASY ; Which football club is from Ruse ? ; Dunav ; Levski ; CSKA ; Slavya
 __EASY ; What is the distance between Ruse and Bucharest ? ; 75km ; 175km ; 275km ; 190km
-__NORMAL ; Which Romanian city stand across the Rousse bridge over Danube? ; Giurgiu ; Bucharest ; Brashov ; Calafat
+__NORMAL ; Which Romanian city stands across the Rousse bridge over Danube? ; Giurgiu ; Bucharest ; Brashov ; Calafat
 __NORMAL ; How else is Ruse often called ? ; The Little Vienna ; The Little Florence ; The Little Sofia ; The Little Prague
 __NORMAL ; Which park is situated in Ruse ? ; Lesopark Lipnik ; Kajluka ; Zaymov ; Yujen park
 __NORMAL ; Which theater is situated in Ruse ? ; Sava Ognyanov ; Ivan Vazov ; Aleko Konstantinov ; Nikolay Binev
