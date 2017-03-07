@@ -1,5 +1,6 @@
 package application.controllers;
 
+import application.Ranking.Ranking;
 import application.classes.GameManager;
 import application.classes.Values;
 import javafx.animation.PauseTransition;
@@ -21,6 +22,7 @@ public class BootController {
     @FXML
     public void initialize() throws IOException {
         GameManager.init();
+        Ranking.init();
         PauseTransition delay = new PauseTransition(Duration.millis(4000));
 
         delay.setOnFinished( event -> startGame() );

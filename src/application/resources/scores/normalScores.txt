@@ -1,0 +1,5 @@
+Normal ; TEAM RIFT ; 0
+Sofia ; coco ; 10
+BG ; TEAM RIFT ; 0
+BG ; TEAM RIFT ; 0
+BG ; TEAM RIFT ; 0

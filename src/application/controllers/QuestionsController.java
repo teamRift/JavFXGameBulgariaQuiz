@@ -11,7 +11,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.*;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -76,8 +77,8 @@ public class QuestionsController {
 
         GUIHelper.styleButton(firstButton,secondButton,thirdButton,fourthButton,backButton,hintOne);
 
-        GUIHelper.setViewDimensions(hintOne,Values.ONE_COL,Values.ONE_ROW);
-        GUIHelper.setViewDimensions(backButton,Values.ONE_COL, Values.ONE_ROW/2);
+        GUIHelper.setViewDimensions(hintOne, Values.ONE_COL, Values.ONE_ROW);
+        GUIHelper.setViewDimensions(backButton, Values.ONE_COL, Values.ONE_ROW/2);
         GUIHelper.setViewDimensions(firstButton, Values.THREE_COLS, Values.ONE_ROW);
         GUIHelper.setViewDimensions(secondButton, Values.THREE_COLS, Values.ONE_ROW);
         GUIHelper.setViewDimensions(thirdButton, Values.THREE_COLS, Values.ONE_ROW);
@@ -88,7 +89,7 @@ public class QuestionsController {
         questionButtons.setMinHeight(Values.THREE_ROWS);
 
         Question.reset();
-        questions = Question.loadQuestions(GameManager.getFileName(),GameManager.getQuestionsDifficulty());
+        questions = Question.loadQuestions(GameManager.getFileName(), GameManager.getQuestionsDifficulty());
         Question.setButtons(firstButton, secondButton, thirdButton, fourthButton);
         questions.get(Question.getQuestionIndex()).displayQuestion(questionLabel, questionNumLabel);
 
@@ -105,7 +106,8 @@ public class QuestionsController {
         }
         Score newScore = new Score(GameManager.getCityName(), GameManager.getCurrentUser(), score);
         System.out.println("Save score.");
-        Scores.save(newScore);
+        Scores.save(newScore,"global");
+        Scores.save(newScore, GameManager.getQuestionsDifficulty().toLowerCase().substring(2));
 
         GameManager.setCurrentUserPoints(score);
     }
@@ -151,9 +153,9 @@ public class QuestionsController {
 
         GUIHelper.setViewDimensions(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
 
-        GUIHelper.setViewDimensions(questionButtons,Values.SIX_COLS,Values.TWO_ROWS);
+        GUIHelper.setViewDimensions(questionButtons, Values.SIX_COLS, Values.TWO_ROWS);
 
-        GUIHelper.setBackground(mainPane,Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
+        GUIHelper.setBackground(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
 
     }
 
@@ -174,7 +176,7 @@ public class QuestionsController {
 
             public void run() {
                 Platform.runLater(() -> {
-                    if (questions.size()>Question.getQuestionIndex()){
+                    if (questions.size()> Question.getQuestionIndex()){
                         questions.get(Question.getQuestionIndex()).displayQuestion(questionLabel, questionNumLabel);
                     }
                     firstButton.setDisable(false);
@@ -224,7 +226,7 @@ public class QuestionsController {
 
         Stage stage = (Stage)backButton.getScene().getWindow();
 
-        stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
+        stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
 
         stage.show();
     }

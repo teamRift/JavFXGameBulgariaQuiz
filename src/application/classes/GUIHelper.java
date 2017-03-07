@@ -15,9 +15,6 @@ import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
-/**
- * Created by Administrator on 3/6/2017.
- */
 public class GUIHelper {
     public static String capitalize(String input){
         return input.substring(0, 1).toUpperCase() + input.substring(1);
@@ -120,6 +117,7 @@ public class GUIHelper {
 
         }
     }
+
     public static void setShadow(Object object) {
 
         DropShadow shadow = new DropShadow();

@@ -1,7 +1,7 @@
 package application.classes;
 
 
-import java.io.*;
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -12,11 +12,14 @@ import java.util.List;
 
 public class Scores {
     private List<Score> leaderboard;
+    private String difficult;
+
     public Scores() {
-        leaderboard = load();
+        leaderboard = load(Values.PATH_RANKING_GLOBAL);
     }
+
     private static void create() {
-        Path filePath = Paths.get("./" + Values.PATH_RANKINGS);
+        Path filePath = Paths.get(Values.PATH_RANKING_GLOBAL);
         try {
             Files.createFile(filePath);
         } catch (IOException e) {
@@ -32,13 +35,15 @@ public class Scores {
             e.printStackTrace();
         }
     }
-    public static List<Score> load() {
+
+    public static List<Score> load(String path) {
         ArrayList<Score> scores = new ArrayList<>();
         try {
-            Path filePath = Paths.get("./" + Values.PATH_RANKINGS);
+            Path filePath = Paths.get(path);
             if (!Files.exists(filePath)) {
                 create();
             }
+
             Files.lines(filePath).forEach(line -> {
                 if (line.isEmpty()) {
                     return;
@@ -59,13 +64,13 @@ public class Scores {
                 return 1; // replace with -1 to reverse
             return 0;
         });
-
         return scores;
     }
+
     static void findAndLoad(String userName) throws Exception {
         ArrayList<Score> scores = new ArrayList<>();
         try {
-            Path filePath = Paths.get("./" + Values.PATH_RANKINGS);
+            Path filePath = Paths.get(Values.PATH_RANKING_GLOBAL);
             Files.lines(filePath).forEach(line -> {
                 if (line.isEmpty()) {
                     line.replace(line,line);
@@ -84,13 +89,14 @@ public class Scores {
     }
     List<Score> getScores(){
         if (leaderboard.isEmpty()){
-            load();
+            load(Values.PATH_RANKING_GLOBAL);
         }
         return leaderboard;
     }
-    public static void save(Score score) {
 
-        Path filePath = Paths.get("./" + Values.PATH_RANKINGS);
+    public static void save(Score score, String difficult) {
+
+        Path filePath = Paths.get(Values.PATH_TO_SCORES + difficult + Values.PATH_RANKING);
 
         List<String> fileContent = null;
 

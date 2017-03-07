@@ -19,7 +19,11 @@ public class Values
     public static final String DIFFICULTY_HARD = "__DIFFICULT";
 
 
-    public static final  String PATH_RANKINGS = "scores.txt";
+//    public static final  String PATH_RANKINGS = "scores.txt";
+    public static final String PATH_TO_PROJECT = System.getProperty("user.dir");
+    public static final String PATH_TO_SCORES = PATH_TO_PROJECT + "/src/application/resources/scores/";
+    public static String PATH_RANKING_GLOBAL = PATH_TO_PROJECT + "/src/application/resources/scores/globalScores.txt";
+    public static final String PATH_RANKING = "Scores.txt";
 
     //This allows you to create your design reg ardless of SCREEN SIZE
 
@@ -49,13 +53,15 @@ public class Values
     public static final  String LABEL_START_BTN = "New game";
     public static final  String LABEL_EXIT_BTN = "Exit";
     public static final  String LABEL_RANKTABLE_BTN="Rank Table";
+    public static final String LABEL_SELECT_RANKING = "Select ranking by difficult";
     public static final  String LABEL_CREDITS_BTN = "Credits";
-    public static final  String LABEL_CHOOSE_CITY_BTN = "Choose city";
+    public static final  String LABEL_CHOOSE_CITY_BTN = "Choose difficult and city";
     public static final  String LABEL_SCORES_BTN = "Leaderboard";
     public static final  String LABEL_RANKINGS_TOP_5 = "Top 5 Players";
     public static final  String LABEL_GAME_TITLE = "Bulgaria Quiz";
     public static final  String LABEL_TEAM_RIFT = "Team Rift®";
     public static final  String LABEL_SOFTUNI = "SoftUni 2017";
+    public static final String LABEL_CHOOSE_SCORE_BTN = "Choose score";
 
     public static final  int H3 = (int) Math.round(ONE_COL/7);
     public static final  int H2 = (int) Math.round(ONE_COL/3);
