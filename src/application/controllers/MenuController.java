@@ -1,6 +1,8 @@
 package application.controllers;
 
-import application.classes.*;
+import application.classes.GUIHelper;
+import application.classes.Song;
+import application.classes.Values;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +11,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.*;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -76,6 +80,7 @@ public class MenuController {
             }
         });
     }
+
     private void initScoresButton(){
         buttonScores.setText(Values.LABEL_SCORES_BTN);
         buttonScores.setOnMouseClicked(actionEvent -> {
@@ -112,10 +117,11 @@ public class MenuController {
         setRiftLabel();
         setSoftUniLabel();
     }
+
     private void setGameLabel() {
         gameTitle.setText(Values.LABEL_GAME_TITLE);
         gameTitle.setTextFill(Color.SEAGREEN);
-        gameTitle.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD,Values.H1 - Values.H2));
+        gameTitle.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H1 - Values.H2));
         GUIHelper.setShadow(gameTitle);
     }
     private void setRiftLabel() {
@@ -127,7 +133,7 @@ public class MenuController {
     private void setSoftUniLabel() {
         menuRightLabel.setText(Values.LABEL_SOFTUNI);
         menuRightLabel.setTextFill(Color.WHITE);
-        menuRightLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD,Values.H3*2));
+        menuRightLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H3*2));
         GUIHelper.setShadow(menuRightLabel);
     }
     private void setButtons() {
@@ -145,7 +151,7 @@ public class MenuController {
         GUIHelper.setViewDimensions(rightPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
         GUIHelper.setViewDimensions(centerPane, Values.SCREEN_WIDTH , Values.SCREEN_HEIGHT);
         GUIHelper.setViewDimensions(mapImage, Values.SCREEN_WIDTH- Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.THREE_ROWS);
-        GUIHelper.setBackground(mainPane, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT);
+        GUIHelper.setBackground(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
     }
 
     private void exitGame() {
@@ -155,21 +161,21 @@ public class MenuController {
     private void showCredits() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/credits.fxml"));
         Stage stage = (Stage)buttonCredits.getScene().getWindow();
-        stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
+        stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
         stage.show();
     }
 
     private void showScores() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/rankings.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/selectRanking.fxml"));
         Stage stage = (Stage)buttonScores.getScene().getWindow();
-        stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
+        stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
         stage.show();
     }
 
     private void startGame() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/cities.fxml"));
         Stage stage = (Stage)buttonStart.getScene().getWindow();
-        stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
+        stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
         stage.show();
     }
 
