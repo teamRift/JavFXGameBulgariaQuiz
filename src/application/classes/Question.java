@@ -108,12 +108,14 @@ public class Question {
         if (this.randomButton == b) {
             b.setTextFill(Color.WHITE);
             b.setBackground(new Background(new BackgroundFill(Paint.valueOf("#006600"),new CornerRadii(7), new Insets(5,5,5,5))));
+            Song.winSound();
             score += 10;
             scoreLabel.setText("Score: " + score);
             questionsCorrect += 1;
         } else {
             b.setTextFill(Color.WHITE);
             b.setBackground(new Background(new BackgroundFill(Paint.valueOf("#cc3745"),new CornerRadii(7), new Insets(5,5,5,5))));
+            Song.wrongSound();
         }
 
         if (questions.size() == questionCount) {

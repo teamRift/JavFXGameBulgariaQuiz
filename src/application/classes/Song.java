@@ -26,4 +26,20 @@ public class Song {
         check = false;
       player.play();
     }
+    public static void winSound(){
+        String soundPath = "src/application/resources/songs/win.wav";
+        Media sound = new Media(new File(soundPath).toURI().toString());
+        MediaPlayer win = new MediaPlayer(sound);
+        if (!check){
+            win.play();
+        }
+    }
+    public static void wrongSound(){
+        String soundPath = "src/application/resources/songs/wrong.wav";
+        Media sound = new Media(new File(soundPath).toURI().toString());
+        MediaPlayer wrong = new MediaPlayer(sound);
+        if (!check){
+            wrong.play();
+        }
+    }
 }

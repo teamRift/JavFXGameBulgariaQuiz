@@ -30,9 +30,6 @@ public class Main extends Application {
         }));
         primaryStage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
         primaryStage.show();
-        songBackground();
-    }
-    private void songBackground() {
         Song song = new Song();
         song.playTrack();
     }
