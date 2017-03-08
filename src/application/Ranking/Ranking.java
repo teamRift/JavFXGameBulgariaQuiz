@@ -1,6 +1,7 @@
 package application.Ranking;
 
 import application.classes.Score;
+import application.classes.Scores;
 import application.classes.Values;
 
 import java.io.IOException;
@@ -28,28 +29,8 @@ public class Ranking {
     }
 
     public static List<Score> loadAndSortRanking(String difficult) {
-        ArrayList<Score> currentScores = new ArrayList<>();
-        try {
-            Path filePath = Paths.get(Values.PATH_TO_SCORES + difficult + Values.PATH_RANKING);
-            Files.lines(filePath).forEach(line -> {
-                if (line.isEmpty()) {
-                    return;
-                }
-                String[] tokens = line.split(";");
-                currentScores.add(new Score(tokens[0].trim(),tokens[1].trim(), Integer.parseInt(tokens[2].trim())));
-            });
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        Collections.sort(currentScores, (s1, s2) -> {
-            if (s1.getValue() > s2.getValue())
-                return -1; // replace with 1 to reverse
-            if (s1.getValue() < s2.getValue())
-                return 1; // replace with -1 to reverse
-            return 0;
-        });
-
+        List<Score> currentScores = new ArrayList<>();
+        currentScores = Scores.load(Values.PATH_TO_SCORES + difficult + Values.PATH_RANKING);
         return currentScores;
     }
 }
