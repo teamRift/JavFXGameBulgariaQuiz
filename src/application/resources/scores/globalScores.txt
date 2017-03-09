@@ -1,8 +1,5 @@
-Global ; TEAM RIFT ; 0
-Varna ; pipi ; 20
-Plovdiv ; USERNAME ; 20
-Blagoevgrad ; USERNAME ; 30
-Burgas ; USERNAME ; 20
-Ruse ; USERNAME ; 0
-Plovdiv ; USERNAME ; 0
-Sofia ; coco ; 10
+BG ; TEAM RIFT ; 0
+BG ; TEAM RIFT ; 0
+BG ; TEAM RIFT ; 0
+BG ; TEAM RIFT ; 0
+BG ; TEAM RIFT ; 0

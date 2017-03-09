@@ -4,7 +4,9 @@ public class City {
     private final static String QUESTION_FILE_SUFFIX = "Questions.txt";
     private String name;
     private String fileName;
+
     public City(){}
+
     public String getName() {
         return GUIHelper.capitalize(name);
     }

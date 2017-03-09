@@ -33,6 +33,7 @@ public class Main extends Application {
         Song song = new Song();
         song.playTrack();
     }
+
     public static void main(String[] args) {
         launch(args);
     }

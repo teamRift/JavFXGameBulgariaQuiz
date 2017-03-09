@@ -53,6 +53,7 @@ public class Question {
         this.wrongsAnswers.add(wrong2);
         this.wrongsAnswers.add(wrong3);
     }
+
     public static ArrayList<Question> loadQuestions(String filename, String difficulty) {
         ArrayList<Question> questions = new ArrayList<>();
         String projectPath = System.getProperty("user.dir");
@@ -67,7 +68,6 @@ public class Question {
                 questions.add(new Question(tokens[1].trim(), tokens[2].trim(), tokens[3].trim(), tokens[4].trim(),tokens[5].trim()));
 
             });
-
         } catch (IOException e) {
             e.printStackTrace();
             Alert notFound = new Alert(Alert.AlertType.ERROR);
@@ -78,10 +78,13 @@ public class Question {
         }
         return questions;
     }
+
     public static void setButtons(Button...buttonsArray) {
         buttons = new ArrayList<>(Arrays.asList(buttonsArray));
     }
+
     public static int getQuestionIndex() { return questionIndex; }
+
     public void displayQuestion(Label currentLabel, Label correctLabel) {
         ArrayList<Button> buttonsCopy = new ArrayList<>(buttons);
 
@@ -102,8 +105,8 @@ public class Question {
             b.setBackground(new Background(new BackgroundFill(Paint.valueOf("#FFFFFF"),new CornerRadii(7), new Insets(5,5,5,5))));
             b.setText(this.wrongsAnswers.get(buttonsCopy.indexOf(b)));
         }
-
     }
+
     public void checkCorrect(Button b, ArrayList<Question> questions, Label scoreLabel) {
         if (this.randomButton == b) {
             b.setTextFill(Color.WHITE);
@@ -127,53 +130,36 @@ public class Question {
             }
         }
         questionCount += 1;
-
         questionIndex += 1;
     }
+
     private void showScores(Button b) throws IOException {
-
         Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/rankings.fxml"));
-
         Stage stage = (Stage)b.getScene().getWindow();
-
         stage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
-
         stage.show();
     }
+
     public ArrayList jokerBtn(ArrayList<Button> btn) {
 
         ArrayList<Button> list = new ArrayList<>();
-
         ArrayList<String> str1 = new ArrayList<>();
 
         for (Button button : btn) {
-
             String str = button.getText();
-
             if (!str.equals(correctAnswer) && !str1.contains(str)) {
-
                 list.add(button);
-
                 str1.add(str);
-
             }
-
         }
-
         return list;
-
     }
+
     public static void reset() {
-
         score = 0;
-
         questionCount = 1;
-
         questionIndex = 0;
-
         questionsCorrect = 0;
-
         GameManager.setCurrentUserPoints(0);
-
     }
 }

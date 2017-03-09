@@ -52,6 +52,7 @@ public class MenuController {
         initRankButton();
         initSongButton();
     }
+
     private void initStartButton(){
         buttonStart.setText(Values.LABEL_START_BTN);
         setButtons();
@@ -63,6 +64,7 @@ public class MenuController {
             }
         });
     }
+
     private void initExitButton(){
         buttonExit.setText(Values.LABEL_EXIT_BTN);
         GUIHelper.setViewDimensions(buttonExit, Values.FOUR_COLS, Values.ONE_ROW);
@@ -70,6 +72,7 @@ public class MenuController {
             exitGame();
         });
     }
+
     private void initCreditsButton(){
         buttonCredits.setText(Values.LABEL_CREDITS_BTN);
         buttonCredits.setOnMouseClicked(actionEvent -> {
@@ -91,12 +94,14 @@ public class MenuController {
             }
         });
     }
+
     private void initSongButton(){
         GUIHelper.styleButton(songBtn);
         if (Song.check){
             songBtn.setText("Sound On");
         }
     }
+
     private void initRankButton(){
         //        rankBtn.setText(Values.LABEL_RANKTABLE_BTN);
 //        rankBtn.setMaxWidth(Values.FOUR_COLS);
@@ -124,18 +129,21 @@ public class MenuController {
         gameTitle.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H1 - Values.H2));
         GUIHelper.setShadow(gameTitle);
     }
+
     private void setRiftLabel() {
         menuLeftLabel.setText(Values.LABEL_TEAM_RIFT);
         menuLeftLabel.setTextFill(Color.WHITESMOKE);
         menuLeftLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H2));
         GUIHelper.setShadow(menuLeftLabel);
     }
+
     private void setSoftUniLabel() {
         menuRightLabel.setText(Values.LABEL_SOFTUNI);
         menuRightLabel.setTextFill(Color.WHITE);
         menuRightLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H3*2));
         GUIHelper.setShadow(menuRightLabel);
     }
+
     private void setButtons() {
         GUIHelper.setViewDimensions(buttonStart, Values.TWO_COLS, Values.ONE_ROW/2);
         GUIHelper.setViewDimensions(buttonExit, Values.TWO_COLS, Values.ONE_ROW/2);
@@ -143,6 +151,7 @@ public class MenuController {
         GUIHelper.setViewDimensions(buttonScores, Values.TWO_COLS, Values.ONE_ROW/2);
         GUIHelper.styleAsButton(buttonStart,buttonExit,buttonCredits,buttonScores);
     }
+
     private void initPanes(){
         GUIHelper.setViewDimensions(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
         GUIHelper.setViewDimensions(topPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
@@ -158,6 +167,7 @@ public class MenuController {
         Stage stage = (Stage)buttonExit.getScene().getWindow();
         stage.close();
     }
+
     private void showCredits() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/credits.fxml"));
         Stage stage = (Stage)buttonCredits.getScene().getWindow();

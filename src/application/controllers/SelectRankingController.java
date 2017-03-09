@@ -23,39 +23,38 @@ import java.io.IOException;
 public class SelectRankingController {
 
     @FXML
-    public Button backBtn;
+    Button backBtn;
     @FXML
-    public Button global;
+    Button global;
     @FXML
-    public Button easy;
+    Button easy;
     @FXML
-    public Button normal;
+    Button normal;
     @FXML
-    public Button hard;
+    Button hard;
     @FXML
-    public StackPane mainPane;
+    StackPane mainPane;
     @FXML
-    public ImageView background;
+    ImageView background;
     @FXML
-    public Label rankingTitle;
+    Label rankingTitle;
     @FXML
-    public Label rankingLeftLabel;
+    Label rankingLeftLabel;
     @FXML
-    public Label rankingRightLabel;
+    Label rankingRightLabel;
     @FXML
-    public GridPane centerPane;
+    GridPane centerPane;
     @FXML
-    public GridPane topPane;
+    GridPane topPane;
     @FXML
-    public GridPane leftPane;
+    GridPane leftPane;
     @FXML
-    public GridPane bottomPane;
+    GridPane bottomPane;
     @FXML
-    public GridPane rightPane;
+    GridPane rightPane;
 
 
     public void initialize() throws Exception {
-
         initPanes();
         initButtons();
         setTitleLabel();

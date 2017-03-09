@@ -22,7 +22,7 @@ public class Values
 //    public static final  String PATH_RANKINGS = "scores.txt";
     public static final String PATH_TO_PROJECT = System.getProperty("user.dir");
     public static final String PATH_TO_SCORES = PATH_TO_PROJECT + "/src/application/resources/scores/";
-    public static String PATH_RANKING_GLOBAL = PATH_TO_PROJECT + "/src/application/resources/scores/globalScores.txt";
+    public static final String PATH_RANKING_GLOBAL = PATH_TO_PROJECT + "/src/application/resources/scores/globalScores.txt";
     public static final String PATH_RANKING = "Scores.txt";
 
     //This allows you to create your design reg ardless of SCREEN SIZE

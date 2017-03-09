@@ -18,11 +18,11 @@ public class CreditsController {
     @FXML
     Button backBtn;
     @FXML
-    public Label gameTitle, leftLabel, rightLabel;
+    Label gameTitle, leftLabel, rightLabel;
     @FXML
-    private BorderPane mainPane;
+    BorderPane mainPane;
     @FXML
-    private GridPane teamRiftBox, topPane, bottomPane, leftPane, rightPane;
+    GridPane teamRiftBox, topPane, bottomPane, leftPane, rightPane;
     @FXML
     private Label creditsL1, creditsL2, creditsL3, creditsL4, creditsR1, creditsR2, creditsR3, creditsR4;
 

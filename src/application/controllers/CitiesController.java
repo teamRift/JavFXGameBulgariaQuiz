@@ -27,15 +27,17 @@ import java.io.IOException;
 
 public class CitiesController {
     @FXML
-    public Label labelDifficulty;
+    Label labelDifficulty;
     @FXML
-    public Button buttonEasy;
+    Button buttonEasy;
     @FXML
-    public Button buttonNormal;
+    Button buttonNormal;
     @FXML
-    public Button buttonHard;
-    public Label labelInputUserName;
-    public TextField inputUserName;
+    Button buttonHard;
+    @FXML
+    Label labelInputUserName;
+    @FXML
+    TextField inputUserName;
     @FXML
     Label hintLabel, labelChooseCity;
     @FXML
@@ -50,6 +52,7 @@ public class CitiesController {
     ImageView mapImg;
     @FXML
     VBox difficultyBox;
+
     public void initialize() throws IOException {
         inputUserName.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.NORMAL, FontPosture.REGULAR, Values.H3));
         GameManager.setUserName(inputUserName);
@@ -128,9 +131,9 @@ public class CitiesController {
 
         GUIHelper.styleButton(backButton);
         GUIHelper.setViewDimensions(backButton,Values.ONE_COL*0.8, Values.ONE_ROW/2);
-
         backButton.setText(Values.LABEL_BACK_BTN);
     }
+
     private void resetDifficultyButtons() {
         buttonEasy.setTextFill(Color.BLACK);
         buttonEasy.setBackground(new Background(new BackgroundFill(Color.WHITE,new CornerRadii(7), new Insets(5,5,5,5))));
@@ -139,37 +142,28 @@ public class CitiesController {
         buttonHard.setTextFill(Color.BLACK);
         buttonHard.setBackground(new Background(new BackgroundFill(Color.WHITE,new CornerRadii(7), new Insets(5,5,5,5))));
     }
+
     private void setLabels() {
-
         GameManager.setFactsLabel(hintLabel);
-
         GUIHelper.styleLabel(Values.H3,hintLabel);
         labelDifficulty.setText(Values.LABEL_DIFFICULTY);
-
         labelChooseCity.setText(Values.LABEL_CHOOSE_CITY_BTN);
-
-        GUIHelper.styleLabel(Values.H2,labelChooseCity);
-
+        GUIHelper.styleLabel(Values.H3*2,labelChooseCity);
     }
+
     private void setCity(String cityName) {
         GameManager.setCityName(cityName);
     }
+
     private void setPanes(){
-
         GUIHelper.setViewDimensions(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
-
         GUIHelper.setViewDimensions(topPane, Values.SCREEN_WIDTH, Values.THREE_ROWS);
-
         GUIHelper.setViewDimensions(bottomPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
-
         GUIHelper.setViewDimensions(leftPane, Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-
         GUIHelper.setViewDimensions(rightPane, Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-
         GUIHelper.setViewDimensions(mapPane, Values.SIX_COLS, Values.SIX_ROWS + Values.THREE_ROWS);
         difficultyBox.setPadding(new Insets(0,0,0,Values.ONE_ROW/5));
         GUIHelper.setBackground(mainPane, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT);
-
         mapImg.setFitWidth(Values.SCREEN_WIDTH);
         mapImg.setFitWidth(Values.SCREEN_HEIGHT);
     }

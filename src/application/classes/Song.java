@@ -15,17 +15,18 @@ public class Song {
         this.player = new MediaPlayer(sound);
         player.setCycleCount(MediaPlayer.INDEFINITE);
         player.play();
-
-
     }
+
     public static void pause(){
         check = true;
         player.pause();
     }
+
     public static void start(){
         check = false;
       player.play();
     }
+
     public static void winSound(){
         String soundPath = "src/application/resources/songs/win.wav";
         Media sound = new Media(new File(soundPath).toURI().toString());
@@ -34,6 +35,7 @@ public class Song {
             win.play();
         }
     }
+
     public static void wrongSound(){
         String soundPath = "src/application/resources/songs/wrong.wav";
         Media sound = new Media(new File(soundPath).toURI().toString());

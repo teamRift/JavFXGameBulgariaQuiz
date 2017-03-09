@@ -25,21 +25,21 @@ import java.util.List;
 public class DifficultRankingController {
 
     @FXML
-    public StackPane mainPane;
+    StackPane mainPane;
     @FXML
-    public ImageView background;
+    ImageView background;
     @FXML
-    public Button backBtn;
+    Button backBtn;
     @FXML
-    public Label rankingsFirst;
+    Label rankingsFirst;
     @FXML
-    public Label rankingsSecond;
+    Label rankingsSecond;
     @FXML
-    public Label rankingsThird;
+    Label rankingsThird;
     @FXML
-    public Label rankingsFourth;
+    Label rankingsFourth;
     @FXML
-    public Label rankingsFifth;
+    Label rankingsFifth;
     @FXML
     Label rankingsTitle;
     @FXML
@@ -63,12 +63,13 @@ public class DifficultRankingController {
         loadCurrentRanking();
         initBackButton();
         initPanes();
-        initButton();
         initLabels();
     }
 
     private void initBackButton(){
         backBtn.setOnAction(this::OnBack);
+        GUIHelper.setViewDimensions(backBtn, Values.ONE_COL, Values.ONE_ROW/2);
+        GUIHelper.styleAsButton(backBtn);
     }
 
     private void initLabels(){
@@ -91,9 +92,7 @@ public class DifficultRankingController {
     }
 
     private void loadCurrentRanking(){
-
         List<Score> currentScores = Ranking.loadAndSortRanking(Ranking.getDifficult());
-
         for (int i = 5 - currentScores.size(); i > 0; i--) {
             currentScores.set(currentScores.size(), new Score("---","---",0));
         }
@@ -118,11 +117,6 @@ public class DifficultRankingController {
         GUIHelper.setViewDimensions(leftPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
         GUIHelper.setViewDimensions(rightPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
         GUIHelper.setBackground(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
-    }
-
-    private void initButton(){
-        GUIHelper.setViewDimensions(backBtn, Values.ONE_COL, Values.ONE_ROW/2);
-        GUIHelper.styleAsButton(backBtn);
     }
 
     private void setTextLabels(){

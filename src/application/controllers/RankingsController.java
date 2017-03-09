@@ -20,44 +20,36 @@ import java.util.List;
 
 public class RankingsController {
     @FXML
-    public Label rankingsTitle;
+    Label rankingsTitle;
     @FXML
-    public Label rankingsCurrent;
+    Label rankingsCurrent;
     @FXML
-    public Label rankingsFirst;
+    Label rankingsFirst;
     @FXML
-    public Label rankingsSecond;
+    Label rankingsSecond;
     @FXML
-    public Label rankingsThird;
+    Label rankingsThird;
     @FXML
-    public Label rankingsFourth;
+    Label rankingsFourth;
     @FXML
-    public Label rankingsFifth;
+    Label rankingsFifth;
     @FXML
-    public Label hintLabel;
+    Label hintLabel;
     @FXML
-    public StackPane mainPane;
+    StackPane mainPane;
     @FXML
-    public ImageView background;
+    ImageView background;
     @FXML
     Button backBtn;
 
     public void initialize() throws Exception {
-
         initCurrent();
-
         loadScores();
-
         GUIHelper.setBackground(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
-
         GUIHelper.setViewDimensions(background, Values.SCREEN_WIDTH- Values.THREE_COLS, Values.SCREEN_HEIGHT- Values.THREE_ROWS);
-
         GUIHelper.styleLabel(35,rankingsCurrent,rankingsFirst,rankingsSecond,rankingsThird,rankingsFourth,rankingsFifth);
-
         GUIHelper.styleLabel(50,rankingsTitle);
-
         GUIHelper.styleLabel(25,hintLabel);
-
         initBackButton();
     }
 
@@ -86,7 +78,6 @@ public class RankingsController {
         rankingsThird.setText(getRanking(mScores.get(2).prepareSave()));
         rankingsFourth.setText(getRanking(mScores.get(3).prepareSave()));
         rankingsFifth.setText(getRanking(mScores.get(4).prepareSave()));
-
         GameManager.setFactsLabel(hintLabel);
     }
 
@@ -96,6 +87,7 @@ public class RankingsController {
         GUIHelper.setViewDimensions(backBtn, Values.ONE_COL, Values.ONE_ROW);
         GUIHelper.styleButton(backBtn);
     }
+
     private void initCurrent(){
         if (GameManager.playerHasPlayed()){
             rankingsCurrent.setText(String.format("%s %s %s",
@@ -107,6 +99,7 @@ public class RankingsController {
             rankingsCurrent.setVisible(false);
         }
     }
+
     public static String getRanking(String input) {
         return String.format("%s %s %s",
                 input.split(";")[0],
@@ -114,5 +107,4 @@ public class RankingsController {
                 input.split(";")[2]
         );
     }
-
 }

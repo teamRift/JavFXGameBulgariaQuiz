@@ -1,4 +1,4 @@
-Hard ; TEAM RIFT ; 0
+BG ; TEAM RIFT ; 0
 BG ; TEAM RIFT ; 0
 BG ; TEAM RIFT ; 0
 BG ; TEAM RIFT ; 0

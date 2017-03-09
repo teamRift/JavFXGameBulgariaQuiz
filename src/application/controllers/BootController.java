@@ -24,33 +24,21 @@ public class BootController {
         GameManager.init();
         Ranking.init();
         PauseTransition delay = new PauseTransition(Duration.millis(4000));
-
         delay.setOnFinished( event -> startGame() );
-
         delay.play();
-
     }
+
     private void startGame() {
-
         Stage stage = (Stage) textLabel.getScene().getWindow();
-
-
         Parent root = stage.getScene().getRoot();
 
         try {
-
             root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
-
         } catch (IOException e) {
-
             e.printStackTrace();
-
         }
 
         stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
-
         stage.show();
-
     }
-
 }

@@ -15,9 +15,11 @@ public  class GameManager {
     private static int userMaxPoints = 0;
     private static City city = new City();
     private static List<Score> scores = new ArrayList<>();
+
     public GameManager(){
         init();
     }
+
     public static String getCityName(){
         return city.getName();
     }
@@ -25,21 +27,27 @@ public  class GameManager {
     public static String getFileName(){
         return city.getFileName();
     }
+
     public static String getCurrentUser() {
         return currentUser;
     }
+
     public static City getCity(){
         return city;
     }
+
     public static int getCurrentUserPoints() {
         return currentUserPoints;
     }
+
     public static int getUserMaxPoints() {
         return userMaxPoints;
     }
+
     public static int getMaxScore(){
         return maxPoints;
     }
+
     public static void setCurrentUser(String currentUser) {
         currentUser = currentUser;
         try {
@@ -48,6 +56,7 @@ public  class GameManager {
             e.printStackTrace();
         }
     }
+
     public static void setCityName(String cityName) {
         if (city != null) {
             city.setName(cityName);
@@ -95,6 +104,7 @@ public  class GameManager {
             t.setText(getCurrentUser());
         }
     }
+
     public static String getQuestionsDifficulty() {
         return questionsDifficulty;
     }

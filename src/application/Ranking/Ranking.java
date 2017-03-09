@@ -24,9 +24,7 @@ public class Ranking {
         difficult = currentDifficult;
     }
 
-    public static void init(){
-
-    }
+    public static void init(){}
 
     public static List<Score> loadAndSortRanking(String difficult) {
         List<Score> currentScores = new ArrayList<>();

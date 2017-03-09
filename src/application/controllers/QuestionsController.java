@@ -59,13 +59,13 @@ public class QuestionsController {
     @FXML
     Button hintOne;
     @FXML
-    public Button firstButton;
+    Button firstButton;
     @FXML
-    public Button secondButton;
+    Button secondButton;
     @FXML
-    public Button thirdButton;
+    Button thirdButton;
     @FXML
-    public Button fourthButton;
+    Button fourthButton;
 
     private static ArrayList<Question> questions;
 
@@ -104,6 +104,7 @@ public class QuestionsController {
         if (questionsCorrect > 0) {
             percent = (int) ((double) questionsCorrect / (double) questions.size() * 100);
         }
+
         Score newScore = new Score(GameManager.getCityName(), GameManager.getCurrentUser(), score);
         System.out.println("Save score.");
         Scores.save(newScore,"global");
@@ -113,50 +114,30 @@ public class QuestionsController {
     }
 
     private void setBackground(){
-
         background.setFitHeight(Values.SCREEN_HEIGHT);
-
         background.setFitWidth(Values.SCREEN_WIDTH);
-
         background.setImage(new Image(Values.IMG_BACKGROUND, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT,false,false));
-
     }
 
     private void setLabels() {
-
         cityName.setText(GameManager.getCityName());
-
         userName.setText(GameManager.getCurrentUser());
-
         maxScore.setText(String.valueOf("Game Max: " + GameManager.getMaxScore()));
-
         maxScoreUser.setText(String.valueOf("User Max: " + GameManager.getUserMaxPoints()));
-
         GameManager.setFactsLabel(hintLabel);
-
         GUIHelper.styleLabel(Values.H3,cityName,userName,maxScore,maxScoreUser,questionNumLabel,questionLabel,scoreLabel,hintLabel);
     }
 
     private void setPanes() {
-
         GUIHelper.setViewDimensions(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
-
         GUIHelper.setViewDimensions(topPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
-
         GUIHelper.setViewDimensions(bottomPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
-
         GUIHelper.setViewDimensions(leftPane, Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-
         GUIHelper.setViewDimensions(rightPane, Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-
         GUIHelper.setViewDimensions(centerPane, Values.SIX_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-
         GUIHelper.setViewDimensions(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
-
         GUIHelper.setViewDimensions(questionButtons, Values.SIX_COLS, Values.TWO_ROWS);
-
         GUIHelper.setBackground(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
-
     }
 
     private void handleButtonAction(ActionEvent event) {
@@ -189,45 +170,29 @@ public class QuestionsController {
     }
 
     public void hintButton(ActionEvent actionEvent) {
-
         Random rn = new Random();
-
         ArrayList<Button> buttons = new ArrayList<>();
-
         buttons.add(firstButton);
-
         buttons.add(secondButton);
-
         buttons.add(thirdButton);
-
         buttons.add(firstButton);
 
         Question question = questions.get(Question.getQuestionIndex());
-
         buttons = question.jokerBtn(buttons);
 
         for (int i = 0; i < 2; i++) {
-
             int index = rn.nextInt(buttons.size());
-
             buttons.get(index).setDisable(true);
-
             buttons.remove(index);
-
         }
 
         hintOne.setDisable(true);
-
     }
 
     public void OnBack(ActionEvent actionEvent) throws IOException {
-
         Parent root = FXMLLoader.load(getClass().getResource(Values.PATH_CITIES));
-
         Stage stage = (Stage)backButton.getScene().getWindow();
-
         stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
-
         stage.show();
     }
 }
