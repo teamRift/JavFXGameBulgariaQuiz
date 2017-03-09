@@ -22,7 +22,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class MenuController {
-    public Button songBtn,buttonExit,buttonCredits, buttonStart, buttonScores;
+    public Button songBtn, buttonExit, buttonCredits, buttonPlayingInstructions, buttonStart, buttonScores;
     @FXML
     BorderPane mainPane;
     @FXML
@@ -45,6 +45,7 @@ public class MenuController {
     }
 
     private void initButtons(){
+        initPlayingInstructionsButton();
         initCreditsButton();
         initExitButton();
         initScoresButton();
@@ -72,6 +73,18 @@ public class MenuController {
             exitGame();
         });
     }
+
+    private void initPlayingInstructionsButton(){
+        buttonPlayingInstructions.setText(Values.LABEL_PLAYINGINSTRUCTIONS_BTN);
+        buttonPlayingInstructions.setOnMouseClicked(actionEvent -> {
+            try {
+                showPlayingInstructions();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
 
     private void initCreditsButton(){
         buttonCredits.setText(Values.LABEL_CREDITS_BTN);
@@ -147,6 +160,7 @@ public class MenuController {
     private void setButtons() {
         GUIHelper.setViewDimensions(buttonStart, Values.TWO_COLS, Values.ONE_ROW/2);
         GUIHelper.setViewDimensions(buttonExit, Values.TWO_COLS, Values.ONE_ROW/2);
+        GUIHelper.setViewDimensions(buttonPlayingInstructions, Values.TWO_COLS, Values.ONE_ROW/2);
         GUIHelper.setViewDimensions(buttonCredits, Values.TWO_COLS, Values.ONE_ROW/2);
         GUIHelper.setViewDimensions(buttonScores, Values.TWO_COLS, Values.ONE_ROW/2);
         GUIHelper.styleAsButton(buttonStart,buttonExit,buttonCredits,buttonScores);
@@ -166,6 +180,13 @@ public class MenuController {
     private void exitGame() {
         Stage stage = (Stage)buttonExit.getScene().getWindow();
         stage.close();
+    }
+
+    private void showPlayingInstructions() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/playingInstructions.fxml"));
+        Stage stage = (Stage)buttonPlayingInstructions.getScene().getWindow();
+        stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
+        stage.show();
     }
 
     private void showCredits() throws IOException {

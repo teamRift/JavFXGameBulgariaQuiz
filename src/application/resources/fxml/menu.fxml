@@ -38,6 +38,7 @@
                         <Image url="@../images/quest.gif" />
                   </ImageView>
                         <Button fx:id="buttonStart" alignment="CENTER" contentDisplay="CENTER" text="Start Game"/>
+                        <Button fx:id="buttonPlayingInstructions" alignment="CENTER" contentDisplay="CENTER" text="Label" />
                         <Button fx:id="buttonScores" alignment="CENTER" contentDisplay="CENTER" text="Label" />
                         <Button fx:id="buttonCredits" alignment="CENTER" contentDisplay="CENTER" text="Label" />
                         <Button fx:id="buttonExit" alignment="CENTER" contentDisplay="CENTER" text="Label" />
