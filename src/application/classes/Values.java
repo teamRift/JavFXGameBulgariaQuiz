@@ -62,6 +62,8 @@ public class Values
     public static final  String LABEL_TEAM_RIFT = "Team Rift®";
     public static final  String LABEL_SOFTUNI = "SoftUni 2017";
     public static final String LABEL_CHOOSE_SCORE_BTN = "Choose score";
+    public static final String LABEL_RANKING_TITEL_PART_1 = "Top 5 scores for ";
+    public static final String LABEL_RANKING_TITLE_PART_2 = " difficult";
 
     public static final  int H3 = (int) Math.round(ONE_COL/7);
     public static final  int H2 = (int) Math.round(ONE_COL/3);

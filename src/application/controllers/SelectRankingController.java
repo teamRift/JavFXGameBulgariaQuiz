@@ -57,15 +57,18 @@ public class SelectRankingController {
     public void initialize() throws Exception {
 
         initPanes();
+        initButtons();
+        setTitleLabel();
+        setRiftLabel();
+        setSoftUniLabel();
+    }
 
+    private void initButtons(){
         initBackButton();
         initEasyButton();
         initGlobalButton();
         initNormalButton();
         initHardButton();
-        setTitleLabel();
-        setRiftLabel();
-        setSoftUniLabel();
     }
 
     private void initGlobalButton(){
@@ -116,12 +119,9 @@ public class SelectRankingController {
 
     private void initPanes(){
         GUIHelper.setViewDimensions(background, Values.SCREEN_WIDTH- Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.THREE_ROWS);
+        GUIHelper.setViewDimensions(leftPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
+        GUIHelper.setViewDimensions(rightPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
         GUIHelper.setBackground(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
-//        GUIHelper.setViewDimensions(centerPane, Values.SCREEN_WIDTH , Values.SCREEN_HEIGHT);
-//        GUIHelper.setViewDimensions(topPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
-//        GUIHelper.setViewDimensions(bottomPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
-//        GUIHelper.setViewDimensions(leftPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-//        GUIHelper.setViewDimensions(rightPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
     }
 
     private void setButtons() {
@@ -136,7 +136,7 @@ public class SelectRankingController {
     private void setTitleLabel() {
         rankingTitle.setText(Values.LABEL_SELECT_RANKING);
         rankingTitle.setTextFill(Color.SEAGREEN);
-        rankingTitle.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H1 - Values.H2));
+        rankingTitle.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H3*3));
         GUIHelper.setShadow(rankingTitle);
     }
 

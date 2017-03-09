@@ -7,10 +7,12 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <StackPane fx:id="mainPane" prefHeight="1500.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.DifficultRankingController">
@@ -26,70 +28,113 @@
             <Point3D x="5.0" y="5.0" z="5.0" />
          </rotationAxis>
       </ImageView>
-      <GridPane>
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints maxHeight="200.0" minHeight="50.0" prefHeight="200.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="200.0" minHeight="50.0" prefHeight="200.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <GridPane GridPane.halignment="CENTER" GridPane.rowIndex="1">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="50.0" prefWidth="200.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
-              </columnConstraints>
-              <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
+      <BorderPane fx:id="mainPane1">
+         <center>
+            <GridPane fx:id="centerPane">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
                <children>
-                  <Button fx:id="backBtn" mnemonicParsing="false" text="Back" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-                  <Label fx:id="rankingsFirst" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
-                     <font>
-                        <Font name="Lucida Console" size="40.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="rankingsSecond" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
-                     <font>
-                        <Font name="Lucida Console" size="40.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="rankingsThird" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
-                     <font>
-                        <Font name="Lucida Console" size="40.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="rankingsFourth" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
-                     <font>
-                        <Font name="Lucida Console" size="40.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="rankingsFifth" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
-                     <font>
-                        <Font name="Lucida Console" size="40.0" />
-                     </font>
-                  </Label>
+                  <VBox fx:id="buttonsGroup" alignment="CENTER">
+                     <children>
+                        <Label fx:id="rankingsFirst" text="Label">
+                           <font>
+                              <Font name="Lucida Console" size="40.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="rankingsSecond" text="Label">
+                           <font>
+                              <Font name="Lucida Console" size="40.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="rankingsThird" text="Label">
+                           <font>
+                              <Font name="Lucida Console" size="40.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="rankingsFourth" text="Label">
+                           <font>
+                              <Font name="Lucida Console" size="40.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="rankingsFifth" text="Label">
+                           <font>
+                              <Font name="Lucida Console" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
                </children>
             </GridPane>
-            <Label fx:id="hintLabel" contentDisplay="CENTER" text="Label" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-               <font>
-                  <Font name="Lucida Sans Unicode" size="26.0" />
-               </font>
-            </Label>
-            <Label fx:id="rankingsTitle" alignment="CENTER" text="Label" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
-               <font>
-                  <Font name="Lucida Console" size="70.0" />
-               </font>
-            </Label>
-         </children>
-      </GridPane>
+         </center>
+         <top>
+            <GridPane fx:id="topPane" alignment="CENTER" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="rankingTitle" text="Label" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+         </top>
+         <left>
+            <GridPane fx:id="leftPane" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="rankingLeftLabel" text="Label" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="backBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="53.0" text="Back" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </left>
+         <bottom>
+            <GridPane fx:id="bottomPane" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+         </bottom>
+         <right>
+            <GridPane fx:id="rightPane" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="rankingRightLabel" text="Label" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+         </right>
+      </BorderPane>
    </children>
 </StackPane>
