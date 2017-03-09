@@ -23,9 +23,9 @@ public class PlayingInstructionsController {
     @FXML
     private BorderPane mainPane;
     @FXML
-    private GridPane instructionsBox, howToPlayBox , topPane, bottomPane, leftPane, rightPane;
+    private GridPane howToPlayBox , topPane, bottomPane, leftPane, rightPane;
     @FXML
-    // private Label creditsL1, creditsL2, creditsL3, creditsL4, creditsR1, creditsR2, creditsR3, creditsR4;
+    private Label rule1, rule2, rule3;
 
     public void initialize() {
         setLabels();
@@ -49,7 +49,7 @@ public class PlayingInstructionsController {
     private void setPanes(){
         GUIHelper.setBackground(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
         GUIHelper.setViewDimensions(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
-        GUIHelper.setViewDimensions(instructionsBox, Values.SCREEN_WIDTH - Values.ONE_COL, Values.SCREEN_HEIGHT - Values.ONE_COL);
+        //GUIHelper.setViewDimensions(instructionsBox, Values.SCREEN_WIDTH - Values.ONE_COL, Values.SCREEN_HEIGHT - Values.ONE_COL);
         GUIHelper.setViewDimensions(howToPlayBox, Values.SCREEN_WIDTH - Values.ONE_COL, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
         GUIHelper.setViewDimensions(topPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
         GUIHelper.setViewDimensions(bottomPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
@@ -63,6 +63,12 @@ public class PlayingInstructionsController {
         GUIHelper.styleLabel(32, leftLabel, rightLabel);
         leftLabel.setText(Values.LABEL_TEAM_RIFT);
         rightLabel.setText(Values.LABEL_SOFTUNI);
+        rule1.setText("1. Select dificulty");
+        rule2.setText("2. Select city");
+        rule3.setText("3. Enjoy the game! :)");
+        GUIHelper.styleLabel(37,rule1, rule2, rule3);
+
+
 
     }
 
