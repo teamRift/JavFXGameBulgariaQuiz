@@ -175,7 +175,7 @@ public class QuestionsController {
         buttons.add(firstButton);
         buttons.add(secondButton);
         buttons.add(thirdButton);
-        buttons.add(firstButton);
+        buttons.add(fourthButton);
 
         Question question = questions.get(Question.getQuestionIndex());
         buttons = question.jokerBtn(buttons);
