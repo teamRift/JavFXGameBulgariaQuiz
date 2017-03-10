@@ -1,4 +1,4 @@
-BG ; TEAM RIFT ; 0
+Pleven ; MinMin ; 20
 BG ; TEAM RIFT ; 0
 BG ; TEAM RIFT ; 0
 BG ; TEAM RIFT ; 0

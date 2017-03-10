@@ -1,6 +1,6 @@
 package application.controllers;
 
-import application.Ranking.Ranking;
+import application.ranking.Ranking;
 import application.classes.GUIHelper;
 import application.classes.Score;
 import application.classes.Values;

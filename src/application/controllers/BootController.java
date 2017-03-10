@@ -1,6 +1,6 @@
 package application.controllers;
 
-import application.Ranking.Ranking;
+import application.ranking.Ranking;
 import application.classes.GameManager;
 import application.classes.Values;
 import javafx.animation.PauseTransition;

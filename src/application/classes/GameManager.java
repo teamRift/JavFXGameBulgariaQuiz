@@ -48,8 +48,8 @@ public  class GameManager {
         return maxPoints;
     }
 
-    public static void setCurrentUser(String currentUser) {
-        currentUser = currentUser;
+    public static void setCurrentUser(String currentInputUser) {
+        currentUser = currentInputUser;
         try {
             Scores.findAndLoad(currentUser);
         } catch (Exception e) {
@@ -109,8 +109,8 @@ public  class GameManager {
         return questionsDifficulty;
     }
 
-    public static void setQuestionsDifficulty(String questionsDifficulty) {
-        questionsDifficulty = questionsDifficulty;
+    public static void setQuestionsDifficulty(String questionsCurrentDifficulty) {
+        questionsDifficulty = questionsCurrentDifficulty;
     }
 
     public static boolean playerHasPlayed() {

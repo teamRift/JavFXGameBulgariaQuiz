@@ -1,5 +1,9 @@
-BG ; TEAM RIFT ; 0
-BG ; TEAM RIFT ; 0
-BG ; TEAM RIFT ; 0
-BG ; TEAM RIFT ; 0
-BG ; TEAM RIFT ; 0
+Blagoevgrad ; User ; 20
+Pleven ; User ; 20
+Sofia ; Pipi ; 30
+Sofia ; Coco ; 30
+Varna ; Stamat ; 10
+Plovdiv ; Minka ; 20
+Burgas ; Coconut ; 30
+Velikoturnovo ; MinMin ; 20
+Ruse ; Coco ; 20
