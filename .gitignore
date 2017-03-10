@@ -58,6 +58,5 @@ module_testtest.xml
 scores.txt
 softuni.properties
 softuni.xml
-src/application/resources/questions/plevenQuestions.txt
 /src/application/db/PlayerDB.java
 /src/application/db/ScoreDB.java
