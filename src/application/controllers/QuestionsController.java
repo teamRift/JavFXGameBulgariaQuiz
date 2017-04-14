@@ -185,7 +185,6 @@ public class QuestionsController {
             buttons.get(index).setDisable(true);
             buttons.remove(index);
         }
-
         hintOne.setDisable(true);
     }
 

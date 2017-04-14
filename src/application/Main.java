@@ -16,10 +16,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        //replace with boot.fxml for bootscreen
-        // replace with menu.fxml for startscreen
         Parent root = FXMLLoader.load(getClass().getResource("resources/fxml/boot.fxml"));
-       // primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
         root.getStylesheets().add("application/lightTheme.css");
 
         primaryStage.setResizable(false);

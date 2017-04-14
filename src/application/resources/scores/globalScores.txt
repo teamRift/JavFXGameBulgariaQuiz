@@ -8,3 +8,10 @@ Burgas ; Coconut ; 30
 Velikoturnovo ; MinMin ; 20
 Ruse ; Coco ; 20
 Varna ; Moncho ; 20
+Blagoevgrad ; Lili ; 30
+Varna ; Gosho ; 0
+Sofia ; Mishlence ; 0
+Plovdiv ; Mishlence ; 20
+Plovdiv ; TEst ; 10
+Blagoevgrad ; Gamer ; 20
+Sofia ; Pipilota ; 30

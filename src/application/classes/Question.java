@@ -1,6 +1,7 @@
 package application.classes;
 
 import application.controllers.QuestionsController;
+import application.ranking.Ranking;
 import javafx.animation.PauseTransition;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;

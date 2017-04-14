@@ -1,5 +1,5 @@
 Pleven ; MinMin ; 20
-BG ; TEAM RIFT ; 0
+Plovdiv ; TEst ; 10
 BG ; TEAM RIFT ; 0
 BG ; TEAM RIFT ; 0
 BG ; TEAM RIFT ; 0

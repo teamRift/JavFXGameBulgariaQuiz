@@ -39,7 +39,6 @@ public class GUIHelper {
     }
 
     public static void setViewDimensions(Object object, double WIDTH, double HEIGHT) {
-
         if (object instanceof Pane) {
             ((Pane) object).setMinWidth(WIDTH);
             ((Pane) object).setMaxWidth(WIDTH);
@@ -114,7 +113,6 @@ public class GUIHelper {
     }
 
     public static void styleButton(Button... buttons) {
-
         for (Button button : buttons) {
             button.setBackground(new Background(new BackgroundFill(Paint.valueOf("#FFFFFF"),new CornerRadii(7), new Insets(5,5,5,5))));
             button.setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD, Values.H3));

@@ -78,6 +78,7 @@ public class DifficultRankingController {
         setRiftLabel();
         setSoftUniLabel();
     }
+
     private void OnBack(ActionEvent actionEvent) {
         Parent root = null;
         try {
