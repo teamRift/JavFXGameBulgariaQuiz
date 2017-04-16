@@ -1,6 +1,5 @@
 package application.controllers;
 
-import application.classes.Scores;
 import application.constants.ConstantsDimentions;
 import application.constants.ConstantsLabel;
 import application.constants.ConstantsPath;
@@ -9,7 +8,6 @@ import application.dependencies.DependencyInjectionContainer;
 import application.ranking.Ranking;
 import application.classes.GUIHelper;
 import application.classes.Score;
-import application.classes.Values;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -47,23 +45,15 @@ public class DifficultRankingController {
     @FXML
     private Label rankingsFifth;
     @FXML
-    private Label rankingsTitle;
-    @FXML
     private Label rankingRightLabel;
     @FXML
     private GridPane rightPane;
-    @FXML
-    private GridPane bottomPane;
     @FXML
     private Label rankingLeftLabel;
     @FXML
     private GridPane leftPane;
     @FXML
     private Label rankingTitle;
-    @FXML
-    private GridPane topPane;
-    @FXML
-    private GridPane centerPane;
 
     private Ranking ranking = DependencyInjectionContainer.getRankingInstance();
 
@@ -101,7 +91,7 @@ public class DifficultRankingController {
     }
 
     private void loadCurrentRanking(){
-        List<Score> currentScores = this.ranking.loadAndSortRanking(this.ranking.getDifficult());
+        List<Score> currentScores = this.ranking.load(this.ranking.getDifficult());
         for (int i = 5 - currentScores.size(); i > 0; i--) {
             currentScores.set(currentScores.size(), new Score("---","---",0));
         }

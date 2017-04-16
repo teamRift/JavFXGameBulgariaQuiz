@@ -2,6 +2,7 @@ package application.classes;
 
 import application.constants.ConstantsDifficulty;
 import application.dependencies.DependencyInjectionContainer;
+import application.ranking.Scores;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import java.util.ArrayList;

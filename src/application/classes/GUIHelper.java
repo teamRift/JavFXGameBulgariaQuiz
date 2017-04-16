@@ -1,6 +1,5 @@
 package application.classes;
 
-import application.classes.Values;
 import application.constants.ConstantsDimentions;
 import application.constants.ConstantsPath;
 import application.constants.ConstantsStyle;
@@ -56,7 +55,7 @@ public class GUIHelper {
             ((Button) object).setMinHeight(HEIGHT);
             ((Button) object).setMaxHeight(HEIGHT);
             ((Button) object).setPrefHeight(HEIGHT);
-            ((Button) object).setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H3));
+            ((Button) object).setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H3));
             styleButton((Button) object);
         } else if (object instanceof Label) {
             ((Label) object).setMinWidth(WIDTH);

@@ -2,7 +2,6 @@ package application.controllers;
 
 import application.classes.GUIHelper;
 import application.classes.Song;
-import application.classes.Values;
 import application.constants.ConstantsDimentions;
 import application.constants.ConstantsLabel;
 import application.constants.ConstantsPath;
@@ -18,7 +17,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;

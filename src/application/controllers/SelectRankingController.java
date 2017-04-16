@@ -7,7 +7,6 @@ import application.constants.ConstantsStyle;
 import application.dependencies.DependencyInjectionContainer;
 import application.ranking.Ranking;
 import application.classes.GUIHelper;
-import application.classes.Values;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

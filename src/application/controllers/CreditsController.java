@@ -1,7 +1,6 @@
 package application.controllers;
 
 import application.classes.GUIHelper;
-import application.classes.Values;
 import application.constants.ConstantsDimentions;
 import application.constants.ConstantsLabel;
 import application.constants.ConstantsPath;

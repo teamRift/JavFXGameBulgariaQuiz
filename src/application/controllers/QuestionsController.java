@@ -6,6 +6,7 @@ import application.constants.ConstantsDimentions;
 import application.constants.ConstantsLabel;
 import application.constants.ConstantsPath;
 import application.dependencies.DependencyInjectionContainer;
+import application.ranking.Scores;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -71,6 +72,8 @@ public class QuestionsController {
     private Button thirdButton;
     @FXML
     private Button fourthButton;
+
+    public static final short PAUSE_VALUE = 1000;
 
     private GameManager gameManager = DependencyInjectionContainer.getGameManagerInstance();
     private Question question = DependencyInjectionContainer.getQuestionInstance();
@@ -178,7 +181,7 @@ public class QuestionsController {
                     fourthButton.setDisable(false);
                 });
             }
-        }, Values.PAUSE_VALUE);
+        }, PAUSE_VALUE);
     }
 
     public void hintButton(ActionEvent actionEvent) {

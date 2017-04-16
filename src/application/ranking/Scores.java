@@ -1,6 +1,9 @@
-package application.classes;
+package application.ranking;
 
+import application.classes.GameManager;
+import application.classes.Score;
 import application.dependencies.DependencyInjectionContainer;
+import application.ranking.Loading;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -13,18 +16,19 @@ import java.util.List;
 
 import static application.constants.ConstantsPath.*;
 
-public class Scores {
+public class Scores implements Loading{
     private final static int INDEX_CITY_NAME = 0;
     private static final int INDEX_USER_NAME = 1;
     private static final int INDEX_VALUE_SCORE = 2;
     private static final int INDEX_BEST_FIVE = 5;
     private static final String DELIMITER = ";";
+    private static final String EMPTY_TEXT_LINE ="BG ; TEAM RIFT ; 0";
+    private static final String MSG_WHEN_CREATE = "Created";
+
     private List<Score> leaderboard;
-    private String difficult;
     private  List<Score> scores;
 
     private GameManager gameManager = DependencyInjectionContainer.getGameManagerInstance();
-
 
     public Scores() {
         this.leaderboard = this.load(PATH_RANKING_GLOBAL);
@@ -40,7 +44,7 @@ public class Scores {
 
         List<String> fileContent = new ArrayList<String>();
         for (int i = INDEX_CITY_NAME; i < INDEX_BEST_FIVE; i++){
-            fileContent.add("BG ; TEAM RIFT ; 0");
+            fileContent.add(EMPTY_TEXT_LINE);
         }
 
         try {
@@ -50,8 +54,9 @@ public class Scores {
         }
     }
 
+    @Override
     public  List<Score> load(String path) {
-        List<Score> scores = new ArrayList<>();
+        this.scores = new ArrayList<>();
         try {
             Path filePath = Paths.get(path);
             if (!Files.exists(filePath)) {
@@ -62,12 +67,12 @@ public class Scores {
                 if (line.isEmpty()) {
                     return;
                 }
-                String[] tokens = line.split(";");
+                String[] tokens = line.split(DELIMITER);
                 scores.add(new Score(tokens[INDEX_CITY_NAME].trim(),tokens[INDEX_USER_NAME].trim(), Integer.parseInt(tokens[INDEX_VALUE_SCORE].trim())));
             });
         } catch (IOException e) {
             create();
-            System.out.println("Created");
+            System.out.println(MSG_WHEN_CREATE);
             e.printStackTrace();
         }
 
@@ -83,7 +88,7 @@ public class Scores {
 
 
     public  void findAndLoad(String userName) throws Exception {
-        List<Score> scores = new ArrayList<>();
+        this.scores = new ArrayList<>();
         try {
             Path filePath = Paths.get(PATH_RANKING_GLOBAL);
             Files.lines(filePath).forEach(line -> {

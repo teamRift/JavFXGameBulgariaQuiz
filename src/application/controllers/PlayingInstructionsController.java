@@ -1,7 +1,6 @@
 package application.controllers;
 
 import application.classes.GUIHelper;
-import application.classes.Values;
 import application.constants.ConstantsDimentions;
 import application.constants.ConstantsLabel;
 import application.constants.ConstantsPath;
@@ -53,7 +52,7 @@ public class PlayingInstructionsController {
         GUIHelper.setBackground(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
         GUIHelper.setViewDimensions(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
         //GUIHelper.setViewDimensions(instructionsBox, Values.SCREEN_WIDTH - Values.ONE_COL, Values.SCREEN_HEIGHT - Values.ONE_COL);
-        GUIHelper.setViewDimensions(this.howToPlayBox, ConstantsDimentions.SCREEN_WIDTH - ConstantsDimentions.ONE_COL, ConstantsDimentions.SCREEN_HEIGHT - Values.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.howToPlayBox, ConstantsDimentions.SCREEN_WIDTH - ConstantsDimentions.ONE_COL, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
         GUIHelper.setViewDimensions(this.topPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.TWO_ROWS);
         GUIHelper.setViewDimensions(this.bottomPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.TWO_ROWS);
         GUIHelper.setViewDimensions(this.leftPane, ConstantsDimentions.TWO_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);

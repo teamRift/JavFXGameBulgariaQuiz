@@ -1,9 +1,7 @@
 package application.controllers;
 
-import application.classes.City;
 import application.classes.GUIHelper;
 import application.classes.GameManager;
-import application.classes.Values;
 import application.constants.*;
 import application.dependencies.DependencyInjectionContainer;
 import javafx.event.ActionEvent;
@@ -36,8 +34,6 @@ public class CitiesController {
     private Button buttonNormal;
     @FXML
     private Button buttonHard;
-    @FXML
-    private Label labelInputUserName;
     @FXML
     private TextField inputUserName;
     @FXML

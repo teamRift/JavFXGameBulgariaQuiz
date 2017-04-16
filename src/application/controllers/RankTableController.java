@@ -1,7 +1,7 @@
 //package application.controllers;
 //
 //import application.classes.Score;
-//import application.classes.Scores;
+//import application.ranking.Scores;
 //import application.classes.Utils;
 //import application.classes.Values;
 //import javafx.animation.PauseTransition;

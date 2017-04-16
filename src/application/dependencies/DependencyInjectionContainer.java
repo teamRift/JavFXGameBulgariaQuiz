@@ -2,7 +2,7 @@ package application.dependencies;
 
 import application.classes.GameManager;
 import application.classes.Question;
-import application.classes.Scores;
+import application.ranking.Scores;
 import application.classes.Song;
 import application.controllers.QuestionsController;
 import application.ranking.Ranking;
