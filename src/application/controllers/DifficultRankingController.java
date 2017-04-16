@@ -5,6 +5,7 @@ import application.constants.ConstantsDimentions;
 import application.constants.ConstantsLabel;
 import application.constants.ConstantsPath;
 import application.constants.ConstantsStyle;
+import application.dependencies.DependencyInjectionContainer;
 import application.ranking.Ranking;
 import application.classes.GUIHelper;
 import application.classes.Score;
@@ -64,6 +65,8 @@ public class DifficultRankingController {
     @FXML
     private GridPane centerPane;
 
+    private Ranking ranking = DependencyInjectionContainer.getRankingInstance();
+
     public void initialize() throws Exception {
         loadCurrentRanking();
         initBackButton();
@@ -98,7 +101,7 @@ public class DifficultRankingController {
     }
 
     private void loadCurrentRanking(){
-        List<Score> currentScores = Ranking.loadAndSortRanking(Ranking.getDifficult());
+        List<Score> currentScores = this.ranking.loadAndSortRanking(this.ranking.getDifficult());
         for (int i = 5 - currentScores.size(); i > 0; i--) {
             currentScores.set(currentScores.size(), new Score("---","---",0));
         }
@@ -145,7 +148,7 @@ public class DifficultRankingController {
     }
 
     private void setTitleLabel() {
-        this.rankingTitle.setText(ConstantsLabel.LABEL_RANKING_TITEL_PART_1 + Ranking.getDifficult() + ConstantsLabel.LABEL_RANKING_TITLE_PART_2);
+        this.rankingTitle.setText(ConstantsLabel.LABEL_RANKING_TITEL_PART_1 + this.ranking.getDifficult() + ConstantsLabel.LABEL_RANKING_TITLE_PART_2);
         this.rankingTitle.setTextFill(Color.SEAGREEN);
         this.rankingTitle.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H3*3));
         GUIHelper.setShadow(this.rankingTitle);

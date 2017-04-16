@@ -115,7 +115,7 @@ public class MenuController {
 
     private void initSongButton(){
         GUIHelper.styleButton(this.songBtn);
-        if (Song.check){
+        if (Song.getCheck()){
             this.songBtn.setText("Sound On");
         }
     }
@@ -224,7 +224,7 @@ public class MenuController {
 //    }
 
     public void songControllers(ActionEvent actionEvent) {
-        if (Song.check){
+        if (Song.getCheck()){
             Song.start();
             this.songBtn.setText("Song Off");
         } else {

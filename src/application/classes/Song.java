@@ -40,4 +40,8 @@ public class Song {
         MediaPlayer wrong = new MediaPlayer(sound);
         wrong.play();
     }
+
+    public static Boolean getCheck() {
+        return check;
+    }
 }

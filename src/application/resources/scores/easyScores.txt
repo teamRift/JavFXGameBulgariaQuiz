@@ -2,4 +2,5 @@ Blagoevgrad ; Koko Shanel ; 20
 Pleven ; Gucci ; 20
 Velikoturnovo ; Boko ; 10
 Plovdiv ; Uki ; 10
-BG ; TEAM RIFT ; 0
+Sofia ; User ; 40
+Sofia ; 3434444 ; 40

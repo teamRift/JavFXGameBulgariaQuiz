@@ -26,3 +26,9 @@ Plovdiv ; Uki ; 10
 Velikoturnovo ; Uki ; 10
 Plovdiv ; Suzi ; 10
 Pleven ; Dodod ; 30
+Sofia ; User ; 40
+Sofia ; sdfr ; 0
+Sofia ; User ; 0
+Sofia ; 77User ; 0
+Sofia ; User ; 0
+Sofia ; 3434444 ; 40

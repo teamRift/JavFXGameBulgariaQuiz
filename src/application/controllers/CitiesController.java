@@ -5,6 +5,7 @@ import application.classes.GUIHelper;
 import application.classes.GameManager;
 import application.classes.Values;
 import application.constants.*;
+import application.dependencies.DependencyInjectionContainer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -54,9 +55,11 @@ public class CitiesController {
     @FXML
     private VBox difficultyBox;
 
+    private GameManager gameManager = DependencyInjectionContainer.getGameManagerInstance();
+
     public void initialize() throws IOException {
         this.inputUserName.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.NORMAL, FontPosture.REGULAR, ConstantsDimentions.H3));
-        GameManager.setUserName(this.inputUserName);
+        this.gameManager.setUserName(this.inputUserName);
         setPanes();
         setButtons();
         setLabels();
@@ -65,7 +68,7 @@ public class CitiesController {
     public void onCityQuestion(ActionEvent actionEvent) throws IOException {
         Button button  = (Button)  actionEvent.getSource();
         String id = button.getId();
-        GameManager.setCurrentUser(this.inputUserName.getText());
+        this.gameManager.setCurrentUser(this.inputUserName.getText());
         setCity(id.toLowerCase());
         Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_QUIZ_WINDOW));
         Stage stage = (Stage)button.getScene().getWindow();
@@ -85,21 +88,21 @@ public class CitiesController {
         GUIHelper.setViewDimensions(this.buttonEasy,ConstantsDimentions.ONE_COL, ConstantsDimentions.ONE_ROW/2);
         this.buttonEasy.setOnAction((event -> {
             resetDifficultyButtons();
-            GameManager.setQuestionsDifficulty(ConstantsDifficulty.DIFFICULTY_EASY);
+            this.gameManager.setQuestionsDifficulty(ConstantsDifficulty.DIFFICULTY_EASY);
             ((Button)event.getSource()).setTextFill(Color.WHITE);
             ((Button)event.getSource()).setBackground(new Background(new BackgroundFill(Paint.valueOf("#006600"),new CornerRadii(7), new Insets(5,5,5,5))));
         }));
         GUIHelper.setViewDimensions(this.buttonNormal,ConstantsDimentions.ONE_COL, ConstantsDimentions.ONE_ROW/2);
         this.buttonNormal.setOnAction((event -> {
             resetDifficultyButtons();
-            GameManager.setQuestionsDifficulty(ConstantsDifficulty.DIFFICULTY_NORMAL);
+            this.gameManager.setQuestionsDifficulty(ConstantsDifficulty.DIFFICULTY_NORMAL);
             ((Button)event.getSource()).setTextFill(Color.WHITE);
             ((Button)event.getSource()).setBackground(new Background(new BackgroundFill(Paint.valueOf("#006600"),new CornerRadii(7), new Insets(5,5,5,5))));
         }));
         GUIHelper.setViewDimensions(this.buttonHard,ConstantsDimentions.ONE_COL, ConstantsDimentions.ONE_ROW/2);
         this.buttonHard.setOnAction((event -> {
             resetDifficultyButtons();
-            GameManager.setQuestionsDifficulty(ConstantsDifficulty.DIFFICULTY_HARD);
+            this.gameManager.setQuestionsDifficulty(ConstantsDifficulty.DIFFICULTY_HARD);
             ((Button)event.getSource()).setTextFill(Color.WHITE);
             ((Button)event.getSource()).setBackground(new Background(new BackgroundFill(Paint.valueOf("#006600"),new CornerRadii(7), new Insets(5,5,5,5))));
         }));
@@ -145,7 +148,7 @@ public class CitiesController {
     }
 
     private void setLabels() {
-        GameManager.setFactsLabel(this.hintLabel);
+        this.gameManager.setFactsLabel(this.hintLabel);
         GUIHelper.styleLabel(ConstantsDimentions.H3, this.hintLabel);
         this.labelDifficulty.setText(ConstantsLabel.LABEL_DIFFICULTY);
         this.labelChooseCity.setText(ConstantsLabel.LABEL_CHOOSE_CITY_BTN);
@@ -153,7 +156,7 @@ public class CitiesController {
     }
 
     private void setCity(String cityName) {
-        GameManager.setCityName(cityName);
+        this.gameManager.setCityName(cityName);
     }
 
     private void setPanes(){

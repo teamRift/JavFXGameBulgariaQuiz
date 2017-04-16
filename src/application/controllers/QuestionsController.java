@@ -1,6 +1,7 @@
 package application.controllers;
 
 import application.classes.*;
+import application.dependencies.DependencyInjectionContainer;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -67,7 +68,10 @@ public class QuestionsController {
     @FXML
     Button fourthButton;
 
-    private static ArrayList<Question> questions;
+    private GameManager gameManager = DependencyInjectionContainer.getGameManagerInstance();
+    private Question question = DependencyInjectionContainer.getQuestionInstance();
+
+    private ArrayList<Question> questions;
 
     @FXML
     public void initialize() {
@@ -75,10 +79,10 @@ public class QuestionsController {
         setPanes();
         setLabels();
 
-        GUIHelper.styleButton(firstButton,secondButton,thirdButton,fourthButton,backButton,hintOne);
+        GUIHelper.styleButton(firstButton, secondButton, thirdButton, fourthButton, backButton, hintOne);
 
         GUIHelper.setViewDimensions(hintOne, Values.ONE_COL, Values.ONE_ROW);
-        GUIHelper.setViewDimensions(backButton, Values.ONE_COL, Values.ONE_ROW/2);
+        GUIHelper.setViewDimensions(backButton, Values.ONE_COL, Values.ONE_ROW / 2);
         GUIHelper.setViewDimensions(firstButton, Values.THREE_COLS, Values.ONE_ROW);
         GUIHelper.setViewDimensions(secondButton, Values.THREE_COLS, Values.ONE_ROW);
         GUIHelper.setViewDimensions(thirdButton, Values.THREE_COLS, Values.ONE_ROW);
@@ -88,10 +92,12 @@ public class QuestionsController {
         questionButtons.setMinWidth(Values.SIX_COLS);
         questionButtons.setMinHeight(Values.THREE_ROWS);
 
-        Question.reset();
-        questions = Question.loadQuestions(GameManager.getFileName(), GameManager.getQuestionsDifficulty());
-        Question.setButtons(firstButton, secondButton, thirdButton, fourthButton);
-        questions.get(Question.getQuestionIndex()).displayQuestion(questionLabel, questionNumLabel);
+        this.question.reset();
+        questions = this.question.loadQuestions(this.gameManager.getFileName(), this.gameManager.getQuestionsDifficulty());
+        for (Question currentQuestion : this.questions) {
+            currentQuestion.setButtons(firstButton, secondButton, thirdButton, fourthButton);
+        }
+        this.questions.get(this.question.getQuestionIndex()).displayQuestion(questionLabel, questionNumLabel);
 
         firstButton.setOnAction(this::handleButtonAction);
         secondButton.setOnAction(this::handleButtonAction);
@@ -100,33 +106,34 @@ public class QuestionsController {
     }
 
 
-    public static void finished(int score, int questionsCorrect) {
+    public void finished(int score, int questionsCorrect, ArrayList<Question> questions) {
         int percent = 0;
         if (questionsCorrect > 0) {
             percent = (int) ((double) questionsCorrect / (double) questions.size() * 100);
         }
 
-        Score newScore = new Score(GameManager.getCityName(), GameManager.getCurrentUser(), score);
+        Score newScore = new Score(this.gameManager.getCityName(), this.gameManager.getCurrentUser(), score);
         System.out.println("Save score.");
-        Scores.save(newScore,"global");
-        Scores.save(newScore, GameManager.getQuestionsDifficulty().toLowerCase().substring(2));
+        Scores scoresInstance = DependencyInjectionContainer.getScoresInstance();
+        scoresInstance.save(newScore, "global");
+        scoresInstance.save(newScore, this.gameManager.getQuestionsDifficulty().toLowerCase().substring(2));
 
-        GameManager.setCurrentUserPoints(score);
+        this.gameManager.setCurrentUserPoints(score);
     }
 
-    private void setBackground(){
+    private void setBackground() {
         background.setFitHeight(Values.SCREEN_HEIGHT);
         background.setFitWidth(Values.SCREEN_WIDTH);
-        background.setImage(new Image(Values.IMG_BACKGROUND, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT,false,false));
+        background.setImage(new Image(Values.IMG_BACKGROUND, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT, false, false));
     }
 
     private void setLabels() {
-        cityName.setText(GameManager.getCityName());
-        userName.setText(GameManager.getCurrentUser());
-        maxScore.setText(String.valueOf("Game Max: " + GameManager.getMaxScore()));
-        maxScoreUser.setText(String.valueOf("User Max: " + GameManager.getUserMaxPoints()));
-        GameManager.setFactsLabel(hintLabel);
-        GUIHelper.styleLabel(Values.H3,cityName,userName,maxScore,maxScoreUser,questionNumLabel,questionLabel,scoreLabel,hintLabel);
+        cityName.setText(this.gameManager.getCityName());
+        userName.setText(this.gameManager.getCurrentUser());
+        maxScore.setText(String.valueOf("Game Max: " + this.gameManager.getMaxScore()));
+        maxScoreUser.setText(String.valueOf("User Max: " + this.gameManager.getUserMaxPoints()));
+        this.gameManager.setFactsLabel(hintLabel);
+        GUIHelper.styleLabel(Values.H3, cityName, userName, maxScore, maxScoreUser, questionNumLabel, questionLabel, scoreLabel, hintLabel);
     }
 
     private void setPanes() {
@@ -148,7 +155,7 @@ public class QuestionsController {
         this.thirdButton.setDisable(true);
         this.fourthButton.setDisable(true);
 
-        this.questions.get(Question.getQuestionIndex())
+        this.questions.get(this.question.getQuestionIndex())
                 .checkCorrect((Button) event.getTarget(), this.questions, this.scoreLabel);
 
         Timer time = new Timer();
@@ -158,8 +165,8 @@ public class QuestionsController {
 
             public void run() {
                 Platform.runLater(() -> {
-                    if (questions.size()> Question.getQuestionIndex()){
-                        questions.get(Question.getQuestionIndex()).displayQuestion(questionLabel, questionNumLabel);
+                    if (questions.size() > DependencyInjectionContainer.getQuestionInstance().getQuestionIndex()) {
+                        questions.get(DependencyInjectionContainer.getQuestionInstance().getQuestionIndex()).displayQuestion(questionLabel, questionNumLabel);
                     }
                     firstButton.setDisable(false);
                     secondButton.setDisable(false);
@@ -178,7 +185,7 @@ public class QuestionsController {
         buttons.add(this.thirdButton);
         buttons.add(this.fourthButton);
 
-        Question question = this.questions.get(Question.getQuestionIndex());
+        Question question = this.questions.get(this.question.getQuestionIndex());
         buttons = question.jokerBtn(buttons);
 
         for (int i = 0; i < 2; i++) {
@@ -191,7 +198,7 @@ public class QuestionsController {
 
     public void OnBack(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(Values.PATH_CITIES));
-        Stage stage = (Stage)this.backButton.getScene().getWindow();
+        Stage stage = (Stage) this.backButton.getScene().getWindow();
         stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
         stage.show();
     }

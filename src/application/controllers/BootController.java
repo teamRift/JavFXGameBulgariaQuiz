@@ -1,10 +1,10 @@
 package application.controllers;
 
+import application.classes.GameManager;
 import application.constants.ConstantsDimentions;
 import application.constants.ConstantsPath;
+import application.dependencies.DependencyInjectionContainer;
 import application.ranking.Ranking;
-import application.classes.GameManager;
-import application.classes.Values;
 import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,12 +21,15 @@ public class BootController {
     @FXML
     private Label textLabel;
 
+    private GameManager gameManager = DependencyInjectionContainer.getGameManagerInstance();
+    private Ranking ranking = DependencyInjectionContainer.getRankingInstance();
+
     @FXML
     public void initialize() throws IOException {
-        GameManager.init();
-        Ranking.init();
+        this.gameManager.init();
+        this.ranking.init();
         PauseTransition delay = new PauseTransition(Duration.millis(4000));
-        delay.setOnFinished( event -> startGame() );
+        delay.setOnFinished(event -> startGame());
         delay.play();
     }
 

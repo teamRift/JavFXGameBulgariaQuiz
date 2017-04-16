@@ -1,5 +1,6 @@
 package application.classes;
 
+import application.dependencies.DependencyInjectionContainer;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import java.util.ArrayList;
@@ -7,57 +8,61 @@ import java.util.List;
 
 public  class GameManager {
 
-    private static boolean hasPlayed = false;
-    private static String questionsDifficulty = "__EASY";
-    private static String currentUser = "User";
-    private static int maxPoints = 0;
-    private static int currentUserPoints = 0;
-    private static int userMaxPoints = 0;
-    private static City city = new City();
-    private static List<Score> scores = new ArrayList<>();
+    private boolean hasPlayed;
+    private String questionsDifficulty;
+    private String currentUser;
+    private int maxPoints;
+    private int currentUserPoints;
+    private int userMaxPoints;
+    private City city;
+    private List<Score> scores;
+
 
     public GameManager(){
-        init();
+        this.questionsDifficulty = "__EASY";
+        this.currentUser = "User";
+        this.scores = new ArrayList<>();
+        this.city = new City();
     }
 
-    public static String getCityName(){
+    public String getCityName(){
         return city.getName();
     }
 
-    public static String getFileName(){
+    public  String getFileName(){
         return city.getFileName();
     }
 
-    public static String getCurrentUser() {
+    public  String getCurrentUser() {
         return currentUser;
     }
 
-    public static City getCity(){
+    public  City getCity(){
         return city;
     }
 
-    public static int getCurrentUserPoints() {
+    public  int getCurrentUserPoints() {
         return currentUserPoints;
     }
 
-    public static int getUserMaxPoints() {
+    public  int getUserMaxPoints() {
         return userMaxPoints;
     }
 
-    public static int getMaxScore(){
+    public  int getMaxScore(){
         return maxPoints;
     }
 
-    public static void setCurrentUser(String currentInputUser) {
-        currentUser = currentInputUser;
+    public  void setCurrentUser(String currentInputUser) {
+        this.currentUser = currentInputUser;
         try {
-            Scores.findAndLoad(currentUser);
+            DependencyInjectionContainer.getScoresInstance().findAndLoad(currentUser);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void setCityName(String cityName) {
+    public  void setCityName(String cityName) {
         if (city != null) {
             city.setName(cityName);
             city.setFileName();
@@ -69,35 +74,35 @@ public  class GameManager {
         }
     }
 
-    public static void setCurrentUserPoints(int currentUserPoint) {
+    public  void setCurrentUserPoints(int currentUserPoint) {
         currentUserPoints = currentUserPoint;
         hasPlayed = true;
     }
 
-    static void setUserMaxPoints(int userMaxPoints) {
+    public void setUserMaxPoints(int userMaxPoints) {
         userMaxPoints = userMaxPoints;
     }
 
-    static void setMaxScore(int maxScore){
+    public void setMaxScore(int maxScore){
         maxPoints = maxScore;
     }
 
-    public static List<Score> getScores() {
+    public  List<Score> getScores() {
         setScores();
         return scores;
     }
 
-    private static void setScores() {
+    private  void setScores() {
         Scores s = new Scores();
         scores = s.getScores();
         setMaxScore(scores.get(0).getValue());
     }
 
-    public static void setFactsLabel(Label label){
+    public  void setFactsLabel(Label label){
         label.setText("Did you know an ancient city, dated back 10.000 BC, has been discovered on the bottom of the Black sea?");
     }
 
-    public static void setUserName(TextField t) {
+    public  void setUserName(TextField t) {
         if (getCurrentUser() == null) {
             t.setText("USERNAME");
         } else {
@@ -105,23 +110,23 @@ public  class GameManager {
         }
     }
 
-    public static String getQuestionsDifficulty() {
+    public  String getQuestionsDifficulty() {
         return questionsDifficulty;
     }
 
-    public static void setQuestionsDifficulty(String questionsCurrentDifficulty) {
+    public  void setQuestionsDifficulty(String questionsCurrentDifficulty) {
         questionsDifficulty = questionsCurrentDifficulty;
     }
 
-    public static boolean playerHasPlayed() {
+    public  boolean playerHasPlayed() {
         return hasPlayed;
     }
 
-    public static void setHasPlayed(boolean hasPlayed) {
-        GameManager.hasPlayed = hasPlayed;
+    public  void setHasPlayed(boolean hasPlayed) {
+        this.hasPlayed = hasPlayed;
     }
 
-    public static void init(){
+    public  void init(){
         setScores();
     }
 }

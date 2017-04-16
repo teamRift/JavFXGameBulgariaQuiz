@@ -1,5 +1,7 @@
 package application.classes;
 
+import application.dependencies.DependencyInjectionContainer;
+
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -18,13 +20,16 @@ public class Scores {
     private static final int INDEX_BEST_FIVE = 5;
     private List<Score> leaderboard;
     private String difficult;
-    private static List<Score> scores;
+    private  List<Score> scores;
+
+    private GameManager gameManager = DependencyInjectionContainer.getGameManagerInstance();
+
 
     public Scores() {
-        this.leaderboard = load(PATH_RANKING_GLOBAL);
+        this.leaderboard = this.load(PATH_RANKING_GLOBAL);
     }
 
-    private static void create() {
+    private  void create() {
         Path filePath = Paths.get(PATH_RANKING_GLOBAL);
         try {
             Files.createFile(filePath);
@@ -44,7 +49,7 @@ public class Scores {
         }
     }
 
-    public static List<Score> load(String path) {
+    public  List<Score> load(String path) {
         List<Score> scores = new ArrayList<>();
         try {
             Path filePath = Paths.get(path);
@@ -76,7 +81,7 @@ public class Scores {
     }
 
 
-    public static void findAndLoad(String userName) throws Exception {
+    public  void findAndLoad(String userName) throws Exception {
         List<Score> scores = new ArrayList<>();
         try {
             Path filePath = Paths.get(PATH_RANKING_GLOBAL);
@@ -88,7 +93,7 @@ public class Scores {
                 String[] tokens = line.replaceAll(" ","").split(";");
                 if (tokens.length > 2) {
                     if (tokens[INDEX_USER_NAME].equalsIgnoreCase(userName)) {
-                        GameManager.setUserMaxPoints(Integer.parseInt(tokens[INDEX_VALUE_SCORE]));
+                        this.gameManager.setUserMaxPoints(Integer.parseInt(tokens[INDEX_VALUE_SCORE]));
                     }
                 }
             });
@@ -104,7 +109,7 @@ public class Scores {
         return this.leaderboard;
     }
 
-    public static void save(Score score, String difficult) {
+    public  void save(Score score, String difficult) {
         Path filePath = Paths.get(PATH_TO_SCORES + difficult + PATH_RANKING);
         List<String> fileContent = null;
 

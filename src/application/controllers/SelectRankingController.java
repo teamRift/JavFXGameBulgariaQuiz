@@ -4,6 +4,7 @@ import application.constants.ConstantsDimentions;
 import application.constants.ConstantsLabel;
 import application.constants.ConstantsPath;
 import application.constants.ConstantsStyle;
+import application.dependencies.DependencyInjectionContainer;
 import application.ranking.Ranking;
 import application.classes.GUIHelper;
 import application.classes.Values;
@@ -57,6 +58,7 @@ public class SelectRankingController {
     @FXML
     private GridPane rightPane;
 
+    private Ranking ranking = DependencyInjectionContainer.getRankingInstance();
 
     public void initialize() throws Exception {
         initPanes();
@@ -102,7 +104,7 @@ public class SelectRankingController {
     private void OnClick(ActionEvent actionEvent) {
         Button button = (Button) actionEvent.getSource();
         String id = button.getId();
-        Ranking.setDifficult(id);
+        this.ranking.setDifficult(id);
         Parent root = null;
         String path = ConstantsPath.PATH_TO_DIFFICULT_RANKING;
         if (id.equals("backBtn")) {
