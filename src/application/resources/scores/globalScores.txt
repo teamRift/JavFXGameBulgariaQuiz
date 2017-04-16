@@ -32,3 +32,6 @@ Sofia ; User ; 0
 Sofia ; 77User ; 0
 Sofia ; User ; 0
 Sofia ; 3434444 ; 40
+Burgas ; Smyrf ; 0
+Blagoevgrad ; Papunqk ; 20
+Varna ; Popincho ; 10

@@ -48,13 +48,7 @@ public class SelectRankingController {
     @FXML
     private Label rankingRightLabel;
     @FXML
-    private GridPane centerPane;
-    @FXML
-    private GridPane topPane;
-    @FXML
     private GridPane leftPane;
-    @FXML
-    private GridPane bottomPane;
     @FXML
     private GridPane rightPane;
 

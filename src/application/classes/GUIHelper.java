@@ -1,6 +1,9 @@
 package application.classes;
 
 import application.classes.Values;
+import application.constants.ConstantsDimentions;
+import application.constants.ConstantsPath;
+import application.constants.ConstantsStyle;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -21,7 +24,7 @@ public class GUIHelper {
     }
 
     public static void setBackground(Pane pane, double WIDTH, double HEIGHT) {
-        BackgroundImage myBI = new BackgroundImage(new Image(Values.IMG_BACKGROUND,WIDTH,HEIGHT,false,true),
+        BackgroundImage myBI = new BackgroundImage(new Image(ConstantsPath.IMG_BACKGROUND, WIDTH, HEIGHT,false,true),
                 BackgroundRepeat.REPEAT,
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundPosition.DEFAULT,
@@ -32,7 +35,7 @@ public class GUIHelper {
 
     public static void styleLabel(int size, Label... labels) {
         for (Label label : labels) {
-            label.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD,size));
+            label.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD,size));
             label.setTextFill(Color.WHITE);
             setShadow(label);
         }
@@ -72,7 +75,7 @@ public class GUIHelper {
             ((TextField) object).setMinHeight(HEIGHT);
             ((TextField) object).setMaxHeight(HEIGHT);
             ((TextField) object).setPrefHeight(HEIGHT);
-            ((TextField) object).setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H3));
+            ((TextField) object).setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H3));
         } else {
             System.out.printf("setViewDimensions(Object object) : %s is not a valid object. Pane, ImageView, Label or Button required.", capitalize(object.getClass().getSimpleName()));
         }
@@ -106,7 +109,7 @@ public class GUIHelper {
     public static void styleCityButton(Button... buttons) {
         for (Button button : buttons) {
             button.setBackground(Background.EMPTY);
-            button.setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD,Values.H3));
+            button.setFont(Font.font(ConstantsStyle.DEFAULT_FONT,FontWeight.BOLD,ConstantsDimentions.H3));
             button.setTextFill(Color.WHITESMOKE);
             setShadow(button);
         }
@@ -115,7 +118,7 @@ public class GUIHelper {
     public static void styleButton(Button... buttons) {
         for (Button button : buttons) {
             button.setBackground(new Background(new BackgroundFill(Paint.valueOf("#FFFFFF"),new CornerRadii(7), new Insets(5,5,5,5))));
-            button.setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD, Values.H3));
+            button.setFont(Font.font(ConstantsStyle.DEFAULT_FONT,FontWeight.BOLD, ConstantsDimentions.H3));
             button.setTextFill(Color.BLACK);
             setShadow(button);
         }
@@ -131,7 +134,7 @@ public class GUIHelper {
                                         new Insets(5))));
                 setShadow(((HBox) object));
             } else if (object instanceof Label) {
-                ((Label) object).setFont(Font.font(Values.DEFAULT_FONT,FontWeight.BOLD,Values.H3));
+                ((Label) object).setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H3));
                 ((Label) object).setTextFill(Color.BLACK);
             }
         }

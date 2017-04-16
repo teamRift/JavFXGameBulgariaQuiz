@@ -1,47 +1,45 @@
 package application.classes;
 
+import application.constants.ConstantsPath;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
 import java.io.File;
 
 public class Song {
-    private static MediaPlayer player;
-    private static Boolean check = false;
+    private MediaPlayer player;
+    private Boolean check = false;
 
     public void playTrack() {
-        String ssound = "src/application/resources/songs/song.wav";
-        Media sound = new Media(new File(ssound).toURI().toString());
+        Media sound = new Media(new File(ConstantsPath.SOUND_PATH_SONG).toURI().toString());
         this.player = new MediaPlayer(sound);
-        player.setCycleCount(MediaPlayer.INDEFINITE);
-        player.play();
+        this.player.setCycleCount(MediaPlayer.INDEFINITE);
+        this.player.play();
     }
 
-    public static void pause(){
-        check = true;
-        player.pause();
+    public void pause(){
+        this.check = true;
+        this.player.pause();
     }
 
-    public static void start(){
-        check = false;
-        player.play();
+    public void start(){
+        this.check = false;
+        this.player.play();
     }
 
-    public static void winSound(){
-        String soundPath = "src/application/resources/songs/win.wav";
-        Media sound = new Media(new File(soundPath).toURI().toString());
+    public void winSound(){
+    Media sound = new Media(new File(ConstantsPath.SOUND_PATH_CORRECT).toURI().toString());
         MediaPlayer win = new MediaPlayer(sound);
         win.play();
     }
 
-    public static void wrongSound(){
-        String soundPath = "src/application/resources/songs/wrong.wav";
-        Media sound = new Media(new File(soundPath).toURI().toString());
+    public void wrongSound(){
+        Media sound = new Media(new File(ConstantsPath.SOUND_PATH_WRONG).toURI().toString());
         MediaPlayer wrong = new MediaPlayer(sound);
         wrong.play();
     }
 
-    public static Boolean getCheck() {
-        return check;
+    public Boolean getCheck() {
+        return this.check;
     }
 }

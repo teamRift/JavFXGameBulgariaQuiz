@@ -1,6 +1,10 @@
 package application.controllers;
 
 import application.classes.*;
+import application.constants.ConstantsDifficulty;
+import application.constants.ConstantsDimentions;
+import application.constants.ConstantsLabel;
+import application.constants.ConstantsPath;
 import application.dependencies.DependencyInjectionContainer;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -24,49 +28,49 @@ import java.util.TimerTask;
 
 public class QuestionsController {
     @FXML
-    Button backButton;
+    private Button backButton;
     @FXML
-    Label questionNumLabel;
+    private Label questionNumLabel;
     @FXML
-    Label questionLabel;
+    private Label questionLabel;
     @FXML
-    Label scoreLabel;
+    private Label scoreLabel;
     @FXML
-    Label cityName;
+    private Label cityName;
     @FXML
-    Label userName;
+    private Label userName;
     @FXML
-    Label maxScore;
+    private Label maxScore;
     @FXML
-    Label maxScoreUser;
+    private Label maxScoreUser;
     @FXML
-    Label hintLabel;
+    private Label hintLabel;
     @FXML
-    ImageView background;
+    private ImageView background;
     @FXML
-    BorderPane mainPane;
+    private BorderPane mainPane;
     @FXML
-    GridPane topPane;
+    private GridPane topPane;
     @FXML
-    GridPane leftPane;
+    private GridPane leftPane;
     @FXML
-    GridPane bottomPane;
+    private GridPane bottomPane;
     @FXML
-    GridPane rightPane;
+    private GridPane rightPane;
     @FXML
-    GridPane questionButtons;
+    private GridPane questionButtons;
     @FXML
-    GridPane centerPane;
+    private GridPane centerPane;
     @FXML
-    Button hintOne;
+    private Button hintOne;
     @FXML
-    Button firstButton;
+    private Button firstButton;
     @FXML
-    Button secondButton;
+    private Button secondButton;
     @FXML
-    Button thirdButton;
+    private Button thirdButton;
     @FXML
-    Button fourthButton;
+    private Button fourthButton;
 
     private GameManager gameManager = DependencyInjectionContainer.getGameManagerInstance();
     private Question question = DependencyInjectionContainer.getQuestionInstance();
@@ -79,30 +83,30 @@ public class QuestionsController {
         setPanes();
         setLabels();
 
-        GUIHelper.styleButton(firstButton, secondButton, thirdButton, fourthButton, backButton, hintOne);
+        GUIHelper.styleButton(this.firstButton, this.secondButton, this.thirdButton, this.fourthButton, this.backButton, this.hintOne);
 
-        GUIHelper.setViewDimensions(hintOne, Values.ONE_COL, Values.ONE_ROW);
-        GUIHelper.setViewDimensions(backButton, Values.ONE_COL, Values.ONE_ROW / 2);
-        GUIHelper.setViewDimensions(firstButton, Values.THREE_COLS, Values.ONE_ROW);
-        GUIHelper.setViewDimensions(secondButton, Values.THREE_COLS, Values.ONE_ROW);
-        GUIHelper.setViewDimensions(thirdButton, Values.THREE_COLS, Values.ONE_ROW);
-        GUIHelper.setViewDimensions(fourthButton, Values.THREE_COLS, Values.ONE_ROW);
+        GUIHelper.setViewDimensions(this.hintOne, ConstantsDimentions.ONE_COL, ConstantsDimentions.ONE_ROW);
+        GUIHelper.setViewDimensions(this.backButton, ConstantsDimentions.ONE_COL, ConstantsDimentions.ONE_ROW / 2);
+        GUIHelper.setViewDimensions(this.firstButton, ConstantsDimentions.THREE_COLS, ConstantsDimentions.ONE_ROW);
+        GUIHelper.setViewDimensions(this.secondButton, ConstantsDimentions.THREE_COLS, ConstantsDimentions.ONE_ROW);
+        GUIHelper.setViewDimensions(this.thirdButton, ConstantsDimentions.THREE_COLS, ConstantsDimentions.ONE_ROW);
+        GUIHelper.setViewDimensions(this.fourthButton, ConstantsDimentions.THREE_COLS, ConstantsDimentions.ONE_ROW);
 
-        backButton.setText(Values.LABEL_BACK_BTN);
-        questionButtons.setMinWidth(Values.SIX_COLS);
-        questionButtons.setMinHeight(Values.THREE_ROWS);
+        this.backButton.setText(ConstantsLabel.LABEL_BACK_BTN);
+        this.questionButtons.setMinWidth(ConstantsDimentions.SIX_COLS);
+        this.questionButtons.setMinHeight(ConstantsDimentions.THREE_ROWS);
 
         this.question.reset();
-        questions = this.question.loadQuestions(this.gameManager.getFileName(), this.gameManager.getQuestionsDifficulty());
+        this.questions = this.question.loadQuestions(this.gameManager.getFileName(), this.gameManager.getQuestionsDifficulty());
         for (Question currentQuestion : this.questions) {
-            currentQuestion.setButtons(firstButton, secondButton, thirdButton, fourthButton);
+            currentQuestion.setButtons(this.firstButton, this.secondButton, this.thirdButton, this.fourthButton);
         }
-        this.questions.get(this.question.getQuestionIndex()).displayQuestion(questionLabel, questionNumLabel);
+        this.questions.get(this.question.getQuestionIndex()).displayQuestion(this.questionLabel, this.questionNumLabel);
 
-        firstButton.setOnAction(this::handleButtonAction);
-        secondButton.setOnAction(this::handleButtonAction);
-        thirdButton.setOnAction(this::handleButtonAction);
-        fourthButton.setOnAction(this::handleButtonAction);
+        this.firstButton.setOnAction(this::handleButtonAction);
+        this.secondButton.setOnAction(this::handleButtonAction);
+        this.thirdButton.setOnAction(this::handleButtonAction);
+        this.fourthButton.setOnAction(this::handleButtonAction);
     }
 
 
@@ -115,37 +119,37 @@ public class QuestionsController {
         Score newScore = new Score(this.gameManager.getCityName(), this.gameManager.getCurrentUser(), score);
         System.out.println("Save score.");
         Scores scoresInstance = DependencyInjectionContainer.getScoresInstance();
-        scoresInstance.save(newScore, "global");
+        scoresInstance.save(newScore, ConstantsDifficulty.DIFFICULT_GLOBAL);
         scoresInstance.save(newScore, this.gameManager.getQuestionsDifficulty().toLowerCase().substring(2));
 
         this.gameManager.setCurrentUserPoints(score);
     }
 
     private void setBackground() {
-        background.setFitHeight(Values.SCREEN_HEIGHT);
-        background.setFitWidth(Values.SCREEN_WIDTH);
-        background.setImage(new Image(Values.IMG_BACKGROUND, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT, false, false));
+        this.background.setFitHeight(ConstantsDimentions.SCREEN_HEIGHT);
+        this.background.setFitWidth(ConstantsDimentions.SCREEN_WIDTH);
+        this.background.setImage(new Image(ConstantsPath.IMG_BACKGROUND, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT, false, false));
     }
 
     private void setLabels() {
-        cityName.setText(this.gameManager.getCityName());
-        userName.setText(this.gameManager.getCurrentUser());
-        maxScore.setText(String.valueOf("Game Max: " + this.gameManager.getMaxScore()));
-        maxScoreUser.setText(String.valueOf("User Max: " + this.gameManager.getUserMaxPoints()));
-        this.gameManager.setFactsLabel(hintLabel);
-        GUIHelper.styleLabel(Values.H3, cityName, userName, maxScore, maxScoreUser, questionNumLabel, questionLabel, scoreLabel, hintLabel);
+        this.cityName.setText(this.gameManager.getCityName());
+        this.userName.setText(this.gameManager.getCurrentUser());
+        this.maxScore.setText(String.valueOf("Game Max: " + this.gameManager.getMaxScore()));
+        this.maxScoreUser.setText(String.valueOf("User Max: " + this.gameManager.getUserMaxPoints()));
+        this.gameManager.setFactsLabel(this.hintLabel);
+        GUIHelper.styleLabel(ConstantsDimentions.H3, this.cityName, this.userName, this.maxScore, this.maxScoreUser, this.questionNumLabel, this.questionLabel, this.scoreLabel, this.hintLabel);
     }
 
     private void setPanes() {
-        GUIHelper.setViewDimensions(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
-        GUIHelper.setViewDimensions(topPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
-        GUIHelper.setViewDimensions(bottomPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
-        GUIHelper.setViewDimensions(leftPane, Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        GUIHelper.setViewDimensions(rightPane, Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        GUIHelper.setViewDimensions(centerPane, Values.SIX_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        GUIHelper.setViewDimensions(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
-        GUIHelper.setViewDimensions(questionButtons, Values.SIX_COLS, Values.TWO_ROWS);
-        GUIHelper.setBackground(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.topPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.TWO_ROWS);
+        GUIHelper.setViewDimensions(this.bottomPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.TWO_ROWS);
+        GUIHelper.setViewDimensions(this.leftPane, ConstantsDimentions.THREE_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.rightPane, ConstantsDimentions.THREE_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.centerPane, ConstantsDimentions.SIX_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.questionButtons, ConstantsDimentions.SIX_COLS, ConstantsDimentions.TWO_ROWS);
+        GUIHelper.setBackground(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
     }
 
     private void handleButtonAction(ActionEvent event) {
@@ -197,9 +201,9 @@ public class QuestionsController {
     }
 
     public void OnBack(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource(Values.PATH_CITIES));
+        Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_CITIES));
         Stage stage = (Stage) this.backButton.getScene().getWindow();
-        stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
+        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
         stage.show();
     }
 }

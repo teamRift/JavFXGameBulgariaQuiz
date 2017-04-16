@@ -4,3 +4,6 @@ Ruse ; SingSing ; 20
 Pleven ; SingSing3 ; 20
 Plovdiv ; Suzi ; 10
 Pleven ; Dodod ; 30
+Sofia ; Omni ; 10
+Blagoevgrad ; Papunqk ; 20
+Varna ; Popincho ; 10

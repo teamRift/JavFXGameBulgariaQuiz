@@ -1,10 +1,9 @@
 
 package application;
 
-import application.classes.GameManager;
-import application.classes.Scores;
 import application.classes.Song;
-import application.classes.Values;
+import application.constants.ConstantsDimentions;
+import application.dependencies.DependencyInjectionContainer;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +12,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+
+    private Song song = DependencyInjectionContainer.getSongInstance();
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -25,10 +26,9 @@ public class Main extends Application {
             Platform.exit();
             System.exit(0);
         }));
-        primaryStage.setScene(new Scene(root, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT));
+        primaryStage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH,ConstantsDimentions.SCREEN_HEIGHT));
         primaryStage.show();
-        Song song = new Song();
-        song.playTrack();
+        this.song.playTrack();
     }
 
     public static void main(String[] args) {

@@ -3,12 +3,10 @@ package application.dependencies;
 import application.classes.GameManager;
 import application.classes.Question;
 import application.classes.Scores;
+import application.classes.Song;
 import application.controllers.QuestionsController;
 import application.ranking.Ranking;
 
-/**
- * Created by Dani on 16.4.2017 г..
- */
 public class DependencyInjectionContainer {
 
     private static final GameManager GAME_MANAGER_INSTANCE = new GameManager();
@@ -16,6 +14,7 @@ public class DependencyInjectionContainer {
     private static final QuestionsController QUESTIONS_CONTROLLER_INSTANCE = new QuestionsController();
     private static final Scores SCORES_INSTANCE = new Scores();
     private static final Ranking RANKING_INSTANCE = new Ranking();
+    private static final Song SONG_INSTANCE = new Song();
 
     public static GameManager getGameManagerInstance() {
         return GAME_MANAGER_INSTANCE;
@@ -34,6 +33,8 @@ public class DependencyInjectionContainer {
     public static Ranking getRankingInstance() {
         return RANKING_INSTANCE;
     }
+
+    public static Song getSongInstance() {return SONG_INSTANCE; }
 
 
     private DependencyInjectionContainer() {

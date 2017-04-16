@@ -11,15 +11,14 @@ import java.util.List;
 public class Ranking {
 
     private Scores scoresInstance = DependencyInjectionContainer.getScoresInstance();
-
     private String difficult = DifficultEnum.EASY.name().toLowerCase();
 
     public String getDifficult() {
-        return difficult;
+        return this.difficult;
     }
 
     public void setDifficult(String currentDifficult) {
-        difficult = currentDifficult;
+        this.difficult = currentDifficult;
     }
 
     public void init() {

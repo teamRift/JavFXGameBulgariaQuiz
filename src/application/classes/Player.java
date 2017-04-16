@@ -36,7 +36,7 @@ public class Player {
     }
 
     public String getUserName() {
-        return userName;
+        return this.userName;
     }
 
     public void setUserName(String name) {
@@ -44,7 +44,7 @@ public class Player {
     }
 
     public List<Score> getScores() {
-        return scores;
+        return this.scores;
     }
 
     public void setScores(List<Score> scores) {

@@ -14,4 +14,10 @@ public class ConstantsPath {
     public static final String PATH_TO_QUIZ_WINDOW = "../resources/fxml/quizWindow.fxml";
     public static final String PATH_TO_PLAYING_INSTRUCTION = "../resources/fxml/playingInstructions.fxml";
     public static final String PATH_TO_CREDITS = "../resources/fxml/credits.fxml";
+    public static final String PATH_TO_RANKINGS_WINDOW = "../resources/fxml/rankings.fxml";
+    public static final String PATH_TO_QUESTIONS = "/src/application/resources/questions/";
+
+    public static final String SOUND_PATH_CORRECT = "src/application/resources/songs/win.wav";
+    public static final String SOUND_PATH_WRONG = "src/application/resources/songs/wrong.wav";
+    public static final String SOUND_PATH_SONG = "src/application/resources/songs/song.wav";
 }

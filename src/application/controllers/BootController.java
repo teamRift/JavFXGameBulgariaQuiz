@@ -1,6 +1,7 @@
 package application.controllers;
 
 import application.classes.GameManager;
+import application.classes.Song;
 import application.constants.ConstantsDimentions;
 import application.constants.ConstantsPath;
 import application.dependencies.DependencyInjectionContainer;
@@ -23,6 +24,7 @@ public class BootController {
 
     private GameManager gameManager = DependencyInjectionContainer.getGameManagerInstance();
     private Ranking ranking = DependencyInjectionContainer.getRankingInstance();
+    private Song song = DependencyInjectionContainer.getSongInstance();
 
     @FXML
     public void initialize() throws IOException {

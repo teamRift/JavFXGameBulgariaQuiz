@@ -7,6 +7,7 @@ import application.constants.ConstantsDimentions;
 import application.constants.ConstantsLabel;
 import application.constants.ConstantsPath;
 import application.constants.ConstantsStyle;
+import application.dependencies.DependencyInjectionContainer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -35,13 +36,13 @@ public class MenuController {
     @FXML
     private Label gameTitle;
     @FXML
-    private VBox buttonsGroup;
-    @FXML
     private ImageView mapImage;
     @FXML
     private Label menuLeftLabel;
     @FXML
     private Label menuRightLabel;
+
+    private Song song = DependencyInjectionContainer.getSongInstance();
 
     public void initialize() {
         initButtons();
@@ -115,7 +116,7 @@ public class MenuController {
 
     private void initSongButton(){
         GUIHelper.styleButton(this.songBtn);
-        if (Song.getCheck()){
+        if (this.song.getCheck()){
             this.songBtn.setText("Sound On");
         }
     }
@@ -203,7 +204,7 @@ public class MenuController {
 
     private void showScores() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_SELECT_RANKING));
-        Stage stage = (Stage)buttonScores.getScene().getWindow();
+        Stage stage = (Stage)this.buttonScores.getScene().getWindow();
         stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
         stage.show();
     }
@@ -224,11 +225,11 @@ public class MenuController {
 //    }
 
     public void songControllers(ActionEvent actionEvent) {
-        if (Song.getCheck()){
-            Song.start();
+        if (this.song.getCheck()){
+            this.song.start();
             this.songBtn.setText("Song Off");
         } else {
-            Song.pause();
+            this.song.pause();
             this.songBtn.setText("Song On");
         }
     }

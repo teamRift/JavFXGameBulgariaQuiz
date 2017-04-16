@@ -18,6 +18,7 @@ public class Scores {
     private static final int INDEX_USER_NAME = 1;
     private static final int INDEX_VALUE_SCORE = 2;
     private static final int INDEX_BEST_FIVE = 5;
+    private static final String DELIMITER = ";";
     private List<Score> leaderboard;
     private String difficult;
     private  List<Score> scores;
@@ -90,7 +91,7 @@ public class Scores {
                     line.replace(line, line);
                     return;
                 }
-                String[] tokens = line.replaceAll(" ","").split(";");
+                String[] tokens = line.replaceAll(" ","").split(DELIMITER);
                 if (tokens.length > 2) {
                     if (tokens[INDEX_USER_NAME].equalsIgnoreCase(userName)) {
                         this.gameManager.setUserMaxPoints(Integer.parseInt(tokens[INDEX_VALUE_SCORE]));
@@ -121,7 +122,7 @@ public class Scores {
 
         if(fileContent != null) {
             for (int i = INDEX_CITY_NAME; i < fileContent.size(); i++) {
-                String[] tokens = fileContent.get(i).replaceAll(" ", "").split(";");
+                String[] tokens = fileContent.get(i).replaceAll(" ", "").split(DELIMITER);
 
                 if (tokens.length > 2) {
                     if (tokens[INDEX_CITY_NAME].equals("BG") || (tokens[INDEX_CITY_NAME].equals(score.getCityName()) && tokens[INDEX_USER_NAME].equals(score.getUserName()))) {

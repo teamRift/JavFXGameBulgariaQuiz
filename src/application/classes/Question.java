@@ -1,5 +1,8 @@
 package application.classes;
 
+import application.constants.ConstantsDimentions;
+import application.constants.ConstantsErrorMsg;
+import application.constants.ConstantsPath;
 import application.controllers.QuestionsController;
 import application.dependencies.DependencyInjectionContainer;
 import javafx.application.Platform;
@@ -44,6 +47,7 @@ public class Question {
 
     private GameManager gameManager = DependencyInjectionContainer.getGameManagerInstance();
     private QuestionsController questionsController = DependencyInjectionContainer.getQuestionsControllerInstance();
+    private Song song = DependencyInjectionContainer.getSongInstance();
 
     public Question() {
     }
@@ -59,9 +63,8 @@ public class Question {
 
     public ArrayList<Question> loadQuestions(String filename, String difficulty) {
         ArrayList<Question> questions = new ArrayList<>();
-        String projectPath = System.getProperty("user.dir");
         try {
-            Path filePath = Paths.get(projectPath + "/src/application/resources/questions/" + filename);
+            Path filePath = Paths.get(ConstantsPath.PATH_TO_PROJECT + ConstantsPath.PATH_TO_QUESTIONS + filename);
             Files.lines(filePath).forEach(line -> {
                 if (line.isEmpty() | !line.contains(difficulty)) {
                     return;
@@ -74,7 +77,7 @@ public class Question {
         } catch (IOException e) {
             e.printStackTrace();
             Alert notFound = new Alert(Alert.AlertType.ERROR);
-            notFound.setTitle(Values.FILE_ERROR_QUESTIONS);
+            notFound.setTitle(ConstantsErrorMsg.FILE_ERROR_QUESTIONS);
             notFound.showAndWait();
             Platform.exit();
             System.exit(0);
@@ -83,21 +86,21 @@ public class Question {
     }
 
     public void setButtons(Button... buttonsArray) {
-        buttons = new ArrayList<>(Arrays.asList(buttonsArray));
+        this.buttons = new ArrayList<>(Arrays.asList(buttonsArray));
     }
 
     public int getQuestionIndex() {
-        return questionIndex;
+        return this.questionIndex;
     }
 
     public void displayQuestion(Label currentLabel, Label correctLabel) {
         ArrayList<Button> buttonsCopy = new ArrayList<>(this.buttons);
 
         currentLabel.setText(this.question);
-        correctLabel.setText("Question " + questionCount);
+        correctLabel.setText("Question " + this.questionCount);
 
-        int randInt = rand.nextInt(4);
-        randomButton = buttonsCopy.get(randInt);
+        int randInt = this.rand.nextInt(4);
+        this.randomButton = buttonsCopy.get(randInt);
 
         buttonsCopy.get(randInt).setText(this.correctAnswer);
         buttonsCopy.get(randInt).setTextFill(Color.BLACK);
@@ -116,7 +119,7 @@ public class Question {
         if (this.randomButton == b) {
             b.setTextFill(Color.WHITE);
             b.setBackground(new Background(new BackgroundFill(Paint.valueOf("#006600"), new CornerRadii(7), new Insets(5, 5, 5, 5))));
-            Song.winSound();
+            this.song.winSound();
             for (Question currentQuestion : questions) {
                 currentQuestion.score += 10;
                 currentQuestion.questionsCorrect++;
@@ -125,11 +128,11 @@ public class Question {
         } else {
             b.setTextFill(Color.WHITE);
             b.setBackground(new Background(new BackgroundFill(Paint.valueOf("#cc3745"), new CornerRadii(7), new Insets(5, 5, 5, 5))));
-            Song.wrongSound();
+            this.song.wrongSound();
         }
 
-        if (questions.size() == questionCount) {
-            this.questionsController.finished(score, questionsCorrect, questions);
+        if (questions.size() == this.questionCount) {
+            this.questionsController.finished(this.score, this.questionsCorrect, questions);
             try {
                 showScores(b);
             } catch (IOException e) {
@@ -144,9 +147,9 @@ public class Question {
     }
 
     private void showScores(Button b) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/rankings.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_RANKINGS_WINDOW));
         Stage stage = (Stage) b.getScene().getWindow();
-        stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
+        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
         stage.show();
     }
 
@@ -157,7 +160,7 @@ public class Question {
 
         for (Button button : btn) {
             String str = button.getText();
-            if (!str.equals(correctAnswer) && !str1.contains(str)) {
+            if (!str.equals(this.correctAnswer) && !str1.contains(str)) {
                 list.add(button);
                 str1.add(str);
             }
@@ -166,15 +169,15 @@ public class Question {
     }
 
     public void reset() {
-        score = 0;
-        questionCount = 1;
-        questionIndex = 0;
-        questionsCorrect = 0;
+        this.score = 0;
+        this.questionCount = 1;
+        this.questionIndex = 0;
+        this.questionsCorrect = 0;
         this.gameManager.setCurrentUserPoints(0);
     }
 
     public int getQuestionCount() {
-        return questionCount;
+        return this.questionCount;
     }
 
     public void setQuestionCount(int questionCount) {

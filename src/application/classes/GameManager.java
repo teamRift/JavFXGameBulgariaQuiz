@@ -1,5 +1,6 @@
 package application.classes;
 
+import application.constants.ConstantsDifficulty;
 import application.dependencies.DependencyInjectionContainer;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -19,38 +20,38 @@ public  class GameManager {
 
 
     public GameManager(){
-        this.questionsDifficulty = "__EASY";
+        this.questionsDifficulty = ConstantsDifficulty.DIFFICULTY_EASY;
         this.currentUser = "User";
         this.scores = new ArrayList<>();
         this.city = new City();
     }
 
     public String getCityName(){
-        return city.getName();
+        return this.city.getName();
     }
 
     public  String getFileName(){
-        return city.getFileName();
+        return this.city.getFileName();
     }
 
     public  String getCurrentUser() {
-        return currentUser;
+        return this.currentUser;
     }
 
     public  City getCity(){
-        return city;
+        return this.city;
     }
 
     public  int getCurrentUserPoints() {
-        return currentUserPoints;
+        return this.currentUserPoints;
     }
 
     public  int getUserMaxPoints() {
-        return userMaxPoints;
+        return this.userMaxPoints;
     }
 
     public  int getMaxScore(){
-        return maxPoints;
+        return this.maxPoints;
     }
 
     public  void setCurrentUser(String currentInputUser) {
@@ -63,20 +64,20 @@ public  class GameManager {
     }
 
     public  void setCityName(String cityName) {
-        if (city != null) {
-            city.setName(cityName);
-            city.setFileName();
+        if (this.city != null) {
+            this.city.setName(cityName);
+            this.city.setFileName();
         }
         else {
-            city = new City();
-            city.setName("mordor");
-            city.setFileName();
+            this.city = new City();
+            this.city.setName("mordor");
+            this.city.setFileName();
         }
     }
 
     public  void setCurrentUserPoints(int currentUserPoint) {
-        currentUserPoints = currentUserPoint;
-        hasPlayed = true;
+        this.currentUserPoints = currentUserPoint;
+        this.hasPlayed = true;
     }
 
     public void setUserMaxPoints(int userMaxPoints) {
@@ -84,18 +85,18 @@ public  class GameManager {
     }
 
     public void setMaxScore(int maxScore){
-        maxPoints = maxScore;
+        this.maxPoints = maxScore;
     }
 
     public  List<Score> getScores() {
         setScores();
-        return scores;
+        return this.scores;
     }
 
     private  void setScores() {
         Scores s = new Scores();
-        scores = s.getScores();
-        setMaxScore(scores.get(0).getValue());
+        this.scores = s.getScores();
+        setMaxScore(this.scores.get(0).getValue());
     }
 
     public  void setFactsLabel(Label label){
@@ -111,15 +112,15 @@ public  class GameManager {
     }
 
     public  String getQuestionsDifficulty() {
-        return questionsDifficulty;
+        return this.questionsDifficulty;
     }
 
     public  void setQuestionsDifficulty(String questionsCurrentDifficulty) {
-        questionsDifficulty = questionsCurrentDifficulty;
+        this.questionsDifficulty = questionsCurrentDifficulty;
     }
 
     public  boolean playerHasPlayed() {
-        return hasPlayed;
+        return this.hasPlayed;
     }
 
     public  void setHasPlayed(boolean hasPlayed) {

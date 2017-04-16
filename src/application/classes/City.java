@@ -8,7 +8,7 @@ public class City {
     public City(){}
 
     public String getName() {
-        return GUIHelper.capitalize(name);
+        return GUIHelper.capitalize(this.name);
     }
 
     public void setName(String name) {
@@ -16,11 +16,11 @@ public class City {
     }
 
     public String getFileName() {
-        return fileName;
+        return this.fileName;
     }
 
     public void setFileName() {
-        this.fileName = name + QUESTION_FILE_SUFFIX;
+        this.fileName = this.name + QUESTION_FILE_SUFFIX;
     }
 
 }
