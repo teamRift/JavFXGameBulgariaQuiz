@@ -20,7 +20,7 @@ public class ConstantsDimentions {
     public static final double THREE_COLS = SCREEN_WIDTH / 4;
     public static final double FOUR_COLS = SCREEN_WIDTH / 3;
     public static final double SIX_COLS = SCREEN_WIDTH / 2;
-
+    // размери за големина на шрифт
     public static final int H3 = (int) Math.round(ONE_COL/7);
     public static final int H2 = (int) Math.round(ONE_COL/3);
     public static final int H1 = (int) Math.round(ONE_COL);
