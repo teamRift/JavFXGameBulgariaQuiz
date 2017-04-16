@@ -1,5 +1,7 @@
 package application.controllers;
 
+import application.constants.ConstantsDimentions;
+import application.constants.ConstantsPath;
 import application.ranking.Ranking;
 import application.classes.GameManager;
 import application.classes.Values;
@@ -17,7 +19,7 @@ import java.io.IOException;
 public class BootController {
 
     @FXML
-    Label textLabel;
+    private Label textLabel;
 
     @FXML
     public void initialize() throws IOException {
@@ -29,16 +31,16 @@ public class BootController {
     }
 
     private void startGame() {
-        Stage stage = (Stage) textLabel.getScene().getWindow();
+        Stage stage = (Stage) this.textLabel.getScene().getWindow();
         Parent root = stage.getScene().getRoot();
 
         try {
-            root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
+            root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_MENU));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
+        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
         stage.show();
     }
 }

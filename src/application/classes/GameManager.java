@@ -69,8 +69,8 @@ public  class GameManager {
         }
     }
 
-    public static void setCurrentUserPoints(int currentUserPoints) {
-        currentUserPoints = currentUserPoints;
+    public static void setCurrentUserPoints(int currentUserPoint) {
+        currentUserPoints = currentUserPoint;
         hasPlayed = true;
     }
 

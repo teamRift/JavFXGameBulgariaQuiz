@@ -7,7 +7,7 @@ import java.io.File;
 
 public class Song {
     private static MediaPlayer player;
-    public static Boolean check = false;
+    private static Boolean check = false;
 
     public void playTrack() {
         String ssound = "src/application/resources/songs/song.wav";
@@ -24,7 +24,7 @@ public class Song {
 
     public static void start(){
         check = false;
-      player.play();
+        player.play();
     }
 
     public static void winSound(){

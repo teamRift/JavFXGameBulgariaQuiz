@@ -1,5 +1,9 @@
 package application.controllers;
 
+import application.constants.ConstantsDimentions;
+import application.constants.ConstantsLabel;
+import application.constants.ConstantsPath;
+import application.constants.ConstantsStyle;
 import application.ranking.Ranking;
 import application.classes.GUIHelper;
 import application.classes.Values;
@@ -23,35 +27,35 @@ import java.io.IOException;
 public class SelectRankingController {
 
     @FXML
-    Button backBtn;
+    private Button backBtn;
     @FXML
-    Button global;
+    private Button global;
     @FXML
-    Button easy;
+    private Button easy;
     @FXML
-    Button normal;
+    private Button normal;
     @FXML
-    Button hard;
+    private Button hard;
     @FXML
-    StackPane mainPane;
+    private StackPane mainPane;
     @FXML
-    ImageView background;
+    private ImageView background;
     @FXML
-    Label rankingTitle;
+    private Label rankingTitle;
     @FXML
-    Label rankingLeftLabel;
+    private Label rankingLeftLabel;
     @FXML
-    Label rankingRightLabel;
+    private Label rankingRightLabel;
     @FXML
-    GridPane centerPane;
+    private GridPane centerPane;
     @FXML
-    GridPane topPane;
+    private GridPane topPane;
     @FXML
-    GridPane leftPane;
+    private GridPane leftPane;
     @FXML
-    GridPane bottomPane;
+    private GridPane bottomPane;
     @FXML
-    GridPane rightPane;
+    private GridPane rightPane;
 
 
     public void initialize() throws Exception {
@@ -72,27 +76,27 @@ public class SelectRankingController {
 
     private void initGlobalButton(){
         setButtons();
-        global.setOnAction(this::OnClick);
+        this.global.setOnAction(this::OnClick);
     }
 
     private void initHardButton() {
         setButtons();
-        hard.setOnAction(this::OnClick);
+        this.hard.setOnAction(this::OnClick);
     }
 
     private void initEasyButton(){
         setButtons();
-        easy.setOnAction(this::OnClick);
+        this.easy.setOnAction(this::OnClick);
     }
 
     private void initNormalButton(){
         setButtons();
-        normal.setOnAction(this::OnClick);
+        this.normal.setOnAction(this::OnClick);
     }
 
     private void initBackButton(){
         setButtons();
-        backBtn.setOnAction(this::OnClick);
+        this.backBtn.setOnAction(this::OnClick);
     }
 
     private void OnClick(ActionEvent actionEvent) {
@@ -100,9 +104,9 @@ public class SelectRankingController {
         String id = button.getId();
         Ranking.setDifficult(id);
         Parent root = null;
-        String path = "../resources/fxml/difficultRanking.fxml";
+        String path = ConstantsPath.PATH_TO_DIFFICULT_RANKING;
         if (id.equals("backBtn")) {
-            path = "../resources/fxml/menu.fxml";
+            path = ConstantsPath.PATH_TO_MENU;
         }
 
         try {
@@ -112,44 +116,44 @@ public class SelectRankingController {
         }
 
         Stage stage = (Stage) button.getScene().getWindow();
-        stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
+        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
         stage.show();
     }
 
     private void initPanes(){
-        GUIHelper.setViewDimensions(background, Values.SCREEN_WIDTH- Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.THREE_ROWS);
-        GUIHelper.setViewDimensions(leftPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        GUIHelper.setViewDimensions(rightPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        GUIHelper.setBackground(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.background, ConstantsDimentions.SCREEN_WIDTH- ConstantsDimentions.THREE_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.THREE_ROWS);
+        GUIHelper.setViewDimensions(this.leftPane, ConstantsDimentions.TWO_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.rightPane, ConstantsDimentions.TWO_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
+        GUIHelper.setBackground(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
     }
 
     private void setButtons() {
-        GUIHelper.setViewDimensions(backBtn, Values.ONE_COL, Values.ONE_ROW/2);
-        GUIHelper.setViewDimensions(global, Values.TWO_COLS, Values.ONE_ROW/2);
-        GUIHelper.setViewDimensions(easy, Values.TWO_COLS, Values.ONE_ROW/2);
-        GUIHelper.setViewDimensions(normal, Values.TWO_COLS, Values.ONE_ROW/2);
-        GUIHelper.setViewDimensions(hard, Values.TWO_COLS, Values.ONE_ROW/2);
-        GUIHelper.styleAsButton(backBtn, easy, normal, hard, global);
+        GUIHelper.setViewDimensions(this.backBtn, ConstantsDimentions.ONE_COL, ConstantsDimentions.ONE_ROW/2);
+        GUIHelper.setViewDimensions(this.global, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
+        GUIHelper.setViewDimensions(this.easy, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
+        GUIHelper.setViewDimensions(this.normal, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
+        GUIHelper.setViewDimensions(this.hard, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
+        GUIHelper.styleAsButton(this.backBtn, this.easy, this.normal, this.hard, this.global);
     }
 
     private void setTitleLabel() {
-        rankingTitle.setText(Values.LABEL_SELECT_RANKING);
-        rankingTitle.setTextFill(Color.SEAGREEN);
-        rankingTitle.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H3*3));
-        GUIHelper.setShadow(rankingTitle);
+        this.rankingTitle.setText(ConstantsLabel.LABEL_SELECT_RANKING);
+        this.rankingTitle.setTextFill(Color.SEAGREEN);
+        this.rankingTitle.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H3*3));
+        GUIHelper.setShadow(this.rankingTitle);
     }
 
     private void setRiftLabel() {
-        rankingLeftLabel.setText(Values.LABEL_TEAM_RIFT);
-        rankingLeftLabel.setTextFill(Color.WHITESMOKE);
-        rankingLeftLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H2));
-        GUIHelper.setShadow(rankingLeftLabel);
+        this.rankingLeftLabel.setText(ConstantsLabel.LABEL_TEAM_RIFT);
+        this.rankingLeftLabel.setTextFill(Color.WHITESMOKE);
+        this.rankingLeftLabel.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H2));
+        GUIHelper.setShadow(this.rankingLeftLabel);
     }
 
     private void setSoftUniLabel() {
-        rankingRightLabel.setText(Values.LABEL_SOFTUNI);
-        rankingRightLabel.setTextFill(Color.WHITE);
-        rankingRightLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H3*2));
-        GUIHelper.setShadow(rankingRightLabel);
+        this.rankingRightLabel.setText(ConstantsLabel.LABEL_SOFTUNI);
+        this.rankingRightLabel.setTextFill(Color.WHITE);
+        this.rankingRightLabel.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H3*2));
+        GUIHelper.setShadow(this.rankingRightLabel);
     }
 }

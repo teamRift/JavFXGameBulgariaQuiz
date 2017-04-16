@@ -1,5 +1,6 @@
 Pleven ; MinMin ; 20
 Plovdiv ; TEst ; 10
-BG ; TEAM RIFT ; 0
-BG ; TEAM RIFT ; 0
-BG ; TEAM RIFT ; 0
+Ruse ; SingSing ; 20
+Pleven ; SingSing3 ; 20
+Plovdiv ; Suzi ; 10
+Pleven ; Dodod ; 30

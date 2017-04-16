@@ -2,6 +2,9 @@ package application.controllers;
 
 import application.classes.GUIHelper;
 import application.classes.Values;
+import application.constants.ConstantsDimentions;
+import application.constants.ConstantsLabel;
+import application.constants.ConstantsPath;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,13 +19,13 @@ import java.io.IOException;
 public class CreditsController {
 
     @FXML
-    Button backBtn;
+    private Button backBtn;
     @FXML
-    Label gameTitle, leftLabel, rightLabel;
+    private Label gameTitle, leftLabel, rightLabel;
     @FXML
-    BorderPane mainPane;
+    private BorderPane mainPane;
     @FXML
-    GridPane teamRiftBox, topPane, bottomPane, leftPane, rightPane;
+    private GridPane teamRiftBox, topPane, bottomPane, leftPane, rightPane;
     @FXML
     private Label creditsL1, creditsL2, creditsL3, creditsL4, creditsR1, creditsR2, creditsR3, creditsR4;
 
@@ -33,10 +36,10 @@ public class CreditsController {
     }
 
     private void setButtons() {
-        GUIHelper.styleButton(backBtn);
-        GUIHelper.setViewDimensions(backBtn, Values.ONE_COL, Values.ONE_ROW);
-        backBtn.setText(Values.LABEL_BACK_BTN);
-        backBtn.setOnAction((actionEvent) -> {
+        GUIHelper.styleButton(this.backBtn);
+        GUIHelper.setViewDimensions(this.backBtn, ConstantsDimentions.ONE_COL, ConstantsDimentions.ONE_ROW);
+        this.backBtn.setText(ConstantsLabel.LABEL_BACK_BTN);
+        this.backBtn.setOnAction((actionEvent) -> {
             try {
                 onBack();
             } catch (IOException e) {
@@ -46,36 +49,36 @@ public class CreditsController {
     }
 
     private void setPanes(){
-        GUIHelper.setBackground(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
-        GUIHelper.setViewDimensions(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
-        GUIHelper.setViewDimensions(teamRiftBox, Values.SCREEN_WIDTH - Values.FOUR_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        GUIHelper.setViewDimensions(topPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
-        GUIHelper.setViewDimensions(bottomPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
-        GUIHelper.setViewDimensions(leftPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        GUIHelper.setViewDimensions(rightPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
+        GUIHelper.setBackground(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.teamRiftBox, ConstantsDimentions.SCREEN_WIDTH - ConstantsDimentions.FOUR_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.topPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.TWO_ROWS);
+        GUIHelper.setViewDimensions(this.bottomPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.TWO_ROWS);
+        GUIHelper.setViewDimensions(this.leftPane, ConstantsDimentions.TWO_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.rightPane, ConstantsDimentions.TWO_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
     }
 
     private void setLabels() {
-        GUIHelper.styleLabel(50,gameTitle);
-        gameTitle.setText(Values.LABEL_GAME_TITLE);
-        GUIHelper.styleLabel(32, leftLabel, rightLabel);
-        leftLabel.setText(Values.LABEL_TEAM_RIFT);
-        rightLabel.setText(Values.LABEL_SOFTUNI);
-        creditsL1.setText("@Alish");
-        creditsR1.setText("@asyadi");
-        creditsL2.setText("@AngelD");
-        creditsR2.setText("@Cvetan1");
-        creditsL3.setText("@daniel.a.mihaylоv");
-        creditsR3.setText("@Daniela.Raycheva");
-        creditsL4.setText("@koushalieva");
-        creditsR4.setText("@mariyanhadzhiev");
-        GUIHelper.styleLabel(25,creditsL1,creditsL2,creditsL3,creditsL4,creditsR1,creditsR2,creditsR3,creditsR4);
+        GUIHelper.styleLabel(50, this.gameTitle);
+        this.gameTitle.setText(ConstantsLabel.LABEL_GAME_TITLE);
+        GUIHelper.styleLabel(32, this.leftLabel, this.rightLabel);
+        this.leftLabel.setText(ConstantsLabel.LABEL_TEAM_RIFT);
+        this.rightLabel.setText(ConstantsLabel.LABEL_SOFTUNI);
+        this.creditsL1.setText("@Alish");
+        this.creditsR1.setText("@asyadi");
+        this.creditsL2.setText("@AngelD");
+        this.creditsR2.setText("@Cvetan1");
+        this.creditsL3.setText("@daniel.a.mihaylоv");
+        this.creditsR3.setText("@Daniela.Raycheva");
+        this.creditsL4.setText("@koushalieva");
+        this.creditsR4.setText("@mariyanhadzhiev");
+        GUIHelper.styleLabel(25, this.creditsL1, this.creditsL2, this.creditsL3, this.creditsL4, this.creditsR1, this.creditsR2, this.creditsR3, this.creditsR4);
     }
 
     private void onBack() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
-        Stage stage = ( Stage ) backBtn.getScene().getWindow();
-        stage.setScene( new Scene( root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
+        Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_MENU));
+        Stage stage = ( Stage ) this.backBtn.getScene().getWindow();
+        stage.setScene( new Scene( root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
         stage.show();
     }
 }

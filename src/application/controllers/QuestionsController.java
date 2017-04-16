@@ -99,6 +99,7 @@ public class QuestionsController {
         fourthButton.setOnAction(this::handleButtonAction);
     }
 
+
     public static void finished(int score, int questionsCorrect) {
         int percent = 0;
         if (questionsCorrect > 0) {
@@ -142,13 +143,13 @@ public class QuestionsController {
 
     private void handleButtonAction(ActionEvent event) {
 
-        firstButton.setDisable(true);
-        secondButton.setDisable(true);
-        thirdButton.setDisable(true);
-        fourthButton.setDisable(true);
+        this.firstButton.setDisable(true);
+        this.secondButton.setDisable(true);
+        this.thirdButton.setDisable(true);
+        this.fourthButton.setDisable(true);
 
-        questions.get(Question.getQuestionIndex())
-                .checkCorrect((Button) event.getTarget(), questions, scoreLabel);
+        this.questions.get(Question.getQuestionIndex())
+                .checkCorrect((Button) event.getTarget(), this.questions, this.scoreLabel);
 
         Timer time = new Timer();
         time.schedule(new TimerTask() {
@@ -172,12 +173,12 @@ public class QuestionsController {
     public void hintButton(ActionEvent actionEvent) {
         Random rn = new Random();
         ArrayList<Button> buttons = new ArrayList<>();
-        buttons.add(firstButton);
-        buttons.add(secondButton);
-        buttons.add(thirdButton);
-        buttons.add(fourthButton);
+        buttons.add(this.firstButton);
+        buttons.add(this.secondButton);
+        buttons.add(this.thirdButton);
+        buttons.add(this.fourthButton);
 
-        Question question = questions.get(Question.getQuestionIndex());
+        Question question = this.questions.get(Question.getQuestionIndex());
         buttons = question.jokerBtn(buttons);
 
         for (int i = 0; i < 2; i++) {
@@ -185,12 +186,12 @@ public class QuestionsController {
             buttons.get(index).setDisable(true);
             buttons.remove(index);
         }
-        hintOne.setDisable(true);
+        this.hintOne.setDisable(true);
     }
 
     public void OnBack(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(Values.PATH_CITIES));
-        Stage stage = (Stage)backButton.getScene().getWindow();
+        Stage stage = (Stage)this.backButton.getScene().getWindow();
         stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
         stage.show();
     }

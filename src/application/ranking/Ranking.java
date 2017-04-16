@@ -3,13 +3,13 @@ package application.ranking;
 import application.classes.Score;
 import application.classes.Scores;
 import application.classes.Values;
+import application.constants.ConstantsPath;
+import application.enums.DifficultEnum;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Ranking {
-
-    private static String difficult = "easy";
+    private static String difficult = DifficultEnum.EASY.name().toLowerCase();
 
     public static String getDifficult(){
         return difficult;
@@ -22,7 +22,7 @@ public class Ranking {
     public static void init(){}
 
     public static List<Score> loadAndSortRanking(String difficult) {
-        List<Score> currentScores = Scores.load(Values.PATH_TO_SCORES + difficult + Values.PATH_RANKING);
-        return currentScores;
+        return Scores.load(ConstantsPath.PATH_TO_SCORES + difficult + ConstantsPath.PATH_RANKING);
     }
+
 }

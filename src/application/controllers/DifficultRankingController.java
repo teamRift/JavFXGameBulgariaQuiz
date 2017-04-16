@@ -1,5 +1,10 @@
 package application.controllers;
 
+import application.classes.Scores;
+import application.constants.ConstantsDimentions;
+import application.constants.ConstantsLabel;
+import application.constants.ConstantsPath;
+import application.constants.ConstantsStyle;
 import application.ranking.Ranking;
 import application.classes.GUIHelper;
 import application.classes.Score;
@@ -25,39 +30,39 @@ import java.util.List;
 public class DifficultRankingController {
 
     @FXML
-    StackPane mainPane;
+    private StackPane mainPane;
     @FXML
-    ImageView background;
+    private ImageView background;
     @FXML
-    Button backBtn;
+    private Button backBtn;
     @FXML
-    Label rankingsFirst;
+    private Label rankingsFirst;
     @FXML
-    Label rankingsSecond;
+    private Label rankingsSecond;
     @FXML
-    Label rankingsThird;
+    private Label rankingsThird;
     @FXML
-    Label rankingsFourth;
+    private Label rankingsFourth;
     @FXML
-    Label rankingsFifth;
+    private Label rankingsFifth;
     @FXML
-    Label rankingsTitle;
+    private Label rankingsTitle;
     @FXML
-    Label rankingRightLabel;
+    private Label rankingRightLabel;
     @FXML
-    GridPane rightPane;
+    private GridPane rightPane;
     @FXML
-    GridPane bottomPane;
+    private GridPane bottomPane;
     @FXML
-    Label rankingLeftLabel;
+    private Label rankingLeftLabel;
     @FXML
-    GridPane leftPane;
+    private GridPane leftPane;
     @FXML
-    Label rankingTitle;
+    private Label rankingTitle;
     @FXML
-    GridPane topPane;
+    private GridPane topPane;
     @FXML
-    GridPane centerPane;
+    private GridPane centerPane;
 
     public void initialize() throws Exception {
         loadCurrentRanking();
@@ -67,9 +72,9 @@ public class DifficultRankingController {
     }
 
     private void initBackButton(){
-        backBtn.setOnAction(this::OnBack);
-        GUIHelper.setViewDimensions(backBtn, Values.ONE_COL, Values.ONE_ROW/2);
-        GUIHelper.styleAsButton(backBtn);
+        this.backBtn.setOnAction(this::OnBack);
+        GUIHelper.setViewDimensions(this.backBtn, ConstantsDimentions.ONE_COL, ConstantsDimentions.ONE_ROW/2);
+        GUIHelper.styleAsButton(this.backBtn);
     }
 
     private void initLabels(){
@@ -82,13 +87,13 @@ public class DifficultRankingController {
     private void OnBack(ActionEvent actionEvent) {
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("../resources/fxml/selectRanking.fxml"));
+            root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_SELECT_RANKING));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        Stage stage = (Stage)backBtn.getScene().getWindow();
-        stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
+        Stage stage = (Stage)this.backBtn.getScene().getWindow();
+        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
         stage.show();
     }
 
@@ -98,11 +103,11 @@ public class DifficultRankingController {
             currentScores.set(currentScores.size(), new Score("---","---",0));
         }
 
-        rankingsFirst.setText(getCurrentRanking(currentScores.get(0).prepareSave()));
-        rankingsSecond.setText(getCurrentRanking(currentScores.get(1).prepareSave()));
-        rankingsThird.setText(getCurrentRanking(currentScores.get(2).prepareSave()));
-        rankingsFourth.setText(getCurrentRanking(currentScores.get(3).prepareSave()));
-        rankingsFifth.setText(getCurrentRanking(currentScores.get(4).prepareSave()));
+        this.rankingsFirst.setText(getCurrentRanking(currentScores.get(0).prepareSave()));
+        this.rankingsSecond.setText(getCurrentRanking(currentScores.get(1).prepareSave()));
+        this.rankingsThird.setText(getCurrentRanking(currentScores.get(2).prepareSave()));
+        this.rankingsFourth.setText(getCurrentRanking(currentScores.get(3).prepareSave()));
+        this.rankingsFifth.setText(getCurrentRanking(currentScores.get(4).prepareSave()));
     }
 
     private static String getCurrentRanking(String input) {
@@ -114,49 +119,49 @@ public class DifficultRankingController {
     }
 
     private void initPanes(){
-        GUIHelper.setViewDimensions(background, Values.SCREEN_WIDTH- Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.THREE_ROWS);
-        GUIHelper.setViewDimensions(leftPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        GUIHelper.setViewDimensions(rightPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        GUIHelper.setBackground(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.background, ConstantsDimentions.SCREEN_WIDTH- ConstantsDimentions.THREE_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.THREE_ROWS);
+        GUIHelper.setViewDimensions(this.leftPane, ConstantsDimentions.TWO_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.rightPane, ConstantsDimentions.TWO_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
+        GUIHelper.setBackground(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
     }
 
     private void setTextLabels(){
-        rankingsFirst.setTextFill(Color.WHITESMOKE);
-        rankingsFirst.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H2));
-        GUIHelper.setShadow(rankingsFirst);
-        rankingsSecond.setTextFill(Color.WHITESMOKE);
-        rankingsSecond.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H2));
-        GUIHelper.setShadow(rankingsSecond);
-        rankingsThird.setTextFill(Color.WHITESMOKE);
-        rankingsThird.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H2));
-        GUIHelper.setShadow(rankingsThird);
-        rankingsFourth.setTextFill(Color.WHITESMOKE);
-        rankingsFourth.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H2));
-        GUIHelper.setShadow(rankingsFourth);
-        rankingsFifth.setTextFill(Color.WHITESMOKE);
-        rankingsFifth.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H2));
-        GUIHelper.setShadow(rankingsFifth);
+        this.rankingsFirst.setTextFill(Color.WHITESMOKE);
+        this.rankingsFirst.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H2));
+        GUIHelper.setShadow(this.rankingsFirst);
+        this.rankingsSecond.setTextFill(Color.WHITESMOKE);
+        this.rankingsSecond.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H2));
+        GUIHelper.setShadow(this.rankingsSecond);
+        this.rankingsThird.setTextFill(Color.WHITESMOKE);
+        this.rankingsThird.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H2));
+        GUIHelper.setShadow(this.rankingsThird);
+        this.rankingsFourth.setTextFill(Color.WHITESMOKE);
+        this.rankingsFourth.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H2));
+        GUIHelper.setShadow(this.rankingsFourth);
+        this.rankingsFifth.setTextFill(Color.WHITESMOKE);
+        this.rankingsFifth.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H2));
+        GUIHelper.setShadow(this.rankingsFifth);
 
     }
 
     private void setTitleLabel() {
-        rankingTitle.setText(Values.LABEL_RANKING_TITEL_PART_1 + Ranking.getDifficult() + Values.LABEL_RANKING_TITLE_PART_2);
-        rankingTitle.setTextFill(Color.SEAGREEN);
-        rankingTitle.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H3*3));
-        GUIHelper.setShadow(rankingTitle);
+        this.rankingTitle.setText(ConstantsLabel.LABEL_RANKING_TITEL_PART_1 + Ranking.getDifficult() + ConstantsLabel.LABEL_RANKING_TITLE_PART_2);
+        this.rankingTitle.setTextFill(Color.SEAGREEN);
+        this.rankingTitle.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H3*3));
+        GUIHelper.setShadow(this.rankingTitle);
     }
 
     private void setRiftLabel() {
-        rankingLeftLabel.setText(Values.LABEL_TEAM_RIFT);
-        rankingLeftLabel.setTextFill(Color.WHITESMOKE);
-        rankingLeftLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H2));
-        GUIHelper.setShadow(rankingLeftLabel);
+        this.rankingLeftLabel.setText(ConstantsLabel.LABEL_TEAM_RIFT);
+        this.rankingLeftLabel.setTextFill(Color.WHITESMOKE);
+        this.rankingLeftLabel.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H2));
+        GUIHelper.setShadow(this.rankingLeftLabel);
     }
 
     private void setSoftUniLabel() {
-        rankingRightLabel.setText(Values.LABEL_SOFTUNI);
-        rankingRightLabel.setTextFill(Color.WHITE);
-        rankingRightLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H3*2));
-        GUIHelper.setShadow(rankingRightLabel);
+        this.rankingRightLabel.setText(ConstantsLabel.LABEL_SOFTUNI);
+        this.rankingRightLabel.setTextFill(Color.WHITE);
+        this.rankingRightLabel.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H3*2));
+        GUIHelper.setShadow(this.rankingRightLabel);
     }
 }

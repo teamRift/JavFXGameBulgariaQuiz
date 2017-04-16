@@ -1,5 +1,8 @@
 Plovdiv ; Pipin ; 30
 Varna ; Moncho ; 20
 Sofia ; Pipilota ; 30
-BG ; TEAM RIFT ; 0
-BG ; TEAM RIFT ; 0
+Blagoevgrad ; Puhcho ; 10
+Pleven ; SingSing3 ; 20
+Pleven ; PinPin ; 30
+Pleven ; Elf ; 30
+Velikoturnovo ; Uki ; 10

@@ -2,6 +2,9 @@ package application.controllers;
 
 import application.classes.GUIHelper;
 import application.classes.Values;
+import application.constants.ConstantsDimentions;
+import application.constants.ConstantsLabel;
+import application.constants.ConstantsPath;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,9 +20,9 @@ import java.io.IOException;
 public class PlayingInstructionsController {
 
     @FXML
-    Button backBtn;
+    private Button backBtn;
     @FXML
-    public Label gameTitle, leftLabel, rightLabel;
+    private Label gameTitle, leftLabel, rightLabel;
     @FXML
     private BorderPane mainPane;
     @FXML
@@ -34,10 +37,10 @@ public class PlayingInstructionsController {
     }
 
     private void setButtons() {
-        GUIHelper.styleButton(backBtn);
-        GUIHelper.setViewDimensions(backBtn, Values.ONE_COL, Values.ONE_ROW);
-        backBtn.setText(Values.LABEL_BACK_BTN);
-        backBtn.setOnAction((actionEvent) -> {
+        GUIHelper.styleButton(this.backBtn);
+        GUIHelper.setViewDimensions(this.backBtn, ConstantsDimentions.ONE_COL, ConstantsDimentions.ONE_ROW);
+        this.backBtn.setText(ConstantsLabel.LABEL_BACK_BTN);
+        this.backBtn.setOnAction((actionEvent) -> {
             try {
                 onBack();
             } catch (IOException e) {
@@ -47,35 +50,35 @@ public class PlayingInstructionsController {
     }
 
     private void setPanes(){
-        GUIHelper.setBackground(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
-        GUIHelper.setViewDimensions(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
+        GUIHelper.setBackground(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
         //GUIHelper.setViewDimensions(instructionsBox, Values.SCREEN_WIDTH - Values.ONE_COL, Values.SCREEN_HEIGHT - Values.ONE_COL);
-        GUIHelper.setViewDimensions(howToPlayBox, Values.SCREEN_WIDTH - Values.ONE_COL, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        GUIHelper.setViewDimensions(topPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
-        GUIHelper.setViewDimensions(bottomPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
-        GUIHelper.setViewDimensions(leftPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        GUIHelper.setViewDimensions(rightPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.howToPlayBox, ConstantsDimentions.SCREEN_WIDTH - ConstantsDimentions.ONE_COL, ConstantsDimentions.SCREEN_HEIGHT - Values.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.topPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.TWO_ROWS);
+        GUIHelper.setViewDimensions(this.bottomPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.TWO_ROWS);
+        GUIHelper.setViewDimensions(this.leftPane, ConstantsDimentions.TWO_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.rightPane, ConstantsDimentions.TWO_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
     }
 
     private void setLabels() {
-        GUIHelper.styleLabel(50,gameTitle);
-        gameTitle.setText(Values.LABEL_GAME_TITLE);
-        GUIHelper.styleLabel(32, leftLabel, rightLabel);
-        leftLabel.setText(Values.LABEL_TEAM_RIFT);
-        rightLabel.setText(Values.LABEL_SOFTUNI);
-        rule1.setText("1. Select dificulty");
-        rule2.setText("2. Select city");
-        rule3.setText("3. Enjoy the game! :)");
-        GUIHelper.styleLabel(37,rule1, rule2, rule3);
+        GUIHelper.styleLabel(50, this.gameTitle);
+        this.gameTitle.setText(ConstantsLabel.LABEL_GAME_TITLE);
+        GUIHelper.styleLabel(32, this.leftLabel, this.rightLabel);
+        this.leftLabel.setText(ConstantsLabel.LABEL_TEAM_RIFT);
+        this.rightLabel.setText(ConstantsLabel.LABEL_SOFTUNI);
+        this.rule1.setText("1. Select dificulty");
+        this.rule2.setText("2. Select city");
+        this.rule3.setText("3. Enjoy the game! :)");
+        GUIHelper.styleLabel(37, this.rule1, this.rule2, this.rule3);
 
 
 
     }
 
     private void onBack() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
-        Stage stage = ( Stage ) backBtn.getScene().getWindow();
-        stage.setScene( new Scene( root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
+        Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_MENU));
+        Stage stage = ( Stage ) this.backBtn.getScene().getWindow();
+        stage.setScene( new Scene( root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
         stage.show();
     }
 }

@@ -1,5 +1,5 @@
 Blagoevgrad ; Koko Shanel ; 20
 Pleven ; Gucci ; 20
-BG ; TEAM RIFT ; 0
-BG ; TEAM RIFT ; 0
+Velikoturnovo ; Boko ; 10
+Plovdiv ; Uki ; 10
 BG ; TEAM RIFT ; 0

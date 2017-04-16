@@ -4,6 +4,7 @@ import application.classes.City;
 import application.classes.GUIHelper;
 import application.classes.GameManager;
 import application.classes.Values;
+import application.constants.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -27,35 +28,35 @@ import java.io.IOException;
 
 public class CitiesController {
     @FXML
-    Label labelDifficulty;
+    private Label labelDifficulty;
     @FXML
-    Button buttonEasy;
+    private Button buttonEasy;
     @FXML
-    Button buttonNormal;
+    private Button buttonNormal;
     @FXML
-    Button buttonHard;
+    private Button buttonHard;
     @FXML
-    Label labelInputUserName;
+    private Label labelInputUserName;
     @FXML
-    TextField inputUserName;
+    private TextField inputUserName;
     @FXML
-    Label hintLabel, labelChooseCity;
+    private Label hintLabel, labelChooseCity;
     @FXML
-    Button varna, sofia, ruse, burgas, blagoevgrad, velikoturnovo, pleven, plovdiv, backButton, hardButton, normalButton,easyButton;
+    private Button varna, sofia, ruse, burgas, blagoevgrad, velikoturnovo, pleven, plovdiv, backButton, hardButton, normalButton,easyButton;
     @FXML
-    AnchorPane mapPane;
+    private AnchorPane mapPane;
     @FXML
-    BorderPane mainPane;
+    private BorderPane mainPane;
     @FXML
-    GridPane topPane, bottomPane, leftPane, rightPane ;
+    private GridPane topPane, bottomPane, leftPane, rightPane ;
     @FXML
-    ImageView mapImg;
+    private ImageView mapImg;
     @FXML
-    VBox difficultyBox;
+    private VBox difficultyBox;
 
     public void initialize() throws IOException {
-        inputUserName.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.NORMAL, FontPosture.REGULAR, Values.H3));
-        GameManager.setUserName(inputUserName);
+        this.inputUserName.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.NORMAL, FontPosture.REGULAR, ConstantsDimentions.H3));
+        GameManager.setUserName(this.inputUserName);
         setPanes();
         setButtons();
         setLabels();
@@ -64,91 +65,91 @@ public class CitiesController {
     public void onCityQuestion(ActionEvent actionEvent) throws IOException {
         Button button  = (Button)  actionEvent.getSource();
         String id = button.getId();
-        GameManager.setCurrentUser(inputUserName.getText());
+        GameManager.setCurrentUser(this.inputUserName.getText());
         setCity(id.toLowerCase());
-        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/quizWindow.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_QUIZ_WINDOW));
         Stage stage = (Stage)button.getScene().getWindow();
-        stage.setScene( new Scene( root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
+        stage.setScene( new Scene( root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
         stage.show();
     }
 
     public void OnBack(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/menu.fxml"));
-        Stage stage = ( Stage ) backButton.getScene().getWindow();
-        stage.setScene( new Scene( root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
+        Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_MENU));
+        Stage stage = ( Stage ) this.backButton.getScene().getWindow();
+        stage.setScene( new Scene( root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
         stage.show();
     }
 
     private void setButtons() {
-        GUIHelper.styleButton(buttonEasy,buttonNormal,buttonHard);
-        GUIHelper.setViewDimensions(buttonEasy,Values.ONE_COL, Values.ONE_ROW/2);
-        buttonEasy.setOnAction((event -> {
+        GUIHelper.styleButton(this.buttonEasy, this.buttonNormal, this.buttonHard);
+        GUIHelper.setViewDimensions(this.buttonEasy,ConstantsDimentions.ONE_COL, ConstantsDimentions.ONE_ROW/2);
+        this.buttonEasy.setOnAction((event -> {
             resetDifficultyButtons();
-            GameManager.setQuestionsDifficulty(Values.DIFFICULTY_EASY);
+            GameManager.setQuestionsDifficulty(ConstantsDifficulty.DIFFICULTY_EASY);
             ((Button)event.getSource()).setTextFill(Color.WHITE);
             ((Button)event.getSource()).setBackground(new Background(new BackgroundFill(Paint.valueOf("#006600"),new CornerRadii(7), new Insets(5,5,5,5))));
         }));
-        GUIHelper.setViewDimensions(buttonNormal,Values.ONE_COL, Values.ONE_ROW/2);
-        buttonNormal.setOnAction((event -> {
+        GUIHelper.setViewDimensions(this.buttonNormal,ConstantsDimentions.ONE_COL, ConstantsDimentions.ONE_ROW/2);
+        this.buttonNormal.setOnAction((event -> {
             resetDifficultyButtons();
-            GameManager.setQuestionsDifficulty(Values.DIFFICULTY_NORMAL);
+            GameManager.setQuestionsDifficulty(ConstantsDifficulty.DIFFICULTY_NORMAL);
             ((Button)event.getSource()).setTextFill(Color.WHITE);
             ((Button)event.getSource()).setBackground(new Background(new BackgroundFill(Paint.valueOf("#006600"),new CornerRadii(7), new Insets(5,5,5,5))));
         }));
-        GUIHelper.setViewDimensions(buttonHard,Values.ONE_COL, Values.ONE_ROW/2);
-        buttonHard.setOnAction((event -> {
+        GUIHelper.setViewDimensions(this.buttonHard,ConstantsDimentions.ONE_COL, ConstantsDimentions.ONE_ROW/2);
+        this.buttonHard.setOnAction((event -> {
             resetDifficultyButtons();
-            GameManager.setQuestionsDifficulty(Values.DIFFICULTY_HARD);
+            GameManager.setQuestionsDifficulty(ConstantsDifficulty.DIFFICULTY_HARD);
             ((Button)event.getSource()).setTextFill(Color.WHITE);
             ((Button)event.getSource()).setBackground(new Background(new BackgroundFill(Paint.valueOf("#006600"),new CornerRadii(7), new Insets(5,5,5,5))));
         }));
 
 
-        GUIHelper.styleCityButton(varna,ruse,sofia,burgas,blagoevgrad,plovdiv,pleven,velikoturnovo);
-        burgas.setLayoutX(Values.SIX_COLS - Values.ONE_ROW);
-        burgas.setLayoutY(Values.FOUR_ROWS * 1.2);
+        GUIHelper.styleCityButton(this.varna, this.ruse, this.sofia, this.burgas, this.blagoevgrad, this.plovdiv, this.pleven, this.velikoturnovo);
+        this.burgas.setLayoutX(ConstantsDimentions.SIX_COLS - ConstantsDimentions.ONE_ROW);
+        this.burgas.setLayoutY(ConstantsDimentions.FOUR_ROWS * 1.2);
 
-        varna.setLayoutX(Values.SIX_COLS * 0.93);
-        varna.setLayoutY(Values.TWO_ROWS * 1.27);
+        this.varna.setLayoutX(ConstantsDimentions.SIX_COLS * 0.93);
+        this.varna.setLayoutY(ConstantsDimentions.TWO_ROWS * 1.27);
 
-        ruse.setLayoutX(Values.THREE_COLS * 1.07);
-        ruse.setLayoutY(Values.ONE_ROW* 1.2);
+        this.ruse.setLayoutX(ConstantsDimentions.THREE_COLS * 1.07);
+        this.ruse.setLayoutY(ConstantsDimentions.ONE_ROW* 1.2);
 
-        sofia.setLayoutX(Values.ONE_COL);
-        sofia.setLayoutY(Values.TWO_COLS * 1.12);
+        this.sofia.setLayoutX(ConstantsDimentions.ONE_COL);
+        this.sofia.setLayoutY(ConstantsDimentions.TWO_COLS * 1.12);
 
-        blagoevgrad.setLayoutX(Values.ONE_COL * 0.75);
-        blagoevgrad.setLayoutY(Values.SIX_ROWS * 1.2);
+        this.blagoevgrad.setLayoutX(ConstantsDimentions.ONE_COL * 0.75);
+        this.blagoevgrad.setLayoutY(ConstantsDimentions.SIX_ROWS * 1.2);
 
-        plovdiv.setLayoutX(Values.THREE_COLS);
-        plovdiv.setLayoutY(Values.FOUR_ROWS * 1.3);
+        this.plovdiv.setLayoutX(ConstantsDimentions.THREE_COLS);
+        this.plovdiv.setLayoutY(ConstantsDimentions.FOUR_ROWS * 1.3);
 
-        pleven.setLayoutX(Values.TWO_COLS * 0.97);
-        pleven.setLayoutY(Values.TWO_ROWS * 1.45);
+        this.pleven.setLayoutX(ConstantsDimentions.TWO_COLS * 0.97);
+        this.pleven.setLayoutY(ConstantsDimentions.TWO_ROWS * 1.45);
 
-        velikoturnovo.setLayoutX(Values.THREE_COLS * 1.15);
-        velikoturnovo.setLayoutY(Values.TWO_ROWS * 1.5);
+        this.velikoturnovo.setLayoutX(ConstantsDimentions.THREE_COLS * 1.15);
+        this.velikoturnovo.setLayoutY(ConstantsDimentions.TWO_ROWS * 1.5);
 
-        GUIHelper.styleButton(backButton);
-        GUIHelper.setViewDimensions(backButton,Values.ONE_COL*0.8, Values.ONE_ROW/2);
-        backButton.setText(Values.LABEL_BACK_BTN);
+        GUIHelper.styleButton(this.backButton);
+        GUIHelper.setViewDimensions(this.backButton,ConstantsDimentions.ONE_COL*0.8, ConstantsDimentions.ONE_ROW/2);
+        this.backButton.setText(ConstantsLabel.LABEL_BACK_BTN);
     }
 
     private void resetDifficultyButtons() {
-        buttonEasy.setTextFill(Color.BLACK);
-        buttonEasy.setBackground(new Background(new BackgroundFill(Color.WHITE,new CornerRadii(7), new Insets(5,5,5,5))));
-        buttonNormal.setTextFill(Color.BLACK);
-        buttonNormal.setBackground(new Background(new BackgroundFill(Color.WHITE,new CornerRadii(7), new Insets(5,5,5,5))));
-        buttonHard.setTextFill(Color.BLACK);
-        buttonHard.setBackground(new Background(new BackgroundFill(Color.WHITE,new CornerRadii(7), new Insets(5,5,5,5))));
+        this.buttonEasy.setTextFill(Color.BLACK);
+        this.buttonEasy.setBackground(new Background(new BackgroundFill(Color.WHITE,new CornerRadii(7), new Insets(5,5,5,5))));
+        this.buttonNormal.setTextFill(Color.BLACK);
+        this.buttonNormal.setBackground(new Background(new BackgroundFill(Color.WHITE,new CornerRadii(7), new Insets(5,5,5,5))));
+        this.buttonHard.setTextFill(Color.BLACK);
+        this.buttonHard.setBackground(new Background(new BackgroundFill(Color.WHITE,new CornerRadii(7), new Insets(5,5,5,5))));
     }
 
     private void setLabels() {
-        GameManager.setFactsLabel(hintLabel);
-        GUIHelper.styleLabel(Values.H3,hintLabel);
-        labelDifficulty.setText(Values.LABEL_DIFFICULTY);
-        labelChooseCity.setText(Values.LABEL_CHOOSE_CITY_BTN);
-        GUIHelper.styleLabel(Values.H3*2,labelChooseCity);
+        GameManager.setFactsLabel(this.hintLabel);
+        GUIHelper.styleLabel(ConstantsDimentions.H3, this.hintLabel);
+        this.labelDifficulty.setText(ConstantsLabel.LABEL_DIFFICULTY);
+        this.labelChooseCity.setText(ConstantsLabel.LABEL_CHOOSE_CITY_BTN);
+        GUIHelper.styleLabel(ConstantsDimentions.H3*2, this.labelChooseCity);
     }
 
     private void setCity(String cityName) {
@@ -156,15 +157,15 @@ public class CitiesController {
     }
 
     private void setPanes(){
-        GUIHelper.setViewDimensions(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
-        GUIHelper.setViewDimensions(topPane, Values.SCREEN_WIDTH, Values.THREE_ROWS);
-        GUIHelper.setViewDimensions(bottomPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
-        GUIHelper.setViewDimensions(leftPane, Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        GUIHelper.setViewDimensions(rightPane, Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        GUIHelper.setViewDimensions(mapPane, Values.SIX_COLS, Values.SIX_ROWS + Values.THREE_ROWS);
-        difficultyBox.setPadding(new Insets(0,0,0,Values.ONE_ROW/5));
-        GUIHelper.setBackground(mainPane, Values.SCREEN_WIDTH,Values.SCREEN_HEIGHT);
-        mapImg.setFitWidth(Values.SCREEN_WIDTH);
-        mapImg.setFitWidth(Values.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.topPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.THREE_ROWS);
+        GUIHelper.setViewDimensions(this.bottomPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.TWO_ROWS);
+        GUIHelper.setViewDimensions(this.leftPane, ConstantsDimentions.THREE_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.rightPane, ConstantsDimentions.THREE_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.mapPane, ConstantsDimentions.SIX_COLS, ConstantsDimentions.SIX_ROWS + ConstantsDimentions.THREE_ROWS);
+        this.difficultyBox.setPadding(new Insets(0,0,0,ConstantsDimentions.ONE_ROW/5));
+        GUIHelper.setBackground(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
+        this.mapImg.setFitWidth(ConstantsDimentions.SCREEN_WIDTH);
+        this.mapImg.setFitWidth(ConstantsDimentions.SCREEN_HEIGHT);
     }
 }

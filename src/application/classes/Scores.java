@@ -1,6 +1,5 @@
 package application.classes;
 
-
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -10,16 +9,23 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import static application.constants.ConstantsPath.*;
+
 public class Scores {
+    private final static int INDEX_CITY_NAME = 0;
+    private static final int INDEX_USER_NAME = 1;
+    private static final int INDEX_VALUE_SCORE = 2;
+    private static final int INDEX_BEST_FIVE = 5;
     private List<Score> leaderboard;
     private String difficult;
+    private static List<Score> scores;
 
     public Scores() {
-        leaderboard = load(Values.PATH_RANKING_GLOBAL);
+        this.leaderboard = load(PATH_RANKING_GLOBAL);
     }
 
     private static void create() {
-        Path filePath = Paths.get(Values.PATH_RANKING_GLOBAL);
+        Path filePath = Paths.get(PATH_RANKING_GLOBAL);
         try {
             Files.createFile(filePath);
         } catch (IOException e) {
@@ -27,7 +33,7 @@ public class Scores {
         }
 
         List<String> fileContent = new ArrayList<String>();
-        for (int i = 0; i < 5; i++){
+        for (int i = INDEX_CITY_NAME; i < INDEX_BEST_FIVE; i++){
             fileContent.add("BG ; TEAM RIFT ; 0");
         }
 
@@ -39,7 +45,7 @@ public class Scores {
     }
 
     public static List<Score> load(String path) {
-        ArrayList<Score> scores = new ArrayList<>();
+        List<Score> scores = new ArrayList<>();
         try {
             Path filePath = Paths.get(path);
             if (!Files.exists(filePath)) {
@@ -51,7 +57,7 @@ public class Scores {
                     return;
                 }
                 String[] tokens = line.split(";");
-                scores.add(new Score(tokens[0].trim(),tokens[1].trim(), Integer.parseInt(tokens[2].trim())));
+                scores.add(new Score(tokens[INDEX_CITY_NAME].trim(),tokens[INDEX_USER_NAME].trim(), Integer.parseInt(tokens[INDEX_VALUE_SCORE].trim())));
             });
         } catch (IOException e) {
             create();
@@ -69,19 +75,20 @@ public class Scores {
         return scores;
     }
 
-    static void findAndLoad(String userName) throws Exception {
-        ArrayList<Score> scores = new ArrayList<>();
+
+    public static void findAndLoad(String userName) throws Exception {
+        List<Score> scores = new ArrayList<>();
         try {
-            Path filePath = Paths.get(Values.PATH_RANKING_GLOBAL);
+            Path filePath = Paths.get(PATH_RANKING_GLOBAL);
             Files.lines(filePath).forEach(line -> {
                 if (line.isEmpty()) {
-                    line.replace(line,line);
+                    line.replace(line, line);
                     return;
                 }
                 String[] tokens = line.replaceAll(" ","").split(";");
                 if (tokens.length > 2) {
-                    if (tokens[1].equalsIgnoreCase(userName)) {
-                        GameManager.setUserMaxPoints(Integer.parseInt(tokens[2]));
+                    if (tokens[INDEX_USER_NAME].equalsIgnoreCase(userName)) {
+                        GameManager.setUserMaxPoints(Integer.parseInt(tokens[INDEX_VALUE_SCORE]));
                     }
                 }
             });
@@ -90,15 +97,15 @@ public class Scores {
         }
     }
 
-    List<Score> getScores(){
-        if (leaderboard.isEmpty()){
-            load(Values.PATH_RANKING_GLOBAL);
+    public List<Score> getScores(){
+        if (this.leaderboard.isEmpty()){
+            load(PATH_RANKING_GLOBAL);
         }
-        return leaderboard;
+        return this.leaderboard;
     }
 
     public static void save(Score score, String difficult) {
-        Path filePath = Paths.get(Values.PATH_TO_SCORES + difficult + Values.PATH_RANKING);
+        Path filePath = Paths.get(PATH_TO_SCORES + difficult + PATH_RANKING);
         List<String> fileContent = null;
 
         try {
@@ -107,19 +114,21 @@ public class Scores {
             e.printStackTrace();
         }
 
-        for (int i = 0; i < fileContent.size(); i++) {
-            String[] tokens = fileContent.get(i).replaceAll(" ", "").split(";");
+        if(fileContent != null) {
+            for (int i = INDEX_CITY_NAME; i < fileContent.size(); i++) {
+                String[] tokens = fileContent.get(i).replaceAll(" ", "").split(";");
 
-            if (tokens.length > 2) {
-                if (tokens[0].equals("BG") | ( tokens[0].equals(score.getCityName()) & tokens[1].equals(score.getUserName()) )) {
-                    if ( score.getValue() > Integer.valueOf(tokens[2]) ) {
-                        fileContent.set(i, score.prepareSave());
-                        break;
-                    }
-                } else {
-                    if( i == fileContent.size()-1){
-                        fileContent.add(score.prepareSave());
-                        break;
+                if (tokens.length > 2) {
+                    if (tokens[INDEX_CITY_NAME].equals("BG") || (tokens[INDEX_CITY_NAME].equals(score.getCityName()) && tokens[INDEX_USER_NAME].equals(score.getUserName()))) {
+                        if (score.getValue() > Integer.valueOf(tokens[INDEX_VALUE_SCORE])) {
+                            fileContent.set(i, score.prepareSave());
+                            break;
+                        }
+                    } else {
+                        if (i == fileContent.size() - 1) {
+                            fileContent.add(score.prepareSave());
+                            break;
+                        }
                     }
                 }
             }

@@ -2,9 +2,10 @@ package application.classes;
 
 public class Score {
 
+    private static final int BEGIN_INDEX = 0;
+    private static final int END_INDEX = 1;
     private String userName;
     private String cityName;
-    private String difficulty;
     private String dateSet;
     private int scores;
 
@@ -24,36 +25,28 @@ public class Score {
         this.dateSet = date;
     }
 
-    public void setScore(int scores) {
+    private void setScore(int scores) {
         this.scores = scores;
     }
 
-    public void setCityName(String city){
+    private void setCityName(String city){
         this.cityName = city;
     }
 
-    public String getCityName(){ return cityName;}
+    public String getCityName(){ return this.cityName;}
 
-    public String getUserName(){ return userName; }
+    public String getUserName(){ return this.userName; }
 
-    public void setUserName(String userName){ this.userName = userName;}
+    private void setUserName(String userName){ this.userName = userName;}
 
-    public String getDifficulty() {
-        return difficulty;
-    }
-
-    public void setDifficulty(String difficulty) {
-        this.difficulty = difficulty;
-    }
-
-    public int getValue() { return scores; }
+    public int getValue() { return this.scores; }
 
     public String prepareSave() {
-        return String.format("%s ; %s ; %s", cityName, userName, scores);
+        return String.format("%s ; %s ; %s", this.cityName, this.userName, this.scores);
     }
 
-    public static String capitalize(String input){
-        return input.substring(0, 1).toUpperCase() + input.substring(1);
+    private static String capitalize(String input){
+        return input.substring(BEGIN_INDEX, END_INDEX).toUpperCase() + input.substring(END_INDEX);
     }
 
 }

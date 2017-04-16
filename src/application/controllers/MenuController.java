@@ -3,6 +3,10 @@ package application.controllers;
 import application.classes.GUIHelper;
 import application.classes.Song;
 import application.classes.Values;
+import application.constants.ConstantsDimentions;
+import application.constants.ConstantsLabel;
+import application.constants.ConstantsPath;
+import application.constants.ConstantsStyle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,21 +26,22 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class MenuController {
-    public Button songBtn, buttonExit, buttonCredits, buttonPlayingInstructions, buttonStart, buttonScores;
     @FXML
-    BorderPane mainPane;
+    private Button songBtn, buttonExit, buttonCredits, buttonPlayingInstructions, buttonStart, buttonScores;
     @FXML
-    GridPane topPane, bottomPane, leftPane, rightPane, centerPane;
+    private BorderPane mainPane;
     @FXML
-    Label gameTitle;
+    private GridPane topPane, bottomPane, leftPane, rightPane, centerPane;
     @FXML
-    VBox buttonsGroup;
+    private Label gameTitle;
     @FXML
-    ImageView mapImage;
+    private VBox buttonsGroup;
     @FXML
-    Label menuLeftLabel;
+    private ImageView mapImage;
     @FXML
-    Label menuRightLabel;
+    private Label menuLeftLabel;
+    @FXML
+    private Label menuRightLabel;
 
     public void initialize() {
         initButtons();
@@ -55,9 +60,9 @@ public class MenuController {
     }
 
     private void initStartButton(){
-        buttonStart.setText(Values.LABEL_START_BTN);
+        this.buttonStart.setText(ConstantsLabel.LABEL_START_BTN);
         setButtons();
-        buttonStart.setOnMouseClicked(actionEvent -> {
+        this.buttonStart.setOnMouseClicked(actionEvent -> {
             try {
                 startGame();
             } catch (IOException e) {
@@ -67,16 +72,16 @@ public class MenuController {
     }
 
     private void initExitButton(){
-        buttonExit.setText(Values.LABEL_EXIT_BTN);
-        GUIHelper.setViewDimensions(buttonExit, Values.FOUR_COLS, Values.ONE_ROW);
-        buttonExit.setOnMouseClicked(actionEvent -> {
+        this.buttonExit.setText(ConstantsLabel.LABEL_EXIT_BTN);
+        GUIHelper.setViewDimensions(this.buttonExit, ConstantsDimentions.FOUR_COLS, ConstantsDimentions.ONE_ROW);
+        this.buttonExit.setOnMouseClicked(actionEvent -> {
             exitGame();
         });
     }
 
     private void initPlayingInstructionsButton(){
-        buttonPlayingInstructions.setText(Values.LABEL_PLAYINGINSTRUCTIONS_BTN);
-        buttonPlayingInstructions.setOnMouseClicked(actionEvent -> {
+        this.buttonPlayingInstructions.setText(ConstantsLabel.LABEL_PLAYINGINSTRUCTIONS_BTN);
+        this.buttonPlayingInstructions.setOnMouseClicked(actionEvent -> {
             try {
                 showPlayingInstructions();
             } catch (IOException e) {
@@ -87,8 +92,8 @@ public class MenuController {
 
 
     private void initCreditsButton(){
-        buttonCredits.setText(Values.LABEL_CREDITS_BTN);
-        buttonCredits.setOnMouseClicked(actionEvent -> {
+        this.buttonCredits.setText(ConstantsLabel.LABEL_CREDITS_BTN);
+        this.buttonCredits.setOnMouseClicked(actionEvent -> {
             try {
                 showCredits();
             } catch (IOException e) {
@@ -98,8 +103,8 @@ public class MenuController {
     }
 
     private void initScoresButton(){
-        buttonScores.setText(Values.LABEL_SCORES_BTN);
-        buttonScores.setOnMouseClicked(actionEvent -> {
+        this.buttonScores.setText(ConstantsLabel.LABEL_SCORES_BTN);
+        this.buttonScores.setOnMouseClicked(actionEvent -> {
             try {
                 showScores();
             } catch (IOException e) {
@@ -109,9 +114,9 @@ public class MenuController {
     }
 
     private void initSongButton(){
-        GUIHelper.styleButton(songBtn);
+        GUIHelper.styleButton(this.songBtn);
         if (Song.check){
-            songBtn.setText("Sound On");
+            this.songBtn.setText("Sound On");
         }
     }
 
@@ -137,76 +142,76 @@ public class MenuController {
     }
 
     private void setGameLabel() {
-        gameTitle.setText(Values.LABEL_GAME_TITLE);
-        gameTitle.setTextFill(Color.SEAGREEN);
-        gameTitle.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H1 - Values.H2));
-        GUIHelper.setShadow(gameTitle);
+        this.gameTitle.setText(ConstantsLabel.LABEL_GAME_TITLE);
+        this.gameTitle.setTextFill(Color.SEAGREEN);
+        this.gameTitle.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H1 - ConstantsDimentions.H2));
+        GUIHelper.setShadow(this.gameTitle);
     }
 
     private void setRiftLabel() {
-        menuLeftLabel.setText(Values.LABEL_TEAM_RIFT);
-        menuLeftLabel.setTextFill(Color.WHITESMOKE);
-        menuLeftLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H2));
-        GUIHelper.setShadow(menuLeftLabel);
+        this.menuLeftLabel.setText(ConstantsLabel.LABEL_TEAM_RIFT);
+        this.menuLeftLabel.setTextFill(Color.WHITESMOKE);
+        this.menuLeftLabel.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H2));
+        GUIHelper.setShadow(this.menuLeftLabel);
     }
 
     private void setSoftUniLabel() {
-        menuRightLabel.setText(Values.LABEL_SOFTUNI);
-        menuRightLabel.setTextFill(Color.WHITE);
-        menuRightLabel.setFont(Font.font(Values.DEFAULT_FONT, FontWeight.BOLD, Values.H3*2));
-        GUIHelper.setShadow(menuRightLabel);
+        this.menuRightLabel.setText(ConstantsLabel.LABEL_SOFTUNI);
+        this.menuRightLabel.setTextFill(Color.WHITE);
+        this.menuRightLabel.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H3*2));
+        GUIHelper.setShadow(this.menuRightLabel);
     }
 
     private void setButtons() {
-        GUIHelper.setViewDimensions(buttonStart, Values.TWO_COLS, Values.ONE_ROW/2);
-        GUIHelper.setViewDimensions(buttonExit, Values.TWO_COLS, Values.ONE_ROW/2);
-        GUIHelper.setViewDimensions(buttonPlayingInstructions, Values.TWO_COLS, Values.ONE_ROW/2);
-        GUIHelper.setViewDimensions(buttonCredits, Values.TWO_COLS, Values.ONE_ROW/2);
-        GUIHelper.setViewDimensions(buttonScores, Values.TWO_COLS, Values.ONE_ROW/2);
-        GUIHelper.styleAsButton(buttonStart,buttonExit,buttonCredits,buttonScores);
+        GUIHelper.setViewDimensions(this.buttonStart, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
+        GUIHelper.setViewDimensions(this.buttonExit, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
+        GUIHelper.setViewDimensions(this.buttonPlayingInstructions, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
+        GUIHelper.setViewDimensions(this.buttonCredits, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
+        GUIHelper.setViewDimensions(this.buttonScores, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
+        GUIHelper.styleAsButton(this.buttonStart, this.buttonExit, this.buttonCredits, this.buttonScores);
     }
 
     private void initPanes(){
-        GUIHelper.setViewDimensions(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
-        GUIHelper.setViewDimensions(topPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
-        GUIHelper.setViewDimensions(bottomPane, Values.SCREEN_WIDTH, Values.TWO_ROWS);
-        GUIHelper.setViewDimensions(leftPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        GUIHelper.setViewDimensions(rightPane, Values.TWO_COLS, Values.SCREEN_HEIGHT - Values.FOUR_ROWS);
-        GUIHelper.setViewDimensions(centerPane, Values.SCREEN_WIDTH , Values.SCREEN_HEIGHT);
-        GUIHelper.setViewDimensions(mapImage, Values.SCREEN_WIDTH- Values.THREE_COLS, Values.SCREEN_HEIGHT - Values.THREE_ROWS);
-        GUIHelper.setBackground(mainPane, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.topPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.TWO_ROWS);
+        GUIHelper.setViewDimensions(this.bottomPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.TWO_ROWS);
+        GUIHelper.setViewDimensions(this.leftPane, ConstantsDimentions.TWO_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.rightPane, ConstantsDimentions.TWO_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.centerPane, ConstantsDimentions.SCREEN_WIDTH , ConstantsDimentions.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.mapImage, ConstantsDimentions.SCREEN_WIDTH- ConstantsDimentions.THREE_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.THREE_ROWS);
+        GUIHelper.setBackground(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
     }
 
     private void exitGame() {
-        Stage stage = (Stage)buttonExit.getScene().getWindow();
+        Stage stage = (Stage)this.buttonExit.getScene().getWindow();
         stage.close();
     }
 
     private void showPlayingInstructions() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/playingInstructions.fxml"));
-        Stage stage = (Stage)buttonPlayingInstructions.getScene().getWindow();
-        stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
+        Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_PLAYING_INSTRUCTION));
+        Stage stage = (Stage)this.buttonPlayingInstructions.getScene().getWindow();
+        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
         stage.show();
     }
 
     private void showCredits() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/credits.fxml"));
-        Stage stage = (Stage)buttonCredits.getScene().getWindow();
-        stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
+        Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_CREDITS));
+        Stage stage = (Stage)this.buttonCredits.getScene().getWindow();
+        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
         stage.show();
     }
 
     private void showScores() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/selectRanking.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_SELECT_RANKING));
         Stage stage = (Stage)buttonScores.getScene().getWindow();
-        stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
+        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
         stage.show();
     }
 
     private void startGame() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../resources/fxml/cities.fxml"));
-        Stage stage = (Stage)buttonStart.getScene().getWindow();
-        stage.setScene(new Scene(root, Values.SCREEN_WIDTH, Values.SCREEN_HEIGHT));
+        Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_CITIES));
+        Stage stage = (Stage)this.buttonStart.getScene().getWindow();
+        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
         stage.show();
     }
 
@@ -221,10 +226,10 @@ public class MenuController {
     public void songControllers(ActionEvent actionEvent) {
         if (Song.check){
             Song.start();
-            songBtn.setText("Song Off");
+            this.songBtn.setText("Song Off");
         } else {
             Song.pause();
-            songBtn.setText("Song On");
+            this.songBtn.setText("Song On");
         }
     }
 }

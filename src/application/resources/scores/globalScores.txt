@@ -15,3 +15,14 @@ Plovdiv ; Mishlence ; 20
 Plovdiv ; TEst ; 10
 Blagoevgrad ; Gamer ; 20
 Sofia ; Pipilota ; 30
+Sofia ; Kuku ; 0
+Velikoturnovo ; Boko ; 10
+Blagoevgrad ; Puhcho ; 10
+Ruse ; SingSing ; 20
+Pleven ; SingSing3 ; 20
+Pleven ; PinPin ; 30
+Pleven ; Elf ; 30
+Plovdiv ; Uki ; 10
+Velikoturnovo ; Uki ; 10
+Plovdiv ; Suzi ; 10
+Pleven ; Dodod ; 30
