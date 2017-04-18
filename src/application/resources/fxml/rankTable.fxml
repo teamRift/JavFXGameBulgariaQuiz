@@ -52,7 +52,7 @@
                <children>
                   <Label fx:id="GoldenLabel" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="-3.0" layoutY="-2.0" prefHeight="300.0" prefWidth="309.0" text="Label" textAlignment="CENTER" textFill="#e4da12" textOverrun="CENTER_ELLIPSIS">
                      <font>
-                        <Font name="System Bold" size="15.0" />
+                        <Font name="System Bold" size="13.0" />
                      </font></Label>
                </children>
             </Pane>
@@ -60,7 +60,7 @@
                <children>
                   <Label fx:id="SilverLabel" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="61.0" prefHeight="294.0" prefWidth="309.0" text="Label" textAlignment="CENTER" textFill="#858fa4" textOverrun="CENTER_ELLIPSIS">
                      <font>
-                        <Font name="System Bold" size="15.0" />
+                        <Font name="System Bold" size="13.0" />
                      </font></Label>
                </children>
             </Pane>
@@ -68,7 +68,7 @@
                <children>
                   <Label fx:id="BronzeLabel" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="97.0" prefHeight="294.0" prefWidth="286.0" text="Label" textAlignment="CENTER" textFill="#a17b7b" textOverrun="CENTER_ELLIPSIS">
                      <font>
-                        <Font name="System Bold" size="15.0" />
+                        <Font name="System Bold" size="13.0" />
                      </font></Label>
                </children>
             </Pane>
