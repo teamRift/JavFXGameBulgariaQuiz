@@ -1,66 +1,82 @@
-<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<?xml version="1.0" encoding="UTF-8"?>
 
-<!--<?import javafx.geometry.Point3D?>-->
-<!--<?import javafx.scene.control.Label?>-->
-<!--<?import javafx.scene.image.Image?>-->
-<!--<?import javafx.scene.image.ImageView?>-->
-<!--<?import javafx.scene.layout.AnchorPane?>-->
-<!--<?import javafx.scene.layout.Pane?>-->
-<!--<?import javafx.scene.text.Font?>-->
-<!--<?import javafx.scene.text.Text?>-->
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<!--<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.RankTableController">-->
-    <!--<children>-->
-        <!--<AnchorPane layoutX="-2.0" prefHeight="277.0" prefWidth="907.0">-->
-            <!--<children>-->
-                <!--<ImageView fitHeight="90.0" fitWidth="124.0" layoutX="86.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">-->
-                    <!--<image>-->
-                        <!--<Image url="@../images/SkillMedalGold.png" />-->
-                    <!--</image>-->
-                <!--</ImageView>-->
-                <!--<Text layoutX="301.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quiz Game Ranks" wrappingWidth="435.13671875">-->
-                    <!--<font>-->
-                        <!--<Font size="48.0" />-->
-                    <!--</font>-->
-                <!--</Text>-->
-                <!--<ImageView fitHeight="89.0" fitWidth="124.0" layoutX="395.0" layoutY="134.0">-->
-                    <!--<image>-->
-                        <!--<Image url="@../images/SkillMedalSilver.png" />-->
-                    <!--</image>-->
-                <!--</ImageView>-->
-                <!--<ImageView fitHeight="89.0" fitWidth="124.0" layoutX="699.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">-->
-                    <!--<image>-->
-                        <!--<Image url="@../images/SkillMedalBronze.png" />-->
-                    <!--</image>-->
-                <!--</ImageView>-->
-                <!--<ImageView fitHeight="71.0" fitWidth="147.0" layoutX="94.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">-->
-                    <!--<image>-->
-                        <!--<Image url="@../images/bulgaria1.png" />-->
-                    <!--</image>-->
-                <!--</ImageView>-->
-            <!--</children>-->
-        <!--</AnchorPane>-->
-        <!--<AnchorPane layoutX="-2.0" layoutY="277.0" prefHeight="368.0" prefWidth="903.0">-->
-            <!--<children>-->
-            <!--<Pane fx:id="GoldenPane" layoutX="6.0" layoutY="1.0" prefHeight="294.0" prefWidth="302.0">-->
-               <!--<children>-->
-                  <!--<Label fx:id="GoldenLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-3.0" layoutY="-2.0" prefHeight="44.0" prefWidth="309.0" text="Label" textAlignment="CENTER" />-->
-               <!--</children>-->
-            <!--</Pane>-->
-            <!--<Pane fx:id="SilverPane" layoutX="308.0" layoutY="1.0" prefHeight="294.0" prefWidth="309.0">-->
-               <!--<children>-->
-                  <!--<Label fx:id="SilverLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="309.0" text="Label" textAlignment="CENTER" />-->
-               <!--</children>-->
-            <!--</Pane>-->
-            <!--<Pane fx:id="BronzePane" layoutX="617.0" prefHeight="294.0" prefWidth="286.0">-->
-               <!--<children>-->
-                  <!--<Label fx:id="BronzeLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="286.0" text="Label" textAlignment="CENTER" />-->
-               <!--</children>-->
-            <!--</Pane>-->
-            <!--</children>-->
-        <!--</AnchorPane>-->
-    <!--</children>-->
-    <!--<rotationAxis>-->
-        <!--<Point3D />-->
-    <!--</rotationAxis>-->
-<!--</AnchorPane>-->
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.RankTableController">
+    <children>
+        <AnchorPane layoutX="-2.0" layoutY="-8.0" prefHeight="275.0" prefWidth="1016.0">
+            <children>
+                <ImageView fitHeight="90.0" fitWidth="124.0" layoutX="86.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="100.0">
+                    <image>
+                        <Image url="@../images/SkillMedalGold.png" />
+                    </image>
+                </ImageView>
+                <Text layoutX="301.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quiz Game Ranks" wrappingWidth="435.13671875">
+                    <font>
+                        <Font size="48.0" />
+                    </font>
+                </Text>
+                <ImageView fitHeight="89.0" fitWidth="124.0" layoutX="457.0" layoutY="134.0">
+                    <image>
+                        <Image url="@../images/SkillMedalSilver.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="89.0" fitWidth="124.0" layoutX="699.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="100.0">
+                    <image>
+                        <Image url="@../images/SkillMedalBronze.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="71.0" fitWidth="147.0" layoutX="94.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/bulgaria1.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="-2.0" layoutY="257.0" prefHeight="388.0" prefWidth="994.0">
+            <children>
+            <Pane fx:id="GoldenPane" layoutX="6.0" layoutY="1.0" prefHeight="294.0" prefWidth="302.0">
+               <children>
+                  <Label fx:id="GoldenLabel" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="-3.0" layoutY="-2.0" prefHeight="300.0" prefWidth="309.0" text="Label" textAlignment="CENTER" textFill="#e4da12" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+            <Pane fx:id="SilverPane" layoutX="308.0" layoutY="1.0" prefHeight="294.0" prefWidth="309.0">
+               <children>
+                  <Label fx:id="SilverLabel" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="61.0" prefHeight="294.0" prefWidth="309.0" text="Label" textAlignment="CENTER" textFill="#858fa4" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+            <Pane fx:id="BronzePane" layoutX="617.0" prefHeight="294.0" prefWidth="286.0">
+               <children>
+                  <Label fx:id="BronzeLabel" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="97.0" prefHeight="294.0" prefWidth="286.0" text="Label" textAlignment="CENTER" textFill="#a17b7b" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+            </children>
+        </AnchorPane>
+      <Button fx:id="backBtn" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #FFFFFF;" text="BACK" textAlignment="CENTER" textFill="#262828" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font></Button>
+    </children>
+</AnchorPane>

@@ -50,6 +50,8 @@ public class SelectRankingController {
     private GridPane leftPane;
     @FXML
     private GridPane rightPane;
+    @FXML
+    private Button rankTblBtn;
 
     private Ranking ranking = DependencyInjectionContainer.getRankingInstance();
 
@@ -59,6 +61,7 @@ public class SelectRankingController {
         setTitleLabel();
         setRiftLabel();
         setSoftUniLabel();
+        initRankTblButton();
     }
 
     private void initButtons(){
@@ -67,6 +70,13 @@ public class SelectRankingController {
         initGlobalButton();
         initNormalButton();
         initHardButton();
+    }
+
+    private void initRankTblButton(){
+        rankTblBtn.setOnAction(this::GoToRankTabel);
+        rankTblBtn.setText(ConstantsLabel.LABEL_RANKTABLE_BTN);
+        GUIHelper.styleButton(rankTblBtn);
+
     }
 
     private void initGlobalButton(){
@@ -115,6 +125,18 @@ public class SelectRankingController {
         stage.show();
     }
 
+    private void GoToRankTabel(ActionEvent actionEvent){
+        Parent root=null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("../resources/fxml/rankTable.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Stage stage=(Stage)rankTblBtn.getScene().getWindow();
+        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH,ConstantsDimentions.SCREEN_HEIGHT));
+        stage.show();
+    }
+
     private void initPanes(){
         GUIHelper.setViewDimensions(this.background, ConstantsDimentions.SCREEN_WIDTH- ConstantsDimentions.THREE_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.THREE_ROWS);
         GUIHelper.setViewDimensions(this.leftPane, ConstantsDimentions.TWO_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
@@ -128,7 +150,8 @@ public class SelectRankingController {
         GUIHelper.setViewDimensions(this.easy, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
         GUIHelper.setViewDimensions(this.normal, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
         GUIHelper.setViewDimensions(this.hard, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
-        GUIHelper.styleAsButton(this.backBtn, this.easy, this.normal, this.hard, this.global);
+        GUIHelper.setViewDimensions(this.rankTblBtn, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
+        GUIHelper.styleAsButton(this.backBtn, this.easy, this.normal, this.hard, this.global, this.rankTblBtn);
     }
 
     private void setTitleLabel() {
