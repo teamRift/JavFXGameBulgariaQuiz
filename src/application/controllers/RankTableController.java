@@ -27,13 +27,11 @@ import java.util.List;
 
 
 public class RankTableController {
-    private static final String PLAYER = "[Player: ";
-    private static final String CITY = "City - ";
     private static final int GOLDEN_SCORE = 40;
     private static final int SILVER_SCORE = 30;
     private static final int BRONZE_SCORE = 20;
     private static final int MAX_SIZE_FOR_SHOW_PLAYERS = 13;
-    private static final String CONNECTING_SYMBOLS = "] -- [";
+    private static final String PLAYER_CITY = "[Player: %s] -- [City - %s]\n";
     @FXML
     public Pane GoldenPane;
     @FXML
@@ -67,10 +65,6 @@ public class RankTableController {
         SilverLabel.setText(getNamesByScore(RankTableEnum.SILVER, mScores));
         BronzeLabel.setText(getNamesByScore(RankTableEnum.BRONZE, mScores));
 
-//        GoldenLabel.setText(Utils.getRanking(mScores.get(0).prepareSave()));
-//        SilverLabel.setText(Utils.getRanking(mScores.get(1).prepareSave()));
-//        BronzeLabel.setText(Utils.getRanking(mScores.get(2).prepareSave()));
-
     }
 
     private String getNamesByScore(RankTableEnum rankTableEnum, List<Score> mScores) {
@@ -78,18 +72,18 @@ public class RankTableController {
         switch (rankTableEnum){
             case GOLDEN:
                 mScores.stream().filter(s -> s.getValue() == GOLDEN_SCORE).limit(MAX_SIZE_FOR_SHOW_PLAYERS)
-                        .forEach(n -> names.append(PLAYER).append(n.getUserName()).append(CONNECTING_SYMBOLS)
-                                .append(CITY).append(n.getCityName()).append("]").append(System.lineSeparator()));
+                        .forEach(n -> names.append(String.format(PLAYER_CITY, n.getUserName(), n.getCityName())));
+
                 break;
             case SILVER:
                 mScores.stream().filter(s -> s.getValue() == SILVER_SCORE).limit(MAX_SIZE_FOR_SHOW_PLAYERS)
-                        .forEach(n -> names.append(PLAYER).append(n.getUserName()).append(CONNECTING_SYMBOLS)
-                                .append(CITY).append(n.getCityName()).append("]").append(System.lineSeparator()));
+                        .forEach(n -> names.append(String.format(PLAYER_CITY, n.getUserName(), n.getCityName())));
+
                 break;
             case BRONZE:
                 mScores.stream().filter(s -> s.getValue() == BRONZE_SCORE).limit(MAX_SIZE_FOR_SHOW_PLAYERS)
-                        .forEach(n -> names.append(PLAYER).append(n.getUserName()).append(CONNECTING_SYMBOLS)
-                                .append(CITY).append(n.getCityName()).append("]").append(System.lineSeparator()));
+                        .forEach(n -> names.append(String.format(PLAYER_CITY, n.getUserName(), n.getCityName())));
+
                 break;
         }
         return names.toString();
