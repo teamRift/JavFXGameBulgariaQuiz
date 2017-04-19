@@ -7,7 +7,12 @@ import application.constants.ConstantsLabel;
 import application.constants.ConstantsPath;
 import application.dependencies.DependencyInjectionContainer;
 import application.ranking.Scores;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.application.Platform;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,7 +24,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -80,11 +87,57 @@ public class QuestionsController {
 
     private ArrayList<Question> questions;
 
+    @FXML//TIMER PARAMETERS
+    private Label timerLabel;
+    private Timeline timeline;
+    private IntegerProperty timeSeconds = new SimpleIntegerProperty(0);
+    private static IntegerProperty timeSeconds1 = new SimpleIntegerProperty(0);
+    private String FINALTIME;
+
+    private void startTimer() {
+
+
+        timeSeconds.set(0);
+        Timeline timeline = new Timeline();
+        timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(Integer.MAX_VALUE),
+                new KeyValue(timeSeconds, Integer.MAX_VALUE)));
+        timeline.playFromStart();
+
+
+
+        timeSeconds.set(0);
+        Timeline timeline1 = new Timeline(new KeyFrame(
+                Duration.seconds(1),
+                ae -> getElapsedTime(timeSeconds.toString())));
+        timeline1.setCycleCount(Integer.MAX_VALUE);
+        timeline1.playFromStart();
+
+    }
+
+    public String getElapsedTime(String seconds) {
+        String[] currentSecond = seconds.replaceAll("]", "").split(" ");
+        FINALTIME = currentSecond[2];
+
+        return FINALTIME;
+    }
+
+
+
+    private void setTimerLabel() {
+        timerLabel.setTextFill(Color.RED);
+        timerLabel.setStyle("-fx-font-size: 5em;");
+        timerLabel.textProperty().bind(timeSeconds.asString());
+    }
+
+
     @FXML
     public void initialize() {
         setBackground();
         setPanes();
         setLabels();
+
+        setTimerLabel();
+        startTimer();
 
         GUIHelper.styleButton(this.firstButton, this.secondButton, this.thirdButton, this.fourthButton, this.backButton, this.hintOne);
 

@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<Pane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.QuestionsController">
+<Pane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.QuestionsController">
    <children>
       <ImageView fx:id="background" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" smooth="false">
          <image>
@@ -130,11 +130,12 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="hintOne" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#hintButton" text="50/50" GridPane.halignment="CENTER">
+                  <Button fx:id="hintOne" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#hintButton" text="50/50" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Button>
+                  <Label fx:id="timerLabel" text="CountdownTimer" />
                </children>
             </GridPane>
          </right>
