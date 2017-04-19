@@ -25,7 +25,6 @@ import java.io.IOException;
 import java.util.List;
 
 
-
 public class RankTableController {
     private static final int GOLDEN_SCORE = 40;
     private static final int SILVER_SCORE = 30;
@@ -69,7 +68,7 @@ public class RankTableController {
 
     private String getNamesByScore(RankTableEnum rankTableEnum, List<Score> mScores) {
         StringBuilder names = new StringBuilder();
-        switch (rankTableEnum){
+        switch (rankTableEnum) {
             case GOLDEN:
                 mScores.stream().filter(s -> s.getValue() == GOLDEN_SCORE).limit(MAX_SIZE_FOR_SHOW_PLAYERS)
                         .forEach(n -> names.append(String.format(PLAYER_CITY, n.getUserName(), n.getCityName())));
@@ -92,8 +91,8 @@ public class RankTableController {
 
     public void back(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_MENU));
-        Stage stage = ( Stage ) this.backBtn.getScene().getWindow();
-        stage.setScene( new Scene( root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
+        Stage stage = (Stage) this.backBtn.getScene().getWindow();
+        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
         stage.show();
     }
 }
