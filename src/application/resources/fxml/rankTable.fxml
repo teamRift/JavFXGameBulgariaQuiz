@@ -1,64 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="mainPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.RankTableController">
+<AnchorPane fx:id="mainPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.RankTableController">
     <children>
-      <Label fx:id="GoldenLabel" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="247.0" text="Label" textAlignment="CENTER" textFill="#e4da12" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="280.0">
+        <Label fx:id="GoldenLabel" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="247.0" text="Label" textAlignment="CENTER" textFill="#e4da12" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="280.0">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Button fx:id="backBtn" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #FFFFFF;" text="Back" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0" />
+        <ImageView fitHeight="71.0" fitWidth="147.0" layoutX="54.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="30.0">
+            <image>
+                <Image url="@../images/bulgaria1.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="90.0" fitWidth="124.0" layoutX="61.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="156.0">
+            <image>
+                <Image url="@../images/SkillMedalGold.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="89.0" fitWidth="124.0" layoutX="456.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="156.0">
+            <image>
+                <Image url="@../images/SkillMedalBronze.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="89.0" fitWidth="124.0" layoutX="776.0" layoutY="156.0" AnchorPane.leftAnchor="455.0" AnchorPane.topAnchor="156.0">
+            <image>
+                <Image url="@../images/SkillMedalSilver.png" />
+            </image>
+        </ImageView>
+        <Label fx:id="BronzeLabel" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="360.0" layoutY="280.0" text="Label" textAlignment="CENTER" textFill="#a17b7b" textOverrun="CENTER_ELLIPSIS" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="280.0">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="SilverLabel" alignment="TOP_CENTER" contentDisplay="CENTER" text="Label" textAlignment="CENTER" textFill="#858fa4" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="280.0">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+      <Label fx:id="tableTitle" alignment="CENTER" contentDisplay="CENTER" text="Quiz Game Ranks">
          <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <Button fx:id="backBtn" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #FFFFFF;" text="BACK" textAlignment="CENTER" textFill="#262828" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
-         <font>
-            <Font name="System Bold Italic" size="17.0" />
-         </font></Button>
-          <ImageView fitHeight="71.0" fitWidth="147.0" layoutX="54.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="30.0">
-              <image>
-                  <Image url="@../images/bulgaria1.png" />
-              </image>
-          </ImageView>
-          <Text layoutX="69.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quiz Game Ranks" wrappingWidth="435.13671875" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="30.0">
-              <font>
-                  <Font size="48.0" />
-              </font>
-          </Text>
-          <ImageView fitHeight="90.0" fitWidth="124.0" layoutX="61.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="156.0">
-              <image>
-                  <Image url="@../images/SkillMedalGold.png" />
-              </image>
-          </ImageView>
-          <ImageView fitHeight="89.0" fitWidth="124.0" layoutX="456.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="156.0">
-              <image>
-                  <Image url="@../images/SkillMedalBronze.png" />
-              </image>
-          </ImageView>
-          <ImageView fitHeight="89.0" fitWidth="124.0" layoutX="776.0" layoutY="156.0" AnchorPane.leftAnchor="455.0" AnchorPane.topAnchor="156.0">
-              <image>
-                  <Image url="@../images/SkillMedalSilver.png" />
-              </image>
-          </ImageView>
-      <Label fx:id="BronzeLabel" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="360.0" layoutY="280.0" text="Label" textAlignment="CENTER" textFill="#a17b7b" textOverrun="CENTER_ELLIPSIS" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="280.0">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <Label fx:id="SilverLabel" alignment="TOP_CENTER" contentDisplay="CENTER" text="Label" textAlignment="CENTER" textFill="#858fa4" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="280.0">
-         <font>
-            <Font name="System Bold" size="13.0" />
+            <Font size="48.0" />
          </font>
       </Label>
     </children>

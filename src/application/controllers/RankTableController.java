@@ -4,7 +4,9 @@ import application.classes.GUIHelper;
 import application.classes.GameManager;
 import application.classes.Score;
 import application.constants.ConstantsDimentions;
+import application.constants.ConstantsLabel;
 import application.constants.ConstantsPath;
+import application.constants.ConstantsStyle;
 import application.dependencies.DependencyInjectionContainer;
 import application.enums.RankTableEnum;
 
@@ -20,6 +22,10 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -33,6 +39,9 @@ public class RankTableController {
     private static final int BRONZE_SCORE = 20;
     private static final int MAX_SIZE_FOR_SHOW_PLAYERS = 13;
     private static final String PLAYER_CITY = "[Player: %s] -- [City - %s]\n";
+
+    @FXML
+    private Label tableTitle;
     @FXML
     private Label GoldenLabel;
     @FXML
@@ -50,6 +59,8 @@ public class RankTableController {
     public void initialize() throws Exception {
         loadScores();
         setPanes();
+        setTitle();
+        initBackButton();
         PauseTransition delay = new PauseTransition(Duration.seconds(2));
         delay.setOnFinished(event -> System.out.println("Started."));
         delay.play();
@@ -99,6 +110,17 @@ public class RankTableController {
         stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
         stage.show();
     }
+
+    private void setTitle(){
+        this.tableTitle.setTextFill(Color.SEAGREEN);
+        this.tableTitle.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H3*3));
+        this.tableTitle.setLayoutX(ConstantsDimentions.FOUR_COLS);
+        this.tableTitle.setLayoutY(ConstantsDimentions.ONE_ROW);
+        GUIHelper.setShadow(this.tableTitle);
+    }
+
+    private void initBackButton(){
+        GUIHelper.setViewDimensions(this.backBtn, ConstantsDimentions.ONE_COL, ConstantsDimentions.ONE_ROW/2);
+        GUIHelper.styleAsButton(this.backBtn);
+    }
 }
-
-
