@@ -1,5 +1,6 @@
 package application.controllers;
 
+import application.classes.GUIHelper;
 import application.classes.GameManager;
 import application.classes.Score;
 import application.constants.ConstantsDimentions;
@@ -16,6 +17,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
 import javafx.stage.Stage;
@@ -32,24 +34,22 @@ public class RankTableController {
     private static final int MAX_SIZE_FOR_SHOW_PLAYERS = 13;
     private static final String PLAYER_CITY = "[Player: %s] -- [City - %s]\n";
     @FXML
-    public Pane GoldenPane;
+    private Label GoldenLabel;
     @FXML
-    public Pane SilverPane;
+    private Label SilverLabel;
     @FXML
-    public Pane BronzePane;
+    private Label BronzeLabel;
     @FXML
-    public Label GoldenLabel;
+    private Button backBtn;
     @FXML
-    public Label SilverLabel;
-    @FXML
-    public Label BronzeLabel;
-    public Button backBtn;
+    private AnchorPane mainPane;
 
     private GameManager gameManager = DependencyInjectionContainer.getGameManagerInstance();
 
 
     public void initialize() throws Exception {
         loadScores();
+        setPanes();
         PauseTransition delay = new PauseTransition(Duration.seconds(2));
         delay.setOnFinished(event -> System.out.println("Started."));
         delay.play();
@@ -88,6 +88,10 @@ public class RankTableController {
         return names.toString();
     }
 
+    private void setPanes() {
+        GUIHelper.setBackground(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
+
+    }
 
     public void back(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_MENU));
