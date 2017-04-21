@@ -92,43 +92,37 @@ public class QuestionsController {
     private Timeline timeline;
     private IntegerProperty timeSeconds = new SimpleIntegerProperty(0);
     private static IntegerProperty timeSeconds1 = new SimpleIntegerProperty(0);
-    private String FINALTIME;
+    private String finalTime;
 
     private void startTimer() {
-
-
-        timeSeconds.set(0);
+        this.timeSeconds.set(0);
         Timeline timeline = new Timeline();
         timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(Integer.MAX_VALUE),
-                new KeyValue(timeSeconds, Integer.MAX_VALUE)));
+                new KeyValue(this.timeSeconds, Integer.MAX_VALUE)));
         timeline.playFromStart();
 
 
 
-        timeSeconds.set(0);
+        this.timeSeconds.set(0);
         Timeline timeline1 = new Timeline(new KeyFrame(
                 Duration.seconds(1),
-                ae -> getElapsedTime(timeSeconds.toString())));
+                ae -> getElapsedTime(this.timeSeconds.toString())));
         timeline1.setCycleCount(Integer.MAX_VALUE);
         timeline1.playFromStart();
 
     }
 
-    public String getElapsedTime(String seconds) {
+    private String getElapsedTime(String seconds) {
         String[] currentSecond = seconds.replaceAll("]", "").split(" ");
-        FINALTIME = currentSecond[2];
-
-        return FINALTIME;
+        this.finalTime = currentSecond[2];
+        return this.finalTime;
     }
-
-
 
     private void setTimerLabel() {
-        timerLabel.setTextFill(Color.RED);
-        timerLabel.setStyle("-fx-font-size: 5em;");
-        timerLabel.textProperty().bind(timeSeconds.asString());
+        this.timerLabel.setTextFill(Color.RED);
+        this.timerLabel.setStyle("-fx-font-size: 5em;");
+        this.timerLabel.textProperty().bind(timeSeconds.asString());
     }
-
 
     @FXML
     public void initialize() {
@@ -136,8 +130,8 @@ public class QuestionsController {
         setPanes();
         setLabels();
 
-        setTimerLabel();
-        startTimer();
+//        setTimerLabel();
+//        startTimer();
 
         GUIHelper.styleButton(this.firstButton, this.secondButton, this.thirdButton, this.fourthButton, this.backButton, this.hintOne);
 
@@ -188,6 +182,7 @@ public class QuestionsController {
     }
 
     private void setLabels() {
+        this.timerLabel.setVisible(false);
         this.cityName.setText(this.gameManager.getCityName());
         this.userName.setText(this.gameManager.getCurrentUser());
         this.maxScore.setText(String.valueOf("Game Max: " + this.gameManager.getMaxScore()));
