@@ -1,7 +1,7 @@
 package application.controllers;
 
 import application.classes.GUIHelper;
-import application.constants.ConstantsDimentions;
+import application.constants.ConstantsDimensions;
 import application.constants.ConstantsLabel;
 import application.constants.ConstantsPath;
 import javafx.fxml.FXML;
@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -36,7 +37,7 @@ public class CreditsController {
 
     private void setButtons() {
         GUIHelper.styleButton(this.backBtn);
-        GUIHelper.setViewDimensions(this.backBtn, ConstantsDimentions.ONE_COL, ConstantsDimentions.ONE_ROW);
+        GUIHelper.setViewDimensions(this.backBtn, ConstantsDimensions.ONE_COL, ConstantsDimensions.ONE_ROW/2);
         this.backBtn.setText(ConstantsLabel.LABEL_BACK_BTN);
         this.backBtn.setOnAction((actionEvent) -> {
             try {
@@ -48,19 +49,22 @@ public class CreditsController {
     }
 
     private void setPanes(){
-        GUIHelper.setBackground(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
-        GUIHelper.setViewDimensions(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
-        GUIHelper.setViewDimensions(this.teamRiftBox, ConstantsDimentions.SCREEN_WIDTH - ConstantsDimentions.FOUR_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
-        GUIHelper.setViewDimensions(this.topPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.TWO_ROWS);
-        GUIHelper.setViewDimensions(this.bottomPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.TWO_ROWS);
-        GUIHelper.setViewDimensions(this.leftPane, ConstantsDimentions.TWO_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
-        GUIHelper.setViewDimensions(this.rightPane, ConstantsDimentions.TWO_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
+        GUIHelper.setBackground(this.mainPane, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.mainPane, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.teamRiftBox, ConstantsDimensions.SCREEN_WIDTH - ConstantsDimensions.FOUR_COLS, ConstantsDimensions.SCREEN_HEIGHT - ConstantsDimensions.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.topPane, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.TWO_ROWS);
+        GUIHelper.setViewDimensions(this.bottomPane, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.TWO_ROWS);
+        GUIHelper.setViewDimensions(this.leftPane, ConstantsDimensions.TWO_COLS, ConstantsDimensions.SCREEN_HEIGHT - ConstantsDimensions.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.rightPane, ConstantsDimensions.TWO_COLS, ConstantsDimensions.SCREEN_HEIGHT - ConstantsDimensions.FOUR_ROWS);
     }
 
     private void setLabels() {
-        GUIHelper.styleLabel(50, this.gameTitle);
+        GUIHelper.styleLabel(ConstantsDimensions.H3*3, this.gameTitle);
         this.gameTitle.setText(ConstantsLabel.LABEL_GAME_TITLE);
-        GUIHelper.styleLabel(32, this.leftLabel, this.rightLabel);
+        this.gameTitle.setTextFill(Color.SEAGREEN);
+        GUIHelper.setShadow(this.gameTitle);
+        GUIHelper.styleLabel(ConstantsDimensions.H2, this.leftLabel);
+        GUIHelper.styleLabel(ConstantsDimensions.H3*2, this.rightLabel);
         this.leftLabel.setText(ConstantsLabel.LABEL_TEAM_RIFT);
         this.rightLabel.setText(ConstantsLabel.LABEL_SOFTUNI);
         this.creditsL1.setText("@Alish");
@@ -71,13 +75,13 @@ public class CreditsController {
         this.creditsR3.setText("@Daniela.Raycheva");
         this.creditsL4.setText("@koushalieva");
         this.creditsR4.setText("@mariyanhadzhiev");
-        GUIHelper.styleLabel(25, this.creditsL1, this.creditsL2, this.creditsL3, this.creditsL4, this.creditsR1, this.creditsR2, this.creditsR3, this.creditsR4);
+        GUIHelper.styleLabel(ConstantsDimensions.H3*2, this.creditsL1, this.creditsL2, this.creditsL3, this.creditsL4, this.creditsR1, this.creditsR2, this.creditsR3, this.creditsR4);
     }
 
     private void onBack() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_MENU));
         Stage stage = ( Stage ) this.backBtn.getScene().getWindow();
-        stage.setScene( new Scene( root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
+        stage.setScene( new Scene( root, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.SCREEN_HEIGHT));
         stage.show();
     }
 }

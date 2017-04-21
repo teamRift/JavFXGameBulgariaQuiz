@@ -1,6 +1,6 @@
 package application.classes;
 
-import application.constants.ConstantsDimentions;
+import application.constants.ConstantsDimensions;
 import application.constants.ConstantsErrorMsg;
 import application.constants.ConstantsPath;
 import application.controllers.QuestionsController;
@@ -149,7 +149,7 @@ public class Question {
     private void showScores(Button b) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_RANKINGS_WINDOW));
         Stage stage = (Stage) b.getScene().getWindow();
-        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
+        stage.setScene(new Scene(root, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.SCREEN_HEIGHT));
         stage.show();
     }
 

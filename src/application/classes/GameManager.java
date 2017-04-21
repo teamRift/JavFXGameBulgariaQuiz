@@ -10,6 +10,7 @@ import java.util.List;
 
 public  class GameManager {
 
+    public static final String TEXT_FACT = "Did you know an ancient city, dated back 10.000 BC, has been discovered on the bottom of the Black sea?";
     private boolean hasPlayed;
     private String questionsDifficulty;
     private String currentUser;
@@ -82,10 +83,10 @@ public  class GameManager {
     }
 
     public void setUserMaxPoints(int userMaxPoints) {
-        userMaxPoints = userMaxPoints;
+        this.userMaxPoints = userMaxPoints;
     }
 
-    public void setMaxScore(int maxScore){
+    private void setMaxScore(int maxScore){
         this.maxPoints = maxScore;
     }
 
@@ -101,7 +102,7 @@ public  class GameManager {
     }
 
     public  void setFactsLabel(Label label){
-        label.setText("Did you know an ancient city, dated back 10.000 BC, has been discovered on the bottom of the Black sea?");
+        label.setText(TEXT_FACT);
     }
 
     public  void setUserName(TextField t) {

@@ -2,7 +2,7 @@ package application.controllers;
 
 import application.classes.GUIHelper;
 import application.classes.Song;
-import application.constants.ConstantsDimentions;
+import application.constants.ConstantsDimensions;
 import application.constants.ConstantsLabel;
 import application.constants.ConstantsPath;
 import application.constants.ConstantsStyle;
@@ -72,7 +72,7 @@ public class MenuController {
 
     private void initExitButton(){
         this.buttonExit.setText(ConstantsLabel.LABEL_EXIT_BTN);
-        GUIHelper.setViewDimensions(this.buttonExit, ConstantsDimentions.FOUR_COLS, ConstantsDimentions.ONE_ROW);
+        GUIHelper.setViewDimensions(this.buttonExit, ConstantsDimensions.FOUR_COLS, ConstantsDimensions.ONE_ROW);
         this.buttonExit.setOnMouseClicked(actionEvent -> {
             exitGame();
         });
@@ -143,42 +143,42 @@ public class MenuController {
     private void setGameLabel() {
         this.gameTitle.setText(ConstantsLabel.LABEL_GAME_TITLE);
         this.gameTitle.setTextFill(Color.SEAGREEN);
-        this.gameTitle.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H1 - ConstantsDimentions.H2));
+        this.gameTitle.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimensions.H1 - ConstantsDimensions.H2));
         GUIHelper.setShadow(this.gameTitle);
     }
 
     private void setRiftLabel() {
         this.menuLeftLabel.setText(ConstantsLabel.LABEL_TEAM_RIFT);
         this.menuLeftLabel.setTextFill(Color.WHITESMOKE);
-        this.menuLeftLabel.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H2));
+        this.menuLeftLabel.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimensions.H2));
         GUIHelper.setShadow(this.menuLeftLabel);
     }
 
     private void setSoftUniLabel() {
         this.menuRightLabel.setText(ConstantsLabel.LABEL_SOFTUNI);
         this.menuRightLabel.setTextFill(Color.WHITE);
-        this.menuRightLabel.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H3*2));
+        this.menuRightLabel.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimensions.H3*2));
         GUIHelper.setShadow(this.menuRightLabel);
     }
 
     private void setButtons() {
-        GUIHelper.setViewDimensions(this.buttonStart, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
-        GUIHelper.setViewDimensions(this.buttonExit, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
-        GUIHelper.setViewDimensions(this.buttonPlayingInstructions, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
-        GUIHelper.setViewDimensions(this.buttonCredits, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
-        GUIHelper.setViewDimensions(this.buttonScores, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
+        GUIHelper.setViewDimensions(this.buttonStart, ConstantsDimensions.TWO_COLS, ConstantsDimensions.ONE_ROW/2);
+        GUIHelper.setViewDimensions(this.buttonExit, ConstantsDimensions.TWO_COLS, ConstantsDimensions.ONE_ROW/2);
+        GUIHelper.setViewDimensions(this.buttonPlayingInstructions, ConstantsDimensions.TWO_COLS, ConstantsDimensions.ONE_ROW/2);
+        GUIHelper.setViewDimensions(this.buttonCredits, ConstantsDimensions.TWO_COLS, ConstantsDimensions.ONE_ROW/2);
+        GUIHelper.setViewDimensions(this.buttonScores, ConstantsDimensions.TWO_COLS, ConstantsDimensions.ONE_ROW/2);
         GUIHelper.styleAsButton(this.buttonStart, this.buttonExit, this.buttonCredits, this.buttonScores);
     }
 
     private void initPanes(){
-        GUIHelper.setViewDimensions(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
-        GUIHelper.setViewDimensions(this.topPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.TWO_ROWS);
-        GUIHelper.setViewDimensions(this.bottomPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.TWO_ROWS);
-        GUIHelper.setViewDimensions(this.leftPane, ConstantsDimentions.TWO_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
-        GUIHelper.setViewDimensions(this.rightPane, ConstantsDimentions.TWO_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
-        GUIHelper.setViewDimensions(this.centerPane, ConstantsDimentions.SCREEN_WIDTH , ConstantsDimentions.SCREEN_HEIGHT);
-        GUIHelper.setViewDimensions(this.mapImage, ConstantsDimentions.SCREEN_WIDTH- ConstantsDimentions.THREE_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.THREE_ROWS);
-        GUIHelper.setBackground(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.mainPane, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.topPane, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.TWO_ROWS);
+        GUIHelper.setViewDimensions(this.bottomPane, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.TWO_ROWS);
+        GUIHelper.setViewDimensions(this.leftPane, ConstantsDimensions.TWO_COLS, ConstantsDimensions.SCREEN_HEIGHT - ConstantsDimensions.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.rightPane, ConstantsDimensions.TWO_COLS, ConstantsDimensions.SCREEN_HEIGHT - ConstantsDimensions.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.centerPane, ConstantsDimensions.SCREEN_WIDTH , ConstantsDimensions.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.mapImage, ConstantsDimensions.SCREEN_WIDTH- ConstantsDimensions.THREE_COLS, ConstantsDimensions.SCREEN_HEIGHT - ConstantsDimensions.THREE_ROWS);
+        GUIHelper.setBackground(this.mainPane, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.SCREEN_HEIGHT);
     }
 
     private void exitGame() {
@@ -189,28 +189,28 @@ public class MenuController {
     private void showPlayingInstructions() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_PLAYING_INSTRUCTION));
         Stage stage = (Stage)this.buttonPlayingInstructions.getScene().getWindow();
-        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
+        stage.setScene(new Scene(root, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.SCREEN_HEIGHT));
         stage.show();
     }
 
     private void showCredits() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_CREDITS));
         Stage stage = (Stage)this.buttonCredits.getScene().getWindow();
-        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
+        stage.setScene(new Scene(root, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.SCREEN_HEIGHT));
         stage.show();
     }
 
     private void showScores() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_SELECT_RANKING));
         Stage stage = (Stage)this.buttonScores.getScene().getWindow();
-        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
+        stage.setScene(new Scene(root, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.SCREEN_HEIGHT));
         stage.show();
     }
 
     private void startGame() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(ConstantsPath.PATH_TO_CITIES));
         Stage stage = (Stage)this.buttonStart.getScene().getWindow();
-        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
+        stage.setScene(new Scene(root, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.SCREEN_HEIGHT));
         stage.show();
     }
 

@@ -1,6 +1,6 @@
 package application.controllers;
 
-import application.constants.ConstantsDimentions;
+import application.constants.ConstantsDimensions;
 import application.constants.ConstantsLabel;
 import application.constants.ConstantsPath;
 import application.constants.ConstantsStyle;
@@ -121,7 +121,7 @@ public class SelectRankingController {
         }
 
         Stage stage = (Stage) button.getScene().getWindow();
-        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
+        stage.setScene(new Scene(root, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.SCREEN_HEIGHT));
         stage.show();
     }
 
@@ -133,45 +133,45 @@ public class SelectRankingController {
             e.printStackTrace();
         }
         Stage stage=(Stage)rankTblBtn.getScene().getWindow();
-        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH,ConstantsDimentions.SCREEN_HEIGHT));
+        stage.setScene(new Scene(root, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.SCREEN_HEIGHT));
         stage.show();
     }
 
     private void initPanes(){
-        GUIHelper.setViewDimensions(this.background, ConstantsDimentions.SCREEN_WIDTH- ConstantsDimentions.THREE_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.THREE_ROWS);
-        GUIHelper.setViewDimensions(this.leftPane, ConstantsDimentions.TWO_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
-        GUIHelper.setViewDimensions(this.rightPane, ConstantsDimentions.TWO_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.FOUR_ROWS);
-        GUIHelper.setBackground(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.background, ConstantsDimensions.SCREEN_WIDTH- ConstantsDimensions.THREE_COLS, ConstantsDimensions.SCREEN_HEIGHT - ConstantsDimensions.THREE_ROWS);
+        GUIHelper.setViewDimensions(this.leftPane, ConstantsDimensions.TWO_COLS, ConstantsDimensions.SCREEN_HEIGHT - ConstantsDimensions.FOUR_ROWS);
+        GUIHelper.setViewDimensions(this.rightPane, ConstantsDimensions.TWO_COLS, ConstantsDimensions.SCREEN_HEIGHT - ConstantsDimensions.FOUR_ROWS);
+        GUIHelper.setBackground(this.mainPane, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.SCREEN_HEIGHT);
     }
 
     private void setButtons() {
-        GUIHelper.setViewDimensions(this.backBtn, ConstantsDimentions.ONE_COL, ConstantsDimentions.ONE_ROW/2);
-        GUIHelper.setViewDimensions(this.global, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
-        GUIHelper.setViewDimensions(this.easy, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
-        GUIHelper.setViewDimensions(this.normal, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
-        GUIHelper.setViewDimensions(this.hard, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
-        GUIHelper.setViewDimensions(this.rankTblBtn, ConstantsDimentions.TWO_COLS, ConstantsDimentions.ONE_ROW/2);
+        GUIHelper.setViewDimensions(this.backBtn, ConstantsDimensions.ONE_COL, ConstantsDimensions.ONE_ROW/2);
+        GUIHelper.setViewDimensions(this.global, ConstantsDimensions.TWO_COLS, ConstantsDimensions.ONE_ROW/2);
+        GUIHelper.setViewDimensions(this.easy, ConstantsDimensions.TWO_COLS, ConstantsDimensions.ONE_ROW/2);
+        GUIHelper.setViewDimensions(this.normal, ConstantsDimensions.TWO_COLS, ConstantsDimensions.ONE_ROW/2);
+        GUIHelper.setViewDimensions(this.hard, ConstantsDimensions.TWO_COLS, ConstantsDimensions.ONE_ROW/2);
+        GUIHelper.setViewDimensions(this.rankTblBtn, ConstantsDimensions.TWO_COLS, ConstantsDimensions.ONE_ROW/2);
         GUIHelper.styleAsButton(this.backBtn, this.easy, this.normal, this.hard, this.global, this.rankTblBtn);
     }
 
     private void setTitleLabel() {
         this.rankingTitle.setText(ConstantsLabel.LABEL_SELECT_RANKING);
         this.rankingTitle.setTextFill(Color.SEAGREEN);
-        this.rankingTitle.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H3*3));
+        this.rankingTitle.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimensions.H3*3));
         GUIHelper.setShadow(this.rankingTitle);
     }
 
     private void setRiftLabel() {
         this.rankingLeftLabel.setText(ConstantsLabel.LABEL_TEAM_RIFT);
         this.rankingLeftLabel.setTextFill(Color.WHITESMOKE);
-        this.rankingLeftLabel.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H2));
+        this.rankingLeftLabel.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimensions.H2));
         GUIHelper.setShadow(this.rankingLeftLabel);
     }
 
     private void setSoftUniLabel() {
         this.rankingRightLabel.setText(ConstantsLabel.LABEL_SOFTUNI);
         this.rankingRightLabel.setTextFill(Color.WHITE);
-        this.rankingRightLabel.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H3*2));
+        this.rankingRightLabel.setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimensions.H3*2));
         GUIHelper.setShadow(this.rankingRightLabel);
     }
 }

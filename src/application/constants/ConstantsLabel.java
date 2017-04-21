@@ -20,4 +20,5 @@ public class ConstantsLabel {
     public static final String LABEL_CHOOSE_SCORE_BTN = "Choose score";
     public static final String LABEL_RANKING_TITEL_PART_1 = "Top 5 scores for ";
     public static final String LABEL_RANKING_TITLE_PART_2 = " difficult";
+    public static final String LABEL_HOW_TO_PLAY = "How to play";
 }

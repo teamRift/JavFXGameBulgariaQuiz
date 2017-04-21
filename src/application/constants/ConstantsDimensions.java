@@ -2,7 +2,7 @@ package application.constants;
 
 import javafx.stage.Screen;
 
-public class ConstantsDimentions {
+public class ConstantsDimensions {
     //This allows you to create your design reg ardless of SCREEN SIZE
     public static final  double SCREEN_WIDTH = Screen.getPrimary().getBounds().getWidth() - (Screen.getPrimary().getBounds().getWidth() / 4); //get the width of the display
     public static final  double SCREEN_HEIGHT = Screen.getPrimary().getBounds().getHeight() - (Screen.getPrimary().getBounds().getHeight() / 4); //get the width of the display

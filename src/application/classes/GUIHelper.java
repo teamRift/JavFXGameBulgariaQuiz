@@ -1,6 +1,6 @@
 package application.classes;
 
-import application.constants.ConstantsDimentions;
+import application.constants.ConstantsDimensions;
 import application.constants.ConstantsPath;
 import application.constants.ConstantsStyle;
 import javafx.geometry.Insets;
@@ -55,7 +55,7 @@ public class GUIHelper {
             ((Button) object).setMinHeight(HEIGHT);
             ((Button) object).setMaxHeight(HEIGHT);
             ((Button) object).setPrefHeight(HEIGHT);
-            ((Button) object).setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H3));
+            ((Button) object).setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimensions.H3));
             styleButton((Button) object);
         } else if (object instanceof Label) {
             ((Label) object).setMinWidth(WIDTH);
@@ -74,7 +74,7 @@ public class GUIHelper {
             ((TextField) object).setMinHeight(HEIGHT);
             ((TextField) object).setMaxHeight(HEIGHT);
             ((TextField) object).setPrefHeight(HEIGHT);
-            ((TextField) object).setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H3));
+            ((TextField) object).setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimensions.H3));
         } else {
             System.out.printf("setViewDimensions(Object object) : %s is not a valid object. Pane, ImageView, Label or Button required.", capitalize(object.getClass().getSimpleName()));
         }
@@ -108,7 +108,7 @@ public class GUIHelper {
     public static void styleCityButton(Button... buttons) {
         for (Button button : buttons) {
             button.setBackground(Background.EMPTY);
-            button.setFont(Font.font(ConstantsStyle.DEFAULT_FONT,FontWeight.BOLD,ConstantsDimentions.H3));
+            button.setFont(Font.font(ConstantsStyle.DEFAULT_FONT,FontWeight.BOLD, ConstantsDimensions.H3));
             button.setTextFill(Color.WHITESMOKE);
             setShadow(button);
         }
@@ -117,7 +117,7 @@ public class GUIHelper {
     public static void styleButton(Button... buttons) {
         for (Button button : buttons) {
             button.setBackground(new Background(new BackgroundFill(Paint.valueOf("#FFFFFF"),new CornerRadii(7), new Insets(5,5,5,5))));
-            button.setFont(Font.font(ConstantsStyle.DEFAULT_FONT,FontWeight.BOLD, ConstantsDimentions.H3));
+            button.setFont(Font.font(ConstantsStyle.DEFAULT_FONT,FontWeight.BOLD, ConstantsDimensions.H3));
             button.setTextFill(Color.BLACK);
             setShadow(button);
         }
@@ -133,7 +133,7 @@ public class GUIHelper {
                                         new Insets(5))));
                 setShadow(((HBox) object));
             } else if (object instanceof Label) {
-                ((Label) object).setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimentions.H3));
+                ((Label) object).setFont(Font.font(ConstantsStyle.DEFAULT_FONT, FontWeight.BOLD, ConstantsDimensions.H3));
                 ((Label) object).setTextFill(Color.BLACK);
             }
         }

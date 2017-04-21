@@ -3,7 +3,7 @@ package application.controllers;
 import application.classes.GUIHelper;
 import application.classes.GameManager;
 import application.classes.Score;
-import application.constants.ConstantsDimentions;
+import application.constants.ConstantsDimensions;
 import application.constants.ConstantsLabel;
 import application.constants.ConstantsPath;
 import application.dependencies.DependencyInjectionContainer;
@@ -16,12 +16,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.List;
 
 public class RankingsController {
+    private static final int FIRST_SCORE_VALUE = 0;
     @FXML
     private Label rankingsTitle;
     @FXML
@@ -50,11 +52,8 @@ public class RankingsController {
     public void initialize() throws Exception {
         initCurrent();
         loadScores();
-        GUIHelper.setBackground(this.mainPane, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT);
-        GUIHelper.setViewDimensions(this.background, ConstantsDimentions.SCREEN_WIDTH - ConstantsDimentions.THREE_COLS, ConstantsDimentions.SCREEN_HEIGHT - ConstantsDimentions.THREE_ROWS);
-        GUIHelper.styleLabel(35, this.rankingsCurrent, this.rankingsFirst, this.rankingsSecond, this.rankingsThird, this.rankingsFourth, this.rankingsFifth);
-        GUIHelper.styleLabel(50, this.rankingsTitle);
-        GUIHelper.styleLabel(25, this.hintLabel);
+        setPane();
+        setLabels();
         initBackButton();
     }
 
@@ -66,7 +65,7 @@ public class RankingsController {
             e.printStackTrace();
         }
         Stage stage = (Stage) this.backBtn.getScene().getWindow();
-        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
+        stage.setScene(new Scene(root, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.SCREEN_HEIGHT));
         stage.show();
     }
 
@@ -75,7 +74,7 @@ public class RankingsController {
         this.rankingsTitle.setText(ConstantsLabel.LABEL_RANKINGS_TOP_5);
 
         for (int i = 5 - mScores.size(); i > 0; i--) {
-            mScores.set(mScores.size(), new Score("---", "---", 0));
+            mScores.set(mScores.size(), new Score("---", "---", FIRST_SCORE_VALUE));
         }
 
         this.rankingsFirst.setText(getRanking(mScores.get(0).prepareSave()));
@@ -89,7 +88,7 @@ public class RankingsController {
     private void initBackButton() {
         backBtn.setOnAction(this::OnBack);
         backBtn.setText(ConstantsLabel.LABEL_BACK_BTN);
-        GUIHelper.setViewDimensions(this.backBtn, ConstantsDimentions.ONE_COL, ConstantsDimentions.ONE_ROW);
+        GUIHelper.setViewDimensions(this.backBtn, ConstantsDimensions.ONE_COL, ConstantsDimensions.ONE_ROW/2);
         GUIHelper.styleButton(this.backBtn);
     }
 
@@ -103,6 +102,20 @@ public class RankingsController {
         } else {
             this.rankingsCurrent.setVisible(false);
         }
+    }
+
+    private void setPane(){
+        GUIHelper.setBackground(this.mainPane, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.SCREEN_HEIGHT);
+        GUIHelper.setViewDimensions(this.background, ConstantsDimensions.SCREEN_WIDTH - ConstantsDimensions.THREE_COLS, ConstantsDimensions.SCREEN_HEIGHT - ConstantsDimensions.THREE_ROWS);
+    }
+
+    private void setLabels(){
+        GUIHelper.styleLabel(ConstantsDimensions.H2, this.rankingsFirst, this.rankingsSecond, this.rankingsThird, this.rankingsFourth, this.rankingsFifth);
+        GUIHelper.styleLabel(ConstantsDimensions.H3*3, this.rankingsTitle);
+        this.rankingsTitle.setTextFill(Color.SEAGREEN);
+        GUIHelper.setShadow(this.rankingsTitle);
+        GUIHelper.styleLabel(ConstantsDimensions.H2/2, this.hintLabel);
+        GUIHelper.styleLabel(ConstantsDimensions.H3*3, this.rankingsCurrent);
     }
 
     private String getRanking(String input) {

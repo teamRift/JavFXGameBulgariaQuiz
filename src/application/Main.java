@@ -2,7 +2,7 @@
 package application;
 
 import application.classes.Song;
-import application.constants.ConstantsDimentions;
+import application.constants.ConstantsDimensions;
 import application.constants.ConstantsPath;
 import application.dependencies.DependencyInjectionContainer;
 import javafx.application.Application;
@@ -28,7 +28,7 @@ public class Main extends Application {
             Platform.exit();
             System.exit(0);
         }));
-        primaryStage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH,ConstantsDimentions.SCREEN_HEIGHT));
+        primaryStage.setScene(new Scene(root, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.SCREEN_HEIGHT));
         primaryStage.show();
         this.song.playTrack();
     }

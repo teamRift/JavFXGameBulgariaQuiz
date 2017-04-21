@@ -2,7 +2,7 @@ package application.controllers;
 
 import application.classes.GameManager;
 import application.classes.Song;
-import application.constants.ConstantsDimentions;
+import application.constants.ConstantsDimensions;
 import application.constants.ConstantsPath;
 import application.dependencies.DependencyInjectionContainer;
 import application.ranking.Ranking;
@@ -45,7 +45,7 @@ public class BootController {
             e.printStackTrace();
         }
 
-        stage.setScene(new Scene(root, ConstantsDimentions.SCREEN_WIDTH, ConstantsDimentions.SCREEN_HEIGHT));
+        stage.setScene(new Scene(root, ConstantsDimensions.SCREEN_WIDTH, ConstantsDimensions.SCREEN_HEIGHT));
         stage.show();
     }
 }
